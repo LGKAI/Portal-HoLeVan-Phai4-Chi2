@@ -25,14 +25,23 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
 
   const isMale = nodeData.gender === "male";
   const isFemale = nodeData.gender === "female";
-  const bgColor = isMale ? "bg-blue-50" : isFemale ? "bg-pink-50" : "bg-gray-100";
-  const borderColor = nodeData.is_deceased
-    ? "border-red-500"
-    : isMale
-    ? "border-blue-200"
+  const isDeceased = Boolean(nodeData.is_deceased);
+
+  // Tăng tone màu rõ rệt, rực rỡ và có chiều sâu (không bị nhạt nhoà khi thu nhỏ)
+  const bgColor = isMale
+    ? "bg-gradient-to-b from-[#dbeafe] via-[#bfdbfe] to-[#93c5fd]/90" // Xanh dương tươi sáng, tone đậm rõ
     : isFemale
-    ? "border-pink-200"
-    : "border-gray-300";
+    ? "bg-gradient-to-b from-[#fce7f3] via-[#fbcfe8] to-[#f472b6]/80" // Hồng phấn tươi tắn, tone đậm rõ
+    : "bg-gradient-to-b from-stone-100 to-stone-200";
+
+  // Viền đậm hơn, sắc nét với độ dày 3px để nhìn rõ cây gia phả cả khi thu nhỏ
+  const borderColor = isDeceased
+    ? "border-[#dc2626] shadow-red-900/15" // Đã mất: viền đỏ đậm
+    : isMale
+    ? "border-[#1d4ed8] shadow-blue-900/20" // Nam còn sống: viền xanh dương đậm (blue-700)
+    : isFemale
+    ? "border-[#be185d] shadow-pink-900/20" // Nữ còn sống: viền hồng đậm (pink-700)
+    : "border-slate-600 shadow-gray-900/10";
 
   const hasValidOccupation =
     nodeData.occupation &&
@@ -42,7 +51,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
 
   return (
     <div
-      className={`relative rounded-lg border-2 ${bgColor} ${borderColor} shadow-md overflow-visible`}
+      className={`relative rounded-xl border-[3px] ${bgColor} ${borderColor} shadow-lg overflow-visible transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5`}
       style={{ width: `${NODE_W}px`, height: `${NODE_H}px` }}
     >
       {/* Top handles */}
@@ -62,7 +71,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
       <Handle type="source" position={Position.Bottom} id="bottom-source" className="w-2 h-2 !bg-gray-400" />
 
       {/* Generation Badge */}
-      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 whitespace-nowrap">
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3.5 py-1 rounded-full shadow-md border-2 border-white z-10 whitespace-nowrap">
         Đời {Number(nodeData.generation_in_branch) + 8}
       </div>
 
@@ -86,7 +95,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
         {/* Middle: avatar + info */}
         <div className="flex items-center gap-4 pl-6 pr-4 pt-0 pb-2 flex-1 min-h-0">
           {/* Avatar */}
-          <div className="w-[76px] h-[76px] rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0 bg-gray-200 flex items-center justify-center">
+          <div className="w-[76px] h-[76px] rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0 bg-white flex items-center justify-center">
             {nodeData.avatar_url ? (
               <img
                 src={nodeData.avatar_url}
@@ -96,7 +105,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
             ) : (
               <UserIcon
                 size={40}
-                className={isMale ? "text-blue-400" : isFemale ? "text-pink-400" : "text-gray-400"}
+                className={isMale ? "text-blue-600" : isFemale ? "text-pink-600" : "text-gray-500"}
               />
             )}
           </div>
@@ -125,7 +134,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
         </div>
 
         {/* Bottom: actions bar - fixed height so it never gets clipped */}
-        <div className="flex-shrink-0 flex items-center gap-1 border-t border-black/10 px-2 py-1.5 bg-white/50">
+        <div className="flex-shrink-0 flex items-center gap-1 border-t border-black/10 px-2 py-1.5 bg-white/70 backdrop-blur-sm">
           <button
             onClick={() => nodeData.onClickDetail?.(nodeData as Member)}
             className="flex-1 text-center text-[13px] font-semibold text-primary hover:bg-primary/10 py-1 rounded transition-colors"

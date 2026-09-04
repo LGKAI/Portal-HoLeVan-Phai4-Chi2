@@ -34,10 +34,10 @@ const edgeTypes = {
 
 const NODE_WIDTH = 380;
 const BASE_NODE_HEIGHT = 170;
-const SIBLING_GAP = 160;
+const SIBLING_GAP = 120;
 // Khoảng cách phân tách rõ ràng giữa nhánh con của các bà vợ (Chánh phối, Thứ phối...)
-const WIFE_BRANCH_GAP = 320;
-const RANK_SEP = 300;
+const WIFE_BRANCH_GAP = 240;
+const RANK_SEP = 600;
 
 interface ClusterInfo {
   clusterWidth: number;
@@ -357,7 +357,7 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
           sourceHandle: 'bottom-source',
           targetHandle: 'top-target',
           type: 'familyEdge',
-          style: { stroke: '#334155', strokeWidth: 2 },
+          style: { stroke: '#1e293b', strokeWidth: 2.5 },
           data: {
             spouseId: wifeId ? wifeId.toString() : undefined,
             spineRatio,
@@ -385,7 +385,7 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
           type: 'straightSpouseEdge',
           sourceHandle: 'spouse-left-source',
           targetHandle: 'spouse-right-target',
-          style: { stroke: '#dc2626', strokeWidth: 2.5, strokeDasharray: '6 6' },
+          style: { stroke: '#b91c1c', strokeWidth: 2.5, strokeDasharray: '6 6' },
           label,
         });
       } else if (index === 1) {
@@ -397,7 +397,7 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
           type: 'straightSpouseEdge',
           sourceHandle: 'spouse-right',
           targetHandle: 'spouse-left',
-          style: { stroke: '#dc2626', strokeWidth: 2.5, strokeDasharray: '6 6' },
+          style: { stroke: '#b91c1c', strokeWidth: 2.5, strokeDasharray: '6 6' },
           label,
         });
       } else {
@@ -409,7 +409,7 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
           type: 'overSpouseEdge',
           sourceHandle: 'spouse-top-source',
           targetHandle: 'spouse-top-target',
-          style: { stroke: '#dc2626', strokeWidth: 2.5, strokeDasharray: '6 6' },
+          style: { stroke: '#b91c1c', strokeWidth: 2.5, strokeDasharray: '6 6' },
           label,
           data: { rank: index },
         });
@@ -481,7 +481,11 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
         <MiniMap
           zoomable
           pannable
-          nodeColor={(n) => (n.data?.gender === 'male' ? '#eff6ff' : '#fdf2f8')}
+          nodeColor={(n) => {
+            const d = n.data as any;
+            if (d?.is_deceased) return '#dc2626';
+            return d?.gender === 'male' ? '#2563eb' : '#db2777';
+          }}
           style={{ backgroundColor: '#FFF5D6' }}
         />
         <Background gap={16} size={1.5} color="#E2D4B7" />
