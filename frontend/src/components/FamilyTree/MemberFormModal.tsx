@@ -166,9 +166,6 @@ const MemberFormModal: React.FC<MemberFormModalProps> = ({
                       </option>
                     ))}
                   </select>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Chọn mẹ để đường huyết thống trên cây nối đúng từ trung điểm của người mẹ này với cha.
-                  </p>
                 </div>
               )}
 
