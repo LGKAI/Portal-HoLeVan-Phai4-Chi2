@@ -1,0 +1,19 @@
+# Git ignore cho toàn bộ dự án
+node_modules/
+dist/
+build/
+.env
+*.log
+uploads/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+data/vector_store/
+*.DS_Store
+.idea/
+.vscode/
+*.suo
+*.user

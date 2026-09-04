@@ -1,0 +1,133 @@
+# ========================================
+# Portal Họ Lê Văn - Phái 4 - Chi 2
+# Docker Compose - Khởi chạy toàn bộ hệ thống
+# ========================================
+
+networks:
+  portal-network:
+    driver: bridge
+
+volumes:
+  mssql-data:
+    name: portal_mssql_data
+  uploads-data:
+    name: portal_uploads
+  chroma-data:
+    name: portal_chroma
+
+services:
+
+  # ==========================================
+  # 1. Microsoft SQL Server 2022
+  # ==========================================
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: portal_mssql
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${DB_PASSWORD:-Portal@Hle2024!}
+      MSSQL_PID: Developer
+      MSSQL_COLLATION: Vietnamese_CI_AS
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+    networks:
+      - portal-network
+    healthcheck:
+      test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "${DB_PASSWORD:-Portal@Hle2024!}" -Q "SELECT 1" -No || exit 1
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+  # ==========================================
+  # 2. Backend Node.js / Express
+  # ==========================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: portal_backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DB_HOST: mssql
+      DB_PORT: 1433
+      DB_USER: ${DB_USER:-sa}
+      DB_PASSWORD: ${DB_PASSWORD:-Portal@Hle2024!}
+      DB_NAME: ${DB_NAME:-portal_hlevan}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-7d}
+      RAG_SERVICE_URL: http://rag-service:8000
+      PORT: 5000
+      NODE_ENV: production
+    ports:
+      - "5000:5000"
+    volumes:
+      - uploads-data:/app/uploads
+    depends_on:
+      mssql:
+        condition: service_healthy
+    networks:
+      - portal-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # ==========================================
+  # 3. Frontend React (Nginx)
+  # ==========================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: /api
+    container_name: portal_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - portal-network
+
+  # ==========================================
+  # 4. RAG Service (Python FastAPI)
+  # Kết nối Ollama chạy trên máy host (không trong Docker)
+  # ==========================================
+  rag-service:
+    build:
+      context: ./rag-service
+      dockerfile: Dockerfile
+    container_name: portal_rag
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      # Windows Docker: host.docker.internal trỏ tới máy host (nơi Ollama chạy)
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+      OLLAMA_LLM_MODEL: ${OLLAMA_LLM_MODEL:-qwen2.5:7b}
+      OLLAMA_EMBED_MODEL: ${OLLAMA_EMBED_MODEL:-nomic-embed-text}
+      BACKEND_URL: http://backend:5000
+      CHROMA_PERSIST_DIR: /app/data/vector_store
+      RAW_DOCS_DIR: /app/data/raw_documents
+      PORT: 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma-data:/app/data/vector_store
+      - ./rag-service/data/raw_documents:/app/data/raw_documents
+    depends_on:
+      - backend
+    networks:
+      - portal-network
+    extra_hosts:
+      # Đảm bảo container có thể reach máy host (Ollama)
+      - "host.docker.internal:host-gateway"
