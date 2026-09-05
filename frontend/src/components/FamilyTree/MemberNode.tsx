@@ -93,7 +93,11 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
         </div>
 
         {/* Middle: avatar + info */}
-        <div className="flex items-center gap-4 pl-6 pr-4 pt-0 pb-2 flex-1 min-h-0">
+        <div 
+          onClick={() => nodeData.onClickDetail?.(nodeData as Member)}
+          className="nodrag nopan flex items-center gap-4 pl-6 pr-4 pt-0 pb-2 flex-1 min-h-0 cursor-pointer"
+          title="Bấm để xem chi tiết"
+        >
           {/* Avatar */}
           <div className="w-[76px] h-[76px] rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0 bg-white flex items-center justify-center">
             {nodeData.avatar_url ? (
@@ -134,10 +138,14 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
         </div>
 
         {/* Bottom: actions bar - fixed height so it never gets clipped */}
-        <div className="flex-shrink-0 flex items-center gap-1 border-t border-black/10 px-2 py-1.5 bg-white/70 backdrop-blur-sm">
+        <div className="nodrag nopan flex-shrink-0 flex items-center gap-1 border-t border-black/10 px-2 py-1.5 bg-white/70 backdrop-blur-sm">
           <button
-            onClick={() => nodeData.onClickDetail?.(nodeData as Member)}
-            className="flex-1 text-center text-[13px] font-semibold text-primary hover:bg-primary/10 py-1 rounded transition-colors"
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              nodeData.onClickDetail?.(nodeData as Member);
+            }}
+            className="nodrag nopan flex-1 text-center text-[13px] font-semibold text-primary hover:bg-primary/10 py-1 rounded transition-colors cursor-pointer"
           >
             Chi tiết
           </button>
@@ -145,29 +153,45 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
           {isAdmin && (
             <>
               <button
-                onClick={() => nodeData.onAddSpouse?.(nodeData.id as number)}
-                className="p-2 text-pink-600 hover:bg-pink-100 rounded transition-colors"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nodeData.onAddSpouse?.(nodeData.id as number);
+                }}
+                className="nodrag nopan p-2 text-pink-600 hover:bg-pink-100 rounded transition-colors"
                 title="Thêm Vợ/Chồng"
               >
                 <Heart size={16} />
               </button>
               <button
-                onClick={() => nodeData.onAddChild?.(nodeData.id as number)}
-                className="p-2 text-green-600 hover:bg-green-100 rounded transition-colors"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nodeData.onAddChild?.(nodeData.id as number);
+                }}
+                className="nodrag nopan p-2 text-green-600 hover:bg-green-100 rounded transition-colors"
                 title="Thêm con"
               >
                 <Plus size={16} />
               </button>
               <button
-                onClick={() => nodeData.onEdit?.(nodeData.id as number)}
-                className="p-2 text-blue-600 hover:bg-blue-100 rounded transition-colors"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nodeData.onEdit?.(nodeData.id as number);
+                }}
+                className="nodrag nopan p-2 text-blue-600 hover:bg-blue-100 rounded transition-colors"
                 title="Sửa"
               >
                 <Edit2 size={16} />
               </button>
               <button
-                onClick={() => nodeData.onDelete?.(nodeData.id as number)}
-                className="p-2 text-red-600 hover:bg-red-100 rounded transition-colors"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nodeData.onDelete?.(nodeData.id as number);
+                }}
+                className="nodrag nopan p-2 text-red-600 hover:bg-red-100 rounded transition-colors"
                 title="Xóa"
               >
                 <Trash2 size={16} />
@@ -180,4 +204,4 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
   );
 };
 
-export default React.memo(MemberNode);
+export default MemberNode;

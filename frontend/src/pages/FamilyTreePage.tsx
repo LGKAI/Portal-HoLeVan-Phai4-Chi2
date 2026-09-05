@@ -274,11 +274,11 @@ const FamilyTreePage: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowMobileStats(!showMobileStats)}
-            className="sm:hidden flex items-center gap-2 px-3 py-1.5 font-medium text-gray-800"
+            className="sm:hidden flex items-center gap-1.5 px-3 py-1.5 font-medium text-gray-800"
           >
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-            <span>Thống kê: <strong className="text-blue-600">{memberStats.total} TV</strong></span>
-            <span className="text-[11px] text-gray-500">{showMobileStats ? '▲ Ẩn' : '▼ Chi tiết'}</span>
+            <span className="text-blue-500 font-bold">-</span>
+            <span>Tổng số thành viên: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
+            <span className="text-xs text-gray-400 ml-1">{showMobileStats ? '▲' : '▼'}</span>
           </button>
 
           {/* Full stats (collapsible on mobile, always visible on sm+) */}

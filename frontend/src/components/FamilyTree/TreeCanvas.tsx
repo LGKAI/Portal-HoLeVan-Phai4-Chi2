@@ -469,12 +469,13 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
   }, [rawNodes, members, setNodes, setEdges]);
 
   return (
-    <div style={{ width: '100%', height: '100%', backgroundColor: '#FFFDF5', touchAction: 'none' }}>
+    <div style={{ width: '100%', height: '100%', backgroundColor: '#FFFDF5' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
+        onNodeClick={(_event, node) => onClickDetail(node.data as Member)}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         fitView
@@ -483,11 +484,8 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
         maxZoom={2}
         nodesDraggable={false}
         nodesConnectable={false}
-        elementsSelectable={false}
+        elementsSelectable={true}
         onlyRenderVisibleElements={true}
-        panOnDrag={true}
-        zoomOnPinch={true}
-        preventScrolling={true}
         proOptions={{ hideAttribution: true }}
       >
         <Controls showInteractive={false} />
