@@ -29,30 +29,53 @@ const HomePage: React.FC = () => {
   return (
     <div className="bg-cream min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[calc(100vh-4rem)] min-h-[620px] flex flex-col justify-end overflow-hidden">
+        {/* Background: nhích lên cao hơn để cắt bầu trời, nhưng không để mái nhà chạm đỉnh */}
         <div
-          className="absolute inset-0 bg-cover z-0 bg-no-repeat"
+          className="absolute inset-0 bg-cover z-0 bg-no-repeat transition-all duration-500 origin-top
+            scale-[1.1] -translate-y-[8%]
+            sm:scale-[1.2] sm:-translate-y-[12%]
+            md:scale-[1.28] md:-translate-y-[20%]
+            bg-[position:49.5%_top] sm:bg-[position:center_top] md:bg-[position:center_top]"
           style={{
-            backgroundImage: 'url("/background.jpg")',
-            backgroundPosition: 'center 25%'
+            backgroundImage: 'url("/background.jpg?v=panoramic5")'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10" />
+        {/* Lớp tối đều toàn ảnh */}
+        <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />
+        {/* Gradient overlay: tối mạnh hơn phía dưới để tôn chữ */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 via-40% to-black/80 z-10 pointer-events-none" />
 
-        <div className="relative z-20 text-center text-white px-4 max-w-6xl mx-auto mt-10">
-          <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold mb-12 drop-shadow-2xl text-white tracking-wide sm:whitespace-nowrap">
-            CỔNG THÔNG TIN DÒNG HỌ
-            <div className="h-6"></div>
-            <span className="text-secondary drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">LÊ VĂN - PHÁI 4 - CHI 2</span>
+        {/* Khối chữ và nút bấm - nhích lên cao hơn khỏi đáy, đồng nhất mobile/desktop */}
+        <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto pb-24 sm:pb-16 md:pb-20">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2 drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] tracking-wide leading-tight">
+            <span
+              className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+              style={{ textShadow: '0 0 20px rgba(255,200,50,0.35), 0 4px 14px rgba(0,0,0,0.98)' }}
+            >
+              CỔNG THÔNG TIN DÒNG HỌ
+            </span>
+            <div className="h-1"></div>
+            <span
+              className="text-secondary drop-shadow-[0_4px_12px_rgba(0,0,0,0.98)]"
+              style={{ textShadow: '0 0 24px rgba(255,180,0,0.6), 0 4px 16px rgba(0,0,0,0.98)' }}
+            >
+              LÊ VĂN - PHÁI 4 - CHI 2
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-12 font-medium text-cream drop-shadow-md">
+          <p className="text-sm sm:text-base md:text-lg mb-5 sm:mb-6 font-bold tracking-wide"
+            style={{
+              color: '#ffffff',
+              textShadow: '0 2px 6px rgba(0,0,0,1), 0 4px 20px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8)'
+            }}
+          >
             Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tree" className="bg-black/40 hover:bg-black/60 border border-red-500 text-red-500 min-w-[220px] flex justify-center items-center px-8 py-3 rounded-md font-bold text-lg transition-colors backdrop-blur-sm shadow-lg">
+          <div className="flex flex-row gap-3 sm:gap-4 justify-center">
+            <Link to="/tree" className="bg-black/60 hover:bg-black/80 border-2 border-red-500 text-red-400 min-w-[130px] sm:min-w-[170px] flex justify-center items-center px-4 sm:px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
               Xem Gia Phả
             </Link>
-            <Link to="/donate" className="bg-black/40 hover:bg-black/60 border border-secondary text-secondary min-w-[220px] flex justify-center items-center px-8 py-3 rounded-md font-bold text-lg transition-colors backdrop-blur-sm shadow-lg">
+            <Link to="/donate" className="bg-black/60 hover:bg-black/80 border-2 border-secondary text-secondary min-w-[130px] sm:min-w-[170px] flex justify-center items-center px-4 sm:px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
               Ủng Hộ Quỹ
             </Link>
           </div>
