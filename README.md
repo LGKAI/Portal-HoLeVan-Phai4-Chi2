@@ -255,7 +255,7 @@ Khi cần phát triển và chỉnh sửa mã nguồn với tính năng Hot-Modu
 
 Website đã được cấu hình cơ chế **Static Data Fallback thông minh**:
 - Khi deploy lên **Netlify**, website hoạt động độc lập 100% không cần máy chủ backend/database.
-- Toàn bộ dữ liệu 306 thành viên, cây gia phả, 150 ảnh đại diện, bài viết tư liệu sự kiện, bảng vinh danh công đức đều hoạt động mượt mà với tốc độ tức thì, có sẵn chứng chỉ HTTPS bảo mật và tên miền miễn phí trọn đời (ví dụ: `https://holevan-phai4chi2.netlify.app`).
+- Toàn bộ dữ liệu 306 thành viên, cây gia phả, 150 ảnh đại diện, bài viết tư liệu sự kiện, bảng vinh danh công đức đều hoạt động mượt mà với tốc độ tức thì, có sẵn chứng chỉ HTTPS bảo mật và tên miền miễn phí trọn đời (ví dụ: `https://portal-holevan-phai4-chi2.netlify.app/`).
 
 ### 7.1. Các bước Deploy lần đầu qua GitHub (Tự động cập nhật)
 
@@ -288,7 +288,7 @@ Netlify sẽ tự động nhận diện file [netlify.toml](file:///d:/ChuyenNga
 - Vào mục **Site configuration** (hoặc **Site settings**) ➔ Chọn **Change site name**.
 - Nhập tên mong muốn (ví dụ: `holevan-phai4chi2`).
 - Địa chỉ truy cập website chính thức của dòng họ sẽ là:  
-  👉 **`https://holevan-phai4chi2.netlify.app`**
+  👉 **`https://portal-holevan-phai4-chi2.netlify.app/`**
 
 ---
 
