@@ -18,6 +18,7 @@ import { Member } from '../../types';
 
 interface TreeCanvasProps {
   members: Member[];
+  allMembers?: Member[];
   onAddChild: (parentId: number) => void;
   onAddSpouse?: (memberId: number) => void;
   onEdit: (memberId: number) => void;
@@ -50,19 +51,15 @@ interface ChildGroup {
   children: Member[];
 }
 
-/** Tự động layout cây gia phả chuẩn mực, phân tách rõ ràng nhánh con theo từng đời vợ */
-const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], members: Member[]) => {
-  if (!members || members.length === 0) {
-    return { nodes: [], edges: [] };
-  }
-
+/** Tính toán toạ độ cây theo cấu trúc phả hệ chuẩn */
+function layoutTreeCore(members: Member[], canonicalXMap?: Map<number, number>) {
   const memberMap = new Map<number, Member>();
   members.forEach(m => memberMap.set(m.id, m));
 
-  // 1. Nhận diện các bà vợ nhập tịch
+  // 1. Nhận diện các bà vợ nhập tịch (chỉ tính nếu người chồng cũng có trong members)
   const marriedInWives = new Set<number>();
   members.forEach(m => {
-    if (m.gender === 'female' && !m.father_id && !m.mother_id && m.spouse_id) {
+    if (m.gender === 'female' && !m.father_id && !m.mother_id && m.spouse_id && memberMap.has(m.spouse_id)) {
       marriedInWives.add(m.id);
     }
   });
@@ -134,11 +131,13 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
     }
   });
 
-  // Sắp xếp con cái theo ID tăng dần (vai vế từ lớn đến nhỏ)
+  // Sắp xếp con cái và các nhánh gốc theo thứ tự chuẩn từ trái sang phải trong toàn bộ cây gia phả
+  const getOrder = (id: number) => (canonicalXMap ? (canonicalXMap.get(id) ?? id) : id);
+
   bloodlineChildrenMap.forEach((children) => {
-    children.sort((a, b) => a.id - b.id);
+    children.sort((a, b) => getOrder(a.id) - getOrder(b.id));
   });
-  rootMembers.sort((a, b) => a.id - b.id);
+  rootMembers.sort((a, b) => getOrder(a.id) - getOrder(b.id));
 
   // 4. Nhóm con theo từng người mẹ để phân tách nhánh riêng biệt
   const getChildGroups = (memberId: number): ChildGroup[] => {
@@ -172,7 +171,6 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
   };
 
   // 5. Tính toán kích thước cụm (cluster) của một người cùng các vợ
-  // Quy ước vị trí: (Chánh phối --- Chồng --- Thứ phối --- Thứ thứ phối...)
   const getClusterInfo = (memberId: number): ClusterInfo => {
     const wifeIds = husbandToWives.get(memberId) || [];
     const numWives = wifeIds.length;
@@ -209,7 +207,7 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
     return { clusterWidth, husbandOffset, wifePositions };
   };
 
-  // 6. Đệ quy tính toán chiều rộng cây con (Subtree Width) có tính khoảng cách phân tách giữa các nhánh vợ
+  // 6. Đệ quy tính toán chiều rộng cây con (Subtree Width)
   const subtreeWidthMap = new Map<number, number>();
 
   const computeSubtreeWidth = (memberId: number): number => {
@@ -232,7 +230,7 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
       });
       totalChildrenWidth += groupW;
       if (gIdx < groups.length - 1) {
-        totalChildrenWidth += WIFE_BRANCH_GAP; // Giãn rộng giữa các nhánh vợ
+        totalChildrenWidth += WIFE_BRANCH_GAP;
       }
     });
 
@@ -309,6 +307,46 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
   });
 
   const centerOffset = minX !== Infinity ? (minX + maxX) / 2 : 0;
+
+  return {
+    memberPositions,
+    bloodlineChildrenMap,
+    husbandToWives,
+    memberMap,
+    centerOffset,
+    getChildGroups,
+  };
+}
+
+/** Tính toạ độ X chuẩn mực của toàn bộ thành viên trong cây đầy đủ để làm thước đo thứ tự chuẩn */
+function computeCanonicalPositions(fullMembers: Member[]): Map<number, number> {
+  const { memberPositions } = layoutTreeCore(fullMembers);
+  const xMap = new Map<number, number>();
+  memberPositions.forEach((pos, id) => {
+    xMap.set(id, pos.x);
+  });
+  return xMap;
+}
+
+/** Tự động layout cây gia phả chuẩn mực, phân tách rõ ràng nhánh con theo từng đời vợ và giữ đúng thứ tự từ trái sang phải */
+const getLayoutedElements = (
+  nodes: Node<MemberNodeData>[],
+  _edges: Edge[],
+  members: Member[],
+  canonicalXMap?: Map<number, number>
+) => {
+  if (!members || members.length === 0) {
+    return { nodes: [], edges: [] };
+  }
+
+  const {
+    memberPositions,
+    bloodlineChildrenMap,
+    husbandToWives,
+    memberMap,
+    centerOffset,
+    getChildGroups,
+  } = layoutTreeCore(members, canonicalXMap);
 
   const layoutedNodes = nodes.map(node => {
     const id = parseInt(node.id, 10);
@@ -431,12 +469,18 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
 
 const TreeCanvas: React.FC<TreeCanvasProps> = ({
   members,
+  allMembers,
   onAddChild,
   onAddSpouse,
   onEdit,
   onDelete,
   onClickDetail,
 }) => {
+  const canonicalXMap = useMemo(() => {
+    const source = allMembers && allMembers.length > 0 ? allMembers : members;
+    return computeCanonicalPositions(source);
+  }, [allMembers, members]);
+
   const rawNodes: Node<MemberNodeData>[] = useMemo(() => {
     return members.map((m) => ({
       id: m.id.toString(),
@@ -455,18 +499,18 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
   }, [members, onAddChild, onAddSpouse, onEdit, onDelete, onClickDetail]);
 
   const { nodes: layoutedNodes, edges: layoutedEdges } = useMemo(
-    () => getLayoutedElements(rawNodes, [], members),
-    [rawNodes, members]
+    () => getLayoutedElements(rawNodes, [], members, canonicalXMap),
+    [rawNodes, members, canonicalXMap]
   );
 
   const [nodes, setNodes, onNodesChange] = useNodesState(layoutedNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
 
   React.useEffect(() => {
-    const { nodes: newNodes, edges: newEdges } = getLayoutedElements(rawNodes, [], members);
+    const { nodes: newNodes, edges: newEdges } = getLayoutedElements(rawNodes, [], members, canonicalXMap);
     setNodes(newNodes);
     setEdges(newEdges);
-  }, [rawNodes, members, setNodes, setEdges]);
+  }, [rawNodes, members, canonicalXMap, setNodes, setEdges]);
 
   return (
     <div style={{ width: '100%', height: '100%', backgroundColor: '#FFFDF5' }}>

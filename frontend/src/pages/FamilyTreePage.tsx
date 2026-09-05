@@ -300,6 +300,7 @@ const FamilyTreePage: React.FC = () => {
 
         <TreeCanvas 
           members={filteredMembers}
+          allMembers={members}
           onAddChild={handleAddChild}
           onAddSpouse={handleAddSpouse}
           onEdit={handleEdit}
