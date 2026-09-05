@@ -2,6 +2,22 @@ import { Request, Response } from 'express';
 import { executeQuery } from '../config/db';
 import mssql from 'mssql';
 import { AuthRequest } from '../middleware/auth';
+import fs from 'fs';
+import path from 'path';
+
+const removeUploadFile = (fileUrl?: string | null) => {
+    if (!fileUrl || !fileUrl.startsWith('/uploads/')) return;
+    try {
+        const uploadDir = process.env.UPLOAD_DIR || path.join(__dirname, '../uploads');
+        const rel = fileUrl.replace('/uploads/', '');
+        const targetPath = path.join(uploadDir, rel);
+        if (fs.existsSync(targetPath)) {
+            fs.unlinkSync(targetPath);
+        }
+    } catch (e) {
+        console.warn('Could not remove file:', fileUrl, e);
+    }
+};
 
 export const getNews = async (req: Request, res: Response) => {
     const { category, page = 1, limit = 10 } = req.query;
@@ -67,6 +83,10 @@ export const updateNews = async (req: Request, res: Response) => {
         const { title, content } = req.body;
         let thumbnail_url = req.body.thumbnail_url;
         if (req.file) {
+            const existing = await executeQuery('SELECT thumbnail_url FROM News WHERE id=@id', [{ name: 'id', type: mssql.Int, value: parseInt(id) }]);
+            if (existing.recordset.length > 0) {
+                removeUploadFile(existing.recordset[0].thumbnail_url);
+            }
             thumbnail_url = `/uploads/thumbnails/${req.file.filename}`;
         }
         
@@ -88,6 +108,10 @@ export const updateNews = async (req: Request, res: Response) => {
 
 export const deleteNews = async (req: Request, res: Response) => {
     const { id } = req.params;
+    const existing = await executeQuery('SELECT thumbnail_url FROM News WHERE id=@id', [{ name: 'id', type: mssql.Int, value: parseInt(id) }]);
+    if (existing.recordset.length > 0) {
+        removeUploadFile(existing.recordset[0].thumbnail_url);
+    }
     await executeQuery('DELETE FROM News WHERE id=@id', [{ name: 'id', type: mssql.Int, value: parseInt(id) }]);
     res.json({ success: true, message: 'News deleted' });
 };

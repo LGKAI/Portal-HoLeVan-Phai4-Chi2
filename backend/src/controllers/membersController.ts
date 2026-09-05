@@ -1,6 +1,22 @@
 import { Request, Response } from 'express';
 import { executeQuery } from '../config/db';
 import mssql from 'mssql';
+import fs from 'fs';
+import path from 'path';
+
+const removeUploadFile = (fileUrl?: string | null) => {
+    if (!fileUrl || !fileUrl.startsWith('/uploads/')) return;
+    try {
+        const uploadDir = process.env.UPLOAD_DIR || path.join(__dirname, '../uploads');
+        const rel = fileUrl.replace('/uploads/', '');
+        const targetPath = path.join(uploadDir, rel);
+        if (fs.existsSync(targetPath)) {
+            fs.unlinkSync(targetPath);
+        }
+    } catch (e) {
+        console.warn('Could not remove file:', fileUrl, e);
+    }
+};
 
 export const getFamilyTree = async (req: Request, res: Response) => {
     const result = await executeQuery('SELECT * FROM Members');
@@ -146,6 +162,10 @@ export const updateMember = async (req: Request, res: Response) => {
 
 export const deleteMember = async (req: Request, res: Response) => {
     const { id } = req.params;
+    const existing = await executeQuery('SELECT avatar_url FROM Members WHERE id=@id', [{ name: 'id', type: mssql.Int, value: parseInt(id) }]);
+    if (existing.recordset.length > 0) {
+        removeUploadFile(existing.recordset[0].avatar_url);
+    }
     await executeQuery('DELETE FROM Members WHERE id=@id', [{ name: 'id', type: mssql.Int, value: parseInt(id) }]);
     res.json({ success: true, message: 'Member deleted' });
 };
@@ -192,6 +212,10 @@ export const addChildren = async (req: Request, res: Response) => {
 export const uploadAvatar = async (req: Request, res: Response) => {
     if (!req.file) return res.status(400).json({ success: false, message: 'No file uploaded' });
     const { id } = req.params;
+    const existing = await executeQuery('SELECT avatar_url FROM Members WHERE id=@id', [{ name: 'id', type: mssql.Int, value: parseInt(id) }]);
+    if (existing.recordset.length > 0) {
+        removeUploadFile(existing.recordset[0].avatar_url);
+    }
     const avatarUrl = `/uploads/avatars/${req.file.filename}`;
     await executeQuery('UPDATE Members SET avatar_url=@avatar WHERE id=@id', [
         { name: 'avatar', type: mssql.VarChar, value: avatarUrl },
