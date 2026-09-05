@@ -180,4 +180,4 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
   );
 };
 
-export default MemberNode;
+export default React.memo(MemberNode);

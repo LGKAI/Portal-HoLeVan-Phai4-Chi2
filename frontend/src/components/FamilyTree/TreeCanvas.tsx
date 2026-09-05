@@ -349,6 +349,14 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
         }
       }
 
+      let spouseCenterX: number | undefined;
+      let spouseCenterY: number | undefined;
+      if (wifeId && memberPositions.has(wifeId)) {
+        const wifePos = memberPositions.get(wifeId)!;
+        spouseCenterX = wifePos.x - centerOffset + 190;
+        spouseCenterY = wifePos.y + 85;
+      }
+
       g.children.forEach((child) => {
         edges.push({
           id: `e-${fatherId}-${child.id}`,
@@ -359,7 +367,8 @@ const getLayoutedElements = (nodes: Node<MemberNodeData>[], _edges: Edge[], memb
           type: 'familyEdge',
           style: { stroke: '#1e293b', strokeWidth: 2.5 },
           data: {
-            spouseId: wifeId ? wifeId.toString() : undefined,
+            spouseCenterX,
+            spouseCenterY,
             spineRatio,
           },
         });
@@ -460,7 +469,7 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
   }, [rawNodes, members, setNodes, setEdges]);
 
   return (
-    <div style={{ width: '100%', height: '100%', backgroundColor: '#FFFDF5' }}>
+    <div style={{ width: '100%', height: '100%', backgroundColor: '#FFFDF5', touchAction: 'none' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -474,10 +483,14 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
         maxZoom={2}
         nodesDraggable={false}
         nodesConnectable={false}
-        elementsSelectable={true}
+        elementsSelectable={false}
+        onlyRenderVisibleElements={true}
+        panOnDrag={true}
+        zoomOnPinch={true}
+        preventScrolling={true}
         proOptions={{ hideAttribution: true }}
       >
-        <Controls />
+        <Controls showInteractive={false} />
         <MiniMap
           zoomable
           pannable
@@ -487,6 +500,7 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
             return d?.gender === 'male' ? '#2563eb' : '#db2777';
           }}
           style={{ backgroundColor: '#FFF5D6' }}
+          className="!hidden md:!block"
         />
         <Background gap={16} size={1.5} color="#E2D4B7" />
       </ReactFlow>

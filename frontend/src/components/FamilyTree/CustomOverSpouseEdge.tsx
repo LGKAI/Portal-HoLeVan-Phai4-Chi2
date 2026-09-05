@@ -1,6 +1,7 @@
+import React from 'react';
 import { BaseEdge, EdgeLabelRenderer, EdgeProps } from '@xyflow/react';
 
-export default function CustomOverSpouseEdge({
+function CustomOverSpouseEdge({
   id,
   sourceX,
   sourceY,
@@ -54,3 +55,5 @@ export default function CustomOverSpouseEdge({
     </>
   );
 }
+
+export default React.memo(CustomOverSpouseEdge);

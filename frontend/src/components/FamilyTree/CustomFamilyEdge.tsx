@@ -1,7 +1,7 @@
 import React from 'react';
-import { BaseEdge, EdgeProps, useNodes } from '@xyflow/react';
+import { BaseEdge, EdgeProps } from '@xyflow/react';
 
-export default function CustomFamilyEdge({
+function CustomFamilyEdge({
   id,
   sourceX,
   sourceY,
@@ -11,24 +11,21 @@ export default function CustomFamilyEdge({
   markerEnd,
   data,
 }: EdgeProps) {
-  const nodes = useNodes();
-  const spouseNode = nodes.find((n) => n.id === data?.spouseId);
-
   let startX = sourceX;
   let startY = sourceY;
 
-  if (spouseNode) {
-    const spouseX = spouseNode.position.x + 190;
-    // Xuất phát từ tim đường nối ngang giữa 2 vợ chồng (+85px từ đỉnh card)
-    startY = spouseNode.position.y + 85;
+  const spouseCenterX = data?.spouseCenterX as number | undefined;
+  const spouseCenterY = data?.spouseCenterY as number | undefined;
 
-    const husbandWifeDist = spouseX - sourceX;
+  if (spouseCenterX !== undefined && spouseCenterY !== undefined) {
+    startY = spouseCenterY;
+    const husbandWifeDist = spouseCenterX - sourceX;
     if (husbandWifeDist > 600) {
       // Vợ 3 trở lên (nằm xa bên phải): điểm nối xuất phát tại cột của người vợ đó
-      startX = spouseX;
+      startX = spouseCenterX;
     } else {
       // Điểm giữa của 2 vợ chồng
-      startX = (sourceX + spouseX) / 2;
+      startX = (sourceX + spouseCenterX) / 2;
     }
   }
 
@@ -54,7 +51,7 @@ export default function CustomFamilyEdge({
       `L ${targetX} ${targetY}`;
   }
 
-  // non-scaling-stroke: Giữ nguyên độ dày và độ sắc nét ở mọi mức độ thu phóng, triệt tiêu hiện tượng mờ nhạt
+  // non-scaling-stroke: Giữ nguyên độ dày và độ sắc nét ở mọi mức độ thu phóng
   const enhancedStyle: React.CSSProperties = {
     ...style,
     vectorEffect: 'non-scaling-stroke',
@@ -64,3 +61,5 @@ export default function CustomFamilyEdge({
     <BaseEdge path={edgePath} markerEnd={markerEnd} style={enhancedStyle} id={id} />
   );
 }
+
+export default React.memo(CustomFamilyEdge);

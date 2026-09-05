@@ -1,6 +1,7 @@
+import React from 'react';
 import { BaseEdge, EdgeLabelRenderer, EdgeProps, getStraightPath } from '@xyflow/react';
 
-export default function CustomSpouseStraightEdge({
+function CustomSpouseStraightEdge({
   id,
   sourceX,
   sourceY,
@@ -42,3 +43,5 @@ export default function CustomSpouseStraightEdge({
     </>
   );
 }
+
+export default React.memo(CustomSpouseStraightEdge);

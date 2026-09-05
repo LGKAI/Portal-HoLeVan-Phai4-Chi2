@@ -15,6 +15,7 @@ const FamilyTreePage: React.FC = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filterGen, setFilterGen] = useState<string>('all');
+  const [showMobileStats, setShowMobileStats] = useState(false);
   
   // Modal states
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -267,10 +268,22 @@ const FamilyTreePage: React.FC = () => {
 
       {/* Canvas Area */}
       <div className="flex-1 w-full relative bg-[#FFFDF5]">
-        {/* Thống kê thành viên - Góc trên trái (ngay dưới ô tìm kiếm) */}
-        <div className="absolute top-3 left-4 z-10 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-md border border-[#E8D8C3] text-xs sm:text-sm select-none pointer-events-auto">
-          <div className="flex flex-col gap-1.5 text-gray-700 font-medium">
-            <div className="flex items-center gap-2">
+        {/* Thống kê thành viên - Góc trên trái */}
+        <div className="absolute top-3 left-3 sm:left-4 z-10 bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-[#E8D8C3] text-xs sm:text-sm select-none pointer-events-auto transition-all">
+          {/* Mobile compact header button */}
+          <button
+            type="button"
+            onClick={() => setShowMobileStats(!showMobileStats)}
+            className="sm:hidden flex items-center gap-2 px-3 py-1.5 font-medium text-gray-800"
+          >
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+            <span>Thống kê: <strong className="text-blue-600">{memberStats.total} TV</strong></span>
+            <span className="text-[11px] text-gray-500">{showMobileStats ? '▲ Ẩn' : '▼ Chi tiết'}</span>
+          </button>
+
+          {/* Full stats (collapsible on mobile, always visible on sm+) */}
+          <div className={`${showMobileStats ? 'flex' : 'hidden'} sm:flex flex-col gap-1.5 text-gray-700 font-medium px-4 py-2.5 sm:py-3 border-t sm:border-t-0 border-[#E8D8C3]/50`}>
+            <div className="hidden sm:flex items-center gap-2">
               <span className="text-blue-500 font-bold">-</span>
               <span>Tổng số thành viên: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
             </div>
