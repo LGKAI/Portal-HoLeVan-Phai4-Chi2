@@ -8,10 +8,12 @@ import NewsPage from './pages/NewsPage';
 import NewsDetailPage from './pages/NewsDetailPage';
 import DonatePage from './pages/DonatePage';
 import ChatbotPanel from './components/Chatbot/ChatbotPanel';
+import ScrollToTop from './components/common/ScrollToTop';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow pt-16">

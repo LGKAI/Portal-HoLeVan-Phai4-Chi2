@@ -19,6 +19,7 @@ const NewsDetailPage: React.FC = () => {
         if (!slug) return;
         const data = await newsService.getNewsById(slug);
         setNews(data);
+        window.scrollTo(0, 0);
       } catch (err) {
         setError('Không tìm thấy tư liệu - sự kiện hoặc có lỗi xảy ra.');
       } finally {
@@ -27,6 +28,14 @@ const NewsDetailPage: React.FC = () => {
     };
     fetchDetail();
   }, [slug]);
+
+  useEffect(() => {
+    if (!loading && news) {
+      window.scrollTo(0, 0);
+      if (document.documentElement) document.documentElement.scrollTop = 0;
+      if (document.body) document.body.scrollTop = 0;
+    }
+  }, [loading, news]);
 
   if (loading) return <div className="py-20"><LoadingSpinner /></div>;
   if (error || !news) return <div className="text-center py-20 text-red-500">{error}</div>;
