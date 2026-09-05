@@ -1,15 +1,30 @@
 import api from './api';
 import { Donation } from '../types';
+import staticDonations from '../data/donations.json';
 
 export const donationService = {
   getDonations: async (): Promise<Donation[]> => {
-    const response = await api.get('/donations');
-    return response.data.data || [];
+    try {
+      const response = await api.get('/donations');
+      if (response.data?.data && response.data.data.length > 0) {
+        return response.data.data;
+      }
+    } catch (err) {
+      console.warn('Backend API not reachable, loading static donations.');
+    }
+    return (staticDonations as unknown as Donation[]) || [];
   },
 
   getAdminDonations: async (): Promise<Donation[]> => {
-    const response = await api.get('/donations/admin');
-    return response.data.data || [];
+    try {
+      const response = await api.get('/donations/admin');
+      if (response.data?.data && response.data.data.length > 0) {
+        return response.data.data;
+      }
+    } catch (err) {
+      console.warn('Backend API not reachable, loading static donations.');
+    }
+    return (staticDonations as unknown as Donation[]) || [];
   },
 
   createDonation: async (data: { donor_name: string; amount: number; message?: string }): Promise<any> => {

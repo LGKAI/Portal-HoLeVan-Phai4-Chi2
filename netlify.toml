@@ -1,0 +1,13 @@
+# ==========================================
+# Netlify Configuration for Portal Chi 2 - Phai 4 - Ho Le Van
+# ==========================================
+
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

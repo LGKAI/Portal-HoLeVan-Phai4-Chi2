@@ -3,9 +3,9 @@ node_modules/
 dist/
 build/
 .env
-*.log
-uploads/
-__pycache__/
+/uploads/
+/backend/uploads/
+!frontend/public/uploads/
 *.pyc
 .pytest_cache/
 *.egg-info/

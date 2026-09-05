@@ -19,6 +19,7 @@ Hệ thống được thiết kế theo kiến trúc Microservices / Client-Serv
   - Thuật toán căn chỉnh layout tự động phân tầng con cái theo từng đời vợ (Chánh phối, Thứ phối, Thứ thứ phối...).
   - Đường nối huyết thống trực tiếp từ trung điểm của người cha và người mẹ sinh thành.
   - Bảng thống kê động thời gian thực ở góc trên bên trái: **Tổng số thành viên** (Xanh dương), **Số thành viên đã mất** (Đỏ), **Số thành viên còn sống** (Xanh lá).
+- **Cơ chế Dữ liệu Tĩnh (Static Fallback):** Tự động phát hiện khi chạy trên các nền tảng Static Cloud (như Netlify) để nạp dữ liệu offline từ file JSON và thư mục ảnh tĩnh, giúp website hoạt động mượt mà 100% không cần máy chủ backend.
 - **Cắt xén ảnh chân dung:** `react-easy-crop` (cắt ảnh bo tròn chuẩn avatar trước khi tải lên)
 - **Định tuyến SPA:** React Router DOM v6
 - **Cấu hình Cổng:** Cố định duy nhất tại cổng `:3000` (`strictPort: true`)
@@ -45,6 +46,7 @@ Hệ thống được thiết kế theo kiến trúc Microservices / Client-Serv
 - **Cơ sở dữ liệu:** Microsoft SQL Server 2022 Developer Edition (Collation `Vietnamese_CI_AS` chuẩn tiếng Việt)
 - **Containerization:** Docker & Docker Compose
 - **Web Server Production:** Nginx Alpine (Reverse Proxy & Serve static files React)
+- **Hosting Static:** Hỗ trợ deploy trọn gói lên Netlify (0 VNĐ)
 
 ---
 
@@ -72,6 +74,7 @@ Portal-HoLeVan-Phai4-Chi2/
 ├── .env.example                      # File mẫu biến môi trường
 ├── .gitignore                        # Cấu hình bỏ qua file trong Git
 ├── docker-compose.yml                # Cấu hình Docker Compose toàn bộ hệ thống
+├── netlify.toml                      # Cấu hình build & redirect SPA cho Netlify
 ├── README.md                         # Tài liệu hướng dẫn dự án
 │
 ├── backend/                          # Mã nguồn Backend (Node.js/Express + TypeScript)
@@ -88,36 +91,35 @@ Portal-HoLeVan-Phai4-Chi2/
 │   └── tsconfig.json
 │
 ├── frontend/                         # Mã nguồn Frontend (React 18 + Vite + TypeScript)
-│   ├── public/                       # Tài nguyên tĩnh (favicon.ico, qr.jpg...)
+│   ├── public/                       # Tài nguyên tĩnh:
+│   │   ├── _redirects                # File điều hướng SPA cho Netlify
+│   │   ├── uploads/                  # Thư mục ảnh đại diện (avatars) và ảnh bài viết (thumbnails)
+│   │   ├── favicon.ico
+│   │   └── qr.jpg
+│   ├── scripts/
+│   │   └── export-data.js            # Kịch bản tự động xuất dữ liệu DB sang file tĩnh
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Auth/                 # Modal đăng nhập (LoginModal), đăng ký (RegisterModal)
 │   │   │   ├── Chatbot/              # Hộp chat trợ lý AI nổi góc dưới phải (ChatbotPanel)
 │   │   │   ├── common/               # Component dùng chung (LoadingSpinner...)
-│   │   │   ├── FamilyTree/           # Thành phần Cây gia phả:
-│   │   │   │   ├── TreeCanvas.tsx    # Canvas hiển thị cây & thuật toán sắp xếp vị trí node/edge
-│   │   │   │   ├── MemberNode.tsx    # Thẻ thành viên (màu sắc theo giới tính, viền theo tình trạng sinh/tử)
-│   │   │   │   ├── MemberFormModal.tsx # Form thêm/sửa thông tin thành viên (tích hợp crop ảnh đại diện)
-│   │   │   │   ├── CustomFamilyEdge.tsx # Đường nối liên kết huyết thống cha - mẹ - con
-│   │   │   │   ├── CustomOverSpouseEdge.tsx
-│   │   │   │   └── CustomSpouseStraightEdge.tsx
+│   │   │   ├── FamilyTree/           # Thành phần Cây gia phả (TreeCanvas, MemberNode...)
 │   │   │   ├── Layout/               # Thanh điều hướng (Navbar) & Chân trang (Footer)
 │   │   │   └── News/                 # Thẻ bài viết tư liệu & sự kiện (NewsCard)
+│   │   ├── data/                     # Dữ liệu tĩnh dự phòng phục vụ deploy Netlify:
+│   │   │   ├── members.json          # 306 thành viên và toàn bộ liên kết phả hệ
+│   │   │   ├── news.json             # Danh sách bài viết tư liệu & sự kiện
+│   │   │   └── donations.json        # Danh sách đóng góp quỹ công đức
 │   │   ├── hooks/                    # Custom hooks (useChat, useFamilyTree)
-│   │   ├── pages/                    # Các trang màn hình:
-│   │   │   ├── HomePage.tsx          # Trang chủ giới thiệu, thống kê tổng quan, sự kiện mới
-│   │   │   ├── FamilyTreePage.tsx    # Cây gia phả tương tác, tìm kiếm, lọc đời, widget thống kê
-│   │   │   ├── NewsPage.tsx          # Trang danh sách Tư liệu - Sự kiện nội tộc
-│   │   │   ├── NewsDetailPage.tsx    # Xem chi tiết bài viết tư liệu / sự kiện
-│   │   │   └── DonatePage.tsx        # Trang ủng hộ quỹ công đức & bảng vàng vinh danh
-│   │   ├── services/                 # Gọi API backend (api, authService, memberService, newsService, donationService)
+│   │   ├── pages/                    # Các trang màn hình (Home, Tree, News, NewsDetail, Donate)
+│   │   ├── services/                 # Gọi API backend kèm cơ chế tự động Fallback dữ liệu tĩnh
 │   │   ├── store/                    # Zustand store (authStore)
 │   │   ├── types/                    # Định nghĩa kiểu dữ liệu (Member, User, NewsItem, Donation...)
 │   │   ├── utils/                    # Tiện ích cắt xén ảnh canvas (cropImage.ts)
 │   │   ├── App.tsx                   # Định tuyến Router
 │   │   ├── index.css                 # CSS toàn cục & cấu hình Tailwind
 │   │   └── main.tsx                  # Điểm khởi tạo ứng dụng React
-│   ├── nginx.conf                    # Cấu hình Nginx reverse proxy cho production
+│   ├── nginx.conf                    # Cấu hình Nginx reverse proxy cho Docker production
 │   ├── Dockerfile                    # Multi-stage build (Node builder -> Nginx Alpine)
 │   ├── package.json
 │   ├── tailwind.config.js
@@ -150,7 +152,7 @@ Portal-HoLeVan-Phai4-Chi2/
   - **- Tổng số thành viên:** Hiển thị màu xanh dương (**Blue**).
   - **- Số thành viên đã mất:** Hiển thị màu đỏ (**Red**).
   - **- Số thành viên còn sống:** Hiển thị màu xanh lá (**Green**).
-  - Sử dụng thuật toán đếm động phản hồi ngay lập tức khi quản trị viên thực hiện thao tác thêm, sửa hoặc xóa thành viên.
+  - Sử dụng thuật toán đếm động phản hồi ngay lập tức khi có thay đổi dữ liệu.
 - **Tìm kiếm & Bộ lọc:** Tìm kiếm tức thì theo họ tên thành viên; lọc hiển thị theo từng Đời cụ thể.
 - **Quản trị viên:** Thêm con cái, thêm hôn phối, chỉnh sửa thông tin chi tiết, tải ảnh chân dung bo tròn và xóa thành viên với hộp thoại xác nhận an toàn.
 
@@ -184,7 +186,7 @@ Trước khi tiến hành cài đặt, máy tính cần có:
 
 ---
 
-## 6. Hướng dẫn khởi chạy
+## 6. Hướng dẫn khởi chạy trên máy cục bộ (Local)
 
 ### Bước 1: Chuẩn bị file môi trường
 Tạo file `.env` tại thư mục gốc từ file mẫu:
@@ -230,7 +232,6 @@ Khi cần phát triển và chỉnh sửa mã nguồn với tính năng Hot-Modu
    ```bash
    docker-compose up -d mssql rag-service
    ```
-   *(Lưu ý: Không khởi chạy container `frontend` trong Docker để tránh chiếm dụng cổng 3000).*
 
 2. **Khởi chạy Backend:**
    ```bash
@@ -250,16 +251,101 @@ Khi cần phát triển và chỉnh sửa mã nguồn với tính năng Hot-Modu
 
 ---
 
-## 7. Thông tin Quản trị & Cơ sở dữ liệu
+## 7. Hướng dẫn Deploy miễn phí lên Netlify (0 VNĐ - Kết nối GitHub)
 
-### 7.1. Tài khoản Quản trị viên (Admin mặc định)
+Website đã được cấu hình cơ chế **Static Data Fallback thông minh**:
+- Khi deploy lên **Netlify**, website hoạt động độc lập 100% không cần máy chủ backend/database.
+- Toàn bộ dữ liệu 306 thành viên, cây gia phả, 150 ảnh đại diện, bài viết tư liệu sự kiện, bảng vinh danh công đức đều hoạt động mượt mà với tốc độ tức thì, có sẵn chứng chỉ HTTPS bảo mật và tên miền miễn phí trọn đời (ví dụ: `https://holevan-phai4chi2.netlify.app`).
+
+### 7.1. Các bước Deploy lần đầu qua GitHub (Tự động cập nhật)
+
+#### Bước 1: Đẩy toàn bộ mã nguồn lên GitHub
+Mở terminal tại thư mục gốc của dự án (`Portal-HoLeVan-Phai4-Chi2`):
+```bash
+git add .
+git commit -m "feat: config static data and netlify deploy"
+git push origin main
+```
+
+#### Bước 2: Đăng nhập Netlify và chọn Repository
+1. Truy cập [https://app.netlify.com/](https://app.netlify.com/) và đăng nhập bằng tài khoản **GitHub**.
+2. Nhấn nút **Add new site** ➔ Chọn **Import an existing project**.
+3. Chọn nhà cung cấp Git là **GitHub**.
+4. Cấp quyền truy cập (Authorize) và chọn repository của bạn:  
+   👉 `Portal-HoLeVan-Phai4-Chi2`.
+
+#### Bước 3: Kiểm tra cấu hình Build Settings
+Netlify sẽ tự động nhận diện file [netlify.toml](file:///d:/ChuyenNganhAI/Portal-HoLeVan-Phai4-Chi2/netlify.toml) có sẵn trong dự án:
+- **Base directory:** `frontend`
+- **Build command:** `npm run build`
+- **Publish directory:** `frontend/dist` (hoặc `dist`)
+
+#### Bước 4: Khởi chạy Deploy
+- Nhấn nút **Deploy Portal-HoLeVan-Phai4-Chi2** (hoặc **Deploy site**).
+- Chờ khoảng 1 - 2 phút để Netlify tải mã nguồn và build trang web. Khi thấy trạng thái chuyển sang **Published** màu xanh lá là website đã chính thức online!
+
+#### Bước 5: Đổi tên miền Netlify cho đẹp và dễ nhớ
+- Vào mục **Site configuration** (hoặc **Site settings**) ➔ Chọn **Change site name**.
+- Nhập tên mong muốn (ví dụ: `holevan-phai4chi2`).
+- Địa chỉ truy cập website chính thức của dòng họ sẽ là:  
+  👉 **`https://holevan-phai4chi2.netlify.app`**
+
+---
+
+### 7.2. Quy trình cập nhật dữ liệu gia phả & bài viết mới sau này
+
+Sau này, khi có thành viên mới sinh, người mất, bổ sung thông tin hoặc đăng bài viết sự kiện mới:
+
+```mermaid
+graph LR
+    A[1. Bật Docker trên máy] --> B[2. Đăng nhập Admin sửa thông tin]
+    B --> C[3. Chạy npm run export-data]
+    C --> D[4. Git commit & push lên GitHub]
+    D --> E[5. Netlify tự động cập nhật web sau 30s]
+```
+
+1. **Bước 1: Chỉnh sửa dữ liệu trên máy cá nhân**
+   - Bật Docker trên máy: `docker-compose up -d`
+   - Mở trình duyệt vào `http://localhost:3000`, đăng nhập tài khoản Quản trị viên (`0901234567` / `Admin@123`).
+   - Thêm/sửa thành viên, tải ảnh đại diện, hoặc đăng bài viết mới vào hệ thống.
+
+2. **Bước 2: Xuất dữ liệu tĩnh và build kiểm tra**
+   Mở terminal, chuyển vào thư mục `frontend` và chạy 2 lệnh sau:
+   ```bash
+   cd frontend
+   npm run export-data
+   npm run build
+   ```
+   > 💡 **Lệnh `npm run export-data` thực hiện tự động các công việc:**
+   > - Trích xuất toàn bộ dữ liệu thành viên từ SQL Server sang `src/data/members.json`.
+   > - Trích xuất danh sách bài viết sang `src/data/news.json`.
+   > - Trích xuất danh sách công đức sang `src/data/donations.json`.
+   > - Tự động đồng bộ toàn bộ ảnh đại diện và ảnh bài viết mới từ Docker sang `public/uploads/`.
+
+3. **Bước 3: Đẩy dữ liệu mới lên GitHub**
+   Quay lại thư mục gốc và đẩy commit lên GitHub:
+   ```bash
+   git add .
+   git commit -m "Cập nhật dữ liệu gia phả mới"
+   git push origin main
+   ```
+
+4. **Bước 4: Hoàn tất**
+   - Netlify sẽ tự động phát hiện commit mới trên GitHub, tự động build và xuất bản phiên bản mới nhất.
+   - Sau khoảng 30 - 60 giây, website trực tuyến sẽ tự động cập nhật dữ liệu mới cho tất cả mọi người cùng xem!
+
+---
+
+## 8. Thông tin Quản trị & Cơ sở dữ liệu
+
+### 8.1. Tài khoản Quản trị viên (Admin mặc định)
 Sau khi chạy script khởi tạo `init.sql`, hệ thống tự động có sẵn tài khoản:
 - **Số điện thoại:** `0901234567`
 - **Mật khẩu:** `Admin@123`
 
 *Quyền hạn quản trị viên: Quản lý cây gia phả (thêm, sửa, xóa thành viên, gắn quan hệ cha-mẹ-con, hôn phối, đổi ảnh đại diện), đăng tải bài viết Tư liệu - Sự kiện, duyệt và quản lý danh sách đóng góp quỹ.*
 
-### 7.2. Kết nối Cơ sở dữ liệu SQL Server
+### 8.2. Kết nối Cơ sở dữ liệu SQL Server
 Cổng `1433` đã được ánh xạ ra máy host. Có thể kết nối qua Azure Data Studio, DBeaver hoặc SQL Server Management Studio (SSMS):
 - **Host / Server:** `localhost,1433` (hoặc `127.0.0.1,1433`)
 - **Authentication:** SQL Server Authentication
@@ -269,7 +355,7 @@ Cổng `1433` đã được ánh xạ ra máy host. Có thể kết nối qua Az
 
 ---
 
-## 8. Đồng bộ dữ liệu vào Trợ lý AI (RAG Ingestion)
+## 9. Đồng bộ dữ liệu vào Trợ lý AI (RAG Ingestion)
 
 Mỗi khi dữ liệu gia phả có sự thay đổi lớn hoặc sau khi nạp dữ liệu ban đầu, bạn có thể gọi API để AI nạp vector kiến thức mới nhất:
 
@@ -283,7 +369,7 @@ Invoke-RestMethod -Method Post -Uri http://localhost:8000/ingest/members
 
 ---
 
-## 9. Xử lý sự cố thường gặp (Troubleshooting)
+## 10. Xử lý sự cố thường gặp (Troubleshooting)
 
 ### 1. Xung đột cổng `:3000` (`Port 3000 is in use`)
 - **Nguyên nhân:** Container `portal_frontend` của Docker đang chạy và chiếm giữ cổng 3000.
