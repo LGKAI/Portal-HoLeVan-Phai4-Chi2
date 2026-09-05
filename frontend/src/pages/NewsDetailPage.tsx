@@ -60,11 +60,13 @@ const NewsDetailPage: React.FC = () => {
       </div>
 
       {news.thumbnail_url && (
-        <img 
-          src={news.thumbnail_url} 
-          alt={news.title} 
-          className="w-full h-auto max-h-[500px] object-cover rounded-lg shadow-sm mb-8"
-        />
+        <div className="flex justify-center mb-8">
+          <img 
+            src={news.thumbnail_url} 
+            alt={news.title} 
+            className="max-w-full h-auto rounded-lg shadow-md border border-[#E8D8C3]/50"
+          />
+        </div>
       )}
 
       <div className="prose max-w-none prose-lg">

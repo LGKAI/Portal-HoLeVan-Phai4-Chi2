@@ -77,7 +77,7 @@ const NewsPage: React.FC = () => {
       alert("Vui lòng nhập đủ tiêu đề và nội dung.");
       return;
     }
-    
+
     try {
       const formData = new FormData();
       formData.append('title', newTitle);
@@ -87,7 +87,7 @@ const NewsPage: React.FC = () => {
       } else {
         formData.append('thumbnail_url', newThumb);
       }
-      
+
       if (editingId) {
         await newsService.updateNews(editingId, formData);
         alert("Cập nhật thành công!");
@@ -115,11 +115,11 @@ const NewsPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div className="flex justify-between items-end mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện dòng họ</h1>
+          <h1 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện Dòng họ</h1>
           <p className="text-gray-600">Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.</p>
         </div>
         {isAdmin && (
-          <button 
+          <button
             onClick={openAdd}
             className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium shadow transition-colors"
           >
@@ -133,9 +133,9 @@ const NewsPage: React.FC = () => {
       ) : news.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {news.map((item) => (
-            <NewsCard 
-              key={item.id} 
-              news={item} 
+            <NewsCard
+              key={item.id}
+              news={item}
               isAdmin={isAdmin}
               onEdit={openEdit}
               onDelete={handleDelete}
@@ -193,7 +193,7 @@ const NewsPage: React.FC = () => {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary min-h-[200px]"
                 />
               </div>
-              
+
               <div className="flex justify-end gap-3 mt-6 pt-4 border-t">
                 <button
                   type="button"

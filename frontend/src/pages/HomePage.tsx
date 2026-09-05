@@ -30,15 +30,15 @@ const HomePage: React.FC = () => {
     <div className="bg-cream min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover z-0 bg-no-repeat"
-          style={{ 
+          style={{
             backgroundImage: 'url("/background.jpg")',
             backgroundPosition: 'center 25%'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10" />
-        
+
         <div className="relative z-20 text-center text-white px-4 max-w-6xl mx-auto mt-10">
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold mb-12 drop-shadow-2xl text-white tracking-wide sm:whitespace-nowrap">
             CỔNG THÔNG TIN DÒNG HỌ
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-dark mb-4">Kết nối Truyền thống & Tương lai</h2>
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow border border-primary/20 shadow-sm">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-dark">Gia Phả Số</h3>
               <p className="text-gray-600 mb-6 line-clamp-3">
-                Hệ thống phả hệ trực quan giúp con cháu dễ dàng tra cứu, tìm hiểu về nguồn cội và mối quan hệ họ hàng trong dòng họ.
+                Hệ thống phả hệ trực quan giúp con cháu dễ dàng tra cứu, tìm hiểu về nguồn cội và mối quan hệ trong dòng họ.
               </p>
               <Link to="/tree" className="text-primary font-medium flex items-center justify-center gap-1 hover:underline">
                 Khám phá ngay <ChevronRight size={16} />
@@ -102,7 +102,7 @@ const HomePage: React.FC = () => {
               <p className="text-gray-600 mb-6 line-clamp-3">
                 Hệ thống trí tuệ nhân tạo học dữ liệu từ gia phả, sẵn sàng giải đáp mọi thắc mắc của con cháu về dòng họ 24/7.
               </p>
-              <button 
+              <button
                 onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
                 className="text-blue-600 font-medium flex items-center justify-center gap-1 hover:underline mx-auto"
               >
@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-10">
             <div>
-              <h2 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện dòng họ</h2>
+              <h2 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện Dòng họ</h2>
               <div className="w-16 h-1 bg-primary"></div>
             </div>
             {news.length > 0 && (
@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
               </Link>
             )}
           </div>
-          
+
           {loadingNews ? (
             <LoadingSpinner />
           ) : news.length > 0 ? (
