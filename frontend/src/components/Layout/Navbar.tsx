@@ -21,8 +21,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Trang chủ', path: '/' },
     { name: 'Gia phả', path: '/tree' },
-    { name: 'Sự kiện', path: '/news' },
-    { name: 'Tư liệu', path: '/documents' },
+    { name: 'Tư liệu - Sự kiện', path: '/news' },
     { name: 'Donate', path: '/donate' },
   ];
 
@@ -34,8 +33,8 @@ const Navbar: React.FC = () => {
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0 flex items-center gap-2">
                 <img src="/favicon.ico" alt="Logo" className="w-8 h-8 object-contain" />
-                <span className="font-bold text-lg hidden sm:block">HỌ LÊ VĂN - PHÁI 4 - CHI 2</span>
-                <span className="font-bold text-lg sm:hidden">HỌ LÊ VĂN</span>
+                <span className="font-bold text-lg hidden sm:block">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</span>
+                <span className="font-bold text-lg sm:hidden">CHI 2 - PHÁI 4</span>
               </Link>
             </div>
 

@@ -30,8 +30,8 @@ COPY --from=builder /app/dist ./dist
 # Copy file sql vì tsc không build các file không phải ts
 COPY --from=builder /app/src/config/init.sql ./dist/config/init.sql
 
-# Thư mục uploads cho avatars và documents
-RUN mkdir -p /app/uploads/avatars /app/uploads/documents
+# Thư mục uploads cho avatars và thumbnails
+RUN mkdir -p /app/uploads/avatars /app/uploads/thumbnails
 
 # Non-root user để bảo mật
 RUN addgroup -g 1001 -S nodejs && adduser -S nodejs -u 1001

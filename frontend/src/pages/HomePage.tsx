@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, FileText, Bot, ChevronRight } from 'lucide-react';
+import { Users, Calendar, Bot, ChevronRight } from 'lucide-react';
 import NewsCard from '../components/News/NewsCard';
 import { newsService } from '../services/newsService';
 import { NewsItem } from '../types';
@@ -83,14 +83,14 @@ const HomePage: React.FC = () => {
 
             <div className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow border border-primary/20 shadow-sm">
               <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText size={32} className="text-secondary" />
+                <Calendar size={32} className="text-secondary-dark" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-dark">Tư Liệu Lịch Sử</h3>
+              <h3 className="text-xl font-bold mb-3 text-dark">Tư Liệu - Sự Kiện</h3>
               <p className="text-gray-600 mb-6 line-clamp-3">
-                Kho lưu trữ các văn bản, hình ảnh, video về các sự kiện quan trọng, lịch sử hình thành và phát triển của dòng họ.
+                Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện truyền thống quan trọng của con cháu dòng họ.
               </p>
-              <Link to="/documents" className="text-secondary font-medium flex items-center justify-center gap-1 hover:underline">
-                Xem tư liệu <ChevronRight size={16} />
+              <Link to="/news" className="text-secondary-dark font-medium flex items-center justify-center gap-1 hover:underline">
+                Xem sự kiện <ChevronRight size={16} />
               </Link>
             </div>
 
@@ -116,7 +116,7 @@ const HomePage: React.FC = () => {
       {/* Stats Section */}
       <section className="py-12 bg-primary-dark text-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2 text-secondary">8+</div>
               <div className="text-sm uppercase tracking-wider text-secondary">Đời</div>
@@ -129,10 +129,6 @@ const HomePage: React.FC = () => {
               <div className="text-4xl font-bold mb-2 text-secondary">250+</div>
               <div className="text-sm uppercase tracking-wider text-secondary">Năm lịch sử</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold mb-2 text-secondary">20+</div>
-              <div className="text-sm uppercase tracking-wider text-secondary">Tài liệu lưu trữ</div>
-            </div>
           </div>
         </div>
       </section>
@@ -142,7 +138,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-10">
             <div>
-              <h2 className="text-3xl font-bold text-dark mb-2">Sự kiện dòng họ</h2>
+              <h2 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện dòng họ</h2>
               <div className="w-16 h-1 bg-primary"></div>
             </div>
             {news.length > 0 && (
@@ -162,7 +158,7 @@ const HomePage: React.FC = () => {
             </div>
           ) : (
             <div className="text-center py-12 bg-cream/50 rounded-lg border border-dashed border-primary/30">
-              <p className="text-gray-500 italic">Chưa có sự kiện nào được đăng tải.</p>
+              <p className="text-gray-500 italic">Chưa có tư liệu - sự kiện nào được đăng tải.</p>
             </div>
           )}
         </div>

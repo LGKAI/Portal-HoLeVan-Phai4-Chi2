@@ -193,6 +193,25 @@ const FamilyTreePage: React.FC = () => {
     return result;
   }, [members, filterGen, searchTerm]);
 
+  const memberStats = React.useMemo(() => {
+    let total = 0;
+    let deceased = 0;
+    let living = 0;
+
+    for (let i = 0; i < members.length; i++) {
+      const m = members[i];
+      total++;
+      const isDeceased = Boolean(m.is_deceased) || String(m.is_deceased) === '1' || String(m.is_deceased).toLowerCase() === 'true';
+      if (isDeceased) {
+        deceased++;
+      } else {
+        living++;
+      }
+    }
+
+    return { total, deceased, living };
+  }, [members]);
+
   const availableMothers = React.useMemo(() => {
     if (!parentIdForAdd) return [];
     const parent = members.find(m => m.id === parentIdForAdd);
@@ -248,6 +267,24 @@ const FamilyTreePage: React.FC = () => {
 
       {/* Canvas Area */}
       <div className="flex-1 w-full relative bg-[#FFFDF5]">
+        {/* Thống kê thành viên - Góc trên trái (ngay dưới ô tìm kiếm) */}
+        <div className="absolute top-3 left-4 z-10 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-md border border-[#E8D8C3] text-xs sm:text-sm select-none pointer-events-auto">
+          <div className="flex flex-col gap-1.5 text-gray-700 font-medium">
+            <div className="flex items-center gap-2">
+              <span className="text-blue-500 font-bold">-</span>
+              <span>Tổng số thành viên: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-red-500 font-bold">-</span>
+              <span>Số thành viên đã mất: <strong className="font-bold text-red-600">{memberStats.deceased}</strong></span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-500 font-bold">-</span>
+              <span>Số thành viên còn sống: <strong className="font-bold text-green-600">{memberStats.living}</strong></span>
+            </div>
+          </div>
+        </div>
+
         <TreeCanvas 
           members={filteredMembers}
           onAddChild={handleAddChild}

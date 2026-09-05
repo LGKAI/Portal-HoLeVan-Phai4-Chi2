@@ -20,7 +20,7 @@ const NewsDetailPage: React.FC = () => {
         const data = await newsService.getNewsById(slug);
         setNews(data);
       } catch (err) {
-        setError('Không tìm thấy sự kiện hoặc có lỗi xảy ra.');
+        setError('Không tìm thấy tư liệu - sự kiện hoặc có lỗi xảy ra.');
       } finally {
         setLoading(false);
       }

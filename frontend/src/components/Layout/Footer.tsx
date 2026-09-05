@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-secondary">HỌ LÊ VĂN - PHÁI 4 - CHI 2</h3>
+            <h3 className="text-xl font-bold mb-4 text-secondary">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               Cổng thông tin lưu trữ gia phả, tư liệu và kết nối con cháu dòng họ Lê Văn - Phái 4 - Chi 2.
             </p>
@@ -23,8 +23,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4 text-secondary">Liên kết</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><a href="/tree" className="hover:text-white transition-colors">Gia phả số</a></li>
-              <li><a href="/news" className="hover:text-white transition-colors">Sự kiện nội tộc</a></li>
-              <li><a href="/documents" className="hover:text-white transition-colors">Tư liệu lịch sử</a></li>
+              <li><a href="/news" className="hover:text-white transition-colors">Tư liệu - Sự kiện</a></li>
               <li><a href="/donate" className="hover:text-white transition-colors">Quỹ phát triển</a></li>
             </ul>
           </div>

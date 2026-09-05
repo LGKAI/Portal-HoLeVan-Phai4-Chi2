@@ -16,8 +16,6 @@ const storage = multer.diskStorage({
         let dest = path.join(uploadDir, 'general');
         if (file.fieldname === 'avatar') {
             dest = path.join(uploadDir, 'avatars');
-        } else if (file.fieldname === 'document') {
-            dest = path.join(uploadDir, 'documents');
         } else if (file.fieldname === 'thumbnail') {
             dest = path.join(uploadDir, 'thumbnails');
         }

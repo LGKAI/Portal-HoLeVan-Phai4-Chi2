@@ -23,7 +23,7 @@ const NewsPage: React.FC = () => {
       const res = await newsService.getNewsList({});
       setNews(res);
     } catch (error) {
-      console.error("Lỗi khi tải sự kiện:", error);
+      console.error("Lỗi khi tải tư liệu - sự kiện:", error);
     } finally {
       setLoading(false);
     }
@@ -61,12 +61,12 @@ const NewsPage: React.FC = () => {
   };
 
   const handleDelete = async (id: number) => {
-    if (window.confirm("Bạn có chắc chắn muốn xóa sự kiện này?")) {
+    if (window.confirm("Bạn có chắc chắn muốn xóa bài viết này?")) {
       try {
         await newsService.deleteNews(id);
         fetchNews();
       } catch (error) {
-        alert("Lỗi khi xóa sự kiện.");
+        alert("Lỗi khi xóa bài viết.");
       }
     }
   };
@@ -96,7 +96,7 @@ const NewsPage: React.FC = () => {
         formData.append('category', 'event');
         formData.append('is_published', 'true');
         await newsService.createNews(formData);
-        alert("Đăng sự kiện thành công!");
+        alert("Đăng bài thành công!");
       }
       setIsAddOpen(false);
       setEditingId(null);
@@ -106,8 +106,8 @@ const NewsPage: React.FC = () => {
       setFile(null);
       fetchNews();
     } catch (error: any) {
-      console.error("Lỗi khi lưu sự kiện:", error?.response?.data || error);
-      alert("Lỗi khi lưu sự kiện: " + (error?.response?.data?.message || error.message));
+      console.error("Lỗi khi lưu bài viết:", error?.response?.data || error);
+      alert("Lỗi khi lưu bài viết: " + (error?.response?.data?.message || error.message));
     }
   };
 
@@ -115,15 +115,15 @@ const NewsPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div className="flex justify-between items-end mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-dark mb-2">Sự kiện dòng họ</h1>
-          <p className="text-gray-600">Nơi cập nhật thông báo và các sự kiện quan trọng của dòng họ.</p>
+          <h1 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện dòng họ</h1>
+          <p className="text-gray-600">Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.</p>
         </div>
         {isAdmin && (
           <button 
             onClick={openAdd}
             className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium shadow transition-colors"
           >
-            + Đăng sự kiện
+            + Đăng bài mới
           </button>
         )}
       </div>
@@ -144,7 +144,7 @@ const NewsPage: React.FC = () => {
         </div>
       ) : (
         <div className="text-center py-16 bg-cream rounded-lg border border-dashed border-gray-300">
-          <p className="text-gray-500 italic">Hiện tại chưa có sự kiện nào được đăng tải.</p>
+          <p className="text-gray-500 italic">Hiện tại chưa có tư liệu hoặc sự kiện nào được đăng tải.</p>
         </div>
       )}
 
@@ -152,7 +152,7 @@ const NewsPage: React.FC = () => {
       {isAddOpen && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            <h2 className="text-2xl font-bold mb-4 text-dark">{editingId ? 'Sửa sự kiện' : 'Đăng sự kiện mới'}</h2>
+            <h2 className="text-2xl font-bold mb-4 text-dark">{editingId ? 'Sửa bài viết' : 'Đăng tư liệu / sự kiện mới'}</h2>
             <form onSubmit={handleAdd} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Tiêu đề *</label>

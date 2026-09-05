@@ -1,6 +1,8 @@
-# Portal Họ Lê Văn - Phái 4 - Chi 2
+# Portal Chi 2 - Phái 4 - Họ Lê Văn
 
-Hệ thống Cổng thông tin & Gia phả số hóa dòng họ **Lê Văn (Phái 4 - Chi 2)**. Dự án kết hợp công nghệ web hiện đại với trí tuệ nhân tạo (RAG - Retrieval Augmented Generation) nhằm bảo tồn, quản lý cây gia phả tương tác, cập nhật tin tức sự kiện dòng họ, lưu trữ tài liệu lịch sử, quản lý quỹ công đức và hỗ trợ con cháu tra cứu thông tin cội nguồn qua Trợ lý AI thông minh.
+Hệ thống **Cổng thông tin & Gia phả số hóa** dòng họ **Lê Văn (Chi 2 - Phái 4)** — Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị. 
+
+Dự án kết hợp công nghệ web hiện đại với trí tuệ nhân tạo (**RAG - Retrieval Augmented Generation**) nhằm bảo tồn và phát huy truyền thống tổ tiên, số hóa cây gia phả tương tác đa thế hệ, cập nhật tư liệu và sự kiện dòng họ, quản lý quỹ công đức minh bạch, đồng thời hỗ trợ con cháu tra cứu cội nguồn nhanh chóng qua **Trợ lý AI dòng họ**.
 
 ---
 
@@ -8,38 +10,41 @@ Hệ thống Cổng thông tin & Gia phả số hóa dòng họ **Lê Văn (Phá
 
 Hệ thống được thiết kế theo kiến trúc Microservices / Client-Server tách biệt, bao gồm 4 thành phần chính:
 
-### Frontend (Giao diện Web)
+### 1.1. Frontend (Giao diện Web)
 - **Framework:** React 18, Vite 5
 - **Ngôn ngữ:** TypeScript
-- **Styling:** Tailwind CSS, Lucide React (bộ icon hiện đại)
-- **Quản lý State:** Zustand
-- **Sơ đồ cây gia phả tương tác:** `@xyflow/react` (React Flow v12) với thuật toán phân tầng đa thê, nhánh con tự động căn chỉnh và xử lý chồng chéo
-- **Cắt xén ảnh chân dung:** `react-easy-crop`
+- **Styling:** Tailwind CSS, Lucide React (bộ icon tối giản hiện đại)
+- **Quản lý State:** Zustand (quản lý trạng thái phiên đăng nhập, thông tin người dùng)
+- **Cây gia phả tương tác:** `@xyflow/react` (React Flow v12)
+  - Thuật toán căn chỉnh layout tự động phân tầng con cái theo từng đời vợ (Chánh phối, Thứ phối, Thứ thứ phối...).
+  - Đường nối huyết thống trực tiếp từ trung điểm của người cha và người mẹ sinh thành.
+  - Bảng thống kê động thời gian thực ở góc trên bên trái: **Tổng số thành viên** (Xanh dương), **Số thành viên đã mất** (Đỏ), **Số thành viên còn sống** (Xanh lá).
+- **Cắt xén ảnh chân dung:** `react-easy-crop` (cắt ảnh bo tròn chuẩn avatar trước khi tải lên)
 - **Định tuyến SPA:** React Router DOM v6
 - **Cấu hình Cổng:** Cố định duy nhất tại cổng `:3000` (`strictPort: true`)
 
-### Backend (API Server)
+### 1.2. Backend (API Server)
 - **Framework:** Node.js, Express.js
 - **Ngôn ngữ:** TypeScript
 - **Database Driver:** `mssql` (kết nối Microsoft SQL Server)
-- **Xác thực:** JSON Web Token (JWT) + bcryptjs mã hóa mật khẩu
-- **Quản lý Upload:** Multer (xử lý tải ảnh đại diện, ảnh tin tức, tài liệu số)
+- **Xác thực:** JSON Web Token (JWT) + mã hóa mật khẩu `bcryptjs`
+- **Quản lý Upload:** `multer` (xử lý upload ảnh chân dung thành viên và ảnh đại diện bài viết)
 - **Bảo mật & Middleware:** Helmet, CORS, Express Async Errors
 - **Cổng dịch vụ:** Chạy tại cổng `:5000`
 
-### RAG Service (Trợ lý AI Tra cứu Dòng họ)
+### 1.3. RAG Service (Trợ lý AI Tra cứu Dòng họ)
 - **Framework:** Python 3.10+, FastAPI, Uvicorn
 - **Framework AI:** LangChain (LangChain Core, LangChain Community, LangChain Chroma)
-- **Vector Database:** ChromaDB (lưu trữ vector embedding cục bộ)
-- **Mô hình AI (Local LLM via Ollama):**
-  - **LLM:** `qwen2.5:7b` (hỗ trợ tiếng Việt xuất sắc)
+- **Vector Database:** ChromaDB (lưu trữ vector embeddings cục bộ)
+- **Mô hình AI cục bộ (Local LLM via Ollama):**
+  - **LLM:** `qwen2.5:7b` (hỗ trợ tiếng Việt tự nhiên, chuẩn xác)
   - **Embedding Model:** `nomic-embed-text`
 - **Cổng dịch vụ:** Chạy tại cổng `:8000`
 
-### Cơ sở dữ liệu & Hạ tầng
-- **Database:** Microsoft SQL Server 2022 Developer Edition (Collation `Vietnamese_CI_AS`)
+### 1.4. Cơ sở dữ liệu & Hạ tầng
+- **Cơ sở dữ liệu:** Microsoft SQL Server 2022 Developer Edition (Collation `Vietnamese_CI_AS` chuẩn tiếng Việt)
 - **Containerization:** Docker & Docker Compose
-- **Web Server Production:** Nginx Alpine (Reverse Proxy & Serve static files)
+- **Web Server Production:** Nginx Alpine (Reverse Proxy & Serve static files React)
 
 ---
 
@@ -54,8 +59,8 @@ Hệ thống được thiết kế theo kiến trúc Microservices / Client-Serv
 | **Ollama (Host)** | **`:11434`** | Máy host | Cung cấp inference LLM & Embeddings |
 
 > [!NOTE]
-> **Về vấn đề cổng `:3000` vs `:3001`**: 
-> Cấu hình Vite đã được thiết lập `strictPort: true`. Frontend sẽ **luôn luôn cố định ở cổng `:3000`**, không còn tình trạng tự ý nhảy sang `:3001` khi xảy ra xung đột. Nếu cổng `:3000` đang bị chiếm giữ (ví dụ bởi container `portal_frontend`), Vite sẽ thông báo rõ ràng để bạn dừng container thay vì chuyển cổng ngầm.
+> **Về cấu hình cổng `:3000`:** 
+> Cấu hình Vite đã được thiết lập `strictPort: true`. Frontend sẽ **luôn luôn chạy cố định ở cổng `:3000`**, ngăn chặn việc tự ý nhảy sang `:3001` khi xảy ra xung đột.
 
 ---
 
@@ -66,56 +71,67 @@ Portal-HoLeVan-Phai4-Chi2/
 ├── .env                              # File biến môi trường thực tế
 ├── .env.example                      # File mẫu biến môi trường
 ├── .gitignore                        # Cấu hình bỏ qua file trong Git
-├── docker-compose.yml                # Cấu hình khởi chạy trọn gói các dịch vụ Docker
+├── docker-compose.yml                # Cấu hình Docker Compose toàn bộ hệ thống
 ├── README.md                         # Tài liệu hướng dẫn dự án
 │
 ├── backend/                          # Mã nguồn Backend (Node.js/Express + TypeScript)
 │   ├── src/
-│   │   ├── config/                   # Cấu hình DB (db.ts) & script tạo bảng (init.sql)
-│   │   ├── controllers/              # Bộ điều khiển (auth, members, news, documents, donations)
-│   │   ├── middleware/               # Xác thực JWT (auth.ts), xử lý upload file (upload.ts)
-│   │   ├── routes/                   # Khai báo các endpoints API
+│   │   ├── config/                   # Kết nối CSDL (db.ts) & script tạo bảng (init.sql)
+│   │   ├── controllers/              # Bộ điều khiển (auth, members, news, donations)
+│   │   ├── middleware/               # Xác thực JWT (auth.ts), xử lý upload ảnh (upload.ts)
+│   │   ├── routes/                   # Khai báo các endpoints API (/api/auth, /members, /news, /donations)
 │   │   ├── types/                    # Định nghĩa TypeScript interfaces
-│   │   └── server.ts                 # File khởi động chính của Backend
-│   ├── .env.example                  # Mẫu biến môi trường cho Backend
-│   ├── Dockerfile                    # Đóng gói container Backend
+│   │   └── server.ts                 # Điểm khởi động Express server
+│   ├── .env.example                  # Mẫu biến môi trường Backend
+│   ├── Dockerfile                    # Dockerfile đóng gói container Backend
 │   ├── package.json
 │   └── tsconfig.json
 │
 ├── frontend/                         # Mã nguồn Frontend (React 18 + Vite + TypeScript)
-│   ├── public/                       # Tài nguyên tĩnh (ảnh nền background.jpg, qr.jpg, favicon.ico)
+│   ├── public/                       # Tài nguyên tĩnh (favicon.ico, qr.jpg...)
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Auth/                 # Modal đăng nhập (LoginModal), đăng ký (RegisterModal)
-│   │   │   ├── Chatbot/              # Giao diện hộp chat trợ lý AI (ChatbotPanel)
-│   │   │   ├── common/               # Component dùng chung (LoadingSpinner)
-│   │   │   ├── FamilyTree/           # Hệ thống Cây gia phả (TreeCanvas, MemberNode, Edges...)
-│   │   │   ├── Layout/               # Thanh điều hướng (Navbar) và chân trang (Footer)
-│   │   │   └── News/                 # Thẻ hiển thị sự kiện/tin tức (NewsCard)
+│   │   │   ├── Chatbot/              # Hộp chat trợ lý AI nổi góc dưới phải (ChatbotPanel)
+│   │   │   ├── common/               # Component dùng chung (LoadingSpinner...)
+│   │   │   ├── FamilyTree/           # Thành phần Cây gia phả:
+│   │   │   │   ├── TreeCanvas.tsx    # Canvas hiển thị cây & thuật toán sắp xếp vị trí node/edge
+│   │   │   │   ├── MemberNode.tsx    # Thẻ thành viên (màu sắc theo giới tính, viền theo tình trạng sinh/tử)
+│   │   │   │   ├── MemberFormModal.tsx # Form thêm/sửa thông tin thành viên (tích hợp crop ảnh đại diện)
+│   │   │   │   ├── CustomFamilyEdge.tsx # Đường nối liên kết huyết thống cha - mẹ - con
+│   │   │   │   ├── CustomOverSpouseEdge.tsx
+│   │   │   │   └── CustomSpouseStraightEdge.tsx
+│   │   │   ├── Layout/               # Thanh điều hướng (Navbar) & Chân trang (Footer)
+│   │   │   └── News/                 # Thẻ bài viết tư liệu & sự kiện (NewsCard)
 │   │   ├── hooks/                    # Custom hooks (useChat, useFamilyTree)
-│   │   ├── pages/                    # Các trang màn hình chính (Home, Tree, News, Docs, Donate)
-│   │   ├── services/                 # Kết nối gọi API backend (api, memberService, newsService...)
-│   │   ├── store/                    # Quản lý state toàn cục Zustand (authStore)
-│   │   ├── types/                    # Định nghĩa kiểu dữ liệu TypeScript
-│   │   ├── utils/                    # Tiện ích cắt ảnh (cropImage.ts)
-│   │   ├── App.tsx                   # Khởi tạo Router và bố cục chính
-│   │   ├── index.css                 # CSS chung & cấu hình Tailwind
+│   │   ├── pages/                    # Các trang màn hình:
+│   │   │   ├── HomePage.tsx          # Trang chủ giới thiệu, thống kê tổng quan, sự kiện mới
+│   │   │   ├── FamilyTreePage.tsx    # Cây gia phả tương tác, tìm kiếm, lọc đời, widget thống kê
+│   │   │   ├── NewsPage.tsx          # Trang danh sách Tư liệu - Sự kiện nội tộc
+│   │   │   ├── NewsDetailPage.tsx    # Xem chi tiết bài viết tư liệu / sự kiện
+│   │   │   └── DonatePage.tsx        # Trang ủng hộ quỹ công đức & bảng vàng vinh danh
+│   │   ├── services/                 # Gọi API backend (api, authService, memberService, newsService, donationService)
+│   │   ├── store/                    # Zustand store (authStore)
+│   │   ├── types/                    # Định nghĩa kiểu dữ liệu (Member, User, NewsItem, Donation...)
+│   │   ├── utils/                    # Tiện ích cắt xén ảnh canvas (cropImage.ts)
+│   │   ├── App.tsx                   # Định tuyến Router
+│   │   ├── index.css                 # CSS toàn cục & cấu hình Tailwind
 │   │   └── main.tsx                  # Điểm khởi tạo ứng dụng React
 │   ├── nginx.conf                    # Cấu hình Nginx reverse proxy cho production
-│   ├── Dockerfile                    # Multi-stage Dockerfile (Build React -> Nginx Alpine)
+│   ├── Dockerfile                    # Multi-stage build (Node builder -> Nginx Alpine)
 │   ├── package.json
 │   ├── tailwind.config.js
-│   └── vite.config.ts                # Cấu hình Vite (khóa cố định port: 3000, strictPort: true)
+│   └── vite.config.ts                # Cấu hình Vite (port: 3000, strictPort: true, proxy API)
 │
-└── rag-service/                      # Dịch vụ Trợ lý AI (FastAPI + LangChain + ChromaDB)
+└── rag-service/                      # Dịch vụ Trợ lý AI (Python FastAPI + LangChain + ChromaDB)
     ├── src/
-    │   ├── config.py                 # Cấu hình biến môi trường RAG
+    │   ├── config.py                 # Cấu hình tham số RAG & Ollama
     │   ├── ingest.py                 # Kịch bản đồng bộ dữ liệu gia phả vào Vector Database
-    │   ├── main.py                   # FastAPI app (cung cấp API /chat, /ingest, /health)
-    │   ├── models.py                 # Pydantic schemas cho dữ liệu request/response
+    │   ├── main.py                   # FastAPI app (API endpoints: /chat, /ingest, /health)
+    │   ├── models.py                 # Pydantic schemas cho request/response
     │   └── rag_pipeline.py           # Luồng truy xuất thông tin & sinh câu trả lời RAG
     ├── data/
-    │   └── raw_documents/            # Thư mục chứa tài liệu thô phục vụ nạp vector
+    │   └── raw_documents/            # Thư mục lưu trữ văn bản thô phục vụ nạp kiến thức bổ sung
     ├── .env.example                  # Mẫu biến môi trường cho RAG Service
     ├── Dockerfile
     └── requirements.txt              # Danh sách thư viện Python
@@ -123,12 +139,44 @@ Portal-HoLeVan-Phai4-Chi2/
 
 ---
 
-## 4. Yêu cầu môi trường (Prerequisites)
+## 4. Các tính năng cốt lõi
 
-Trước khi bắt đầu, hãy đảm bảo máy tính của bạn đã cài đặt:
-1. **Docker Desktop:** [Tải Docker](https://www.docker.com/) (hỗ trợ WSL2 trên Windows).
-2. **Node.js:** Phiên bản 18 LTS hoặc 20 LTS (nếu muốn phát triển cục bộ).
-3. **Ollama:** [Tải Ollama](https://ollama.com/) (dùng cho tính năng Trợ lý AI). Sau khi cài đặt, tải 2 mô hình sau:
+### 4.1. Cây gia phả số hóa tương tác (`/tree`)
+- **Hiển thị trực quan:** Xem toàn bộ cây gia phả nhiều thế hệ (từ Đời thứ 9 đến Đời thứ 16 theo thứ bậc Phái 4).
+- **Quan hệ hôn phối & huyết thống:**
+  - Tự động nhận diện thứ bậc vợ chồng: *Chánh phối*, *Thứ phối*, *Thứ thứ phối*...
+  - Cho phép chỉ định chính xác **Người mẹ sinh thành** trong gia đình đa thê để đường nối huyết thống xuất phát chuẩn xác từ trung điểm giữa người cha và người mẹ tương ứng.
+- **Thống kê thời gian thực (Góc trên bên trái, dưới ô tìm kiếm):**
+  - **- Tổng số thành viên:** Hiển thị màu xanh dương (**Blue**).
+  - **- Số thành viên đã mất:** Hiển thị màu đỏ (**Red**).
+  - **- Số thành viên còn sống:** Hiển thị màu xanh lá (**Green**).
+  - Sử dụng thuật toán đếm động phản hồi ngay lập tức khi quản trị viên thực hiện thao tác thêm, sửa hoặc xóa thành viên.
+- **Tìm kiếm & Bộ lọc:** Tìm kiếm tức thì theo họ tên thành viên; lọc hiển thị theo từng Đời cụ thể.
+- **Quản trị viên:** Thêm con cái, thêm hôn phối, chỉnh sửa thông tin chi tiết, tải ảnh chân dung bo tròn và xóa thành viên với hộp thoại xác nhận an toàn.
+
+### 4.2. Tư liệu - Sự kiện dòng họ (`/news`)
+- Cập nhật các thông báo, hoạt động truyền thống (Lễ tảo mộ, chạp mả, giỗ tổ, khuyến học...).
+- Đăng tải bài viết kèm hình ảnh minh họa, tự động tạo slug thân thiện, đếm số lượt xem và định dạng thời gian tiếng Việt.
+- Quản trị viên có toàn quyền đăng mới, chỉnh sửa nội dung và xóa bài viết.
+
+### 4.3. Quỹ phát triển & Công đức (`/donate`)
+- Cung cấp thông tin tài khoản ngân hàng và mã QR thanh toán nhanh phục vụ việc đóng góp xây dựng từ đường, tu bổ lăng mộ và quỹ khuyến học.
+- Bảng vàng vinh danh công đức minh bạch, cập nhật công khai các khoản ủng hộ, có bộ lọc theo mức tiền đóng góp và tìm kiếm nhà hảo tâm.
+- Quản trị viên có quyền ghi nhận hoặc xác thực các khoản công đức.
+
+### 4.4. Trợ lý AI Dòng họ (AI Chatbot)
+- Trợ lý AI thông minh sẵn sàng trò chuyện và giải đáp 24/7.
+- Sử dụng mô hình ngôn ngữ lớn cục bộ qua Ollama (`qwen2.5:7b`), bảo mật tuyệt đối dữ liệu nội bộ dòng họ.
+- Tích hợp kỹ thuật **RAG (Retrieval Augmented Generation)**: tự động truy xuất thông tin từ cơ sở dữ liệu phả hệ để trả lời chính xác các câu hỏi về tổ tiên, quan hệ gia đình, vai vế họ hàng.
+
+---
+
+## 5. Yêu cầu môi trường (Prerequisites)
+
+Trước khi tiến hành cài đặt, máy tính cần có:
+1. **Docker Desktop:** [Tải Docker](https://www.docker.com/) (yêu cầu kích hoạt WSL2 trên Windows).
+2. **Node.js:** Phiên bản 18 LTS hoặc 20 LTS (nếu muốn chạy phát triển cục bộ).
+3. **Ollama:** [Tải Ollama](https://ollama.com/) (dành cho tính năng Trợ lý AI). Sau khi cài đặt, tải 2 mô hình sau:
    ```bash
    ollama pull qwen2.5:7b
    ollama pull nomic-embed-text
@@ -136,119 +184,122 @@ Trước khi bắt đầu, hãy đảm bảo máy tính của bạn đã cài đ
 
 ---
 
-## 5. Hướng dẫn khởi chạy
+## 6. Hướng dẫn khởi chạy
 
-### Bước 1: Chuẩn bị biến môi trường
-Sao chép file mẫu `.env.example` thành `.env` tại thư mục gốc của dự án:
+### Bước 1: Chuẩn bị file môi trường
+Tạo file `.env` tại thư mục gốc từ file mẫu:
 ```bash
+# Trên Linux/macOS
 cp .env.example .env
+
+# Trên Windows PowerShell
+Copy-Item .env.example .env
 ```
-*(Trên Windows PowerShell: `Copy-Item .env.example .env`)*
 
 ---
 
-### Chế độ 1: Khởi chạy trọn gói bằng Docker Compose (Khuyên dùng)
-Chế độ này sẽ khởi chạy tất cả 4 container: SQL Server, Backend, Frontend (Nginx), và RAG Service.
+### Cách 1: Khởi chạy trọn gói bằng Docker Compose (Khuyên dùng)
+Phương thức này sẽ tự động build và chạy toàn bộ 4 containers: Database MSSQL, Backend API, Frontend Web (Nginx), và RAG AI Service.
 
-1. **Build và khởi động tất cả container:**
+1. **Khởi động toàn bộ hệ thống:**
    ```bash
    docker-compose up -d --build
    ```
 
-2. **Khởi tạo bảng dữ liệu (chỉ cần chạy lần đầu tiên):**
+2. **Khởi tạo bảng cơ sở dữ liệu (chỉ cần thực hiện trong lần đầu tiên):**
    ```bash
    docker exec -i portal_mssql /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "Portal@Hle2024!" -d portal_hlevan -C < backend/src/config/init.sql
    ```
 
-3. **Truy cập hệ thống:**
-   - **Giao diện Web:** `http://localhost:3000`
-   - **Backend API:** `http://localhost:5000`
-   - **RAG Service API:** `http://localhost:8000/docs`
+3. **Truy cập các dịch vụ:**
+   - **Giao diện Web:** [http://localhost:3000](http://localhost:3000)
+   - **Backend API:** [http://localhost:5000](http://localhost:5000)
+   - **Tài liệu Swagger RAG AI:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
-4. **Dừng hệ thống:**
+4. **Dừng toàn bộ hệ thống:**
    ```bash
    docker-compose down
    ```
 
 ---
 
-### Chế độ 2: Phát triển cục bộ (Local Development với Hot-Reload)
-Khi bạn cần sửa code frontend hoặc backend và muốn xem thay đổi tức thì (HMR):
+### Cách 2: Phát triển cục bộ (Local Development với Hot-Reload)
+Khi cần phát triển và chỉnh sửa mã nguồn với tính năng Hot-Module Replacement (HMR):
 
 1. **Khởi chạy Database & RAG Service bằng Docker:**
    ```bash
-   # Chỉ khởi chạy Database SQL Server và RAG Service
    docker-compose up -d mssql rag-service
    ```
-   *(Lưu ý: Không khởi chạy container `frontend` trong Docker để tránh chiếm cổng 3000).*
+   *(Lưu ý: Không khởi chạy container `frontend` trong Docker để tránh chiếm dụng cổng 3000).*
 
-2. **Chạy Backend cục bộ:**
+2. **Khởi chạy Backend:**
    ```bash
    cd backend
    npm install
    npm run dev
    ```
-   Backend sẽ lắng nghe tại `http://localhost:5000`.
+   Backend sẽ lắng nghe tại [http://localhost:5000](http://localhost:5000).
 
-3. **Chạy Frontend cục bộ (Hot-Reload):**
+3. **Khởi chạy Frontend:**
    ```bash
    cd frontend
    npm install
    npm run dev
    ```
-   Frontend sẽ lắng nghe **duy nhất** tại `http://localhost:3000`.
+   Frontend sẽ mở tại cổng cố định [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 6. Thông tin Quản trị & Kết nối Database
+## 7. Thông tin Quản trị & Cơ sở dữ liệu
 
-### Tài khoản Quản trị viên (Admin mặc định)
-Sau khi nạp script `init.sql`, hệ thống tự động khởi tạo tài khoản quản trị:
+### 7.1. Tài khoản Quản trị viên (Admin mặc định)
+Sau khi chạy script khởi tạo `init.sql`, hệ thống tự động có sẵn tài khoản:
 - **Số điện thoại:** `0901234567`
 - **Mật khẩu:** `Admin@123`
 
-*Quản trị viên có quyền: Thêm, sửa, xóa thành viên trên cây gia phả, kết nối hôn phối, thêm con, tải lên tư liệu lịch sử, đăng bài viết/sự kiện, xác nhận tiền công đức.*
+*Quyền hạn quản trị viên: Quản lý cây gia phả (thêm, sửa, xóa thành viên, gắn quan hệ cha-mẹ-con, hôn phối, đổi ảnh đại diện), đăng tải bài viết Tư liệu - Sự kiện, duyệt và quản lý danh sách đóng góp quỹ.*
 
-### Kết nối Database SQL Server
-Port `1433` đã được mở ra máy host. Bạn có thể dùng SSMS, DBeaver, hoặc Azure Data Studio để kết nối:
-- **Server:** `localhost,1433` (hoặc `127.0.0.1,1433`)
+### 7.2. Kết nối Cơ sở dữ liệu SQL Server
+Cổng `1433` đã được ánh xạ ra máy host. Có thể kết nối qua Azure Data Studio, DBeaver hoặc SQL Server Management Studio (SSMS):
+- **Host / Server:** `localhost,1433` (hoặc `127.0.0.1,1433`)
 - **Authentication:** SQL Server Authentication
-- **Username:** `sa`
+- **User:** `sa`
 - **Password:** `Portal@Hle2024!`
 - **Database:** `portal_hlevan`
 
 ---
 
-## 7. Nạp dữ liệu vào Trợ lý AI (RAG Ingestion)
+## 8. Đồng bộ dữ liệu vào Trợ lý AI (RAG Ingestion)
 
-Sau khi hệ thống đã có dữ liệu thành viên trong cây gia phả, bạn có thể đồng bộ vào cơ sở dữ liệu vector ChromaDB để Trợ lý AI nắm bắt đầy đủ thông tin:
+Mỗi khi dữ liệu gia phả có sự thay đổi lớn hoặc sau khi nạp dữ liệu ban đầu, bạn có thể gọi API để AI nạp vector kiến thức mới nhất:
 
-Chạy lệnh gọi API nạp dữ liệu:
 ```bash
+# Trên Linux/macOS
 curl -X POST http://localhost:8000/ingest/members
+
+# Trên Windows PowerShell
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/ingest/members
 ```
-*(Trên Windows PowerShell: `Invoke-RestMethod -Method Post -Uri http://localhost:8000/ingest/members`)*
 
 ---
 
-## 8. Xử lý sự cố thường gặp (Troubleshooting)
+## 9. Xử lý sự cố thường gặp (Troubleshooting)
 
-### 1. Báo lỗi cổng 3000 đang được sử dụng (`Port 3000 is in use`)
-- **Nguyên nhân:** Container `portal_frontend` của Docker đang chạy và chiếm giữ cổng `:3000`.
-- **Cách khắc phục:**
+### 1. Xung đột cổng `:3000` (`Port 3000 is in use`)
+- **Nguyên nhân:** Container `portal_frontend` của Docker đang chạy và chiếm giữ cổng 3000.
+- **Xử lý:**
   ```bash
-  # Tắt container frontend của Docker
   docker stop portal_frontend
-  # Sau đó khởi động lại lệnh dev cục bộ:
+  # Sau đó chạy lệnh dev cục bộ:
   cd frontend && npm run dev
   ```
 
-### 2. Kiểm tra log của các container
-- Log backend: `docker logs -f portal_backend`
-- Log frontend (Nginx): `docker logs -f portal_frontend`
-- Log RAG AI: `docker logs -f portal_rag`
+### 2. Xem log trực tiếp của từng container
+- Log Backend: `docker logs -f portal_backend`
+- Log Frontend (Nginx): `docker logs -f portal_frontend`
+- Log RAG AI Service: `docker logs -f portal_rag`
 - Log SQL Server: `docker logs -f portal_mssql`
 
-### 3. RAG Service không kết nối được với Ollama
-- Đảm bảo Ollama đang chạy trên máy tính: `ollama list`.
-- Trong file `.env`, giá trị `OLLAMA_BASE_URL` mặc định là `http://host.docker.internal:11434` để container Docker có thể giao tiếp với Ollama chạy trên máy host Windows.
+### 3. RAG AI Service không kết nối được Ollama
+- Kiểm tra xem tiến trình Ollama đã khởi động chưa: `ollama list`.
+- Đảm bảo biến `OLLAMA_BASE_URL` trong file `.env` trỏ đến `http://host.docker.internal:11434` (để container Docker có thể gọi dịch vụ Ollama đang chạy trên máy chủ Windows host).

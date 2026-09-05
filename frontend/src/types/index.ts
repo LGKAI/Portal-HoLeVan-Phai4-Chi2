@@ -42,15 +42,6 @@ export interface NewsItem {
   is_published?: boolean;
 }
 
-export interface Document {
-  id: number;
-  title: string;
-  description?: string;
-  file_url?: string;
-  thumbnail_url?: string;
-  doc_type: 'text' | 'image' | 'video' | 'pdf';
-  created_at: string;
-}
 
 export interface Donation {
   id: number;
