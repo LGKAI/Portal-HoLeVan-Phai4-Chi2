@@ -92,10 +92,10 @@
 
 /* iOS WebKit Performance Optimizations for Large Family Tree Canvas */
 .react-flow__node-memberNode {
-  contain: layout style paint;
+  contain: layout style;
+  overflow: visible !important;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translateZ(0);
 }
 
 .react-flow__viewport {
