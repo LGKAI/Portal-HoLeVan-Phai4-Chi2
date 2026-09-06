@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef, useCallback, useEffect } from 'react';
 import {
   ReactFlow,
   Controls,
@@ -8,6 +8,9 @@ import {
   MiniMap,
   Node,
   Edge,
+  ReactFlowProvider,
+  useReactFlow,
+  Viewport,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import MemberNode, { MemberNodeData } from './MemberNode';
@@ -467,7 +470,7 @@ const getLayoutedElements = (
   return { nodes: layoutedNodes, edges };
 };
 
-const TreeCanvas: React.FC<TreeCanvasProps> = ({
+const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
   members,
   allMembers,
   onAddChild,
@@ -476,6 +479,15 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
   onDelete,
   onClickDetail,
 }) => {
+  const { setViewport, fitView } = useReactFlow();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollbarRef = useRef<HTMLDivElement>(null);
+  const spacerRef = useRef<HTMLDivElement>(null);
+
+  const currentViewportRef = useRef<Viewport>({ x: 0, y: 220, zoom: 0.045 });
+  const syncSourceRef = useRef<'flow' | 'scrollbar' | null>(null);
+  const syncTimerRef = useRef<any>(null);
+
   const canonicalXMap = useMemo(() => {
     const source = allMembers && allMembers.length > 0 ? allMembers : members;
     return computeCanonicalPositions(source);
@@ -506,24 +518,139 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
   const [nodes, setNodes, onNodesChange] = useNodesState(layoutedNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const { nodes: newNodes, edges: newEdges } = getLayoutedElements(rawNodes, [], members, canonicalXMap);
     setNodes(newNodes);
     setEdges(newEdges);
   }, [rawNodes, members, canonicalXMap, setNodes, setEdges]);
 
+  // Tính toán khung toạ độ X của toàn bộ cây gia phả
+  const { minX, maxX } = useMemo(() => {
+    if (nodes.length === 0) return { minX: -1000, maxX: 1000 };
+    let min = Infinity;
+    let max = -Infinity;
+    nodes.forEach((n) => {
+      min = Math.min(min, n.position.x);
+      max = Math.max(max, n.position.x + NODE_WIDTH);
+    });
+    // Lề 2 bên để cuộn thoải mái
+    const margin = 1200;
+    return { minX: min - margin, maxX: max + margin };
+  }, [nodes]);
+
+  const worldWidth = maxX - minX;
+
+  // Khởi tạo hoặc cập nhật viewport khi tải hoặc khi đổi bộ lọc
+  useEffect(() => {
+    if (members.length === 0) return;
+
+    // Nếu đang xem danh sách lọc ít người (ví dụ chỉ 1 đời hoặc tìm kiếm), dùng fitView để gom gọn
+    if (members.length <= 50) {
+      const timer = setTimeout(() => {
+        fitView({ padding: 0.2, duration: 400 });
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+
+    // Cây phả hệ đầy đủ: Kích thước mặc định tổng quan (zoom ~0.045) như ảnh người dùng yêu cầu
+    const timer = setTimeout(() => {
+      if (!containerRef.current) return;
+      const width = containerRef.current.clientWidth || window.innerWidth;
+      const initialZoom = 0.045;
+      // Do các node đã được căn giữa tại X = 0 (Thủy tổ ở quanh x = 0)
+      // Để hiển thị Thủy tổ chính giữa màn hình: screenX = 0 * zoom + flowX = width / 2 => flowX = width / 2
+      const initialX = width / 2;
+      const initialY = 220; // Vị trí thanh nhã, hiển thị trọn vẹn tổng quan các thế hệ
+
+      currentViewportRef.current = { x: initialX, y: initialY, zoom: initialZoom };
+      setViewport({ x: initialX, y: initialY, zoom: initialZoom }, { duration: 0 });
+
+      // Đồng bộ thanh cuộn ngang
+      if (spacerRef.current) {
+        const virtualW = Math.max(worldWidth * initialZoom, width);
+        spacerRef.current.style.width = `${virtualW}px`;
+      }
+      if (scrollbarRef.current) {
+        const targetScroll = -(minX * initialZoom + initialX);
+        scrollbarRef.current.scrollLeft = Math.max(0, targetScroll);
+      }
+    }, 60);
+
+    return () => clearTimeout(timer);
+  }, [members, minX, worldWidth, setViewport, fitView]);
+
+  // Đồng bộ từ thao tác kéo/zoom trên canvas sang thanh cuộn ngang
+  const handleMove = useCallback(
+    (_event: any, viewport: Viewport) => {
+      currentViewportRef.current = viewport;
+
+      if (syncSourceRef.current === 'scrollbar') return;
+
+      syncSourceRef.current = 'flow';
+
+      if (spacerRef.current && containerRef.current) {
+        const containerW = containerRef.current.clientWidth || window.innerWidth;
+        const virtualW = Math.max(worldWidth * viewport.zoom, containerW);
+        spacerRef.current.style.width = `${virtualW}px`;
+      }
+
+      if (scrollbarRef.current) {
+        const targetScroll = -(minX * viewport.zoom + viewport.x);
+        scrollbarRef.current.scrollLeft = Math.max(0, targetScroll);
+      }
+
+      clearTimeout(syncTimerRef.current);
+      syncTimerRef.current = setTimeout(() => {
+        syncSourceRef.current = null;
+      }, 50);
+    },
+    [minX, worldWidth]
+  );
+
+  // Đồng bộ từ thanh cuộn ngang sang toạ độ canvas
+  const handleScrollbarScroll = useCallback(() => {
+    if (syncSourceRef.current === 'flow') return;
+    if (!scrollbarRef.current) return;
+
+    syncSourceRef.current = 'scrollbar';
+    const scrollLeft = scrollbarRef.current.scrollLeft;
+    const current = currentViewportRef.current;
+
+    // scrollLeft = -(minX * zoom + flowX) => flowX = -minX * zoom - scrollLeft
+    const newX = -minX * current.zoom - scrollLeft;
+    setViewport({ x: newX, y: current.y, zoom: current.zoom });
+
+    clearTimeout(syncTimerRef.current);
+    syncTimerRef.current = setTimeout(() => {
+      syncSourceRef.current = null;
+    }, 50);
+  }, [minX, setViewport]);
+
   return (
-    <div style={{ width: '100%', height: '100%', backgroundColor: '#FFFDF5' }}>
+    <div
+      ref={containerRef}
+      style={{
+        width: '100%',
+        height: '100%',
+        backgroundColor: '#FFFDF5',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
       <ReactFlow
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onNodeClick={(_event, node) => onClickDetail(node.data as Member)}
+        onMove={handleMove}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
-        fitView
-        fitViewOptions={{ padding: 0.1 }}
+        defaultViewport={{
+          x: (typeof window !== 'undefined' ? window.innerWidth : 1200) / 2,
+          y: 220,
+          zoom: 0.045,
+        }}
         minZoom={0.01}
         maxZoom={2}
         nodesDraggable={false}
@@ -532,7 +659,12 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
         onlyRenderVisibleElements={true}
         proOptions={{ hideAttribution: true }}
       >
-        <Controls showInteractive={false} />
+        {/* Nút điều khiển: Chỉ 2 nút Phóng to (+) và Thu nhỏ (-), phóng lớn, nhích lên trên thanh cuộn */}
+        <Controls
+          showInteractive={false}
+          showFitView={false}
+          style={{ bottom: 36, left: 16 }}
+        />
         <MiniMap
           zoomable
           pannable
@@ -541,12 +673,36 @@ const TreeCanvas: React.FC<TreeCanvasProps> = ({
             if (d?.is_deceased) return '#dc2626';
             return d?.gender === 'male' ? '#2563eb' : '#db2777';
           }}
-          style={{ backgroundColor: '#FFF5D6' }}
+          style={{ backgroundColor: '#FFF5D6', bottom: 36, right: 16 }}
           className="!hidden md:!block"
         />
         <Background gap={16} size={1.5} color="#E2D4B7" />
       </ReactFlow>
+
+      {/* Thanh cuộn ngang ở đáy màn hình */}
+      <div
+        ref={scrollbarRef}
+        className="tree-horizontal-scrollbar"
+        onScroll={handleScrollbarScroll}
+        title="Kéo thanh cuộn ngang để di chuyển cây gia phả"
+      >
+        <div
+          ref={spacerRef}
+          style={{
+            width: `${Math.max(worldWidth * 0.045, 2000)}px`,
+            height: '1px',
+          }}
+        />
+      </div>
     </div>
+  );
+};
+
+const TreeCanvas: React.FC<TreeCanvasProps> = (props) => {
+  return (
+    <ReactFlowProvider>
+      <TreeCanvasContent {...props} />
+    </ReactFlowProvider>
   );
 };
 
