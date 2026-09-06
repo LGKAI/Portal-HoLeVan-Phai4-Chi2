@@ -71,12 +71,9 @@ const HomePage: React.FC = () => {
           >
             Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
           </p>
-          <div className="flex flex-row gap-3 sm:gap-4 justify-center">
-            <Link to="/tree" className="bg-black/60 hover:bg-black/80 border-2 border-red-500 text-red-400 min-w-[130px] sm:min-w-[170px] flex justify-center items-center px-4 sm:px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
+          <div className="flex justify-center">
+            <Link to="/tree" className="bg-black/60 hover:bg-black/80 border-2 border-red-500 text-red-400 min-w-[150px] sm:min-w-[190px] flex justify-center items-center px-6 sm:px-8 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
               Xem Gia Phả
-            </Link>
-            <Link to="/donate" className="bg-black/60 hover:bg-black/80 border-2 border-secondary text-secondary min-w-[130px] sm:min-w-[170px] flex justify-center items-center px-4 sm:px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
-              Ủng Hộ Quỹ
             </Link>
           </div>
         </div>

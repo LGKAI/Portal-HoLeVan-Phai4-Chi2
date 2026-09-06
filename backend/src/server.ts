@@ -9,7 +9,6 @@ import { initDb } from './config/db';
 import authRoutes from './routes/auth';
 import membersRoutes from './routes/members';
 import newsRoutes from './routes/news';
-import donationsRoutes from './routes/donations';
 
 dotenv.config();
 
@@ -35,7 +34,6 @@ app.get('/', (_req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/members', membersRoutes);
 app.use('/api/news', newsRoutes);
-app.use('/api/donations', donationsRoutes);
 
 // Error handling
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

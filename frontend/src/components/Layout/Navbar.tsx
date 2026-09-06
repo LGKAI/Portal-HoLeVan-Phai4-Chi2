@@ -22,7 +22,6 @@ const Navbar: React.FC = () => {
     { name: 'Trang chủ', path: '/' },
     { name: 'Gia phả', path: '/tree' },
     { name: 'Tư liệu - Sự kiện', path: '/news' },
-    { name: 'Donate', path: '/donate' },
   ];
 
   return (

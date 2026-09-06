@@ -51,9 +51,17 @@ async function exportData() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
 
+  // Xoá donations.json nếu còn tồn tại
+  const donationsPath = path.join(DATA_DIR, 'donations.json');
+  if (fs.existsSync(donationsPath)) {
+    try {
+      fs.unlinkSync(donationsPath);
+      console.log('🗑️ Đã xoá file dữ liệu cũ: src/data/donations.json');
+    } catch (_) {}
+  }
+
   let members = [];
   let news = [];
-  let donations = [];
   let hasBackendData = false;
 
   // 1. Export Members
@@ -84,20 +92,6 @@ async function exportData() {
     console.error('❌ Lỗi khi xuất bài viết từ Backend:', err.message);
   }
 
-  // 3. Export Donations
-  try {
-    const dRes = await fetch(`${BACKEND_URL}/api/donations`);
-    if (dRes.ok) {
-      const dJson = await dRes.json();
-      donations = dJson.data || [];
-      fs.writeFileSync(path.join(DATA_DIR, 'donations.json'), JSON.stringify(donations, null, 2), 'utf8');
-      console.log(`✅ Đã xuất ${donations.length} khoản công đức vào src/data/donations.json`);
-      hasBackendData = true;
-    }
-  } catch (err) {
-    console.error('❌ Lỗi khi xuất danh sách công đức từ Backend:', err.message);
-  }
-
   // Fallback: Nếu không kết nối được Backend, dùng file JSON đã có sẵn trong src/data
   if (!hasBackendData) {
     console.warn('⚠️ Không tải được dữ liệu từ Backend, đọc file JSON sẵn có trong src/data để kiểm tra ảnh...');
@@ -108,15 +102,12 @@ async function exportData() {
       if (fs.existsSync(path.join(DATA_DIR, 'news.json'))) {
         news = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'news.json'), 'utf8'));
       }
-      if (fs.existsSync(path.join(DATA_DIR, 'donations.json'))) {
-        donations = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'donations.json'), 'utf8'));
-      }
     } catch (e) {
       console.error('❌ Lỗi đọc file JSON dự phòng:', e.message);
     }
   }
 
-  // 4. Lọc toàn bộ đường dẫn ảnh ĐANG HOẠT ĐỘNG trên web (chỉ những ảnh này mới được giữ / xuất)
+  // 3. Lọc toàn bộ đường dẫn ảnh ĐANG HOẠT ĐỘNG trên web (chỉ những ảnh này mới được giữ / xuất)
   const activeImages = new Set();
 
   for (const m of members) {
@@ -138,15 +129,9 @@ async function exportData() {
     }
   }
 
-  for (const d of donations) {
-    if (d.proof_url && typeof d.proof_url === 'string' && d.proof_url.startsWith('/uploads/')) {
-      activeImages.add(path.normalize(d.proof_url.replace('/uploads/', '')));
-    }
-  }
-
   console.log(`\n🎯 Tìm thấy ${activeImages.size} ảnh đang hoạt động và hiển thị trên web.`);
 
-  // 5. Đồng bộ CHỈ CÁC ẢNH ĐANG HOẠT ĐỘNG từ Backend / Docker về public/uploads
+  // 4. Đồng bộ CHỈ CÁC ẢNH ĐANG HOẠT ĐỘNG từ Backend / Docker về public/uploads
   if (!fs.existsSync(PUBLIC_UPLOADS_DIR)) {
     fs.mkdirSync(PUBLIC_UPLOADS_DIR, { recursive: true });
   }
@@ -178,7 +163,7 @@ async function exportData() {
     console.log(`📥 Đã tải mới / đồng bộ ${downloadedCount} ảnh đang hoạt động.`);
   }
 
-  // 6. Xoá TOÀN BỘ ảnh cũ / ảnh đã bị thay thế / không còn hiển thị trên web
+  // 5. Xoá TOÀN BỘ ảnh cũ / ảnh đã bị thay thế / không còn hiển thị trên web
   const existingFiles = getAllFiles(PUBLIC_UPLOADS_DIR);
   let deletedCount = 0;
 
@@ -210,7 +195,7 @@ async function exportData() {
     console.log(`✨ Thư mục uploads hoàn toàn sạch sẽ, chỉ chứa ảnh đang dùng!`);
   }
 
-  console.log('\n🎉 Quá trình xuất dữ liệu tĩnh hoàn tất! Chỉ dữ liệu đang hiện trên web và ảnh hợp lệ được giữ lại.');
+  console.log(`\n🎉 Quá trình xuất dữ liệu tĩnh hoàn tất! Tổng cộng: ${members.length} thành viên, ${news.length} tin tức, ${activeImages.size} ảnh đang hoạt động.`);
   console.log('👉 Bây giờ bạn có thể an tâm commit và push lên GitHub để Netlify deploy.');
 }
 

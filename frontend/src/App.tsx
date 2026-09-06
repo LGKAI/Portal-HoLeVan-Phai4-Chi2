@@ -6,7 +6,6 @@ import HomePage from './pages/HomePage';
 import FamilyTreePage from './pages/FamilyTreePage';
 import NewsPage from './pages/NewsPage';
 import NewsDetailPage from './pages/NewsDetailPage';
-import DonatePage from './pages/DonatePage';
 import ChatbotPanel from './components/Chatbot/ChatbotPanel';
 import ScrollToTop from './components/common/ScrollToTop';
 
@@ -22,7 +21,6 @@ const App: React.FC = () => {
             <Route path="/tree" element={<FamilyTreePage />} />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/news/:id" element={<NewsDetailPage />} />
-            <Route path="/donate" element={<DonatePage />} />
           </Routes>
         </main>
         <Footer />

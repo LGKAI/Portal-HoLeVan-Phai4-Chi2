@@ -24,7 +24,6 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm text-gray-300">
               <li><a href="/tree" className="hover:text-white transition-colors">Gia phả số</a></li>
               <li><a href="/news" className="hover:text-white transition-colors">Tư liệu - Sự kiện</a></li>
-              <li><a href="/donate" className="hover:text-white transition-colors">Quỹ phát triển</a></li>
             </ul>
           </div>
         </div>

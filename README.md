@@ -80,9 +80,9 @@ Portal-HoLeVan-Phai4-Chi2/
 ├── backend/                          # Mã nguồn Backend (Node.js/Express + TypeScript)
 │   ├── src/
 │   │   ├── config/                   # Kết nối CSDL (db.ts) & script tạo bảng (init.sql)
-│   │   ├── controllers/              # Bộ điều khiển (auth, members, news, donations)
+│   │   ├── controllers/              # Bộ điều khiển (auth, members, news)
 │   │   ├── middleware/               # Xác thực JWT (auth.ts), xử lý upload ảnh (upload.ts)
-│   │   ├── routes/                   # Khai báo các endpoints API (/api/auth, /members, /news, /donations)
+│   │   ├── routes/                   # Khai báo các endpoints API (/api/auth, /members, /news)
 │   │   ├── types/                    # Định nghĩa TypeScript interfaces
 │   │   └── server.ts                 # Điểm khởi động Express server
 │   ├── .env.example                  # Mẫu biến môi trường Backend
@@ -95,7 +95,6 @@ Portal-HoLeVan-Phai4-Chi2/
 │   │   ├── _redirects                # File điều hướng SPA cho Netlify
 │   │   ├── uploads/                  # Thư mục ảnh đại diện (avatars) và ảnh bài viết (thumbnails)
 │   │   ├── favicon.ico
-│   │   └── qr.jpg
 │   ├── scripts/
 │   │   └── export-data.js            # Kịch bản tự động xuất dữ liệu DB sang file tĩnh
 │   ├── src/
@@ -108,13 +107,12 @@ Portal-HoLeVan-Phai4-Chi2/
 │   │   │   └── News/                 # Thẻ bài viết tư liệu & sự kiện (NewsCard)
 │   │   ├── data/                     # Dữ liệu tĩnh dự phòng phục vụ deploy Netlify:
 │   │   │   ├── members.json          # 306 thành viên và toàn bộ liên kết phả hệ
-│   │   │   ├── news.json             # Danh sách bài viết tư liệu & sự kiện
-│   │   │   └── donations.json        # Danh sách đóng góp quỹ công đức
+│   │   │   └── news.json             # Danh sách bài viết tư liệu & sự kiện
 │   │   ├── hooks/                    # Custom hooks (useChat, useFamilyTree)
-│   │   ├── pages/                    # Các trang màn hình (Home, Tree, News, NewsDetail, Donate)
+│   │   ├── pages/                    # Các trang màn hình (Home, Tree, News, NewsDetail)
 │   │   ├── services/                 # Gọi API backend kèm cơ chế tự động Fallback dữ liệu tĩnh
 │   │   ├── store/                    # Zustand store (authStore)
-│   │   ├── types/                    # Định nghĩa kiểu dữ liệu (Member, User, NewsItem, Donation...)
+│   │   ├── types/                    # Định nghĩa kiểu dữ liệu (Member, User, NewsItem...)
 │   │   ├── utils/                    # Tiện ích cắt xén ảnh canvas (cropImage.ts)
 │   │   ├── App.tsx                   # Định tuyến Router
 │   │   ├── index.css                 # CSS toàn cục & cấu hình Tailwind
@@ -161,12 +159,7 @@ Portal-HoLeVan-Phai4-Chi2/
 - Đăng tải bài viết kèm hình ảnh minh họa, tự động tạo slug thân thiện, đếm số lượt xem và định dạng thời gian tiếng Việt.
 - Quản trị viên có toàn quyền đăng mới, chỉnh sửa nội dung và xóa bài viết.
 
-### 4.3. Quỹ phát triển & Công đức (`/donate`)
-- Cung cấp thông tin tài khoản ngân hàng và mã QR thanh toán nhanh phục vụ việc đóng góp xây dựng từ đường, tu bổ lăng mộ và quỹ khuyến học.
-- Bảng vàng vinh danh công đức minh bạch, cập nhật công khai các khoản ủng hộ, có bộ lọc theo mức tiền đóng góp và tìm kiếm nhà hảo tâm.
-- Quản trị viên có quyền ghi nhận hoặc xác thực các khoản công đức.
-
-### 4.4. Trợ lý AI Dòng họ (AI Chatbot)
+### 4.3. Trợ lý AI Dòng họ (AI Chatbot)
 - Trợ lý AI thông minh sẵn sàng trò chuyện và giải đáp 24/7.
 - Sử dụng mô hình ngôn ngữ lớn cục bộ qua Ollama (`qwen2.5:7b`), bảo mật tuyệt đối dữ liệu nội bộ dòng họ.
 - Tích hợp kỹ thuật **RAG (Retrieval Augmented Generation)**: tự động truy xuất thông tin từ cơ sở dữ liệu phả hệ để trả lời chính xác các câu hỏi về tổ tiên, quan hệ gia đình, vai vế họ hàng.
@@ -319,7 +312,6 @@ graph LR
    > 💡 **Lệnh `npm run export-data` thực hiện tự động các công việc:**
    > - Trích xuất toàn bộ dữ liệu thành viên từ SQL Server sang `src/data/members.json`.
    > - Trích xuất danh sách bài viết sang `src/data/news.json`.
-   > - Trích xuất danh sách công đức sang `src/data/donations.json`.
    > - Tự động đồng bộ toàn bộ ảnh đại diện và ảnh bài viết mới từ Docker sang `public/uploads/`.
 
 3. **Bước 3: Đẩy dữ liệu mới lên GitHub**

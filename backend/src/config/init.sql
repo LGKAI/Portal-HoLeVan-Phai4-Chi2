@@ -118,18 +118,6 @@ CREATE TABLE QuizAttempts (
 END
 GO
 
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Donations' and xtype='U')
-BEGIN
-CREATE TABLE Donations (
-  id INT IDENTITY(1,1) PRIMARY KEY,
-  donor_name NVARCHAR(100),
-  amount DECIMAL(18,0) DEFAULT 0,
-  message NVARCHAR(500),
-  donated_at DATETIME DEFAULT GETDATE(),
-  is_verified BIT DEFAULT 0
-)
-END
-GO
 
 -- Seed admin user and member
 IF NOT EXISTS (SELECT * FROM Users WHERE phone = '0901234567')

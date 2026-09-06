@@ -43,14 +43,6 @@ export interface NewsItem {
 }
 
 
-export interface Donation {
-  id: number;
-  donor_name: string;
-  amount: number;
-  message?: string;
-  donated_at: string;
-  is_verified: boolean;
-}
 
 export interface ChatMessage {
   role: 'user' | 'assistant';
