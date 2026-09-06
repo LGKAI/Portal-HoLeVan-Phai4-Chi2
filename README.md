@@ -2,7 +2,7 @@
 
 Hệ thống **Cổng thông tin & Gia phả số hóa** dòng họ **Lê Văn (Chi 2 - Phái 4)** — Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị. 
 
-Dự án kết hợp công nghệ web hiện đại với trí tuệ nhân tạo (**RAG - Retrieval Augmented Generation**) nhằm bảo tồn và phát huy truyền thống tổ tiên, số hóa cây gia phả tương tác đa thế hệ, cập nhật tư liệu và sự kiện dòng họ, quản lý quỹ công đức minh bạch, đồng thời hỗ trợ con cháu tra cứu cội nguồn nhanh chóng qua **Trợ lý AI dòng họ**.
+Dự án kết hợp công nghệ web hiện đại với trí tuệ nhân tạo (**RAG - Retrieval Augmented Generation**) nhằm bảo tồn và phát huy truyền thống tổ tiên, số hóa cây gia phả tương tác đa thế hệ, cập nhật tư liệu và sự kiện dòng họ, đồng thời hỗ trợ con cháu tra cứu cội nguồn nhanh chóng qua **Trợ lý AI dòng họ**.
 
 ---
 
@@ -18,6 +18,7 @@ Hệ thống được thiết kế theo kiến trúc Microservices / Client-Serv
 - **Cây gia phả tương tác:** `@xyflow/react` (React Flow v12)
   - Thuật toán căn chỉnh layout tự động phân tầng con cái theo từng đời vợ (Chánh phối, Thứ phối, Thứ thứ phối...).
   - Đường nối huyết thống trực tiếp từ trung điểm của người cha và người mẹ sinh thành.
+  - Sắp xếp thứ tự trực quan chuẩn xác từ trái sang phải khớp với vị trí nhánh cây trên biểu đồ phả hệ khi lọc xem từng đời.
   - Bảng thống kê động thời gian thực ở góc trên bên trái: **Tổng số thành viên** (Xanh dương), **Số thành viên đã mất** (Đỏ), **Số thành viên còn sống** (Xanh lá).
 - **Cơ chế Dữ liệu Tĩnh (Static Fallback):** Tự động phát hiện khi chạy trên các nền tảng Static Cloud (như Netlify) để nạp dữ liệu offline từ file JSON và thư mục ảnh tĩnh, giúp website hoạt động mượt mà 100% không cần máy chủ backend.
 - **Cắt xén ảnh chân dung:** `react-easy-crop` (cắt ảnh bo tròn chuẩn avatar trước khi tải lên)
@@ -29,7 +30,7 @@ Hệ thống được thiết kế theo kiến trúc Microservices / Client-Serv
 - **Ngôn ngữ:** TypeScript
 - **Database Driver:** `mssql` (kết nối Microsoft SQL Server)
 - **Xác thực:** JSON Web Token (JWT) + mã hóa mật khẩu `bcryptjs`
-- **Quản lý Upload:** `multer` (xử lý upload ảnh chân dung thành viên và ảnh đại diện bài viết)
+- **Quản lý Upload:** `multer` (xử lý upload ảnh chân dung thành viên và ảnh bài viết, cơ chế tự động dọn dẹp file ảnh cũ bị thay thế khi cập nhật hoặc xoá để tối ưu dung lượng)
 - **Bảo mật & Middleware:** Helmet, CORS, Express Async Errors
 - **Cổng dịch vụ:** Chạy tại cổng `:5000`
 
@@ -93,15 +94,16 @@ Portal-HoLeVan-Phai4-Chi2/
 ├── frontend/                         # Mã nguồn Frontend (React 18 + Vite + TypeScript)
 │   ├── public/                       # Tài nguyên tĩnh:
 │   │   ├── _redirects                # File điều hướng SPA cho Netlify
-│   │   ├── uploads/                  # Thư mục ảnh đại diện (avatars) và ảnh bài viết (thumbnails)
-│   │   ├── favicon.ico
+│   │   ├── background.jpg            # Ảnh nền Banner Nhà thờ mộ trung tâm
+│   │   ├── favicon.ico               # Huy hiệu dòng họ (Logo/Favicon)
+│   │   └── uploads/                  # Thư mục ảnh đại diện (avatars) và ảnh sự kiện (thumbnails) đang sử dụng
 │   ├── scripts/
-│   │   └── export-data.js            # Kịch bản tự động xuất dữ liệu DB sang file tĩnh
+│   │   └── export-data.js            # Kịch bản thông minh tự động xuất dữ liệu sạch sang file tĩnh
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Auth/                 # Modal đăng nhập (LoginModal), đăng ký (RegisterModal)
 │   │   │   ├── Chatbot/              # Hộp chat trợ lý AI nổi góc dưới phải (ChatbotPanel)
-│   │   │   ├── common/               # Component dùng chung (LoadingSpinner...)
+│   │   │   ├── common/               # Component dùng chung (LoadingSpinner, ScrollToTop...)
 │   │   │   ├── FamilyTree/           # Thành phần Cây gia phả (TreeCanvas, MemberNode...)
 │   │   │   ├── Layout/               # Thanh điều hướng (Navbar) & Chân trang (Footer)
 │   │   │   └── News/                 # Thẻ bài viết tư liệu & sự kiện (NewsCard)
@@ -143,6 +145,7 @@ Portal-HoLeVan-Phai4-Chi2/
 
 ### 4.1. Cây gia phả số hóa tương tác (`/tree`)
 - **Hiển thị trực quan:** Xem toàn bộ cây gia phả nhiều thế hệ (từ Đời thứ 9 đến Đời thứ 16 theo thứ bậc Phái 4).
+- **Thứ tự chuẩn xác:** Danh sách thành viên khi lọc theo từng đời hiển thị đúng thứ tự từ trái sang phải trên sơ đồ cây gia phả (đảm bảo tính nhất quán giữa biểu đồ phả hệ và danh sách tra cứu).
 - **Quan hệ hôn phối & huyết thống:**
   - Tự động nhận diện thứ bậc vợ chồng: *Chánh phối*, *Thứ phối*, *Thứ thứ phối*...
   - Cho phép chỉ định chính xác **Người mẹ sinh thành** trong gia đình đa thê để đường nối huyết thống xuất phát chuẩn xác từ trung điểm giữa người cha và người mẹ tương ứng.
@@ -152,12 +155,13 @@ Portal-HoLeVan-Phai4-Chi2/
   - **- Số thành viên còn sống:** Hiển thị màu xanh lá (**Green**).
   - Sử dụng thuật toán đếm động phản hồi ngay lập tức khi có thay đổi dữ liệu.
 - **Tìm kiếm & Bộ lọc:** Tìm kiếm tức thì theo họ tên thành viên; lọc hiển thị theo từng Đời cụ thể.
-- **Quản trị viên:** Thêm con cái, thêm hôn phối, chỉnh sửa thông tin chi tiết, tải ảnh chân dung bo tròn và xóa thành viên với hộp thoại xác nhận an toàn.
+- **Quản trị viên:** Thêm con cái, thêm hôn phối, chỉnh sửa thông tin chi tiết, tải ảnh chân dung bo tròn và xóa thành viên với hộp thoại xác nhận an toàn (tự động xóa ảnh cũ khỏi ổ đĩa).
 
 ### 4.2. Tư liệu - Sự kiện dòng họ (`/news`)
 - Cập nhật các thông báo, hoạt động truyền thống (Lễ tảo mộ, chạp mả, giỗ tổ, khuyến học...).
 - Đăng tải bài viết kèm hình ảnh minh họa, tự động tạo slug thân thiện, đếm số lượt xem và định dạng thời gian tiếng Việt.
-- Quản trị viên có toàn quyền đăng mới, chỉnh sửa nội dung và xóa bài viết.
+- Xem chi tiết bài viết với ảnh bìa gốc nguyên vẹn kích thước chuẩn (không bị cắt xén ngang).
+- Quản trị viên có toàn quyền đăng mới, chỉnh sửa nội dung và xóa bài viết (tự động xóa ảnh bìa cũ khi thay thế).
 
 ### 4.3. Trợ lý AI Dòng họ (AI Chatbot)
 - Trợ lý AI thông minh sẵn sàng trò chuyện và giải đáp 24/7.
@@ -248,14 +252,14 @@ Khi cần phát triển và chỉnh sửa mã nguồn với tính năng Hot-Modu
 
 Website đã được cấu hình cơ chế **Static Data Fallback thông minh**:
 - Khi deploy lên **Netlify**, website hoạt động độc lập 100% không cần máy chủ backend/database.
-- Toàn bộ dữ liệu 306 thành viên, cây gia phả, 150 ảnh đại diện, bài viết tư liệu sự kiện, bảng vinh danh công đức đều hoạt động mượt mà với tốc độ tức thì, có sẵn chứng chỉ HTTPS bảo mật và tên miền miễn phí trọn đời (ví dụ: `https://portal-holevan-phai4-chi2.netlify.app/`).
+- Toàn bộ dữ liệu 306 thành viên, cây gia phả, 154 ảnh đại diện & ảnh sự kiện, bài viết tư liệu sự kiện đều hoạt động mượt mà với tốc độ tức thì, có sẵn chứng chỉ HTTPS bảo mật và tên miền miễn phí trọn đời (ví dụ: `https://portal-holevan-phai4-chi2.netlify.app/`).
 
 ### 7.1. Các bước Deploy lần đầu qua GitHub (Tự động cập nhật)
 
 #### Bước 1: Đẩy toàn bộ mã nguồn lên GitHub
 Mở terminal tại thư mục gốc của dự án (`Portal-HoLeVan-Phai4-Chi2`):
 ```bash
-git add .
+git add -A
 git commit -m "feat: config static data and netlify deploy"
 git push origin main
 ```
@@ -281,7 +285,7 @@ Netlify sẽ tự động nhận diện file [netlify.toml](file:///d:/ChuyenNga
 - Vào mục **Site configuration** (hoặc **Site settings**) ➔ Chọn **Change site name**.
 - Nhập tên mong muốn (ví dụ: `holevan-phai4chi2`).
 - Địa chỉ truy cập website chính thức của dòng họ sẽ là:  
-  👉 **`https://portal-holevan-phai4-chi2.netlify.app/`**
+   👉 **`https://portal-holevan-phai4-chi2.netlify.app/`**
 
 ---
 
@@ -309,16 +313,17 @@ graph LR
    npm run export-data
    npm run build
    ```
-   > 💡 **Lệnh `npm run export-data` thực hiện tự động các công việc:**
-   > - Trích xuất toàn bộ dữ liệu thành viên từ SQL Server sang `src/data/members.json`.
+   > 💡 **Lệnh `npm run export-data` thực hiện tự động các công việc thông minh:**
+   > - Trích xuất toàn bộ dữ liệu 306 thành viên từ SQL Server sang `src/data/members.json`.
    > - Trích xuất danh sách bài viết sang `src/data/news.json`.
-   > - Tự động đồng bộ toàn bộ ảnh đại diện và ảnh bài viết mới từ Docker sang `public/uploads/`.
+   > - **Chỉ đồng bộ các file ảnh thực tế đang hiển thị trên web** về `public/uploads/`.
+   > - **Tự động quét và xoá bỏ mọi ảnh thừa, ảnh rác, ảnh đã bị thay thế** (cả trên máy local và trong container Docker `portal_backend`), giúp repository luôn gọn nhẹ và tối ưu dung lượng.
 
 3. **Bước 3: Đẩy dữ liệu mới lên GitHub**
    Quay lại thư mục gốc và đẩy commit lên GitHub:
    ```bash
-   git add .
-   git commit -m "Cập nhật dữ liệu gia phả mới"
+   git add -A
+   git commit -m "Cập nhật dữ liệu gia phả và tư liệu mới"
    git push origin main
    ```
 
@@ -335,7 +340,7 @@ Sau khi chạy script khởi tạo `init.sql`, hệ thống tự động có s�
 - **Số điện thoại:** `0901234567`
 - **Mật khẩu:** `Admin@123`
 
-*Quyền hạn quản trị viên: Quản lý cây gia phả (thêm, sửa, xóa thành viên, gắn quan hệ cha-mẹ-con, hôn phối, đổi ảnh đại diện), đăng tải bài viết Tư liệu - Sự kiện, duyệt và quản lý danh sách đóng góp quỹ.*
+*Quyền hạn quản trị viên: Quản lý cây gia phả (thêm, sửa, xóa thành viên, gắn quan hệ cha-mẹ-con, hôn phối, đổi ảnh đại diện), đăng tải, chỉnh sửa và quản lý bài viết Tư liệu - Sự kiện.*
 
 ### 8.2. Kết nối Cơ sở dữ liệu SQL Server
 Cổng `1433` đã được ánh xạ ra máy host. Có thể kết nối qua Azure Data Studio, DBeaver hoặc SQL Server Management Studio (SSMS):
