@@ -519,10 +519,9 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
   const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
 
   useEffect(() => {
-    const { nodes: newNodes, edges: newEdges } = getLayoutedElements(rawNodes, [], members, canonicalXMap);
-    setNodes(newNodes);
-    setEdges(newEdges);
-  }, [rawNodes, members, canonicalXMap, setNodes, setEdges]);
+    setNodes(layoutedNodes);
+    setEdges(layoutedEdges);
+  }, [layoutedNodes, layoutedEdges, setNodes, setEdges]);
 
   // Tính toán khung toạ độ X của toàn bộ cây gia phả
   const { minX, maxX } = useMemo(() => {

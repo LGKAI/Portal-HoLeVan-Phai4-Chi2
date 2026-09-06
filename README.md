@@ -163,7 +163,7 @@ Portal-HoLeVan-Phai4-Chi2/
 - Xem chi tiết bài viết với ảnh bìa gốc nguyên vẹn kích thước chuẩn (không bị cắt xén ngang).
 - Quản trị viên có toàn quyền đăng mới, chỉnh sửa nội dung và xóa bài viết (tự động xóa ảnh bìa cũ khi thay thế).
 
-### 4.3. Trợ lý AI Dòng họ (AI Chatbot)
+### 4.3. Trợ lý AI dòng họ (AI Chatbot)
 - Trợ lý AI thông minh sẵn sàng trò chuyện và giải đáp 24/7.
 - Sử dụng mô hình ngôn ngữ lớn cục bộ qua Ollama (`qwen2.5:7b`), bảo mật tuyệt đối dữ liệu nội bộ dòng họ.
 - Tích hợp kỹ thuật **RAG (Retrieval Augmented Generation)**: tự động truy xuất thông tin từ cơ sở dữ liệu phả hệ để trả lời chính xác các câu hỏi về tổ tiên, quan hệ gia đình, vai vế họ hàng.

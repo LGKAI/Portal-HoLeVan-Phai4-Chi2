@@ -226,7 +226,7 @@ const FamilyTreePage: React.FC = () => {
   if (loading) return <LoadingSpinner />;
   
   return (
-    <div className="h-[calc(100vh-64px)] flex flex-col bg-cream relative">
+    <div className="h-[calc(100dvh-64px)] min-h-[calc(100vh-64px)] flex flex-col bg-cream relative overflow-hidden">
       {/* Toolbar */}
       <div className="bg-[#FFFDF5] p-3 shadow-sm flex flex-col sm:flex-row justify-between items-center gap-3 z-10 border-b border-[#E8D8C3] relative">
         <div className="flex items-center gap-3 w-full sm:w-auto">

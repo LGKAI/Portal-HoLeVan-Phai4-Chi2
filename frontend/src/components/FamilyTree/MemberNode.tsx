@@ -138,7 +138,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
         </div>
 
         {/* Bottom: actions bar - fixed height so it never gets clipped */}
-        <div className="nodrag nopan flex-shrink-0 flex items-center gap-1 border-t border-black/10 px-2 py-1.5 bg-white/70 backdrop-blur-sm">
+        <div className="nodrag nopan flex-shrink-0 flex items-center gap-1 border-t border-black/10 px-2 py-1.5 bg-white/95">
           <button
             type="button"
             onClick={(e) => {
