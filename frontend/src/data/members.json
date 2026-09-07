@@ -6868,7 +6868,7 @@
     "full_name": "LÊ AN",
     "birth_name": null,
     "generation_in_branch": 8,
-    "gender": "male",
+    "gender": "female",
     "birth_date": "12/05/2020 (Canh Tý)",
     "death_date": null,
     "is_deceased": false,
@@ -6880,7 +6880,7 @@
     "mother_id": 11008,
     "spouse_id": null,
     "created_at": "2026-09-06T13:55:50.363Z",
-    "updated_at": "2026-09-06T13:55:50.363Z",
+    "updated_at": "2026-09-07T01:27:56.143Z",
     "created_by": null,
     "hometown": "Phường Đông Hà, Tỉnh Quảng Trị",
     "spouse_type": null
