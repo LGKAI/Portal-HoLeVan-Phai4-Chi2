@@ -3404,9 +3404,9 @@
     "mother_id": null,
     "spouse_id": null,
     "created_at": "2026-08-23T07:39:49.113Z",
-    "updated_at": "2026-09-04T02:38:00.543Z",
+    "updated_at": "2026-09-07T14:09:57.803Z",
     "created_by": null,
-    "hometown": "Không rõ",
+    "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": null
   },
   {
@@ -3426,9 +3426,9 @@
     "mother_id": null,
     "spouse_id": null,
     "created_at": "2026-08-23T07:42:13.457Z",
-    "updated_at": "2026-09-04T02:38:32.803Z",
+    "updated_at": "2026-09-07T14:10:24.250Z",
     "created_by": null,
-    "hometown": "Không rõ",
+    "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": null
   },
   {
@@ -3440,17 +3440,17 @@
     "birth_date": "03/09/1954 (Giáp Ngọ)",
     "death_date": "Không rõ",
     "is_deceased": true,
-    "occupation": "Không rõ",
+    "occupation": "Nông dân",
     "avatar_url": null,
     "bio": null,
-    "burial_place": "Không rõ",
+    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "father_id": 3053,
     "mother_id": null,
     "spouse_id": null,
     "created_at": "2026-08-23T07:45:20.483Z",
-    "updated_at": "2026-08-23T07:45:20.483Z",
+    "updated_at": "2026-09-07T14:08:23.520Z",
     "created_by": null,
-    "hometown": "Không rõ",
+    "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": null
   },
   {
@@ -3470,9 +3470,9 @@
     "mother_id": null,
     "spouse_id": null,
     "created_at": "2026-08-23T07:47:00.210Z",
-    "updated_at": "2026-09-04T02:39:16.713Z",
+    "updated_at": "2026-09-07T14:10:52.117Z",
     "created_by": null,
-    "hometown": "Không rõ",
+    "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": null
   },
   {
@@ -3492,9 +3492,9 @@
     "mother_id": null,
     "spouse_id": null,
     "created_at": "2026-08-23T07:48:45.010Z",
-    "updated_at": "2026-09-04T02:39:35.670Z",
+    "updated_at": "2026-09-07T14:11:18.473Z",
     "created_by": null,
-    "hometown": "Không rõ",
+    "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": null
   },
   {
@@ -3514,9 +3514,9 @@
     "mother_id": null,
     "spouse_id": null,
     "created_at": "2026-08-23T07:49:55.053Z",
-    "updated_at": "2026-09-04T02:39:50.637Z",
+    "updated_at": "2026-09-07T14:11:31.737Z",
     "created_by": null,
-    "hometown": "Không rõ",
+    "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": null
   },
   {
@@ -3558,9 +3558,9 @@
     "mother_id": null,
     "spouse_id": null,
     "created_at": "2026-08-23T07:52:29.830Z",
-    "updated_at": "2026-09-04T02:40:29.353Z",
+    "updated_at": "2026-09-07T14:11:55.853Z",
     "created_by": null,
-    "hometown": "Không rõ",
+    "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": null
   },
   {
@@ -5002,7 +5002,7 @@
     "birth_date": "1957 (Đinh Dậu)",
     "death_date": null,
     "is_deceased": false,
-    "occupation": "Không rõ",
+    "occupation": "Nội trợ",
     "avatar_url": null,
     "bio": null,
     "burial_place": null,
@@ -5010,7 +5010,7 @@
     "mother_id": null,
     "spouse_id": 5009,
     "created_at": "2026-09-04T01:48:40.810Z",
-    "updated_at": "2026-09-04T03:01:26.740Z",
+    "updated_at": "2026-09-07T14:08:59.820Z",
     "created_by": null,
     "hometown": "Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "spouse_type": "Chánh phối"
