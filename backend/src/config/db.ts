@@ -7,8 +7,8 @@ import { defaultPostgresSchema } from './initSql';
 
 dotenv.config();
 
-const isProduction = process.env.NODE_ENV === 'production';
-const hasSsl = process.env.DB_SSL === 'true' || Boolean(process.env.DATABASE_URL) || isProduction;
+const isLocal = process.env.DB_HOST === 'localhost' || process.env.DB_HOST === 'postgres';
+const hasSsl = process.env.DB_SSL === 'true' || (Boolean(process.env.DATABASE_URL) && process.env.DB_SSL !== 'false');
 
 const getPoolConfig = (): PoolConfig => {
     if (process.env.DATABASE_URL) {

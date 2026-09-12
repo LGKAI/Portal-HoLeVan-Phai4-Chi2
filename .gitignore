@@ -17,3 +17,5 @@ data/vector_store/
 .vscode/
 *.suo
 *.user
+admin.txt
+

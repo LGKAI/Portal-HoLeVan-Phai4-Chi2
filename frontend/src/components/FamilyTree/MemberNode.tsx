@@ -54,24 +54,8 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
       className={`relative rounded-xl border-[3px] ${bgColor} ${borderColor} shadow-lg overflow-visible transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5`}
       style={{ width: `${NODE_W}px`, height: `${NODE_H}px` }}
     >
-      {/* Top handles */}
-      <Handle type="target" position={Position.Top} id="top-target" className="w-2 h-2 !bg-gray-400" />
-      <Handle type="source" position={Position.Top} id="spouse-top-source" className="w-2 h-2 !bg-transparent opacity-0" />
-      <Handle type="target" position={Position.Top} id="spouse-top-target" className="w-2 h-2 !bg-transparent opacity-0" />
-
-      {/* Left handles */}
-      <Handle type="target" position={Position.Left} id="spouse-left" className="w-2 h-2 !bg-gray-400" />
-      <Handle type="source" position={Position.Left} id="spouse-left-source" className="w-2 h-2 !bg-transparent opacity-0" />
-
-      {/* Right handles */}
-      <Handle type="source" position={Position.Right} id="spouse-right" className="w-2 h-2 !bg-gray-400" />
-      <Handle type="target" position={Position.Right} id="spouse-right-target" className="w-2 h-2 !bg-transparent opacity-0" />
-
-      {/* Bottom handle for child outgoing edges */}
-      <Handle type="source" position={Position.Bottom} id="bottom-source" className="w-2 h-2 !bg-gray-400" />
-
       {/* Generation Badge */}
-      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3.5 py-1 rounded-full shadow-md border-2 border-white z-10 whitespace-nowrap">
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3.5 py-1 rounded-full shadow-md border-2 border-white !z-40 whitespace-nowrap select-none">
         Đời {Number(nodeData.generation_in_branch) + 8}
       </div>
 
@@ -200,6 +184,22 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
           )}
         </div>
       </div>
+
+      {/* Top handles */}
+      <Handle type="target" position={Position.Top} id="top-target" className="!w-2 !h-2 !bg-transparent opacity-0 !z-10 pointer-events-none" />
+      <Handle type="source" position={Position.Top} id="spouse-top-source" className="!w-2 !h-2 !bg-transparent opacity-0 !z-10 pointer-events-none" />
+      <Handle type="target" position={Position.Top} id="spouse-top-target" className="!w-2 !h-2 !bg-transparent opacity-0 !z-10 pointer-events-none" />
+
+      {/* Left handles */}
+      <Handle type="target" position={Position.Left} id="spouse-left" className="!w-2.5 !h-2.5 !bg-gray-400 !border-2 !border-white !z-30 shadow-sm" />
+      <Handle type="source" position={Position.Left} id="spouse-left-source" className="!w-2 !h-2 !bg-transparent opacity-0 !z-30 pointer-events-none" />
+
+      {/* Right handles */}
+      <Handle type="source" position={Position.Right} id="spouse-right" className="!w-2.5 !h-2.5 !bg-gray-400 !border-2 !border-white !z-30 shadow-sm" />
+      <Handle type="target" position={Position.Right} id="spouse-right-target" className="!w-2 !h-2 !bg-transparent opacity-0 !z-30 pointer-events-none" />
+
+      {/* Bottom handle for child outgoing edges */}
+      <Handle type="source" position={Position.Bottom} id="bottom-source" className="!w-2.5 !h-2.5 !bg-gray-400 !border-2 !border-white !z-30 shadow-sm" />
     </div>
   );
 };
