@@ -28,7 +28,7 @@ def parse_death_date(date_str):
     return (99, 99, date_str.strip())
 
 def main():
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     json_path = os.path.join(base_dir, 'backend', 'src', 'data', 'members.json')
     
     with open(json_path, 'r', encoding='utf-8') as f:
@@ -273,10 +273,10 @@ def main():
         detail_doc.append(f"  - Anh chị em ruột: {siblings_info}")
         detail_doc.append(f"- **Tiểu sử / Ghi chú**: {bio}\n")
 
-    # SAVE TO BOTH DIRECTORIES
+    # SAVE TO DIRECTORIES
     target_dirs = [
         os.path.join(base_dir, 'rag-service', 'data', 'raw_documents'),
-        os.path.join(base_dir, 'data', 'raw_documents')
+        os.path.join(base_dir, 'backend', 'src', 'data', 'knowledge')
     ]
     
     files_to_save = [

@@ -220,7 +220,7 @@ ${message}`;
     });
 
     const apiKey = geminiKey.trim();
-    const modelsToTry = ['gemini-flash-latest', 'gemini-1.5-flash', 'gemini-2.0-flash'];
+    const modelsToTry = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-flash-latest'];
     
     let lastError: any = null;
     let reply: string | null = null;

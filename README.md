@@ -18,14 +18,14 @@ flowchart LR
     Frontend --> Backend[Backend Express Node.js\nDeploy trên RENDER]
     Backend --> SupabaseDB[(PostgreSQL 17 Database\nLưu trữ trên SUPABASE)]
     Backend --> SupabaseStorage[(Cloud Storage Bucket\nLưu ảnh vĩnh viễn trên SUPABASE)]
-    Frontend -. Tra cứu AI .-> RAG[RAG AI Service\nFastAPI & Vector DB]
+    Backend --> GeminiAI[Google Gemini AI\nRAG Engine Trợ lý AI]
 ```
 
 ### Phân công hạ tầng:
 - **Frontend (Vercel)**: React 18, Vite 5, TypeScript, Tailwind CSS, `@xyflow/react`.
-- **Backend API (Render)**: Node.js 22, Express.js, TypeScript, PostgreSQL client (`pg`), `@supabase/storage-js`.
+- **Backend API (Render)**: Node.js 22, Express.js, TypeScript, PostgreSQL client (`pg`), `@supabase/storage-js`, RAG Engine tích hợp.
 - **Database & Storage (Supabase)**: PostgreSQL 17 (kết nối qua Connection Pooler SSL) và Supabase Storage (lưu trữ ảnh đại diện, ảnh tin tức vĩnh viễn).
-- **Trợ lý AI Tra cứu (RAG Service)**: Python FastAPI, LangChain, ChromaDB, Ollama (`qwen2.5:7b`).
+- **Trợ lý AI Tra cứu (RAG Engine)**: Tích hợp trực tiếp trong Backend qua Google Gemini Flash API (`gemini-3.6-flash`), kèm tùy chọn chạy độc lập với Python FastAPI (`rag-service`).
 
 ---
 
@@ -38,7 +38,7 @@ flowchart LR
   - Tích hợp công cụ cắt xén ảnh chân dung bo tròn (`react-easy-crop`) trước khi tải lên.
   - Cơ chế dự phòng dữ liệu ngoại tuyến (Static Fallback) đảm bảo trang web luôn hiển thị mượt mà.
 - **Tư liệu Lịch sử & Sự Kiện Dòng Họ**: Lưu trữ các tư liệu quý, đăng tải tin tức, thông báo ngày giỗ tổ, lễ hội truyền thống, khuyến học...
-- **Trợ Lý AI Dòng Họ**: Giải đáp câu hỏi về phả hệ, danh xưng vai vế, ngày giỗ và mộ phần tổ tiên...
+- **Trợ Lý AI Dòng Họ**: Giải đáp câu hỏi về phả hệ, danh xưng vai vế, ngày giỗ âm lịch và mộ phần tổ tiên dựa trên tư liệu gia phả chính thống...
 
 ---
 
@@ -55,10 +55,13 @@ Portal-HoLeVan-Phai4-Chi2/
 ├── backend/                          # BACKEND SERVICE (Node.js/Express + TypeScript)
 │   ├── src/
 │   │   ├── config/                   # db.ts (PostgreSQL Pool), initSql.ts, seed_members.ts
-│   │   ├── controllers/              # authController, membersController, newsController
-│   │   ├── data/members.json         # Dữ liệu 300+ thành viên gia phả đóng gói sẵn
+│   │   ├── controllers/              # authController, membersController, newsController, chatController
+│   │   ├── data/
+│   │   │   ├── knowledge/            # Bộ tư liệu gia phả số hóa (Markdown) nạp cho RAG Engine
+│   │   │   └── members.json          # Dữ liệu 300+ thành viên gia phả đóng gói sẵn
 │   │   ├── middleware/               # Xác thực JWT (auth.ts), Upload ảnh Supabase (upload.ts)
-│   │   ├── routes/                   # Khai báo endpoints (/api/auth, /api/members, /api/news)
+│   │   ├── routes/                   # Khai báo endpoints (/api/auth, /api/members, /api/news, /api/chat)
+│   │   ├── services/                 # ragService.ts (RAG Retrieval & Gemini AI Engine)
 │   │   └── server.ts                 # Điểm khởi động Express server
 │   ├── Dockerfile                    # Container hóa Backend trên nền Node 22 Alpine
 │   └── package.json
@@ -73,7 +76,9 @@ Portal-HoLeVan-Phai4-Chi2/
 │   ├── Dockerfile
 │   └── package.json
 │
-└── rag-service/                      # AI MICROSERVICE (FastAPI + LangChain + ChromaDB)
+└── rag-service/                      # AI MICROSERVICE ĐỘC LẬP (FastAPI + LangChain + ChromaDB)
+    ├── data/raw_documents/           # Toàn bộ tài liệu tri thức gia phả (Markdown)
+    ├── scripts/                      # Công cụ trích xuất dữ liệu gia phả (generate_rag_documents.py)
     ├── src/main.py                   # FastAPI server & RAG pipeline
     ├── Dockerfile
     └── requirements.txt

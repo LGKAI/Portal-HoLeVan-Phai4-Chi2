@@ -22,7 +22,7 @@ export const handleChat = async (req: Request, res: Response) => {
             console.error('[Chat RAG Error]:', err.message);
             return res.json({
                 success: true,
-                reply: `Lỗi kết nối AI: ${err.message}. Lưu ý: GEMINI_API_KEY chuẩn của Google AI Studio luôn bắt đầu bằng tiền tố "AIzaSy...". Vui lòng kiểm tra lại giá trị key trên Render.`
+                reply: `Lỗi kết nối AI: ${err.message}. Vui lòng kiểm tra lại cấu hình GEMINI_API_KEY trên Render.`
             });
         }
     }
