@@ -1,29 +1,27 @@
-# Cổng Thông Tin & Gia Phả Số Hóa Dòng Họ Lê Văn (Phái 4 - Chi 2)
+# Cổng Thông Tin & Gia Phả Số Hóa Dòng Họ Lê Văn - Phái 4 - Chi 2
 
 > **Website:** [https://portal-holevan-phai4-chi2.vercel.app/](https://portal-holevan-phai4-chi2.vercel.app/)  
-> **Địa bàn:** Thôn An Lợi, Xã Triệu Bình (Triệu Độ cũ), Huyện Triệu Phong, Tỉnh Quảng Trị  
-> **Thủy tổ Chi 2:** Ngài **Lê Văn Khôi** & Chánh phối **Phan Thị Mưu** (Đời 1 Chi 2 tương đương Đời 9 Phái 4)
 
 ---
 
 ## 📖 Mục Lục
 
-1. [Giới thiệu Dự án](#-giới-thiệu-dự-án)
-2. [Kiến trúc Hệ thống Tổng thể](#-kiến-trúc-hệ-thống-tổng-thể-system-architecture)
-3. [Phân Tích Chuyên Sâu 3 Module Cốt Lõi](#-phân-tích-chuyên-sâu-3-module-cốt-lõi)
+1. [Giới thiệu Dự án (Introduction)](#-giới-thiệu-dự-án)
+2. [Kiến trúc Hệ thống Tổng thể (System Architecture)](#-kiến-trúc-hệ-thống-tổng-thể-system-architecture)
+3. [Phân Tích Chuyên Sâu 3 Module Cốt Lõi (Core Modules)](#-phân-tích-chuyên-sâu-3-module-cốt-lõi)
    - [Module 1: Frontend (Client-side Web Application)](#1-module-frontend-client-side-web-application)
    - [Module 2: Backend (API Gateway & Data Management)](#2-module-backend-api-gateway--data-management)
    - [Module 3: RAG & Trợ Lý AI Gia Phả (Retrieval-Augmented Generation)](#3-module-rag--trợ-lý-ai-gia-phả-retrieval-augmented-generation)
 4. [Thiết Kế Cơ Sở Dữ Liệu Chi Tiết (PostgreSQL Schema)](#-thiết-kế-cơ-sở-dữ-liệu-chi-tiết-postgresql-schema)
-5. [Cấu Trúc Thư Mục Toàn Dự Án](#-cấu-trúc-thư-mục-toàn-dự-án)
+5. [Cấu Trúc Thư Mục Toàn Dự Án (Project Structure)](#-cấu-trúc-thư-mục-toàn-dự-án)
 6. [Danh Mục Biến Môi Trường (Environment Variables)](#-danh-mục-biến-môi-trường-environment-variables)
 7. [Hướng Dẫn Triển Khai Thực Tế (Production Deployment)](#-hướng-dẫn-triển-khai-thực-tế-production-deployment)
 8. [Hướng Dẫn Chạy Môi Trường Cục Bộ (Local Development)](#-hướng-dẫn-chạy-môi-trường-cục-bộ-local-development)
-9. [Bản Quyền & Cam Kết Bảo Mật](#-bản-quyền--cam-kết-bảo-mật)
+9. [Bản Quyền & Cam Kết Bảo Mật (Security & Copyright)](#-bản-quyền--cam-kết-bảo-mật)
 
 ---
 
-## 📖 Giới thiệu Dự án
+## 📖 Giới thiệu Dự án (Introduction)
 
 Dự án **Portal Họ Lê Văn - Phái 4 - Chi 2** là nền tảng số hóa di sản dòng họ toàn diện, kết hợp công nghệ web hiện đại với trí tuệ nhân tạo thế hệ mới (**RAG - Retrieval Augmented Generation**). Dự án giải quyết bài toán cấp thiết: các tư liệu gia phả giấy truyền thống qua hàng trăm năm bị mục nát, thất lạc, thông tin phân tán qua nhiều thế hệ và địa lý, đồng thời tạo ra một không gian tương tác trực quan, sinh động giúp con cháu trong và ngoài nước tra cứu nguồn cội, kết nối huyết thống và tưởng nhớ công đức tổ tiên.
 
@@ -85,7 +83,7 @@ flowchart TB
 
 ---
 
-## 🔬 Phân Tích Chuyên Sâu 3 Module Cốt Lõi
+## 🔬 Phân Tích Chuyên Sâu 3 Module Cốt Lõi (Core Modules)
 
 ---
 
@@ -331,7 +329,7 @@ erDiagram
 
 ---
 
-## 📁 Cấu Trúc Thư Mục Toàn Dự Án
+## 📁 Cấu Trúc Thư Mục Toàn Dự Án (Project Structure)
 
 ```
 Portal-HoLeVan-Phai4-Chi2/
@@ -514,7 +512,7 @@ python src/main.py
 
 ---
 
-## 🛡️ Bản Quyền & Cam Kết Bảo Mật
+## 🛡️ Bản Quyền & Cam Kết Bảo Mật (Security & Copyright)
 
 1. **Quyền Sở Hữu Dữ Liệu**:
    - Toàn bộ dữ liệu phả hệ, thông tin thân tộc, hình ảnh và vị trí mồ mả thuộc quyền sở hữu thiêng liêng của Hội đồng Gia tộc **Họ Lê Văn - Phái 4 - Chi 2**, Thôn An Lợi, Xã Triệu Bình, Huyện Triệu Phong, Tỉnh Quảng Trị.
