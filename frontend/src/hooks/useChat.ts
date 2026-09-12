@@ -19,9 +19,10 @@ export const useChat = () => {
     setIsLoading(true);
 
     try {
-      // HTTP call to backend chatbot with SSE support if needed, or simple fetch
-      // Assumes endpoint is available at backend
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const apiBase = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '');
+      const chatEndpoint = apiBase.endsWith('/api') ? `${apiBase}/chat` : `${apiBase}/api/chat`;
+
+      const response = await fetch(chatEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

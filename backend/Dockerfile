@@ -27,8 +27,9 @@ RUN npm ci --only=production && npm cache clean --force
 
 # Copy build output từ stage 1
 COPY --from=builder /app/dist ./dist
-# Copy file sql vì tsc không build các file không phải ts
-COPY --from=builder /app/src/config/init.sql ./dist/config/init.sql
+# Copy file sql và dữ liệu khởi tạo
+COPY --from=builder /app/src/config/init_postgres.sql ./dist/config/init_postgres.sql
+COPY --from=builder /app/src/data/members.json ./dist/data/members.json
 
 # Thư mục uploads cho avatars và thumbnails
 RUN mkdir -p /app/uploads/avatars /app/uploads/thumbnails

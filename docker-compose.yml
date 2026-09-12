@@ -8,8 +8,8 @@ networks:
     driver: bridge
 
 volumes:
-  mssql-data:
-    name: portal_mssql_data
+  postgres-data:
+    name: portal_postgres_data
   uploads-data:
     name: portal_uploads
   chroma-data:
@@ -18,29 +18,28 @@ volumes:
 services:
 
   # ==========================================
-  # 1. Microsoft SQL Server 2022
+  # 1. PostgreSQL 15 (Supabase Compatible)
   # ==========================================
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: portal_mssql
+  postgres:
+    image: postgres:15-alpine
+    container_name: portal_postgres
     restart: unless-stopped
     environment:
-      ACCEPT_EULA: "Y"
-      MSSQL_SA_PASSWORD: ${DB_PASSWORD:-Portal@Hle2024!}
-      MSSQL_PID: Developer
-      MSSQL_COLLATION: Vietnamese_CI_AS
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_NAME:-portal_hlevan}
     ports:
-      - "1433:1433"
+      - "5432:5432"
     volumes:
-      - mssql-data:/var/opt/mssql
+      - postgres-data:/var/lib/postgresql/data
     networks:
       - portal-network
     healthcheck:
-      test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "${DB_PASSWORD:-Portal@Hle2024!}" -Q "SELECT 1" -No || exit 1
-      interval: 20s
-      timeout: 10s
-      retries: 10
-      start_period: 60s
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-portal_hlevan}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
   # ==========================================
   # 2. Backend Node.js / Express
@@ -54,10 +53,11 @@ services:
     env_file:
       - .env
     environment:
-      DB_HOST: mssql
-      DB_PORT: 1433
-      DB_USER: ${DB_USER:-sa}
-      DB_PASSWORD: ${DB_PASSWORD:-Portal@Hle2024!}
+      DATABASE_URL: ${DATABASE_URL:-}
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
       DB_NAME: ${DB_NAME:-portal_hlevan}
       JWT_SECRET: ${JWT_SECRET}
       JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-7d}
@@ -69,7 +69,7 @@ services:
     volumes:
       - uploads-data:/app/uploads
     depends_on:
-      mssql:
+      postgres:
         condition: service_healthy
     networks:
       - portal-network
