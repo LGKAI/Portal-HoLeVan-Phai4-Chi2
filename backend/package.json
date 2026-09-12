@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc && node scripts/copy_knowledge.js"
+    "build": "tsc && node scripts/copy_knowledge.js",
+    "migrate:storage": "ts-node scripts/migrate_to_supabase_storage.ts"
   },
   "dependencies": {
     "@supabase/storage-js": "^2.116.0",

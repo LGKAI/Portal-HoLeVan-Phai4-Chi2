@@ -39,44 +39,41 @@ Hệ thống được thiết kế theo mô hình kiến trúc phân tán linh h
 
 ```mermaid
 flowchart TB
-    subgraph ClientTier["1. LỚP GIAO DIỆN CLIENT (Vercel Edge)"]
+    subgraph ClientTier["1. LỚP GIAO DIỆN CLIENT - Vercel Edge"]
         UI["React 18 SPA (Vite + Tailwind CSS)"]
-        Tree["Interactive Family Tree (@xyflow/react)"]
-        ChatUI["AI Chatbot Floating Widget & Drawer"]
-        AdminUI["Portal Quản Trị & Cắt Ảnh Tròn (Cropper)"]
-        OfflineFallback["Offline Fallback Engine (Local members.json)"]
+        Tree["Interactive Family Tree - xyflow"]
+        ChatUI["AI Chatbot Widget & Drawer"]
+        AdminUI["Portal Quản Trị & Cắt Ảnh Tròn"]
+        OfflineFallback["Offline Fallback Engine (Local Data)"]
     end
 
-    subgraph APITier["2. LỚP XỬ LÝ TRUNG TÂM (Render Web Service)"]
+    subgraph APITier["2. LỚP XỬ LÝ TRUNG TÂM - Render Web Service"]
         API["Node.js 22 LTS + Express + TypeScript"]
-        AuthMid["JWT & RBAC Middleware (Admin/Member/Guest)"]
-        UploadMid["Supabase Storage Service (Direct Memory Buffer)"]
-        RAGCore["Hybrid RAG Service Engine\n(Smart Router + Gemini Flash API)"]
+        AuthMid["JWT & RBAC Middleware"]
+        UploadMid["Supabase Storage Service"]
+        RAGCore["Hybrid RAG Service Engine<br/>(Smart Router + Gemini API)"]
     end
 
-    subgraph DataTier["3. LỚP LƯU TRỮ ĐÁM MÂY (Supabase Cloud)"]
-        PG[("PostgreSQL 17 Database\n(SSL Connection Pooling)")]
-        Storage[("Supabase Storage Bucket 'uploads'\n(Avatars, News Images)")]
+    subgraph DataTier["3. LỚP LƯU TRỮ ĐÁM MÂY - Supabase Cloud"]
+        PG[("PostgreSQL 17 Database<br/>(SSL Connection Pooling)")]
+        Storage[("Supabase Storage Bucket uploads<br/>(Avatars & News Images)")]
     end
 
-    subgraph FallbackTier["4. LỚP RAG NỘI BỘ DỰ PHÒNG (Local/Docker)"]
-        FastAPIApp["Python FastAPI Service (Port 8000)"]
+    subgraph FallbackTier["4. LỚP RAG DỰ PHÒNG - Local Docker"]
+        FastAPIApp["Python FastAPI Service"]
         VectorDB[("ChromaDB Vector Store")]
-        OllamaLocal["Ollama Local LLM (qwen2.5:7b)"]
+        OllamaLocal["Ollama Local LLM (qwen2.5)"]
     end
 
-    %% Client Interactions
-    ClientTier -->|HTTPS REST API Request| APITier
-    ClientTier -.->|Tự động kích hoạt khi Backend Cold-start| OfflineFallback
+    UI -->|HTTPS REST API| API
+    UI -.->|Kích hoạt khi Backend Cold-start| OfflineFallback
 
-    %% Backend Interactions
-    APITier -->|pg.Pool Connection Queries| PG
-    APITier -->|Upload Base64/Buffer qua SDK| Storage
-    APITier -->|Retrieve Context & Build Prompts| RAGCore
-    RAGCore -->|x-goog-api-key HTTPS REST| GeminiAI["Google Gemini 3.6 Flash\n(Google AI Studio)"]
+    API -->|pg.Pool Connection| PG
+    API -->|Upload Buffer qua SDK| Storage
+    API -->|Retrieve Context & Build Prompts| RAGCore
+    RAGCore -->|HTTPS REST Header x-goog-api-key| GeminiAI["Google Gemini 3.6 Flash<br/>(Google AI Studio)"]
 
-    %% Local Fallback
-    APITier -.->|Proxy Fallback khi chạy Local| FastAPIApp
+    API -.->|Proxy Fallback khi chạy Local| FastAPIApp
     FastAPIApp --> VectorDB
     FastAPIApp --> OllamaLocal
 ```
@@ -178,11 +175,15 @@ backend/src/
   - Tự động reset và cân bằng Sequence ID: `SELECT setval('members_id_seq', (SELECT MAX(id) FROM members))` giúp việc thêm mới thành viên qua giao diện Admin không bao giờ bị lỗi trùng khóa chính (duplicate key violation).
   - Tự động kiểm tra và khởi tạo tài khoản Quản trị viên mặc định (`ON CONFLICT (phone) DO UPDATE`).
 
-#### c. Quản lý Đa Phương Tiện (Supabase Cloud Storage)
+#### c. Quản lý Đa Phương Tiện (Supabase Cloud Storage CDN)
+- **100% Ảnh lưu trữ trên Cloud CDN**: Toàn bộ hơn 153 ảnh chân dung tiền nhân và hình ảnh bài viết được lưu trữ vĩnh viễn trên Supabase Storage bucket `uploads`, phân cấp thư mục `avatars/` và `thumbnails/`.
 - **Cơ chế tải lên Không ghi đĩa (Diskless Upload)**:
-  - Sử dụng `Multer.memoryStorage()` nhận dữ liệu ảnh dưới dạng `Buffer` trong RAM.
-  - Truyền tải trực tiếp lên bucket `uploads` của Supabase Cloud thông qua `@supabase/storage-js` bằng `SUPABASE_SERVICE_ROLE_KEY`.
-- **Độ bền vững cao**: Khắc phục triệt để nhược điểm mất tệp của các dịch vụ Cloud container như Render/Heroku (vốn có ephemeral filesystem - ổ cứng tạm thời bị xóa sạch sau mỗi lần restart).
+  - Sử dụng `Multer.memoryStorage()` tiếp nhận file ảnh trực tiếp vào bộ nhớ đệm (RAM) mà không ghi tệp rác lên ổ cứng máy chủ.
+  - Sử dụng `@supabase/storage-js` truyền tải buffer lên Cloud bucket và sinh đường dẫn CDN công khai vĩnh viễn.
+  - Khắc phục triệt để tình trạng mất dữ liệu của các máy chủ PaaS như Render (ổ đĩa tạm - ephemeral disk).
+- **Kho mã nguồn Tinh gọn (Lightweight Repository)**:
+  - Loại bỏ hoàn toàn việc commit hàng trăm file ảnh nặng vào Git. Thư mục `frontend/public/uploads` được bảo vệ bởi `.gitignore`.
+  - Tích hợp công cụ di chuyển dữ liệu tự động `npm run migrate:storage` (`backend/scripts/migrate_to_supabase_storage.ts`) hỗ trợ đồng bộ hàng loạt ảnh lên Cloud khi cần.
 
 ---
 
@@ -193,38 +194,38 @@ Hệ thống RAG được thiết kế theo kiến trúc kép (**Hybrid RAG Engi
 ```mermaid
 sequenceDiagram
     autonumber
-    actor User as Con Cháu Dòng Họ (User)
-    participant Front as Giao diện Web (Chatbot UI)
+    actor User as Con Cháu Dòng Họ
+    participant Front as Giao diện Web
     participant Back as Backend API Gateway
     participant RAG as RAG Retrieval Engine
-    participant DB as PostgreSQL 17 (Supabase)
+    participant DB as PostgreSQL Supabase
     participant Gemini as Google Gemini 3.6 Flash
 
-    User->>Front: Gửi câu hỏi ("Cụ Lê Văn Khôi là ai, giỗ ngày nào?")
-    Front->>Back: POST /api/chat { message: "..." }
-    Back->>RAG: Phân tích Ý định & Từ khóa (Intent & Keyword Analysis)
+    User->>Front: Gửi câu hỏi tra cứu gia phả
+    Front->>Back: POST /api/chat
+    Back->>RAG: Phân tích ý định và từ khóa thực thể
     
-    alt Truy vấn về Nhân thân / Thế hệ
+    alt Truy vấn về Nhân thân hoặc Thế hệ
         RAG->>DB: Truy vấn quan hệ gia đình (Cha, Mẹ, Vợ, Con)
-        DB-->>RAG: Trả về record 313 thành viên có liên quan
-    else Truy vấn về Kỵ nhật / Mộ phần
-        RAG->>RAG: Đọc tệp lich_gio_ky_va_an_tang.md
+        DB-->>RAG: Trả về hồ sơ thành viên liên quan
+    else Truy vấn về Kỵ nhật hoặc Mộ phần
+        RAG->>RAG: Đọc sổ kỵ nhật âm lịch và vị trí mồ mả
     end
 
-    RAG->>RAG: Tổng hợp Ngữ cảnh (Ground-truth Context) + Văn phong cung kính
-    RAG->>Gemini: Gửi Prompt (Context + Question) kèm Header x-goog-api-key
+    RAG->>RAG: Tổng hợp ngữ cảnh văn hóa trang trọng
+    RAG->>Gemini: Gửi Prompt và Context kèm Header API Key
     
-    alt Thành công
-        Gemini-->>RAG: Trả về câu trả lời chuẩn xác, tôn kính
-    else Gặp quá tải tạm thời (503 / 429)
+    alt Xử lý thành công
+        Gemini-->>RAG: Trả về câu trả lời chuẩn xác tôn kính
+    else Gặp lỗi quá tải 503 hoặc 429
         RAG->>RAG: Kích hoạt Auto-retry với Exponential Backoff
-        RAG->>Gemini: Thử lại yêu cầu
+        RAG->>Gemini: Thử lại yêu cầu tự động
         Gemini-->>RAG: Trả về kết quả sau khi hồi phục
     end
 
-    RAG-->>Back: Câu trả lời hoàn chỉnh
-    Back-->>Front: JSON Response { reply: "..." }
-    Front-->>User: Hiển thị câu trả lời trang trọng, kèm Markdown đẹp mắt
+    RAG-->>Back: Chuyển tiếp câu trả lời hoàn chỉnh
+    Back-->>Front: Phản hồi JSON kết quả
+    Front-->>User: Hiển thị câu trả lời trang trọng và đẹp mắt
 ```
 
 #### a. Cơ chế RAG Tích hợp Trực tiếp (Cloud-Native In-Backend RAG Engine)
@@ -265,65 +266,63 @@ Sơ đồ quan hệ thực thể (ERD) của hệ thống:
 
 ```mermaid
 erDiagram
-    USERS ||--o{ NEWS : "tạo bài viết"
-    USERS ||--o{ DOCUMENTS : "tải lên tư liệu"
-    MEMBERS ||--o{ MEMBERS : "cha (father_id)"
-    MEMBERS ||--o{ MEMBERS : "mẹ (mother_id)"
-    MEMBERS ||--o{ MEMBERS : "vợ/chồng (spouse_id)"
+    USERS ||--o{ NEWS : creates
+    USERS ||--o{ DOCUMENTS : uploads
+    MEMBERS ||--o{ MEMBERS : parent_of
 
     USERS {
-        serial id PK
-        varchar_20 phone UK "Số điện thoại đăng nhập"
-        varchar_255 password_hash "Mật khẩu Bcrypt salt 10"
-        varchar_100 full_name "Họ và tên người dùng"
-        varchar_20 role "admin | member | guest"
-        varchar_500 avatar_url "Link ảnh đại diện"
-        boolean is_active "Trạng thái kích hoạt"
-        timestamp created_at
+        int id PK
+        string phone "Unique phone number"
+        string password_hash "Bcrypt password hash"
+        string full_name "Full name"
+        string role "admin member or guest"
+        string avatar_url "Supabase CDN avatar URL"
+        boolean is_active "Active status"
+        timestamp created_at "Created timestamp"
     }
 
     MEMBERS {
-        serial id PK
-        varchar_100 full_name "Họ và tên đầy đủ"
-        varchar_100 birth_name "Tên húy / tên khai sinh"
-        int generation_in_branch "Đời trong Chi 2 (1 đến 8)"
-        varchar_10 gender "male | female | unknown"
-        varchar_50 birth_date "Ngày tháng năm sinh (Dương/Âm)"
-        varchar_50 death_date "Ngày kỵ nhật (Âm lịch)"
-        boolean is_deceased "Trạng thái đã quy tiên"
-        varchar_255 occupation "Nghề nghiệp / Chức vị"
-        varchar_500 avatar_url "Link chân dung Supabase"
-        text bio "Tiểu sử, công đức tiền nhân"
-        varchar_255 burial_place "Vị trí mồ mả / an táng"
-        varchar_255 hometown "Quê quán"
-        varchar_50 spouse_type "Chánh phối | Kế thất | Thứ phối"
-        int father_id FK "Khóa ngoại trỏ về MEMBERS(id)"
-        int mother_id FK "Khóa ngoại trỏ về MEMBERS(id)"
-        int spouse_id FK "Khóa ngoại trỏ về MEMBERS(id)"
-        timestamp created_at
-        timestamp updated_at
+        int id PK
+        string full_name "Full name"
+        string birth_name "Birth name"
+        int generation_in_branch "Generation 1 to 8"
+        string gender "male female or unknown"
+        string birth_date "Birth date"
+        string death_date "Death date lunar"
+        boolean is_deceased "Deceased status"
+        string occupation "Occupation"
+        string avatar_url "Supabase CDN avatar URL"
+        text bio "Biography"
+        string burial_place "Burial location"
+        string hometown "Hometown"
+        string spouse_type "Chanh phoi or Thu phoi"
+        int father_id FK "References members id"
+        int mother_id FK "References members id"
+        int spouse_id FK "References members id"
+        timestamp created_at "Created timestamp"
+        timestamp updated_at "Updated timestamp"
     }
 
     NEWS {
-        serial id PK
-        varchar_255 title "Tiêu đề bài viết"
-        varchar_255 slug UK "Đường dẫn thân thiện SEO"
-        text content "Nội dung bài viết / thông báo"
-        varchar_500 thumbnail_url "Ảnh đại diện bài viết"
-        varchar_50 category "news | event | announcement"
-        int author_id FK "Người đăng bài (USERS)"
-        boolean is_published "Công khai bài viết"
-        int view_count "Lượt xem"
-        timestamp published_at
+        int id PK
+        string title "Article title"
+        string slug "Unique SEO slug"
+        text content "Article content"
+        string thumbnail_url "Supabase CDN thumbnail URL"
+        string category "news event or announcement"
+        int author_id FK "References users id"
+        boolean is_published "Published status"
+        int view_count "View counter"
+        timestamp published_at "Published timestamp"
     }
 
     DOCUMENTS {
-        serial id PK
-        varchar_255 title "Tên tư liệu, sắc phong, văn tự"
-        varchar_500 file_url "Đường dẫn file Supabase"
-        varchar_50 file_type "pdf | image | doc"
-        int uploaded_by FK "Người tải lên (USERS)"
-        timestamp created_at
+        int id PK
+        string title "Document title"
+        string file_url "Supabase CDN document URL"
+        string file_type "pdf image or doc"
+        int uploaded_by FK "References users id"
+        timestamp created_at "Created timestamp"
     }
 ```
 

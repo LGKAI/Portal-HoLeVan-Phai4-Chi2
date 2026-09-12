@@ -3,9 +3,14 @@ node_modules/
 dist/
 build/
 .env
+# Uploads
+uploads/
 /uploads/
 /backend/uploads/
-!frontend/public/uploads/
+frontend/public/uploads/avatars/*
+frontend/public/uploads/thumbnails/*
+!frontend/public/uploads/avatars/.gitkeep
+!frontend/public/uploads/thumbnails/.gitkeep
 *.pyc
 .pytest_cache/
 *.egg-info/
