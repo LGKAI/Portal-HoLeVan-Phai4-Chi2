@@ -224,49 +224,66 @@ ${message}`;
     
     let lastError: any = null;
     let reply: string | null = null;
+    let isOverloaded = false;
 
     for (const model of modelsToTry) {
-        try {
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-            const response = await fetch(endpoint, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'x-goog-api-key': apiKey
-                },
-                body: JSON.stringify({
-                    systemInstruction: {
-                        parts: [{ text: systemInstruction }]
+        // Thử tối đa 2 lần cho mỗi model nếu gặp 503 (quá tải tạm thời)
+        for (let attempt = 1; attempt <= 2; attempt++) {
+            try {
+                const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'x-goog-api-key': apiKey
                     },
-                    contents: contents,
-                    generationConfig: {
-                        temperature: 0.2,
-                        maxOutputTokens: 2048
-                    }
-                }),
-                signal: AbortSignal.timeout(25000)
-            });
+                    body: JSON.stringify({
+                        systemInstruction: {
+                            parts: [{ text: systemInstruction }]
+                        },
+                        contents: contents,
+                        generationConfig: {
+                            temperature: 0.2,
+                            maxOutputTokens: 2048
+                        }
+                    }),
+                    signal: AbortSignal.timeout(25000)
+                });
 
-            if (response.ok) {
-                const data = await response.json() as any;
-                const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-                if (text) {
-                    reply = text;
-                    break;
+                if (response.ok) {
+                    const data = await response.json() as any;
+                    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (text) {
+                        reply = text;
+                        break;
+                    }
+                } else {
+                    const errText = await response.text();
+                    if (response.status === 503 || response.status === 429) {
+                        isOverloaded = true;
+                        console.warn(`[Gemini API] Model ${model} quá tải tạm thời (${response.status}) lần ${attempt}. Đợi 1.5s thử lại...`);
+                        await new Promise(res => setTimeout(res, 1500));
+                        continue;
+                    }
+                    lastError = new Error(`Model ${model} trả về lỗi ${response.status}: ${errText}`);
+                    console.warn(`[Gemini API] Thử model ${model} thất bại:`, response.status);
+                    break; // lỗi khác 503 thì chuyển model khác
                 }
-            } else {
-                const errText = await response.text();
-                lastError = new Error(`Model ${model} trả về lỗi ${response.status}: ${errText}`);
-                console.warn(`[Gemini API] Thử model ${model} thất bại:`, response.status);
+            } catch (err: any) {
+                lastError = err;
+                console.warn(`[Gemini API] Lỗi với model ${model} lần ${attempt}:`, err.message);
+                await new Promise(res => setTimeout(res, 1000));
             }
-        } catch (err: any) {
-            lastError = err;
-            console.warn(`[Gemini API] Lỗi với model ${model}:`, err.message);
         }
+        if (reply) break;
     }
 
     if (reply) {
         return reply;
+    }
+
+    if (isOverloaded) {
+        return 'Dạ, máy chủ AI của Google hiện đang bị quá tải đột xuất trong giây lát (Lỗi 503: High demand). Bạn vui lòng bấm gửi lại câu hỏi sau vài giây nhé!';
     }
 
     throw lastError || new Error('Không nhận được phản hồi từ Google Gemini');
