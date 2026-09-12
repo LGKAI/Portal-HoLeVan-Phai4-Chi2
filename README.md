@@ -1,4 +1,6 @@
-# Cổng Thông Tin & Gia Phả Dòng Họ Lê Văn (Chi 2 - Phái 4)
+# Portal Họ Lê Văn - Phái 4 - Chi 2
+
+Link: https://portal-holevan-phai4-chi2.vercel.app/
 
 Hệ thống **Cổng thông tin & Gia phả số hóa** dòng họ **Lê Văn (Chi 2 - Phái 4)** — Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị.
 
@@ -6,7 +8,7 @@ Dự án kết hợp công nghệ web hiện đại với trí tuệ nhân tạo
 
 ---
 
-## 1. Kiến trúc Triển khai Cloud (0 VNĐ / Tháng)
+## 1. Kiến trúc Triển khai Cloud
 
 Hệ thống vận hành trực tuyến 24/7 hoàn toàn miễn phí trên nền tảng Cloud hiện đại:
 
@@ -35,10 +37,8 @@ flowchart LR
   - Thống kê thời gian thực: Tổng số thành viên, số người còn sống, số người đã mất.
   - Tích hợp công cụ cắt xén ảnh chân dung bo tròn (`react-easy-crop`) trước khi tải lên.
   - Cơ chế dự phòng dữ liệu ngoại tuyến (Static Fallback) đảm bảo trang web luôn hiển thị mượt mà.
-- **Bản Tin & Sự Kiện Dòng Họ**: Đăng tải tin tức, thông báo ngày giỗ tổ, lễ hội truyền thống, khuyến học.
-- **Tư Liệu & Văn Bản Lịch Sử**: Số hóa hình ảnh sắc phong, văn tự Hán - Nôm, văn cúng, bài văn tế.
-- **Đố Vui Gia Phả (Quiz)**: Trắc nghiệm tương tác giúp thế hệ trẻ tìm hiểu cội nguồn dòng họ.
-- **Trợ Lý AI Dòng Họ**: Giải đáp câu hỏi về phả hệ, danh xưng vai vế, ngày giỗ và mộ phần tổ tiên.
+- **Tư liệu Lịch sử & Sự Kiện Dòng Họ**: Lưu trữ các tư liệu quý, đăng tải tin tức, thông báo ngày giỗ tổ, lễ hội truyền thống, khuyến học...
+- **Trợ Lý AI Dòng Họ**: Giải đáp câu hỏi về phả hệ, danh xưng vai vế, ngày giỗ và mộ phần tổ tiên...
 
 ---
 
@@ -116,14 +116,6 @@ npm run dev
 
 ## 5. Hướng dẫn Triển khai Trực tuyến (Cloud)
 
-1. **Database & Storage (Supabase)**: Tạo Project mới tại Singapore $\rightarrow$ Lấy `DATABASE_URL` (URI) $\rightarrow$ Tạo Storage bucket tên `uploads` (chế độ Public).
+1. **Database & Storage (Supabase)**: Tạo Project mới $\rightarrow$ Lấy `DATABASE_URL` (URI) $\rightarrow$ Tạo Storage bucket tên `uploads` (chế độ Public).
 2. **Backend (Render)**: Tạo Web Service từ GitHub $\rightarrow$ Root Directory: `backend` $\rightarrow$ Thêm các biến môi trường: `DATABASE_URL`, `JWT_SECRET`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_STORAGE_BUCKET=uploads`.
 3. **Frontend (Vercel)**: Import repo $\rightarrow$ Root Directory: `frontend` $\rightarrow$ Thêm biến môi trường `VITE_API_URL` trỏ về link Render kèm `/api`.
-
----
-
-## 6. Bảo mật & Quản trị Hệ thống
-
-- **Thông tin tài khoản Quản trị viên (Admin)** mặc định được lưu trữ trong file nội bộ `admin.txt` tại thư mục gốc của dự án.
-- File `admin.txt` và file `.env` đã được cấu hình trong `.gitignore` để bảo đảm **không bao giờ bị lộ lên GitHub**.
-- Sau khi đăng nhập quản trị lần đầu, vui lòng đổi mật khẩu tài khoản cá nhân để tăng cường bảo mật.
