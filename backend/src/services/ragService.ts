@@ -219,36 +219,55 @@ ${message}`;
         parts: [{ text: userPrompt }]
     });
 
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiKey.trim()}`;
+    const apiKey = geminiKey.trim();
+    const modelsToTry = ['gemini-flash-latest', 'gemini-1.5-flash', 'gemini-2.0-flash'];
+    
+    let lastError: any = null;
+    let reply: string | null = null;
 
-    const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            systemInstruction: {
-                parts: [{ text: systemInstruction }]
-            },
-            contents: contents,
-            generationConfig: {
-                temperature: 0.2,
-                maxOutputTokens: 2048
+    for (const model of modelsToTry) {
+        try {
+            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-goog-api-key': apiKey
+                },
+                body: JSON.stringify({
+                    systemInstruction: {
+                        parts: [{ text: systemInstruction }]
+                    },
+                    contents: contents,
+                    generationConfig: {
+                        temperature: 0.2,
+                        maxOutputTokens: 2048
+                    }
+                }),
+                signal: AbortSignal.timeout(25000)
+            });
+
+            if (response.ok) {
+                const data = await response.json() as any;
+                const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (text) {
+                    reply = text;
+                    break;
+                }
+            } else {
+                const errText = await response.text();
+                lastError = new Error(`Model ${model} trả về lỗi ${response.status}: ${errText}`);
+                console.warn(`[Gemini API] Thử model ${model} thất bại:`, response.status);
             }
-        }),
-        signal: AbortSignal.timeout(25000)
-    });
-
-    if (!response.ok) {
-        const errText = await response.text();
-        console.error('Gemini API Error:', response.status, errText);
-        throw new Error(`Gemini API trả về lỗi ${response.status}: ${errText}`);
+        } catch (err: any) {
+            lastError = err;
+            console.warn(`[Gemini API] Lỗi với model ${model}:`, err.message);
+        }
     }
 
-    const data = await response.json() as any;
-    const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-    if (!reply) {
-        return 'Xin lỗi, tôi chưa thể trả lời câu hỏi này lúc này.';
+    if (reply) {
+        return reply;
     }
 
-    return reply;
+    throw lastError || new Error('Không nhận được phản hồi từ Google Gemini');
 };
