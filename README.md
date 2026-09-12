@@ -112,9 +112,9 @@ frontend/src/
 
 #### a. Trực quan hóa Cây Phả Hệ Động đa chiều (`@xyflow/react`)
 - **Thuật toán Phân tầng Tọa độ Tự động (Dynamic Tree Layout Engine)**:
-  - Phân tầng dọc ($Y$): Dựa vào số đời của từng thành viên trong Chi tộc (`generation_in_branch` từ 1 đến 8):
-    $$Y = (\text{generation\_in\_branch} - 1) \times \Delta Y$$
-  - Phân tầng ngang ($X$) & Chống chồng lấn (Anti-collision Layout): Tự động tính toán bề rộng nhánh con cái để phân bổ khoảng cách $X$ hợp lý cho cha mẹ, đảm bảo các nhánh thế hệ sau không đè lên nhau.
+  - **Phân tầng dọc (Y)**: Dựa vào số đời của từng thành viên trong Chi tộc (`generation_in_branch` từ 1 đến 8):
+    $$Y = (\text{Generation} - 1) \times \Delta Y$$
+  - **Phân tầng ngang (X) & Chống chồng lấn (Anti-collision Layout)**: Tự động tính toán bề rộng nhánh con cái để phân bổ khoảng cách hợp lý cho cha mẹ, đảm bảo các nhánh thế hệ sau không đè lên nhau.
 - **Xử lý Đa Hôn Phối Phức Tạp (Multi-Spouse Handling)**:
   - Cấu trúc gia phả truyền thống thường có tiền nhân nhiều vợ (*Chánh phối, Kế thất, Thứ phối...*).
   - Nút `MemberNode.tsx` hiển thị cạnh nhau giữa người chồng và các bà vợ; đồng thời phân bổ đường kết nối (Edges) từ đúng cặp phụ mẫu tương ứng xuống các con.
@@ -233,14 +233,14 @@ sequenceDiagram
 
 - **Kho Tri Thức Chuẩn Hóa Chuyên Biệt (Structured Knowledge Base)**:
   Tọa lạc tại `backend/src/data/knowledge/`, bao gồm 3 tài liệu lõi:
-  1. `tong_quan_va_thong_ke_dong_ho.md`: Lịch sử khai hoang lập ấp tại Thôn An Lợi, nguồn gốc thủy tổ, công thức quy đổi thế hệ ($Đời_{Chi} + 8 = Đời_{Phái}$), tổng quan thống kê số liệu 8 thế hệ.
+  1. `tong_quan_va_thong_ke_dong_ho.md`: Lịch sử khai hoang lập ấp tại Thôn An Lợi, nguồn gốc thủy tổ, công thức quy đổi thế hệ (**Đời Chi 2 + 8 = Đời Phái 4**), tổng quan thống kê số liệu 8 thế hệ.
   2. `lich_gio_ky_va_an_tang.md`: Sổ kỵ nhật sắp xếp tuần tự theo 12 tháng Âm lịch và danh mục vị trí mồ mả, nghĩa trang tiền nhân (Động Cát, Nghĩa trang An Lợi...).
   3. `gia_pha_chi_tiet_ho_le_van.md`: Hồ sơ từng cụ tiền nhân với cấu trúc trường dữ liệu chặt chẽ (Họ tên, Thế hệ, Phụ thân, Mẫu thân, Phối ngẫu, Hậu duệ, Ngày kỵ, Nơi an táng, Tiểu sử công đức).
 
 - **Thuật toán Trích Xuất Ngữ Cảnh Lai (Hybrid Context Retrieval)**:
   - **Phân tích thực thể (Named Entity Recognition)**: Bóc tách tên thành viên (ví dụ: *Lê Văn Khôi, Lê Văn Thường, Lê Gia Khánh...*), số thế hệ hoặc các mốc thời gian âm lịch.
   - **Mở rộng quan hệ 2 thế hệ**: Khi tìm thấy một thành viên, thuật toán tự động gom thêm hồ sơ của cha mẹ, tất cả vợ/chồng và các con để đưa vào ngữ cảnh, giúp AI trả lời chính xác mối quan hệ gia tộc.
-  - **Trích xuất theo chủ đề**: Nếu câu hỏi nhắc đến "giỗ", "kỵ", "mộ", "an táng" $\rightarrow$ tự động trích lọc các trang kỵ nhật âm lịch liên quan.
+  - **Trích xuất theo chủ đề**: Nếu câu hỏi nhắc đến "giỗ", "kỵ", "mộ", "an táng" → tự động trích lọc các trang kỵ nhật âm lịch liên quan.
 
 - **Kết nối Google Gemini 3.6 Flash & Xử lý Ổn định (Resilience Engineering)**:
   - Sử dụng mô hình **Google Gemini 3.6 Flash** thế hệ mới nhất qua Google AI Studio API.
@@ -416,12 +416,12 @@ Hệ thống được thiết kế tối ưu hóa 100% để vận hành liên t
 
 ### Bước 1: Thiết lập Cơ sở dữ liệu & Storage trên Supabase Cloud
 1. Đăng ký tài khoản miễn phí tại [Supabase](https://supabase.com/) và tạo một Project mới.
-2. Điều hướng tới **Project Settings** $\rightarrow$ **Database** $\rightarrow$ Tìm mục **Connection Pooling** $\rightarrow$ Sao chép chuỗi kết nối URI dạng `Transaction` hoặc `Session`.
-3. Điều hướng tới **Storage** $\rightarrow$ Nhấn **New Bucket** $\rightarrow$ Đặt tên `uploads` $\rightarrow$ Đánh dấu chọn **Public bucket** $\rightarrow$ Nhấn **Save**.
-4. Điều hướng tới **Project Settings** $\rightarrow$ **API** $\rightarrow$ Sao chép `Project URL` và khóa `service_role` (bí mật).
+2. Điều hướng tới **Project Settings** → **Database** → Tìm mục **Connection Pooling** → Sao chép chuỗi kết nối URI dạng `Transaction` hoặc `Session`.
+3. Điều hướng tới **Storage** → Nhấn **New Bucket** → Đặt tên `uploads` → Đánh dấu chọn **Public bucket** → Nhấn **Save**.
+4. Điều hướng tới **Project Settings** → **API** → Sao chép `Project URL` và khóa `service_role` (bí mật).
 
 ### Bước 2: Triển khai Backend API trên Render
-1. Đăng nhập [Render Dashboard](https://dashboard.render.com/) $\rightarrow$ Chọn **New** $\rightarrow$ **Web Service**.
+1. Đăng nhập [Render Dashboard](https://dashboard.render.com/) → Chọn **New** → **Web Service**.
 2. Kết nối với kho mã nguồn GitHub của dự án.
 3. Thiết lập thông số:
    - **Name:** `portal-holevan-phai4-chi2`
@@ -430,7 +430,7 @@ Hệ thống được thiết kế tối ưu hóa 100% để vận hành liên t
    - **Build Command:** `npm install && npm run build`
    - **Start Command:** `npm start`
    - **Plan Type:** `Free`
-4. Mở rộng mục **Advanced** $\rightarrow$ **Environment Variables**, thêm đầy đủ các biến:
+4. Mở rộng mục **Advanced** → **Environment Variables**, thêm đầy đủ các biến:
    - `DATABASE_URL`: *(Dán chuỗi kết nối từ Supabase)*
    - `JWT_SECRET`: *(Tạo chuỗi bảo mật ngẫu nhiên dài từ 32 ký tự)*
    - `SUPABASE_URL`: *(Dán Project URL từ Supabase)*
@@ -441,7 +441,7 @@ Hệ thống được thiết kế tối ưu hóa 100% để vận hành liên t
 5. Nhấn **Deploy Web Service** và chờ Render hoàn tất quá trình build. Sao chép đường dẫn Web Service được cấp (ví dụ: `https://portal-holevan-phai4-chi2.onrender.com`).
 
 ### Bước 3: Triển khai Giao diện Người dùng trên Vercel
-1. Đăng nhập [Vercel Dashboard](https://vercel.com/) $\rightarrow$ Nhấn **Add New...** $\rightarrow$ **Project**.
+1. Đăng nhập [Vercel Dashboard](https://vercel.com/) → Nhấn **Add New...** → **Project**.
 2. Import kho mã nguồn GitHub của dự án.
 3. Trong phần cấu hình:
    - **Framework Preset:** `Vite`
