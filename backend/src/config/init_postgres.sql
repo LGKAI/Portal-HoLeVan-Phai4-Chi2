@@ -106,5 +106,6 @@ CREATE TABLE IF NOT EXISTS quiz_attempts (
 -- 8. Tài khoản Admin mặc định (nếu chưa có)
 -- Mật khẩu mặc định: Admin@123456 (đã hash bcrypt)
 INSERT INTO users (phone, password_hash, full_name, role)
-VALUES ('0901234567', '$2a$10$Gj.6jCMx1vcs0gQOjckoguDrl6Y3mX5F0EUl7jqkdeTMMd/QNfPyW', 'Quản trị viên', 'admin')
-ON CONFLICT (phone) DO NOTHING;
+VALUES ('0901234567', '$2a$10$Qdu0xlJipmjUmjJJzdjEsOlr240uAkCv0pSF8O2o5iVkLoayBJ.Wu', 'Quản trị viên', 'admin')
+ON CONFLICT (phone) DO UPDATE SET password_hash = EXCLUDED.password_hash, role = 'admin';
+
