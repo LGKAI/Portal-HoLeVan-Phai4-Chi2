@@ -117,5 +117,5 @@ npm run dev
 ## 5. Hướng dẫn Triển khai Trực tuyến (Cloud)
 
 1. **Database & Storage (Supabase)**: Tạo Project mới $\rightarrow$ Lấy `DATABASE_URL` (URI) $\rightarrow$ Tạo Storage bucket tên `uploads` (chế độ Public).
-2. **Backend (Render)**: Tạo Web Service từ GitHub $\rightarrow$ Root Directory: `backend` $\rightarrow$ Thêm các biến môi trường: `DATABASE_URL`, `JWT_SECRET`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_STORAGE_BUCKET=uploads`.
+2. **Backend (Render)**: Tạo Web Service từ GitHub $\rightarrow$ Root Directory: `backend` $\rightarrow$ Thêm các biến môi trường: `DATABASE_URL`, `JWT_SECRET`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_STORAGE_BUCKET=uploads`, và `GEMINI_API_KEY` (lấy miễn phí tại [Google AI Studio](https://aistudio.google.com/) để kích hoạt Trợ lý AI tra cứu gia phả).
 3. **Frontend (Vercel)**: Import repo $\rightarrow$ Root Directory: `frontend` $\rightarrow$ Thêm biến môi trường `VITE_API_URL` trỏ về link Render kèm `/api`.

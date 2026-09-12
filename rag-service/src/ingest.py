@@ -81,3 +81,24 @@ async def ingest_members_from_backend(pipeline) -> int:
     except Exception as e:
         logger.error(f"Lỗi khi lấy dữ liệu từ backend: {e}")
         return 0
+
+def ingest_all_raw_documents(pipeline) -> int:
+    """Đọc toàn bộ file tài liệu trong thư mục raw_documents và nạp vào vector store"""
+    docs_dir = settings.RAW_DOCS_DIR
+    if not os.path.exists(docs_dir):
+        logger.warning(f"Thư mục không tồn tại: {docs_dir}")
+        return 0
+
+    all_docs = []
+    files = [f for f in os.listdir(docs_dir) if f.endswith(('.md', '.txt'))]
+    for fname in sorted(files):
+        fpath = os.path.join(docs_dir, fname)
+        docs = ingest_text_file(fpath)
+        logger.info(f"Đã đọc {len(docs)} đoạn từ file {fname}")
+        all_docs.extend(docs)
+
+    if all_docs:
+        pipeline.add_documents(all_docs)
+        logger.info(f"Đã nạp thành công {len(all_docs)} đoạn tài liệu vào vector store.")
+    return len(all_docs)
+

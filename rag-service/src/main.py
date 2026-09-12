@@ -27,8 +27,17 @@ async def lifespan(app: FastAPI):
     try:
         pipeline = RAGPipeline()
         logger.info("RAG Pipeline khởi tạo thành công")
+        try:
+            doc_count = pipeline.vector_store._collection.count()
+            if doc_count == 0:
+                logger.info("Vector store đang trống. Tự động nạp tài liệu từ raw_documents...")
+                ingest.ingest_all_raw_documents(pipeline)
+            else:
+                logger.info(f"Vector store hiện có {doc_count} tài liệu.")
+        except Exception as err:
+            logger.warning(f"Không thể kiểm tra hoặc tự nạp tài liệu: {err}")
     except Exception as e:
-        logger.warning(f"Ollama chưa sẵn sàng hoặc có lỗi khi khởi tạo RAG Pipeline: {e}")
+        logger.warning(f"Ollama/LLM chưa sẵn sàng hoặc có lỗi khi khởi tạo RAG Pipeline: {e}")
         # Vẫn cho phép server start, các request sẽ handle lỗi sau
     
     yield
@@ -61,6 +70,27 @@ async def chat(request: ChatRequest):
         yield 'data: [DONE]\n\n'
         
     return StreamingResponse(generate(), media_type='text/event-stream')
+
+@app.post("/chat/sync")
+async def chat_sync(request: ChatRequest):
+    """Endpoint trả về phản hồi dạng JSON đồng bộ cho Frontend / Backend"""
+    if not pipeline:
+        raise HTTPException(status_code=503, detail="RAG Pipeline chưa sẵn sàng")
+        
+    chunks = []
+    async for chunk in pipeline.query(request.message, request.conversation_history):
+        chunks.append(chunk)
+    return {"reply": "".join(chunks)}
+
+@app.post("/ingest/raw-documents")
+async def ingest_raw_documents_route():
+    """Nạp thủ công toàn bộ file trong thư mục raw_documents vào vector store"""
+    if not pipeline:
+        raise HTTPException(status_code=503, detail="RAG Pipeline chưa sẵn sàng")
+        
+    count = ingest.ingest_all_raw_documents(pipeline)
+    return {"success": True, "count": count}
+
 
 @app.post("/ingest")
 async def ingest_document(request: IngestRequest):

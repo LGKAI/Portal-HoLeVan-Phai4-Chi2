@@ -12,6 +12,7 @@ build/
 .venv/
 venv/
 data/vector_store/
+rag-service/data/vector_store/
 *.DS_Store
 .idea/
 .vscode/
