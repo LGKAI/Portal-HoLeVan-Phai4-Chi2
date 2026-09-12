@@ -1,126 +1,525 @@
-# Portal Họ Lê Văn - Phái 4 - Chi 2
+# Cổng Thông Tin & Gia Phả Số Hóa Dòng Họ Lê Văn (Phái 4 - Chi 2)
 
-Link: https://portal-holevan-phai4-chi2.vercel.app/
-
-Hệ thống **Cổng thông tin & Gia phả số hóa** dòng họ **Lê Văn (Chi 2 - Phái 4)** — Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị.
-
-Dự án kết hợp công nghệ web hiện đại với trí tuệ nhân tạo (**RAG - Retrieval Augmented Generation**) nhằm bảo tồn truyền thống tổ tiên, số hóa cây gia phả tương tác đa thế hệ, cập nhật tin tức, tư liệu dòng họ, đồng thời hỗ trợ con cháu tra cứu cội nguồn nhanh chóng qua **Trợ lý AI dòng họ**.
+> **Website:** [https://portal-holevan-phai4-chi2.vercel.app/](https://portal-holevan-phai4-chi2.vercel.app/)  
+> **Địa bàn:** Thôn An Lợi, Xã Triệu Bình (Triệu Độ cũ), Huyện Triệu Phong, Tỉnh Quảng Trị  
+> **Thủy tổ Chi 2:** Ngài **Lê Văn Khôi** & Chánh phối **Phan Thị Mưu** (Đời 1 Chi 2 tương đương Đời 9 Phái 4)
 
 ---
 
-## 1. Kiến trúc Triển khai Cloud
+## 📖 Mục Lục
 
-Hệ thống vận hành trực tuyến 24/7 hoàn toàn miễn phí trên nền tảng Cloud hiện đại:
+1. [Giới thiệu Dự án](#-giới-thiệu-dự-án)
+2. [Kiến trúc Hệ thống Tổng thể](#-kiến-trúc-hệ-thống-tổng-thể-system-architecture)
+3. [Phân Tích Chuyên Sâu 3 Module Cốt Lõi](#-phân-tích-chuyên-sâu-3-module-cốt-lõi)
+   - [Module 1: Frontend (Client-side Web Application)](#1-module-frontend-client-side-web-application)
+   - [Module 2: Backend (API Gateway & Data Management)](#2-module-backend-api-gateway--data-management)
+   - [Module 3: RAG & Trợ Lý AI Gia Phả (Retrieval-Augmented Generation)](#3-module-rag--trợ-lý-ai-gia-phả-retrieval-augmented-generation)
+4. [Thiết Kế Cơ Sở Dữ Liệu Chi Tiết (PostgreSQL Schema)](#-thiết-kế-cơ-sở-dữ-liệu-chi-tiết-postgresql-schema)
+5. [Cấu Trúc Thư Mục Toàn Dự Án](#-cấu-trúc-thư-mục-toàn-dự-án)
+6. [Danh Mục Biến Môi Trường (Environment Variables)](#-danh-mục-biến-môi-trường-environment-variables)
+7. [Hướng Dẫn Triển Khai Thực Tế (Production Deployment)](#-hướng-dẫn-triển-khai-thực-tế-production-deployment)
+8. [Hướng Dẫn Chạy Môi Trường Cục Bộ (Local Development)](#-hướng-dẫn-chạy-môi-trường-cục-bộ-local-development)
+9. [Bản Quyền & Cam Kết Bảo Mật](#-bản-quyền--cam-kết-bảo-mật)
+
+---
+
+## 📖 Giới thiệu Dự án
+
+Dự án **Portal Họ Lê Văn - Phái 4 - Chi 2** là nền tảng số hóa di sản dòng họ toàn diện, kết hợp công nghệ web hiện đại với trí tuệ nhân tạo thế hệ mới (**RAG - Retrieval Augmented Generation**). Dự án giải quyết bài toán cấp thiết: các tư liệu gia phả giấy truyền thống qua hàng trăm năm bị mục nát, thất lạc, thông tin phân tán qua nhiều thế hệ và địa lý, đồng thời tạo ra một không gian tương tác trực quan, sinh động giúp con cháu trong và ngoài nước tra cứu nguồn cội, kết nối huyết thống và tưởng nhớ công đức tổ tiên.
+
+Hệ thống quản lý dữ liệu **hơn 313 thành viên trải qua 8 thế hệ** (tương ứng Đời 9 đến Đời 16 của toàn Phái 4 Họ Lê Văn tại An Lợi), cung cấp:
+- **Cây phả hệ tương tác động đa chiều**: Tự động tính toán vị trí, phân nhánh thế hệ, quản lý đa hôn phối.
+- **Sổ tang lễ kỵ nhật 12 tháng âm lịch**: Tra cứu ngày giỗ, mộ phần, nghĩa trang tiền nhân.
+- **Cổng tin tức & truyền thông dòng tộc**: Cập nhật sự kiện, thông báo việc họ, chia sẻ hình ảnh sinh hoạt.
+- **Trợ lý AI Gia Phả am tường nguồn cội**: Giải đáp thắc mắc về vai vế xưng hô, huyết thống, tiểu sử tiền nhân với độ chính xác tuyệt đối, loại trừ hoàn toàn ảo giác (hallucination).
+
+---
+
+## 🏛️ Kiến trúc Hệ thống Tổng thể (System Architecture)
+
+Hệ thống được thiết kế theo mô hình kiến trúc phân tán linh hoạt (**Decoupled Micro-services Architecture**), vận hành trực tuyến **24/7 hoàn toàn miễn phí** với độ ổn định cao:
 
 ```mermaid
-flowchart LR
-    User([Người dùng / Con cháu]) --> Frontend[Frontend React\nDeploy trên VERCEL]
-    Frontend --> Backend[Backend Express Node.js\nDeploy trên RENDER]
-    Backend --> SupabaseDB[(PostgreSQL 17 Database\nLưu trữ trên SUPABASE)]
-    Backend --> SupabaseStorage[(Cloud Storage Bucket\nLưu ảnh vĩnh viễn trên SUPABASE)]
-    Backend --> GeminiAI[Google Gemini AI\nRAG Engine Trợ lý AI]
+flowchart TB
+    subgraph ClientTier["1. LỚP GIAO DIỆN CLIENT (Vercel Edge)"]
+        UI["React 18 SPA (Vite + Tailwind CSS)"]
+        Tree["Interactive Family Tree (@xyflow/react)"]
+        ChatUI["AI Chatbot Floating Widget & Drawer"]
+        AdminUI["Portal Quản Trị & Cắt Ảnh Tròn (Cropper)"]
+        OfflineFallback["Offline Fallback Engine (Local members.json)"]
+    end
+
+    subgraph APITier["2. LỚP XỬ LÝ TRUNG TÂM (Render Web Service)"]
+        API["Node.js 22 LTS + Express + TypeScript"]
+        AuthMid["JWT & RBAC Middleware (Admin/Member/Guest)"]
+        UploadMid["Supabase Storage Service (Direct Memory Buffer)"]
+        RAGCore["Hybrid RAG Service Engine\n(Smart Router + Gemini Flash API)"]
+    end
+
+    subgraph DataTier["3. LỚP LƯU TRỮ ĐÁM MÂY (Supabase Cloud)"]
+        PG[("PostgreSQL 17 Database\n(SSL Connection Pooling)")]
+        Storage[("Supabase Storage Bucket 'uploads'\n(Avatars, News Images)")]
+    end
+
+    subgraph FallbackTier["4. LỚP RAG NỘI BỘ DỰ PHÒNG (Local/Docker)"]
+        FastAPIApp["Python FastAPI Service (Port 8000)"]
+        VectorDB[("ChromaDB Vector Store")]
+        OllamaLocal["Ollama Local LLM (qwen2.5:7b)"]
+    end
+
+    %% Client Interactions
+    ClientTier -->|HTTPS REST API Request| APITier
+    ClientTier -.->|Tự động kích hoạt khi Backend Cold-start| OfflineFallback
+
+    %% Backend Interactions
+    APITier -->|pg.Pool Connection Queries| PG
+    APITier -->|Upload Base64/Buffer qua SDK| Storage
+    APITier -->|Retrieve Context & Build Prompts| RAGCore
+    RAGCore -->|x-goog-api-key HTTPS REST| GeminiAI["Google Gemini 3.6 Flash\n(Google AI Studio)"]
+
+    %% Local Fallback
+    APITier -.->|Proxy Fallback khi chạy Local| FastAPIApp
+    FastAPIApp --> VectorDB
+    FastAPIApp --> OllamaLocal
 ```
 
-### Phân công hạ tầng:
-- **Frontend (Vercel)**: React 18, Vite 5, TypeScript, Tailwind CSS, `@xyflow/react`.
-- **Backend API (Render)**: Node.js 22, Express.js, TypeScript, PostgreSQL client (`pg`), `@supabase/storage-js`, RAG Engine tích hợp.
-- **Database & Storage (Supabase)**: PostgreSQL 17 (kết nối qua Connection Pooler SSL) và Supabase Storage (lưu trữ ảnh đại diện, ảnh tin tức vĩnh viễn).
-- **Trợ lý AI Tra cứu (RAG Engine)**: Tích hợp trực tiếp trong Backend qua Google Gemini Flash API (`gemini-3.6-flash`), kèm tùy chọn chạy độc lập với Python FastAPI (`rag-service`).
+---
+
+## 🔬 Phân Tích Chuyên Sâu 3 Module Cốt Lõi
 
 ---
 
-## 2. Tính năng Nổi bật
+### 1. MODULE FRONTEND (Client-side Web Application)
 
-- **Cây Gia Phả Tương Tác Trực Quan**:
-  - Tự động phân tầng thế hệ theo từng đời con cháu.
-  - Phân nhánh rõ ràng con cái theo từng đời vợ (*Chánh phối, Thứ phối, Thứ thứ phối...*).
-  - Thống kê thời gian thực: Tổng số thành viên, số người còn sống, số người đã mất.
-  - Tích hợp công cụ cắt xén ảnh chân dung bo tròn (`react-easy-crop`) trước khi tải lên.
-  - Cơ chế dự phòng dữ liệu ngoại tuyến (Static Fallback) đảm bảo trang web luôn hiển thị mượt mà.
-- **Tư liệu Lịch sử & Sự Kiện Dòng Họ**: Lưu trữ các tư liệu quý, đăng tải tin tức, thông báo ngày giỗ tổ, lễ hội truyền thống, khuyến học...
-- **Trợ Lý AI Dòng Họ**: Giải đáp câu hỏi về phả hệ, danh xưng vai vế, ngày giỗ âm lịch và mộ phần tổ tiên dựa trên tư liệu gia phả chính thống...
+Được xây dựng trên nền tảng **React 18**, **Vite 5**, **TypeScript** và **Tailwind CSS**, triển khai tối ưu hóa tại biên (**Edge Network**) trên Vercel.
+
+```
+frontend/src/
+├── components/
+│   ├── FamilyTree/         # Bộ nhân đồ thị cây gia phả
+│   │   ├── MemberNode.tsx  # Custom Node hiển thị thành viên & phối ngẫu
+│   │   ├── TreeControls.tsx# Nút điều hướng, zoom, pan, fullscreen
+│   │   └── layoutEngine.ts # Thuật toán tính toán toạ độ cây phả hệ
+│   ├── Chatbot/            # Widget trợ lý AI nổi và cửa sổ hội thoại
+│   ├── Layout/             # Header, Footer, Navbar, Responsive Mobile Menu
+│   └── modals/             # Modal chi tiết thành viên, Modal đăng nhập...
+├── pages/
+│   ├── HomePage.tsx        # Trang chủ, thống kê số liệu, tin tức mới
+│   ├── FamilyTreePage.tsx  # Trang hiển thị và tìm kiếm gia phả
+│   ├── CalendarPage.tsx    # Trang sổ kỵ nhật 12 tháng âm lịch
+│   ├── NewsPage.tsx        # Cổng thông tin, bài viết dòng họ
+│   └── AdminPage.tsx       # Bảng điều khiển quản trị thành viên & tin tức
+├── store/
+│   └── authStore.ts        # Quản lý phiên đăng nhập Zustand
+└── services/
+    └── api.ts              # Cấu hình Axios Client & Interceptor JWT
+```
+
+#### a. Trực quan hóa Cây Phả Hệ Động đa chiều (`@xyflow/react`)
+- **Thuật toán Phân tầng Tọa độ Tự động (Dynamic Tree Layout Engine)**:
+  - Phân tầng dọc ($Y$): Dựa vào số đời của từng thành viên trong Chi tộc (`generation_in_branch` từ 1 đến 8):
+    $$Y = (\text{generation\_in\_branch} - 1) \times \Delta Y$$
+  - Phân tầng ngang ($X$) & Chống chồng lấn (Anti-collision Layout): Tự động tính toán bề rộng nhánh con cái để phân bổ khoảng cách $X$ hợp lý cho cha mẹ, đảm bảo các nhánh thế hệ sau không đè lên nhau.
+- **Xử lý Đa Hôn Phối Phức Tạp (Multi-Spouse Handling)**:
+  - Cấu trúc gia phả truyền thống thường có tiền nhân nhiều vợ (*Chánh phối, Kế thất, Thứ phối...*).
+  - Nút `MemberNode.tsx` hiển thị cạnh nhau giữa người chồng và các bà vợ; đồng thời phân bổ đường kết nối (Edges) từ đúng cặp phụ mẫu tương ứng xuống các con.
+- **Tối ưu Hiệu Năng & Tương tác UX**:
+  - Tích hợp **MiniMap** định vị toàn cảnh cây phả hệ, thanh công cụ thu/phóng (ZoomIn, ZoomOut, FitView).
+  - **Search & Auto-Focus**: Khi người dùng nhập tên thành viên trên thanh tìm kiếm, hệ thống tự động pan khung nhìn và zoom tập trung vào đúng vị trí của thành viên đó trên cây.
+  - **Chỉ báo Sinh - Tử trang trọng**: Thành viên đã quy tiên hiển thị biểu tượng hoa cúc vàng hoặc dải băng tưởng niệm; người hiện tiền hiển thị trạng thái sinh hoạt.
+
+#### b. Quản trị State & Trải nghiệm Người dùng
+- **Zustand Auth Store (`authStore.ts`)**: Quản lý trạng thái xác thực toàn cục, lưu trữ JWT Token và thông tin định danh (`Admin`, `Member`, `Guest`) đồng bộ qua `localStorage`.
+- **Cắt xén hình ảnh chân dung chuẩn xác (`react-easy-crop`)**:
+  - Trang Admin tích hợp công cụ cắt ảnh tỉ lệ vuông tròn 1:1, phóng to, thu nhỏ, xoay ảnh trước khi gửi lên máy chủ.
+  - Đảm bảo toàn bộ ảnh chân dung hiển thị trên cây phả hệ đạt chuẩn thẩm mỹ đồng nhất.
+- **Cơ chế Dự phòng Ngoại tuyến (Resilient Offline Fallback)**:
+  - Khi Backend gặp sự cố khởi động (Cold-start trên môi trường Free Cloud) hoặc mất kết nối Internet, Frontend tự động fallback nạp từ tệp dữ liệu tĩnh `frontend/src/data/members.json`.
+  - Giữ vững 100% khả năng tra cứu gia phả của người dùng, không bao giờ để xảy ra màn hình trắng hay lỗi ứng dụng.
 
 ---
 
-## 3. Cấu trúc Thư mục Dự án
+### 2. MODULE BACKEND (API Gateway & Data Management)
+
+Xây dựng trên nền tảng **Node.js 22 LTS**, **Express.js** và **TypeScript**, tuân thủ nghiêm ngặt mô hình kiến trúc Controller - Service - Middleware - Route.
+
+```
+backend/src/
+├── config/
+│   ├── db.ts               # Kết nối PostgreSQL Pooler qua SSL
+│   ├── initSql.ts          # Script khởi tạo cấu trúc 4 bảng tự động
+│   └── seed_members.ts     # Script tự động import 313 thành viên vào DB
+├── controllers/
+│   ├── authController.ts   # Đăng nhập, xác thực danh tính
+│   ├── membersController.ts# Nghiệp vụ CRUD thành viên gia phả
+│   ├── newsController.ts   # Nghiệp vụ bài viết, tin tức dòng họ
+│   └── chatController.ts   # Điều phối truy vấn RAG & AI Chat
+├── middleware/
+│   ├── auth.ts             # Kiểm tra Bearer JWT & Phân quyền Role-based (RBAC)
+│   └── upload.ts           # Tiếp nhận file qua Multer MemoryStorage
+├── services/
+│   └── ragService.ts       # Trích xuất ngữ cảnh & Tích hợp Gemini 3.6 Flash
+└── server.ts               # Điểm khởi tạo máy chủ Express
+```
+
+#### a. Xác thực & Phân quyền Bảo mật Đa cấp (JWT & RBAC)
+- **Mã hóa Mật khẩu**: Mật khẩu quản trị và người dùng được băm bằng thuật toán **Bcrypt** với Salt Rounds = 10, ngăn chặn hoàn toàn việc giải mã ngược.
+- **Middleware `verifyToken` & `requireAdmin`**:
+  - Trích xuất token từ header `Authorization: Bearer <token>`.
+  - Xác thực chữ ký số bằng `JWT_SECRET`.
+  - Chặn đứng mọi hành vi chỉnh sửa, xóa dữ liệu thành viên hoặc đăng bài trái phép từ tài khoản không có quyền Admin.
+- **Bảo mật Header HTTP**: Tích hợp `cors` (giới hạn domain cho phép từ Vercel) và `helmet` ngăn ngừa XSS, MIME-sniffing và Clickjacking.
+
+#### b. Hệ thống Kết nối Dữ liệu (PostgreSQL 17 on Supabase)
+- **Quản lý Kết nối Connection Pooling (`pg.Pool`)**:
+  - Kết nối tới Supabase qua cổng Pooler chuyên dụng với cấu hình SSL (`rejectUnauthorized: false`).
+  - Đảm bảo tái sử dụng kết nối hiệu quả, tránh cạn kiệt tài nguyên kết nối (Connection Exhaustion) trên môi trường Serverless/PaaS.
+- **Cơ chế Khởi tạo & Đồng bộ Dữ liệu Tự động (Auto-Migration & Seeding)**:
+  - Khi máy chủ khởi động, tự động thực thi `initSql.ts` để kiểm tra và tạo các bảng nếu chưa có.
+  - Nếu bảng `members` trống, hệ thống tự động kích hoạt `seed_members.ts`, nạp toàn bộ 313 thành viên từ `members.json` với quan hệ đa tầng (Cha, Mẹ, Vợ/Chồng, Con cái).
+  - Tự động reset và cân bằng Sequence ID: `SELECT setval('members_id_seq', (SELECT MAX(id) FROM members))` giúp việc thêm mới thành viên qua giao diện Admin không bao giờ bị lỗi trùng khóa chính (duplicate key violation).
+  - Tự động kiểm tra và khởi tạo tài khoản Quản trị viên mặc định (`ON CONFLICT (phone) DO UPDATE`).
+
+#### c. Quản lý Đa Phương Tiện (Supabase Cloud Storage)
+- **Cơ chế tải lên Không ghi đĩa (Diskless Upload)**:
+  - Sử dụng `Multer.memoryStorage()` nhận dữ liệu ảnh dưới dạng `Buffer` trong RAM.
+  - Truyền tải trực tiếp lên bucket `uploads` của Supabase Cloud thông qua `@supabase/storage-js` bằng `SUPABASE_SERVICE_ROLE_KEY`.
+- **Độ bền vững cao**: Khắc phục triệt để nhược điểm mất tệp của các dịch vụ Cloud container như Render/Heroku (vốn có ephemeral filesystem - ổ cứng tạm thời bị xóa sạch sau mỗi lần restart).
+
+---
+
+### 3. MODULE RAG & TRỢ LÝ AI GIA PHẢ (Retrieval-Augmented Generation)
+
+Hệ thống RAG được thiết kế theo kiến trúc kép (**Hybrid RAG Engine**), ưu tiên tối đa cho việc vận hành Cloud 100% miễn phí mà vẫn sẵn sàng chuyển đổi sang giải pháp hoàn toàn Offline/Local:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Con Cháu Dòng Họ (User)
+    participant Front as Giao diện Web (Chatbot UI)
+    participant Back as Backend API Gateway
+    participant RAG as RAG Retrieval Engine
+    participant DB as PostgreSQL 17 (Supabase)
+    participant Gemini as Google Gemini 3.6 Flash
+
+    User->>Front: Gửi câu hỏi ("Cụ Lê Văn Khôi là ai, giỗ ngày nào?")
+    Front->>Back: POST /api/chat { message: "..." }
+    Back->>RAG: Phân tích Ý định & Từ khóa (Intent & Keyword Analysis)
+    
+    alt Truy vấn về Nhân thân / Thế hệ
+        RAG->>DB: Truy vấn quan hệ gia đình (Cha, Mẹ, Vợ, Con)
+        DB-->>RAG: Trả về record 313 thành viên có liên quan
+    else Truy vấn về Kỵ nhật / Mộ phần
+        RAG->>RAG: Đọc tệp lich_gio_ky_va_an_tang.md
+    end
+
+    RAG->>RAG: Tổng hợp Ngữ cảnh (Ground-truth Context) + Văn phong cung kính
+    RAG->>Gemini: Gửi Prompt (Context + Question) kèm Header x-goog-api-key
+    
+    alt Thành công
+        Gemini-->>RAG: Trả về câu trả lời chuẩn xác, tôn kính
+    else Gặp quá tải tạm thời (503 / 429)
+        RAG->>RAG: Kích hoạt Auto-retry với Exponential Backoff
+        RAG->>Gemini: Thử lại yêu cầu
+        Gemini-->>RAG: Trả về kết quả sau khi hồi phục
+    end
+
+    RAG-->>Back: Câu trả lời hoàn chỉnh
+    Back-->>Front: JSON Response { reply: "..." }
+    Front-->>User: Hiển thị câu trả lời trang trọng, kèm Markdown đẹp mắt
+```
+
+#### a. Cơ chế RAG Tích hợp Trực tiếp (Cloud-Native In-Backend RAG Engine)
+Được tích hợp trực tiếp trong `backend/src/services/ragService.ts`, giải pháp này tối ưu hóa tài nguyên: **không cần chạy thêm container Python riêng**, tiết kiệm 100% RAM và chi phí trên Cloud.
+
+- **Kho Tri Thức Chuẩn Hóa Chuyên Biệt (Structured Knowledge Base)**:
+  Tọa lạc tại `backend/src/data/knowledge/`, bao gồm 3 tài liệu lõi:
+  1. `tong_quan_va_thong_ke_dong_ho.md`: Lịch sử khai hoang lập ấp tại Thôn An Lợi, nguồn gốc thủy tổ, công thức quy đổi thế hệ ($Đời_{Chi} + 8 = Đời_{Phái}$), tổng quan thống kê số liệu 8 thế hệ.
+  2. `lich_gio_ky_va_an_tang.md`: Sổ kỵ nhật sắp xếp tuần tự theo 12 tháng Âm lịch và danh mục vị trí mồ mả, nghĩa trang tiền nhân (Động Cát, Nghĩa trang An Lợi...).
+  3. `gia_pha_chi_tiet_ho_le_van.md`: Hồ sơ từng cụ tiền nhân với cấu trúc trường dữ liệu chặt chẽ (Họ tên, Thế hệ, Phụ thân, Mẫu thân, Phối ngẫu, Hậu duệ, Ngày kỵ, Nơi an táng, Tiểu sử công đức).
+
+- **Thuật toán Trích Xuất Ngữ Cảnh Lai (Hybrid Context Retrieval)**:
+  - **Phân tích thực thể (Named Entity Recognition)**: Bóc tách tên thành viên (ví dụ: *Lê Văn Khôi, Lê Văn Thường, Lê Gia Khánh...*), số thế hệ hoặc các mốc thời gian âm lịch.
+  - **Mở rộng quan hệ 2 thế hệ**: Khi tìm thấy một thành viên, thuật toán tự động gom thêm hồ sơ của cha mẹ, tất cả vợ/chồng và các con để đưa vào ngữ cảnh, giúp AI trả lời chính xác mối quan hệ gia tộc.
+  - **Trích xuất theo chủ đề**: Nếu câu hỏi nhắc đến "giỗ", "kỵ", "mộ", "an táng" $\rightarrow$ tự động trích lọc các trang kỵ nhật âm lịch liên quan.
+
+- **Kết nối Google Gemini 3.6 Flash & Xử lý Ổn định (Resilience Engineering)**:
+  - Sử dụng mô hình **Google Gemini 3.6 Flash** thế hệ mới nhất qua Google AI Studio API.
+  - **Chuẩn hóa Khóa API**: Tương thích định dạng khóa mới bắt đầu bằng `AQ.` bằng cách gửi qua HTTP Header `x-goog-api-key: <KEY>`.
+  - **Tự Động Thử Lại (Exponential Backoff)**: Tích hợp cơ chế tự động thử lại tối đa 3 lần với khoảng cách thời gian tăng dần khi Google AI Studio báo quá tải (HTTP 503 Service Unavailable) hoặc giới hạn tần suất (HTTP 429 Rate Limit).
+  - **System Prompt Chuẩn mực Văn hóa**:
+    > "Bạn là Trợ lý Trí tuệ Nhân tạo Phả Hệ của Dòng họ Lê Văn (Phái 4 - Chi 2)... Khi nhắc đến tiền nhân, luôn xưng hô cung kính: 'Cụ', 'Ông', 'Bà', 'Ngài'... Chỉ dựa vào dữ liệu gia phả được cung cấp, tuyệt đối không suy diễn bịa đặt."
+
+#### b. Microservice Python FastAPI Độc lập (`rag-service`) - *Dùng cho Local / Offline*
+Dành riêng cho môi trường nghiên cứu hoặc triển khai cục bộ không cần kết nối Internet:
+- **Ngăn xếp công nghệ**: Python 3.10+, **FastAPI**, **LangChain**, **ChromaDB**, và **Ollama** (`qwen2.5:7b` + `nomic-embed-text`).
+- **Quy trình Ingestion (`ingest.py`)**:
+  - Phân mảnh văn bản bằng `RecursiveCharacterTextSplitter` (chunk_size: 800 ký tự, chunk_overlap: 150 ký tự).
+  - Tạo vector nhúng và lưu trữ bền vững vào ChromaDB.
+- **Kịch bản Tự động Sinh Tri thức (`rag-service/scripts/generate_rag_documents.py`)**:
+  - Script Python tự động quét cơ sở dữ liệu `members.json` để tạo mới/cập nhật toàn bộ các file Markdown trong kho tri thức khi có sự thay đổi về thành viên.
+
+---
+
+## 🗄️ Thiết Kế Cơ Sở Dữ Liệu Chi Tiết (PostgreSQL Schema)
+
+Sơ đồ quan hệ thực thể (ERD) của hệ thống:
+
+```mermaid
+erDiagram
+    USERS ||--o{ NEWS : "tạo bài viết"
+    USERS ||--o{ DOCUMENTS : "tải lên tư liệu"
+    MEMBERS ||--o{ MEMBERS : "cha (father_id)"
+    MEMBERS ||--o{ MEMBERS : "mẹ (mother_id)"
+    MEMBERS ||--o{ MEMBERS : "vợ/chồng (spouse_id)"
+
+    USERS {
+        serial id PK
+        varchar_20 phone UK "Số điện thoại đăng nhập"
+        varchar_255 password_hash "Mật khẩu Bcrypt salt 10"
+        varchar_100 full_name "Họ và tên người dùng"
+        varchar_20 role "admin | member | guest"
+        varchar_500 avatar_url "Link ảnh đại diện"
+        boolean is_active "Trạng thái kích hoạt"
+        timestamp created_at
+    }
+
+    MEMBERS {
+        serial id PK
+        varchar_100 full_name "Họ và tên đầy đủ"
+        varchar_100 birth_name "Tên húy / tên khai sinh"
+        int generation_in_branch "Đời trong Chi 2 (1 đến 8)"
+        varchar_10 gender "male | female | unknown"
+        varchar_50 birth_date "Ngày tháng năm sinh (Dương/Âm)"
+        varchar_50 death_date "Ngày kỵ nhật (Âm lịch)"
+        boolean is_deceased "Trạng thái đã quy tiên"
+        varchar_255 occupation "Nghề nghiệp / Chức vị"
+        varchar_500 avatar_url "Link chân dung Supabase"
+        text bio "Tiểu sử, công đức tiền nhân"
+        varchar_255 burial_place "Vị trí mồ mả / an táng"
+        varchar_255 hometown "Quê quán"
+        varchar_50 spouse_type "Chánh phối | Kế thất | Thứ phối"
+        int father_id FK "Khóa ngoại trỏ về MEMBERS(id)"
+        int mother_id FK "Khóa ngoại trỏ về MEMBERS(id)"
+        int spouse_id FK "Khóa ngoại trỏ về MEMBERS(id)"
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    NEWS {
+        serial id PK
+        varchar_255 title "Tiêu đề bài viết"
+        varchar_255 slug UK "Đường dẫn thân thiện SEO"
+        text content "Nội dung bài viết / thông báo"
+        varchar_500 thumbnail_url "Ảnh đại diện bài viết"
+        varchar_50 category "news | event | announcement"
+        int author_id FK "Người đăng bài (USERS)"
+        boolean is_published "Công khai bài viết"
+        int view_count "Lượt xem"
+        timestamp published_at
+    }
+
+    DOCUMENTS {
+        serial id PK
+        varchar_255 title "Tên tư liệu, sắc phong, văn tự"
+        varchar_500 file_url "Đường dẫn file Supabase"
+        varchar_50 file_type "pdf | image | doc"
+        int uploaded_by FK "Người tải lên (USERS)"
+        timestamp created_at
+    }
+```
+
+---
+
+## 📁 Cấu Trúc Thư Mục Toàn Dự Án
 
 ```
 Portal-HoLeVan-Phai4-Chi2/
-├── .env.example                      # File mẫu biến môi trường chuẩn (không chứa mã mật)
-├── .gitignore                        # Cấu hình bỏ qua file nhạy cảm và thư mục build
-├── admin.txt                         # Thông tin tài khoản quản trị nội bộ (được gitignore bảo vệ)
-├── docker-compose.yml                # Cấu hình khởi chạy toàn bộ hệ thống cục bộ với PostgreSQL
-├── README.md                         # Tài liệu giới thiệu & hướng dẫn dự án
+├── .env.example                          # Mẫu khai báo biến môi trường chuẩn hóa
+├── .gitignore                            # Danh sách tệp nhạy cảm cần loại trừ khỏi git
+├── admin.txt                             # Thông tin tài khoản quản trị (đã gitignore an toàn)
+├── docker-compose.yml                    # Cấu hình Docker Compose đa container cục bộ
+├── README.md                             # Tài liệu kiến trúc và hướng dẫn toàn diện
 │
-├── backend/                          # BACKEND SERVICE (Node.js/Express + TypeScript)
+├── backend/                              # [MODULE 2] MÁY CHỦ BACKEND API (Node.js/Express)
+│   ├── scripts/
+│   │   └── copy_knowledge.js             # Sao chép tệp Markdown tri thức vào thư mục dist khi build
 │   ├── src/
-│   │   ├── config/                   # db.ts (PostgreSQL Pool), initSql.ts, seed_members.ts
-│   │   ├── controllers/              # authController, membersController, newsController, chatController
+│   │   ├── config/                       # db.ts (PostgreSQL Pool), initSql.ts, seed_members.ts
+│   │   ├── controllers/                  # authController, membersController, newsController, chatController
 │   │   ├── data/
-│   │   │   ├── knowledge/            # Bộ tư liệu gia phả số hóa (Markdown) nạp cho RAG Engine
-│   │   │   └── members.json          # Dữ liệu 300+ thành viên gia phả đóng gói sẵn
-│   │   ├── middleware/               # Xác thực JWT (auth.ts), Upload ảnh Supabase (upload.ts)
-│   │   ├── routes/                   # Khai báo endpoints (/api/auth, /api/members, /api/news, /api/chat)
-│   │   ├── services/                 # ragService.ts (RAG Retrieval & Gemini AI Engine)
-│   │   └── server.ts                 # Điểm khởi động Express server
-│   ├── Dockerfile                    # Container hóa Backend trên nền Node 22 Alpine
-│   └── package.json
+│   │   │   ├── knowledge/                # 3 Tệp Markdown tri thức phục vụ In-Backend RAG
+│   │   │   │   ├── gia_pha_chi_tiet_ho_le_van.md
+│   │   │   │   ├── lich_gio_ky_va_an_tang.md
+│   │   │   │   └── tong_quan_va_thong_ke_dong_ho.md
+│   │   │   └── members.json              # Bản ghi 313 thành viên có cấu trúc dữ liệu
+│   │   ├── middleware/                   # auth.ts (JWT RBAC), upload.ts (Supabase Storage)
+│   │   ├── routes/                       # auth.ts, members.ts, news.ts, chat.ts
+│   │   ├── services/                     # ragService.ts (RAG Engine + Gemini Flash API)
+│   │   └── server.ts                     # Điểm khởi chạy ứng dụng Express
+│   ├── Dockerfile                        # Đóng gói image Node.js 22 Alpine
+│   ├── package.json
+│   └── tsconfig.json
 │
-├── frontend/                         # FRONTEND WEB (React 18 + Vite + TypeScript)
+├── frontend/                             # [MODULE 1] ỨNG DỤNG GIAO DIỆN CLIENT (React/Vite)
 │   ├── src/
-│   │   ├── components/               # Cây gia phả (FamilyTree), Chatbot, Layout, Modals
-│   │   ├── data/members.json         # Dữ liệu gia phả tĩnh dự phòng
-│   │   ├── pages/                    # Trang chủ, Cây gia phả, Tin tức, Tư liệu, Đố vui
-│   │   └── services/                 # Kết nối API linh hoạt qua VITE_API_URL
-│   ├── vercel.json                   # Cấu hình Rewrite định tuyến SPA trên Vercel
+│   │   ├── components/                   # FamilyTree (@xyflow/react), Chatbot, Layout, Modals
+│   │   ├── data/members.json             # Dữ liệu tĩnh dự phòng ngoại tuyến (Offline Fallback)
+│   │   ├── hooks/                        # useChat.ts, useAuth.ts
+│   │   ├── pages/                        # HomePage, FamilyTreePage, CalendarPage, NewsPage, AdminPage
+│   │   ├── services/                     # api.ts (Axios Base Instance & Interceptors)
+│   │   └── store/                        # authStore.ts (Zustand Global State)
+│   ├── vercel.json                       # Cấu hình định tuyến SPA cho Vercel Edge
 │   ├── Dockerfile
-│   └── package.json
+│   ├── package.json
+│   └── vite.config.ts
 │
-└── rag-service/                      # AI MICROSERVICE ĐỘC LẬP (FastAPI + LangChain + ChromaDB)
-    ├── data/raw_documents/           # Toàn bộ tài liệu tri thức gia phả (Markdown)
-    ├── scripts/                      # Công cụ trích xuất dữ liệu gia phả (generate_rag_documents.py)
-    ├── src/main.py                   # FastAPI server & RAG pipeline
+└── rag-service/                          # [MODULE 3] DỊCH VỤ PYTHON RAG (Tùy chọn Local/Docker)
+    ├── data/raw_documents/               # Thư mục chứa tài liệu thô nạp Vector DB
+    ├── scripts/
+    │   └── generate_rag_documents.py     # Công cụ bóc tách members.json ra các file Markdown
+    ├── src/
+    │   ├── config.py                     # Cấu hình Pydantic Settings
+    │   ├── ingest.py                     # Module cắt văn bản và vector hóa vào ChromaDB
+    │   ├── main.py                       # Máy chủ FastAPI & REST/Streaming Endpoints
+    │   ├── models.py                     # Pydantic Schemas
+    │   └── rag_pipeline.py               # Chuỗi xử lý LangChain + ChromaDB + Ollama/Gemini
     ├── Dockerfile
     └── requirements.txt
 ```
 
 ---
 
-## 4. Hướng dẫn Khởi chạy Cục bộ (Local Development)
+## 🔐 Danh Mục Biến Môi Trường (Environment Variables)
 
-### Cách 1: Chạy bằng Docker Compose (Khuyên dùng)
-Yêu cầu máy tính đã cài đặt Docker Desktop:
+### 1. Dành cho Backend (`backend/.env` hoặc cấu hình trên Render)
+
+| Tên Biến | Bắt Buộc | Ý Nghĩa / Giá Trị Mẫu |
+|---|:---:|---|
+| `PORT` | Không | Cổng dịch vụ chạy (mặc định: `5000`) |
+| `NODE_ENV` | Có | Môi trường (`production` hoặc `development`) |
+| `DATABASE_URL` | Có | Chuỗi kết nối PostgreSQL Supabase (`postgresql://postgres.[ref]:[pass]@...:6543/postgres`) |
+| `JWT_SECRET` | Có | Khóa bí mật ký phát JWT token (tối thiểu 32 ký tự ngẫu nhiên) |
+| `SUPABASE_URL` | Có | Địa chỉ Project Supabase (`https://[project-ref].supabase.co`) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Có | Khóa `service_role` quản trị để ghi file vào Storage Bucket |
+| `SUPABASE_STORAGE_BUCKET` | Có | Tên bucket lưu ảnh trên Supabase (mặc định: `uploads`) |
+| `GEMINI_API_KEY` | Có | Khóa API lấy từ [Google AI Studio](https://aistudio.google.com/) |
+
+### 2. Dành cho Frontend (`frontend/.env` hoặc cấu hình trên Vercel)
+
+| Tên Biến | Bắt Buộc | Loại Biến | Ý Nghĩa / Giá Trị Mẫu |
+|---|:---:|:---:|---|
+| `VITE_API_URL` | Có | `Config` | Đường dẫn API Backend (`https://<ten-backend>.onrender.com/api`) |
+
+---
+
+## 🚀 Hướng Dẫn Triển Khai Thực Tế (Production Deployment)
+
+Hệ thống được thiết kế tối ưu hóa 100% để vận hành liên tục không tốn chi phí trên các nền tảng Cloud hiện đại:
+
+### Bước 1: Thiết lập Cơ sở dữ liệu & Storage trên Supabase Cloud
+1. Đăng ký tài khoản miễn phí tại [Supabase](https://supabase.com/) và tạo một Project mới.
+2. Điều hướng tới **Project Settings** $\rightarrow$ **Database** $\rightarrow$ Tìm mục **Connection Pooling** $\rightarrow$ Sao chép chuỗi kết nối URI dạng `Transaction` hoặc `Session`.
+3. Điều hướng tới **Storage** $\rightarrow$ Nhấn **New Bucket** $\rightarrow$ Đặt tên `uploads` $\rightarrow$ Đánh dấu chọn **Public bucket** $\rightarrow$ Nhấn **Save**.
+4. Điều hướng tới **Project Settings** $\rightarrow$ **API** $\rightarrow$ Sao chép `Project URL` và khóa `service_role` (bí mật).
+
+### Bước 2: Triển khai Backend API trên Render
+1. Đăng nhập [Render Dashboard](https://dashboard.render.com/) $\rightarrow$ Chọn **New** $\rightarrow$ **Web Service**.
+2. Kết nối với kho mã nguồn GitHub của dự án.
+3. Thiết lập thông số:
+   - **Name:** `portal-holevan-phai4-chi2`
+   - **Root Directory:** `backend`
+   - **Runtime:** `Node`
+   - **Build Command:** `npm install && npm run build`
+   - **Start Command:** `npm start`
+   - **Plan Type:** `Free`
+4. Mở rộng mục **Advanced** $\rightarrow$ **Environment Variables**, thêm đầy đủ các biến:
+   - `DATABASE_URL`: *(Dán chuỗi kết nối từ Supabase)*
+   - `JWT_SECRET`: *(Tạo chuỗi bảo mật ngẫu nhiên dài từ 32 ký tự)*
+   - `SUPABASE_URL`: *(Dán Project URL từ Supabase)*
+   - `SUPABASE_SERVICE_ROLE_KEY`: *(Dán key service_role từ Supabase)*
+   - `SUPABASE_STORAGE_BUCKET`: `uploads`
+   - `GEMINI_API_KEY`: *(Dán API Key từ Google AI Studio)*
+   - `NODE_ENV`: `production`
+5. Nhấn **Deploy Web Service** và chờ Render hoàn tất quá trình build. Sao chép đường dẫn Web Service được cấp (ví dụ: `https://portal-holevan-phai4-chi2.onrender.com`).
+
+### Bước 3: Triển khai Giao diện Người dùng trên Vercel
+1. Đăng nhập [Vercel Dashboard](https://vercel.com/) $\rightarrow$ Nhấn **Add New...** $\rightarrow$ **Project**.
+2. Import kho mã nguồn GitHub của dự án.
+3. Trong phần cấu hình:
+   - **Framework Preset:** `Vite`
+   - **Root Directory:** Nhấn **Edit** và chọn thư mục `frontend`.
+4. Mở rộng phần **Environment Variables**:
+   - **Key:** `VITE_API_URL`
+   - **Value:** `https://portal-holevan-phai4-chi2.onrender.com/api` *(Lưu ý có đuôi `/api`)*
+   - **Type:** Chọn `Config` (chế độ công khai cho client Vite).
+5. Nhấn **Deploy**. Sau khi hoàn tất, bạn có thể truy cập website tại đường link Vercel cung cấp.
+
+---
+
+## 💻 Hướng Dẫn Chạy Môi Trường Cục Bộ (Local Development)
+
+### Cách 1: Sử dụng Docker Compose (Đầy đủ toàn bộ dịch vụ)
+Yêu cầu máy tính đã cài đặt **Docker Desktop**.
 
 ```bash
-# Khởi chạy toàn bộ hệ thống (PostgreSQL, Backend, Frontend, RAG Service)
+# Clone kho mã nguồn về máy tính
+git clone https://github.com/LGKAI/Portal-HoLeVan-Phai4-Chi2.git
+cd Portal-HoLeVan-Phai4-Chi2
+
+# Khởi tạo và chạy đồng thời: PostgreSQL, Backend, Frontend, Python RAG Service
 docker compose up -d --build
 
-# Xem log hoạt động
+# Theo dõi log hoạt động của các container
 docker compose logs -f
 ```
 
-- **Frontend**: [http://localhost:3000](http://localhost:3000)
-- **Backend API**: [http://localhost:5000](http://localhost:5000)
-- **Database PostgreSQL**: `localhost:5432`
+Địa chỉ truy cập các dịch vụ:
+- **Giao diện Frontend:** [http://localhost:3000](http://localhost:3000)
+- **Cổng Backend API:** [http://localhost:5000](http://localhost:5000)
+- **Cơ sở dữ liệu PostgreSQL:** `localhost:5432`
+- **Dịch vụ Python RAG (FastAPI):** [http://localhost:8000](http://localhost:8000)
 
-### Cách 2: Khởi chạy thủ công từng phần
+---
 
+### Cách 2: Khởi chạy Thủ công từng phần (Dành cho Lập trình viên)
+
+#### 1. Khởi chạy Backend API:
 ```bash
-# Backend
 cd backend
 npm install
 npm run dev
+# Máy chủ Express lắng nghe tại http://localhost:5000
+```
 
-# Frontend (mở terminal mới)
+#### 2. Khởi chạy Giao diện Frontend:
+```bash
+# Mở một cửa sổ Terminal mới
 cd frontend
 npm install
 npm run dev
+# Giao diện Vite khởi chạy tại http://localhost:5173
+```
+
+#### 3. (Tùy chọn) Khởi chạy Python RAG Service:
+```bash
+# Mở một cửa sổ Terminal mới
+cd rag-service
+python -m venv venv
+source venv/bin/activate  # Trên Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python src/main.py
+# FastAPI khởi chạy tại http://localhost:8000
 ```
 
 ---
 
-## 5. Hướng dẫn Triển khai Trực tuyến (Cloud)
+## 🛡️ Bản Quyền & Cam Kết Bảo Mật
 
-1. **Database & Storage (Supabase)**: Tạo Project mới $\rightarrow$ Lấy `DATABASE_URL` (URI) $\rightarrow$ Tạo Storage bucket tên `uploads` (chế độ Public).
-2. **Backend (Render)**: Tạo Web Service từ GitHub $\rightarrow$ Root Directory: `backend` $\rightarrow$ Thêm các biến môi trường: `DATABASE_URL`, `JWT_SECRET`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_STORAGE_BUCKET=uploads`, và `GEMINI_API_KEY` (lấy miễn phí tại [Google AI Studio](https://aistudio.google.com/) để kích hoạt Trợ lý AI tra cứu gia phả).
-3. **Frontend (Vercel)**: Import repo $\rightarrow$ Root Directory: `frontend` $\rightarrow$ Thêm biến môi trường `VITE_API_URL` trỏ về link Render kèm `/api`.
+1. **Quyền Sở Hữu Dữ Liệu**:
+   - Toàn bộ dữ liệu phả hệ, thông tin thân tộc, hình ảnh và vị trí mồ mả thuộc quyền sở hữu thiêng liêng của Hội đồng Gia tộc **Họ Lê Văn - Phái 4 - Chi 2**, Thôn An Lợi, Xã Triệu Bình, Huyện Triệu Phong, Tỉnh Quảng Trị.
+   - Dự án được xây dựng với lòng thành kính tri ân công đức tổ tiên, phụng sự việc họ, kết nối thế hệ con cháu muôn đời sau.
+
+2. **Nguyên Tắc Bảo Mật**:
+   - Mã nguồn công khai trên GitHub hoàn toàn tuân thủ các quy chuẩn bảo mật: tuyệt đối không lưu vết mật khẩu, khóa API bí mật hay chuỗi kết nối nhạy cảm trong mã nguồn hoặc lịch sử commit.
+   - Tất cả tài khoản quản trị và khóa kết nối trên môi trường vận hành thực tế đều được bảo vệ nghiêm ngặt qua biến môi trường độc lập.
