@@ -1,15 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, LogOut, User as UserIcon } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
+import { authService } from '../../services/authService';
 import LoginModal from '../Auth/LoginModal';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const { user, isAuthenticated, logout } = useAuthStore();
+  const { user, token, isAuthenticated, logout, setUser } = useAuthStore();
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    if (isAuthenticated && token) {
+      // Luôn tự động cập nhật lại thông tin mới nhất từ database (đảm bảo họ tên luôn đủ)
+      authService.getMe()
+        .then((userData) => {
+          if (userData && (userData.full_name || userData.role)) {
+            setUser(userData);
+          }
+        })
+        .catch(() => {
+          // Xử lý bởi axios interceptor nếu token hết hạn
+        });
+    }
+  }, [isAuthenticated, token, setUser]);
+
+  const displayName = user?.full_name?.trim() || (user?.role === 'admin' ? 'Quản trị viên' : 'Thành viên');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -62,7 +80,7 @@ const Navbar: React.FC = () => {
                           <UserIcon size={18} />
                         )}
                       </div>
-                      <span className="text-sm font-medium">{user.full_name}</span>
+                      <span className="text-sm font-medium">{displayName}</span>
                     </div>
                     {/* Dropdown menu can go here, for now just logout button */}
                     <button 
@@ -122,7 +140,7 @@ const Navbar: React.FC = () => {
                       <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                         <UserIcon size={20} />
                       </div>
-                      <span className="font-medium">{user.full_name}</span>
+                      <span className="font-medium">{displayName}</span>
                     </div>
                     <button onClick={handleLogout} className="p-2">
                       <LogOut size={20} />

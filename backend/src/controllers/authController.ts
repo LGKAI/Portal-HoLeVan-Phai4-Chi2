@@ -10,10 +10,13 @@ export const register = async (req: Request, res: Response) => {
         return res.status(400).json({ success: false, message: 'Missing required fields' });
     }
 
-    const checkExisting = await executeQuery('SELECT id FROM users WHERE phone = $1', [phone]);
+    const trimmedPhone = phone.trim();
+    const trimmedName = full_name.trim();
+
+    const checkExisting = await executeQuery('SELECT id FROM users WHERE phone = $1', [trimmedPhone]);
 
     if (checkExisting.rows.length > 0) {
-        return res.status(400).json({ success: false, message: 'Phone already registered' });
+        return res.status(400).json({ success: false, message: 'Số điện thoại này đã được đăng ký' });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -22,13 +25,13 @@ export const register = async (req: Request, res: Response) => {
     const insertResult = await executeQuery(
         `INSERT INTO users (phone, password_hash, full_name, role)
          VALUES ($1, $2, $3, $4)
-         RETURNING id, phone, role`,
-        [phone, password_hash, full_name, 'member']
+         RETURNING id, phone, full_name, role, avatar_url, member_id, created_at`,
+        [trimmedPhone, password_hash, trimmedName, 'member']
     );
 
     const user = insertResult.rows[0];
     const token = jwt.sign(
-        { id: user.id, phone: user.phone, role: user.role },
+        { id: user.id, phone: user.phone, full_name: user.full_name, role: user.role },
         process.env.JWT_SECRET || 'portal_hlevan_jwt_secret_2024',
         { expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as unknown as number }
     );
@@ -38,21 +41,26 @@ export const register = async (req: Request, res: Response) => {
 
 export const login = async (req: Request, res: Response) => {
     const { phone, password } = req.body;
+    const trimmedPhone = phone ? phone.trim() : '';
 
-    const result = await executeQuery('SELECT * FROM users WHERE phone = $1', [phone]);
+    const result = await executeQuery('SELECT * FROM users WHERE phone = $1', [trimmedPhone]);
 
     if (result.rows.length === 0) {
-        return res.status(400).json({ success: false, message: 'Invalid phone or password' });
+        return res.status(400).json({ success: false, message: 'Số điện thoại hoặc mật khẩu không chính xác' });
     }
 
     const user = result.rows[0];
     const isMatch = await bcrypt.compare(password, user.password_hash);
     if (!isMatch) {
-        return res.status(400).json({ success: false, message: 'Invalid phone or password' });
+        return res.status(400).json({ success: false, message: 'Số điện thoại hoặc mật khẩu không chính xác' });
+    }
+
+    if (!user.full_name) {
+        user.full_name = user.role === 'admin' ? 'Quản trị viên' : 'Thành viên';
     }
 
     const token = jwt.sign(
-        { id: user.id, phone: user.phone, role: user.role },
+        { id: user.id, phone: user.phone, full_name: user.full_name, role: user.role },
         process.env.JWT_SECRET || 'portal_hlevan_jwt_secret_2024',
         { expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as unknown as number }
     );
@@ -66,7 +74,14 @@ export const getMe = async (req: AuthRequest, res: Response) => {
         'SELECT id, phone, full_name, role, avatar_url, member_id, is_active, created_at FROM users WHERE id = $1',
         [req.user?.id]
     );
-    res.json({ success: true, data: result.rows[0] });
+    if (result.rows.length === 0) {
+        return res.status(404).json({ success: false, message: 'User not found' });
+    }
+    const user = result.rows[0];
+    if (!user.full_name) {
+        user.full_name = user.role === 'admin' ? 'Quản trị viên' : 'Thành viên';
+    }
+    res.json({ success: true, data: user });
 };
 
 export const updateMe = async (req: AuthRequest, res: Response) => {
