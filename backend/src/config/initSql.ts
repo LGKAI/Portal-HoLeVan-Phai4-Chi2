@@ -103,4 +103,16 @@ CREATE TABLE IF NOT EXISTS quiz_attempts (
 INSERT INTO users (phone, password_hash, full_name, role)
 VALUES ('0901234567', '$2a$10$Qdu0xlJipmjUmjJJzdjEsOlr240uAkCv0pSF8O2o5iVkLoayBJ.Wu', 'Quản trị viên', 'admin')
 ON CONFLICT (phone) DO UPDATE SET password_hash = EXCLUDED.password_hash, role = 'admin';
+
+-- ========================================
+-- 9. Kích hoạt Row-Level Security (RLS) bảo mật Supabase
+-- ========================================
+ALTER TABLE IF EXISTS public.users ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.members ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.news ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.documents ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.quiz_sets ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.questions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.quiz_attempts ENABLE ROW LEVEL SECURITY;
 `;
+
