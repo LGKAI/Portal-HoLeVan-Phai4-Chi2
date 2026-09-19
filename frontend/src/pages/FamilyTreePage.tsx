@@ -174,21 +174,32 @@ const FamilyTreePage: React.FC = () => {
     
     if (searchTerm.trim()) {
       const term = searchTerm.toLowerCase();
-      result = result.filter(m => m.full_name.toLowerCase().includes(term));
-      
-      // Include spouses of matched members for better visualization
-      const matchedIds = new Set(result.map(m => m.id));
-      const spousesToInclude = members.filter(m => 
-        (m.spouse_id && matchedIds.has(m.spouse_id)) || 
-        (result.some(r => r.spouse_id === m.id))
+      // 1. Tìm các thành viên khớp tên trực tiếp (ưu tiên trong filter hiện tại nếu có)
+      const directMatches = (filterGen !== 'all' ? result : members).filter(m => 
+        m.full_name.toLowerCase().includes(term)
       );
+
+      const includedIds = new Set<number>();
       
-      spousesToInclude.forEach(spouse => {
-        if (!matchedIds.has(spouse.id)) {
-          result.push(spouse);
-          matchedIds.add(spouse.id);
+      // Thêm các thành viên khớp trực tiếp
+      directMatches.forEach(m => {
+        includedIds.add(m.id);
+        // Thêm cha mẹ (thân phụ, thân mẫu) của thành viên được tìm thấy
+        if (m.father_id) includedIds.add(m.father_id);
+        if (m.mother_id) includedIds.add(m.mother_id);
+      });
+
+      // Thêm vợ/chồng (spouses) của các thành viên trực tiếp VÀ của cha mẹ
+      members.forEach(m => {
+        if (m.spouse_id && includedIds.has(m.spouse_id)) {
+          includedIds.add(m.id);
+        }
+        if (includedIds.has(m.id) && m.spouse_id) {
+          includedIds.add(m.spouse_id);
         }
       });
+
+      result = members.filter(m => includedIds.has(m.id));
     }
     
     return result;
@@ -226,9 +237,9 @@ const FamilyTreePage: React.FC = () => {
   if (loading) return <LoadingSpinner />;
   
   return (
-    <div className="h-[calc(100dvh-64px)] min-h-[calc(100vh-64px)] flex flex-col bg-cream relative overflow-hidden">
+    <div className="family-tree-wrapper h-[calc(100dvh-64px)] min-h-[calc(100vh-64px)] flex flex-col bg-cream relative overflow-hidden">
       {/* Toolbar */}
-      <div className="bg-[#FFFDF5] p-3 shadow-sm flex flex-col sm:flex-row justify-between items-center gap-3 z-10 border-b border-[#E8D8C3] relative">
+      <div className="family-tree-toolbar bg-[#FFFDF5] p-2.5 sm:p-3 shadow-sm flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 z-10 border-b border-[#E8D8C3] relative">
         <div className="flex items-center gap-3 w-full sm:w-auto">
           <div className="relative flex-1 sm:w-64">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -269,21 +280,25 @@ const FamilyTreePage: React.FC = () => {
       {/* Canvas Area */}
       <div className="flex-1 w-full relative bg-[#FFFDF5]">
         {/* Thống kê thành viên - Góc trên trái */}
-        <div className="absolute top-3 left-3 sm:left-4 z-10 bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-[#E8D8C3] text-xs sm:text-sm select-none pointer-events-auto transition-all">
-          {/* Mobile compact header button */}
+        <div className="family-tree-stats-box absolute top-2 left-2 sm:top-3 sm:left-4 z-10 bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-[#E8D8C3] text-xs sm:text-sm select-none pointer-events-auto transition-all">
+          {/* Mobile & Landscape compact header button */}
           <button
             type="button"
             onClick={() => setShowMobileStats(!showMobileStats)}
-            className="sm:hidden flex items-center gap-1.5 px-3 py-1.5 font-medium text-gray-800"
+            className="md:hidden flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 font-medium text-gray-800"
           >
-            <span className="text-blue-500 font-bold">-</span>
-            <span>Tổng số thành viên: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
-            <span className="text-xs text-gray-400 ml-1">{showMobileStats ? '▲' : '▼'}</span>
+            <span className="text-blue-500 font-bold">•</span>
+            <span>Tổng: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
+            <span className="text-gray-300">|</span>
+            <span className="text-red-500">Mất: <strong className="font-bold text-red-600">{memberStats.deceased}</strong></span>
+            <span className="text-gray-300">|</span>
+            <span className="text-green-500">Sống: <strong className="font-bold text-green-600">{memberStats.living}</strong></span>
+            <span className="text-[10px] text-gray-400 ml-1">{showMobileStats ? '▲' : '▼'}</span>
           </button>
 
-          {/* Full stats (collapsible on mobile, always visible on sm+) */}
-          <div className={`${showMobileStats ? 'flex' : 'hidden'} sm:flex flex-col gap-1.5 text-gray-700 font-medium px-4 py-2.5 sm:py-3 border-t sm:border-t-0 border-[#E8D8C3]/50`}>
-            <div className="hidden sm:flex items-center gap-2">
+          {/* Full stats (collapsible on mobile/landscape, always visible on large desktop md+) */}
+          <div className={`family-tree-stats-full ${showMobileStats ? 'flex' : 'hidden'} md:flex flex-col gap-1 sm:gap-1.5 text-gray-700 font-medium px-3 sm:px-4 py-2 sm:py-2.5 border-t md:border-t-0 border-[#E8D8C3]/50`}>
+            <div className="flex items-center gap-2">
               <span className="text-blue-500 font-bold">-</span>
               <span>Tổng số thành viên: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
             </div>
@@ -323,7 +338,7 @@ const FamilyTreePage: React.FC = () => {
       {/* Simple Detail Modal */}
       {isDetailOpen && selectedMember && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="bg-white rounded-lg p-6 max-w-md w-full shadow-xl border border-gray-100">
+          <div className="bg-white rounded-lg p-5 sm:p-6 max-w-md w-full shadow-xl border border-gray-100 max-h-[90vh] overflow-y-auto">
             <h2 className="text-xl font-bold text-primary mb-4 border-b pb-2 flex justify-between items-center">
               <span>Chi tiết thành viên</span>
               {isAdmin && (

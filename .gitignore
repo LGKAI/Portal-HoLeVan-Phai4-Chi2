@@ -12,6 +12,8 @@ frontend/public/uploads/thumbnails/*
 !frontend/public/uploads/avatars/.gitkeep
 !frontend/public/uploads/thumbnails/.gitkeep
 *.pyc
+__pycache__/
+*/__pycache__/
 .pytest_cache/
 *.egg-info/
 .venv/

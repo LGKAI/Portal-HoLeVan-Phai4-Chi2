@@ -22,7 +22,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-secondary">Liên kết</h4>
             <ul className="space-y-2 text-sm text-gray-300">
+              <li><a href="/" className="hover:text-white transition-colors">Trang chủ</a></li>
               <li><a href="/tree" className="hover:text-white transition-colors">Gia phả số</a></li>
+              <li><a href="/memorials" className="hover:text-white transition-colors">Lịch giỗ kỵ</a></li>
               <li><a href="/news" className="hover:text-white transition-colors">Tư liệu - Sự kiện</a></li>
             </ul>
           </div>

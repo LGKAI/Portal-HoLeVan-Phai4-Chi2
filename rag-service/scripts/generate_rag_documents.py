@@ -27,6 +27,27 @@ def parse_death_date(date_str):
         
     return (99, 99, date_str.strip())
 
+def compute_gio_date(month, day, raw_death_date):
+    """
+    Tính ngày giỗ từ ngày mất theo phong tục: Ngày giỗ là ngày ngay trước ngày mất.
+    Ví dụ: mất ngày 10/01 -> giỗ 09/01; mất ngày 09/08 -> giỗ 08/08; mất ngày 01/09 -> giỗ ngày 30/08 (cuối tháng 8).
+    Returns (gio_month, gio_day, gio_display_str)
+    """
+    if month == 99 or day == 99:
+        return (99, 99, f"Chưa rõ ngày cụ thể (mất {raw_death_date})")
+    
+    if day > 1:
+        gio_day = day - 1
+        gio_month = month
+        gio_str = f"{gio_day:02d}/{gio_month:02d} Âm lịch"
+        return (gio_month, gio_day, gio_str)
+    else:
+        # Ngày mất là ngày 1 -> Ngày giỗ là ngày cuối tháng trước
+        gio_month = 12 if month == 1 else month - 1
+        gio_day = 30  # Sắp xếp ở cuối tháng
+        gio_str = f"29 hoặc 30/{gio_month:02d} Âm lịch (ngày cuối tháng {gio_month})"
+        return (gio_month, gio_day, gio_str)
+
 def main():
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     json_path = os.path.join(base_dir, 'backend', 'src', 'data', 'members.json')
@@ -63,13 +84,34 @@ def main():
         elif gender == 'female':
             return 'Nữ'
         return 'Không rõ'
-        
+
+    def get_honorific_label(mem):
+        if not mem:
+            return ""
+        gen = mem.get('generation_in_branch', 1)
+        gen_phai = gen + 8
+        gender = mem.get('gender')
+        is_female = gender == 'female'
+        if gen_phai <= 13:
+            if gen_phai == 9:
+                return "Ngài Thủy tổ" if not is_female else "Cụ bà Thủy tổ"
+            return "Cụ bà" if is_female else "Cụ ông" if gender == 'male' else "Cụ"
+        elif gen_phai == 14:
+            return "Bà" if is_female else "Ông"
+        else:  # gen_phai >= 15
+            bdate = str(mem.get('birth_date') or '')
+            m = re.search(r'\b(201\d|202\d)\b', bdate)
+            if m:
+                return "Bé" if is_female else "Cháu"
+            return "Chị" if is_female else "Anh"
+
     def get_member_name_link(mid):
         if not mid or mid not in id_map:
             return "Không rõ"
         mem = id_map[mid]
+        hon = get_honorific_label(mem)
         gen = mem.get('generation_in_branch', 0)
-        return f"{mem.get('full_name')} (ID: {mem.get('id')}, Đời {gen})"
+        return f"{hon} {mem.get('full_name')} (ID: {mem.get('id')}, Đời {gen} Chi 2 - Đời {gen+8} Phái 4)"
 
     # 1. GENERATE TỔNG QUAN & THỐNG KÊ (tong_quan_va_thong_ke_dong_ho.md)
     gen_counts = {}
@@ -135,7 +177,8 @@ def main():
     stats_doc.append("## 5. Quy tắc xưng hô và tra cứu phả hệ")
     stats_doc.append("- Thành viên Đời 1 là bậc Cụ Thủy tổ của Chi 2.")
     stats_doc.append("- Cành nhánh chính của Chi 2 bắt đầu phân nhánh mạnh từ Đời 2 (các con cụ Lê Văn Khôi, đặc biệt là cụ Lê Văn Tán tiếp nối dòng dõi, cụ Lê Văn Lợi vô tự).")
-    stats_doc.append("- Khi con cháu hỏi về ngày giỗ hoặc mộ phần, hệ thống ưu tiên đối chiếu ngày mất theo Âm lịch và địa điểm an táng được ghi nhận.\n")
+    stats_doc.append("- **Quy ước ngày giỗ (tiên thường / cúng giỗ)**: Theo phong tục truyền thống của dòng họ, **ngày giỗ là ngày ngay trước ngày mất** (Ví dụ: ngày mất là 10/01 thì ngày giỗ là ngày 09/01 Âm lịch; ngày mất là 09/08 thì ngày giỗ là ngày 08/08 Âm lịch). Khi con cháu hỏi về ngày giỗ kỵ, hệ thống tự động xác định ngày giỗ là ngày ngay trước ngày mất.")
+    stats_doc.append("- Khi con cháu hỏi về mộ phần, hệ thống ưu tiên đối chiếu địa điểm an táng và khu nghĩa trang được ghi nhận trong gia phả.\n")
 
     # 2. GENERATE LỊCH GIỖ KỴ & MỘ PHẦN (lich_gio_ky_va_an_tang.md)
     death_records = []
@@ -143,17 +186,19 @@ def main():
         dd = m.get('death_date')
         parsed = parse_death_date(dd)
         if parsed:
-            month, day, raw = parsed
-            death_records.append((month, day, raw, m))
+            d_month, d_day, raw = parsed
+            gio_month, gio_day, gio_str = compute_gio_date(d_month, d_day, raw)
+            death_records.append((gio_month, gio_day, gio_str, d_month, d_day, raw, m))
             
-    # Sort by month then day
+    # Sort by month and day of ngày giỗ
     death_records.sort(key=lambda x: (x[0], x[1]))
     
     calendar_doc = []
     calendar_doc.append("# LỊCH GIỖ KỴ (KỴ NHẬT) & MỘ PHẦN TIỀN NHÂN - HỌ LÊ VĂN (CHI 2 - PHÁI 4)\n")
-    calendar_doc.append("Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ phần của các bậc tiền nhân, con cháu dòng họ Lê Văn - Phái 4 - Chi 2 làng An Lợi. Sử dụng để tra cứu ngày kỵ nhật hằng năm.\n")
+    calendar_doc.append("Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ phần của các bậc tiền nhân, con cháu dòng họ Lê Văn - Phái 4 - Chi 2 làng An Lợi. Sử dụng để tra cứu ngày cúng giỗ hằng năm.\n")
+    calendar_doc.append("> **QUY ƯỚC QUAN TRỌNG VỀ NGÀY GIỖ:**\n> Theo phong tục truyền thống của dòng họ, **ngày giỗ (cúng giỗ) được cử hành vào ngày ngay trước ngày mất** (Ví dụ: ngày mất là 10/01 thì ngày giỗ là ngày 09/01 Âm lịch; ngày mất là 09/08 thì ngày giỗ là ngày 08/08 Âm lịch).\n> Toàn bộ danh sách dưới đây được phân loại và sắp xếp theo **NGÀY GIỖ** trong 12 tháng Âm lịch để con cháu tiện theo dõi và tổ chức kỵ nhật hằng năm.\n")
     
-    # Group by month
+    # Group by month of ngày giỗ
     month_names = {
         1: "Tháng Giêng (Tháng 1)", 2: "Tháng 2", 3: "Tháng 3", 4: "Tháng 4",
         5: "Tháng 5", 6: "Tháng 6", 7: "Tháng 7", 8: "Tháng 8",
@@ -161,19 +206,21 @@ def main():
     }
     
     current_month = None
-    for month, day, raw, m in death_records:
-        if month != current_month:
-            current_month = month
-            m_name = month_names.get(month, "Các ngày giỗ khác / Chưa rõ tháng")
+    for gio_month, gio_day, gio_str, d_month, d_day, raw, m in death_records:
+        if gio_month != current_month:
+            current_month = gio_month
+            m_name = month_names.get(gio_month, "Các ngày giỗ khác / Chưa rõ ngày tháng")
             calendar_doc.append(f"\n## {m_name}\n")
             
         gen = m.get('generation_in_branch', 0)
         burial = m.get('burial_place') or "Không rõ nơi an táng"
         father_name = id_map.get(m.get('father_id'), {}).get('full_name', '')
+        mother_name = id_map.get(m.get('mother_id'), {}).get('full_name', '')
         father_info = f", thân phụ: {father_name}" if father_name else ""
+        mother_info = f", thân mẫu: {mother_name}" if mother_name else ""
         bio_info = f" ({m.get('bio')})" if m.get('bio') else ""
         
-        calendar_doc.append(f"- **Ngày {raw}**: **{m.get('full_name')}** (ID: {m.get('id')}, Đời {gen} Chi 2 - Đời {gen+8} Phái 4{father_info}). Giới tính: {get_gender_label(m.get('gender'))}. Nơi an táng: {burial}.{bio_info}")
+        calendar_doc.append(f"- **Ngày giỗ: {gio_str}** (Ngày mất: {raw}): **{m.get('full_name')}** (ID: {m.get('id')}, Đời {gen} Chi 2 - Đời {gen+8} Phái 4{father_info}{mother_info}). Giới tính: {get_gender_label(m.get('gender'))}. Nơi an táng: {burial}.{bio_info}")
 
     calendar_doc.append("\n\n## Danh sách nơi an táng và mộ phần tiền nhân")
     for place, count in sorted_burials:
@@ -182,7 +229,13 @@ def main():
         for m in mems_at_place:
             gen = m.get('generation_in_branch', 0)
             dd = m.get('death_date') or 'Chưa rõ'
-            calendar_doc.append(f"- **{m.get('full_name')}** (ID: {m.get('id')}, Đời {gen}) - Ngày mất: {dd}")
+            parsed = parse_death_date(dd)
+            if parsed:
+                _, _, gio_str = compute_gio_date(parsed[0], parsed[1], parsed[2])
+                gio_info = f" | Ngày giỗ: {gio_str}"
+            else:
+                gio_info = ""
+            calendar_doc.append(f"- **{m.get('full_name')}** (ID: {m.get('id')}, Đời {gen}) - Ngày mất: {dd}{gio_info}")
 
     # 3. GENERATE GIA PHẢ CHI TIẾT 313 THÀNH VIÊN (gia_pha_chi_tiet_ho_le_van.md)
     detail_doc = []
@@ -223,8 +276,9 @@ def main():
             for s_id in s_ids:
                 sp_mem = id_map.get(s_id)
                 if sp_mem:
+                    sp_hon = get_honorific_label(sp_mem)
                     sp_type = sp_mem.get('spouse_type') or m.get('spouse_type') or 'Phối ngẫu'
-                    spouse_strs.append(f"{sp_mem.get('full_name')} (ID: {s_id}, {sp_type})")
+                    spouse_strs.append(f"{sp_hon} {sp_mem.get('full_name')} (ID: {s_id}, {sp_type})")
             spouse_info = ", ".join(spouse_strs)
         else:
             spouse_info = "Chưa ghi nhận hoặc chưa có"
@@ -237,32 +291,50 @@ def main():
             child_strs = []
             for c in sorted(unique_children, key=lambda x: x.get('id', 0)):
                 c_gen = c.get('generation_in_branch', gen + 1)
-                child_strs.append(f"{c.get('full_name')} (ID: {c.get('id')}, {get_gender_label(c.get('gender'))}, Đời {c_gen})")
+                c_hon = get_honorific_label(c)
+                child_strs.append(f"{c_hon} {c.get('full_name')} (ID: {c.get('id')}, {get_gender_label(c.get('gender'))}, Đời {c_gen})")
             children_info = f"{len(unique_children)} người: " + "; ".join(child_strs)
         else:
             children_info = "Không có ghi nhận con cái (hoặc Vô tự)"
             
         # Siblings
-        siblings = []
+        full_siblings = []
+        half_siblings = []
         fid = m.get('father_id')
         mid_mom = m.get('mother_id')
         if fid or mid_mom:
-            for other in members:
+            for other in sorted(members, key=lambda x: x.get('id', 0)):
                 if other['id'] != mid:
-                    if (fid and other.get('father_id') == fid) or (mid_mom and other.get('mother_id') == mid_mom):
-                        siblings.append(f"{other.get('full_name')} (ID: {other['id']})")
-        siblings_info = ", ".join(siblings) if siblings else "Không có ghi nhận"
+                    o_fid = other.get('father_id')
+                    o_mid = other.get('mother_id')
+                    o_hon = get_honorific_label(other)
+                    if fid and o_fid == fid and mid_mom and o_mid == mid_mom:
+                        full_siblings.append(f"{o_hon} {other.get('full_name')} (ID: {other['id']})")
+                    elif (fid and o_fid == fid) or (mid_mom and o_mid == mid_mom):
+                        half_siblings.append(f"{o_hon} {other.get('full_name')} (ID: {other['id']})")
         
         # Entry in Markdown
+        hon = get_honorific_label(m)
         detail_doc.append(f"### {name} (ID: {mid})")
+        detail_doc.append(f"- **Danh xưng chuẩn mực**: {hon}")
         if birth_name:
             detail_doc.append(f"- **Tên húy / tên tự**: {birth_name}")
         detail_doc.append(f"- **Đời thứ**: Đời {gen} Chi 2 (Đời {gen + 8} Phái 4)")
         detail_doc.append(f"- **Giới tính**: {gender}")
         detail_doc.append(f"- **Tình trạng**: {status}")
         detail_doc.append(f"- **Năm sinh**: {birth_date}")
-        detail_doc.append(f"- **Ngày mất (kỵ nhật)**: {death_date}")
-        detail_doc.append(f"- **Nơi an táng**: {burial_place}")
+
+        if m.get('is_deceased'):
+            parsed_death = parse_death_date(death_date)
+            if parsed_death:
+                _, _, gio_str = compute_gio_date(parsed_death[0], parsed_death[1], parsed_death[2])
+                gio_info = f"{gio_str} (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)"
+            else:
+                gio_info = "Không rõ"
+            detail_doc.append(f"- **Ngày mất**: {death_date}")
+            detail_doc.append(f"- **Ngày giỗ**: {gio_info}")
+            detail_doc.append(f"- **Nơi an táng**: {burial_place}")
+
         detail_doc.append(f"- **Nguyên quán**: {hometown}")
         detail_doc.append(f"- **Nghề nghiệp**: {occupation}")
         detail_doc.append(f"- **Quan hệ thân tộc**:")
@@ -270,13 +342,19 @@ def main():
         detail_doc.append(f"  - Thân mẫu (Mẹ): {mother}")
         detail_doc.append(f"  - Phối ngẫu (Vợ/Chồng): {spouse_info}")
         detail_doc.append(f"  - Con cái: {children_info}")
-        detail_doc.append(f"  - Anh chị em ruột: {siblings_info}")
+        if full_siblings:
+            detail_doc.append(f"  - Anh chị em ruột: {', '.join(full_siblings)}")
+        else:
+            detail_doc.append(f"  - Anh chị em ruột: Không có ghi nhận")
+        if half_siblings:
+            detail_doc.append(f"  - Anh chị em cùng cha khác mẹ: {', '.join(half_siblings)}")
         detail_doc.append(f"- **Tiểu sử / Ghi chú**: {bio}\n")
 
     # SAVE TO DIRECTORIES
     target_dirs = [
         os.path.join(base_dir, 'rag-service', 'data', 'raw_documents'),
-        os.path.join(base_dir, 'backend', 'src', 'data', 'knowledge')
+        os.path.join(base_dir, 'backend', 'src', 'data', 'knowledge'),
+        os.path.join(base_dir, 'backend', 'dist', 'data', 'knowledge')
     ]
     
     files_to_save = [

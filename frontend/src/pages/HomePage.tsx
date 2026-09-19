@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Calendar, Bot, ChevronRight } from 'lucide-react';
+import { Users, Calendar, Bot, ChevronRight, BookOpen } from 'lucide-react';
 import NewsCard from '../components/News/NewsCard';
 import { newsService } from '../services/newsService';
 import { NewsItem } from '../types';
@@ -71,9 +71,14 @@ const HomePage: React.FC = () => {
           >
             Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
           </p>
-          <div className="flex justify-center">
-            <Link to="/tree" className="bg-black/60 hover:bg-black/80 border-2 border-red-500 text-red-400 min-w-[150px] sm:min-w-[190px] flex justify-center items-center px-6 sm:px-8 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <Link to="/tree" className="bg-primary/80 hover:bg-primary border-2 border-red-400 text-red-300 min-w-[150px] sm:min-w-[180px] flex justify-center items-center gap-2 px-6 sm:px-8 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
+              <BookOpen size={18} />
               Xem Gia Phả
+            </Link>
+            <Link to="/memorials" className="bg-secondary/80 hover:bg-secondary border-2 border-yellow-300 text-yellow-900 min-w-[150px] sm:min-w-[180px] flex justify-center items-center gap-2 px-6 sm:px-8 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
+              <Calendar size={18} />
+              Lịch Giỗ Kỵ
             </Link>
           </div>
         </div>
@@ -87,46 +92,67 @@ const HomePage: React.FC = () => {
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow border border-primary/20 shadow-sm">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users size={32} className="text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="rounded-xl p-6 text-center hover:shadow-lg transition-all border-2 border-red-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #fff5f5 0%, #ffe4e4 100%)'}}>
+              <div>
+                <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <Users size={28} className="text-red-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-red-800">Gia Phả Số</h3>
+                <p className="text-red-900/70 text-sm mb-4 line-clamp-3">
+                  Hệ thống phả hệ trực quan giúp con cháu dễ dàng tra cứu nguồn cội, thế thứ và quan hệ thân tộc.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-dark">Gia Phả Số</h3>
-              <p className="text-gray-600 mb-6 line-clamp-3">
-                Hệ thống phả hệ trực quan giúp con cháu dễ dàng tra cứu, tìm hiểu về nguồn cội và mối quan hệ trong dòng họ.
-              </p>
-              <Link to="/tree" className="text-primary font-medium flex items-center justify-center gap-1 hover:underline">
+              <Link to="/tree" className="text-red-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
                 Khám phá ngay <ChevronRight size={16} />
               </Link>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow border border-primary/20 shadow-sm">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Calendar size={32} className="text-secondary-dark" />
+            <div className="rounded-xl p-6 text-center hover:shadow-lg transition-all border-2 border-secondary/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #fffde7 0%, #fff8c5 100%)'}}>
+              <div>
+                <div className="w-14 h-14 bg-secondary/30 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <Calendar size={28} className="text-yellow-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-yellow-800">Lịch Giỗ Kỵ</h3>
+                <p className="text-yellow-900/70 text-sm mb-4 line-clamp-3">
+                  Tra cứu ngày cúng giỗ, nơi an táng các bậc tiền nhân trong 12 tháng Âm lịch để phụng sự hương khói.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-dark">Tư Liệu - Sự Kiện</h3>
-              <p className="text-gray-600 mb-6 line-clamp-3">
-                Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện truyền thống quan trọng của con cháu dòng họ.
-              </p>
-              <Link to="/news" className="text-secondary-dark font-medium flex items-center justify-center gap-1 hover:underline">
+              <Link to="/memorials" className="text-yellow-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
+                Xem lịch kỵ nhật <ChevronRight size={16} />
+              </Link>
+            </div>
+
+            <div className="rounded-xl p-6 text-center hover:shadow-lg transition-all border-2 border-green-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)'}}>
+              <div>
+                <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <Calendar size={28} className="text-green-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-green-800">Tư Liệu - Sự Kiện</h3>
+                <p className="text-green-900/70 text-sm mb-4 line-clamp-3">
+                  Nơi cập nhật thông báo, hình ảnh tư liệu và các sinh hoạt truyền thống quan trọng của dòng họ.
+                </p>
+              </div>
+              <Link to="/news" className="text-green-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
                 Xem sự kiện <ChevronRight size={16} />
               </Link>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow border border-primary/20 shadow-sm">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Bot size={32} className="text-blue-600" />
+            <div className="rounded-xl p-6 text-center hover:shadow-lg transition-all border-2 border-blue-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)'}}>
+              <div>
+                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <Bot size={28} className="text-blue-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-blue-800">Trợ Lý AI Dòng Họ</h3>
+                <p className="text-blue-900/70 text-sm mb-4 line-clamp-3">
+                  Trí tuệ nhân tạo học sâu từ gia phả, sẵn sàng giải đáp thắc mắc của con cháu về dòng họ 24/7.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-dark">Trợ Lý AI Dòng Họ</h3>
-              <p className="text-gray-600 mb-6 line-clamp-3">
-                Hệ thống trí tuệ nhân tạo học dữ liệu từ gia phả, sẵn sàng giải đáp mọi thắc mắc của con cháu về dòng họ 24/7.
-              </p>
               <button
                 onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                className="text-blue-600 font-medium flex items-center justify-center gap-1 hover:underline mx-auto"
+                className="text-blue-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mx-auto mt-2"
               >
-                Bắt đầu trò chuyện <ChevronRight size={16} />
+                Bắt đầu hỏi đáp <ChevronRight size={16} />
               </button>
             </div>
           </div>

@@ -25,11 +25,16 @@
 
 Dự án **Portal Họ Lê Văn - Phái 4 - Chi 2** là nền tảng số hóa di sản dòng họ toàn diện, kết hợp công nghệ web hiện đại với trí tuệ nhân tạo thế hệ mới (**RAG - Retrieval Augmented Generation**). Dự án giải quyết bài toán cấp thiết: các tư liệu gia phả giấy truyền thống qua hàng trăm năm bị mục nát, thất lạc, thông tin phân tán qua nhiều thế hệ và địa lý, đồng thời tạo ra một không gian tương tác trực quan, sinh động giúp con cháu trong và ngoài nước tra cứu nguồn cội, kết nối huyết thống và tưởng nhớ công đức tổ tiên.
 
-Hệ thống quản lý dữ liệu **hơn 313 thành viên trải qua 8 thế hệ** (tương ứng Đời 9 đến Đời 16 của toàn Phái 4 Họ Lê Văn tại An Lợi), cung cấp:
-- **Cây phả hệ tương tác động đa chiều**: Tự động tính toán vị trí, phân nhánh thế hệ, quản lý đa hôn phối.
-- **Sổ tang lễ kỵ nhật 12 tháng âm lịch**: Tra cứu ngày giỗ, mộ phần, nghĩa trang tiền nhân.
-- **Cổng tin tức & truyền thông dòng tộc**: Cập nhật sự kiện, thông báo việc họ, chia sẻ hình ảnh sinh hoạt.
-- **Trợ lý AI Gia Phả am tường nguồn cội**: Giải đáp thắc mắc về vai vế xưng hô, huyết thống, tiểu sử tiền nhân với độ chính xác tuyệt đối, loại trừ hoàn toàn ảo giác (hallucination).
+Hệ thống quản lý dữ liệu **hơn 313 thành viên trải qua 8 thế hệ** (tương ứng Đời 9 đến Đời 16 của toàn Phái 4 Họ Lê Văn tại An Lợi, Triệu Bình, Quảng Trị), cung cấp 4 phân hệ chính:
+- **Trang chủ & Cổng thông tin**: Giới thiệu cội nguồn, câu đối tổ tiên, thống kê số liệu tổng quan và 4 thẻ điều hướng đặc sắc:
+  - 🔴 **Gia phả số**: Khám phá cây phả hệ trực quan phân tầng theo đời.
+  - 🟡 **Lịch giỗ kỵ**: Sổ kỵ nhật tiền nhân 12 tháng Âm lịch & vị trí an táng.
+  - 🟢 **Tư liệu - Sự kiện**: Tin tức, hoạt động, thông báo, tài liệu lịch sử họ tộc.
+  - 🔵 **Trợ lý AI dòng họ**: Tra cứu gia phả thông minh, đối thoại phả hệ tức thì.
+- **Cây phả hệ tương tác động đa chiều**: Trực quan hóa cây phả hệ phân tầng theo đời (`@xyflow/react`), tự động định vị tọa độ, quản lý đa hôn phối, tìm kiếm thông minh và hiển thị thẻ thành viên chi tiết.
+- **Lịch giỗ kỵ 12 tháng Âm lịch**: Tra cứu ngày cúng giỗ của 109 vị tiền nhân đã quy tiên. Áp dụng chuẩn phong tục dòng họ: **ngày cúng giỗ tiên thường là ngày ngay trước ngày mất theo Âm lịch**; hiển thị bảng chi tiết gồm họ tên, đời thứ, thân phụ, thân mẫu, nơi an táng; tự động cập nhật khi Admin thêm người mất.
+- **Tư liệu - Sự kiện dòng họ**: Cập nhật sự kiện, thông báo việc họ, chia sẻ hình ảnh sinh hoạt, lưu giữ tư liệu văn hóa lịch sử.
+- **Trợ lý AI Gia Phả am tường nguồn cội**: Giải đáp thắc mắc về vai vế xưng hô, huyết thống, tiểu sử tiền nhân với độ chính xác tuyệt đối, chuẩn hóa cấu trúc trả lời dạng gạch đầu dòng, ẩn 100% mã ID, chuẩn hóa danh xưng người không rõ giới tính (`LÊ HVVD`) và loại trừ hoàn toàn ảo giác.
 
 ---
 
@@ -42,6 +47,7 @@ flowchart TB
     subgraph ClientTier["1. LỚP GIAO DIỆN CLIENT - Vercel Edge"]
         UI["React 18 SPA (Vite + Tailwind CSS)"]
         Tree["Interactive Family Tree - xyflow"]
+        Memorials["Sổ Kỵ Nhật 12 Tháng Âm Lịch"]
         ChatUI["AI Chatbot Widget & Drawer"]
         AdminUI["Portal Quản Trị & Cắt Ảnh Tròn"]
         OfflineFallback["Offline Fallback Engine (Local Data)"]
@@ -51,6 +57,7 @@ flowchart TB
         API["Node.js 22 LTS + Express + TypeScript"]
         AuthMid["JWT & RBAC Middleware"]
         UploadMid["Supabase Storage Service"]
+        MemorialsService["Memorials Controller (Dynamic Merge)"]
         RAGCore["Hybrid RAG Service Engine<br/>(Smart Router + Gemini API)"]
     end
 
@@ -62,7 +69,7 @@ flowchart TB
     subgraph FallbackTier["4. LỚP RAG DỰ PHÒNG - Local Docker"]
         FastAPIApp["Python FastAPI Service"]
         VectorDB[("ChromaDB Vector Store")]
-        OllamaLocal["Ollama Local LLM (qwen2.5)"]
+        OllamaLocal["Ollama Local LLM (qwen2.5:7b)"]
     end
 
     UI -->|HTTPS REST API| API
@@ -70,6 +77,7 @@ flowchart TB
 
     API -->|pg.Pool Connection| PG
     API -->|Upload Buffer qua SDK| Storage
+    API -->|Tra cứu & Đồng bộ kỵ nhật| MemorialsService
     API -->|Retrieve Context & Build Prompts| RAGCore
     RAGCore -->|HTTPS REST Header x-goog-api-key| GeminiAI["Google Gemini 3.6 Flash<br/>(Google AI Studio)"]
 
@@ -80,7 +88,7 @@ flowchart TB
 
 ---
 
-## 🔬 Phân Tích Chuyên Sâu 3 Module Cốt Lõi (Core Modules)
+## 🔬 Phân Tích Chuyên Sâu Các Module Cốt Lõi (Core Modules)
 
 ---
 
@@ -91,7 +99,7 @@ flowchart TB
 ```
 frontend/src/
 ├── components/
-│   ├── FamilyTree/         # Bộ nhân đồ thị cây gia phả
+│   ├── FamilyTree/         # Bộ nhân đồ thị cây gia phả (@xyflow/react)
 │   │   ├── MemberNode.tsx  # Custom Node hiển thị thành viên & phối ngẫu
 │   │   ├── TreeControls.tsx# Nút điều hướng, zoom, pan, fullscreen
 │   │   └── layoutEngine.ts # Thuật toán tính toán toạ độ cây phả hệ
@@ -99,11 +107,11 @@ frontend/src/
 │   ├── Layout/             # Header, Footer, Navbar, Responsive Mobile Menu
 │   └── modals/             # Modal chi tiết thành viên, Modal đăng nhập...
 ├── pages/
-│   ├── HomePage.tsx        # Trang chủ, thống kê số liệu, tin tức mới
-│   ├── FamilyTreePage.tsx  # Trang hiển thị và tìm kiếm gia phả
-│   ├── CalendarPage.tsx    # Trang sổ kỵ nhật 12 tháng âm lịch
-│   ├── NewsPage.tsx        # Cổng thông tin, bài viết dòng họ
-│   └── AdminPage.tsx       # Bảng điều khiển quản trị thành viên & tin tức
+│   ├── HomePage.tsx            # Trang chủ, thống kê số liệu, 4 thẻ điều hướng
+│   ├── FamilyTreePage.tsx      # Cây gia phả số hóa & danh bạ dòng họ
+│   ├── MemorialCalendarPage.tsx# Sổ kỵ nhật 12 tháng Âm lịch & nơi an táng
+│   ├── NewsPage.tsx            # Cổng tư liệu - sự kiện dòng họ
+│   └── NewsDetailPage.tsx      # Trang chi tiết bài viết tư liệu dòng họ
 ├── store/
 │   └── authStore.ts        # Quản lý phiên đăng nhập Zustand
 └── services/
@@ -123,7 +131,14 @@ frontend/src/
   - **Search & Auto-Focus**: Khi người dùng nhập tên thành viên trên thanh tìm kiếm, hệ thống tự động pan khung nhìn và zoom tập trung vào đúng vị trí của thành viên đó trên cây.
   - **Chỉ báo Sinh - Tử trang trọng**: Thành viên đã quy tiên hiển thị biểu tượng hoa cúc vàng hoặc dải băng tưởng niệm; người hiện tiền hiển thị trạng thái sinh hoạt.
 
-#### b. Quản trị State & Trải nghiệm Người dùng
+#### b. Sổ Kỵ Nhật & Lịch Giỗ Kỵ 12 Tháng Âm Lịch (`MemorialCalendarPage.tsx`)
+- **Phân nhóm theo 12 tháng Âm lịch**: Hiển thị danh sách kỵ nhật của 109 vị tiền nhân đã quy tiên, chia theo từng tháng (từ Tháng Giêng đến Tháng Chạp).
+- **Quy ước phong tục truyền thống**: Ngày cúng giỗ tiên thường là ngày ngay trước ngày mất theo Âm lịch (Ví dụ: ngày mất là 10/01 thì ngày giỗ là 09/01; ngày mất 12/04 thì ngày giỗ là 11/04 Âm lịch).
+- **Bảng tra cứu thông minh**: Cung cấp đầy đủ thông tin: Ngày giỗ (kèm ngày mất), Họ và tên, Đời thứ (Chi 2 & Phái 4), Thân phụ, Thân mẫu, Nơi an táng.
+- **Tìm kiếm đa trường**: Cho phép tìm kiếm nhanh theo họ tên tiền nhân, theo đời thứ, tên cha mẹ hoặc theo địa danh an táng (Cồn Giữa, Đồng Giám, Lai Bình, Lâm Đồng...).
+- **Cơ chế tự động đồng bộ (Auto Sync)**: Khi quản trị viên cập nhật thêm người mất trong mục Quản trị gia phả, hệ thống tự động bổ sung người đó vào bảng kỵ nhật mà không cần nhập lại.
+
+#### c. Quản trị State & Trải nghiệm Người dùng
 - **Zustand Auth Store (`authStore.ts`)**: Quản lý trạng thái xác thực toàn cục, lưu trữ JWT Token và thông tin định danh (`Admin`, `Member`, `Guest`) đồng bộ qua `localStorage`.
 - **Cắt xén hình ảnh chân dung chuẩn xác (`react-easy-crop`)**:
   - Trang Admin tích hợp công cụ cắt ảnh tỉ lệ vuông tròn 1:1, phóng to, thu nhỏ, xoay ảnh trước khi gửi lên máy chủ.
@@ -234,29 +249,29 @@ sequenceDiagram
 - **Kho Tri Thức Chuẩn Hóa Chuyên Biệt (Structured Knowledge Base)**:
   Tọa lạc tại `backend/src/data/knowledge/`, bao gồm 3 tài liệu lõi:
   1. `tong_quan_va_thong_ke_dong_ho.md`: Lịch sử khai hoang lập ấp tại Thôn An Lợi, nguồn gốc thủy tổ, công thức quy đổi thế hệ (**Đời Chi 2 + 8 = Đời Phái 4**), tổng quan thống kê số liệu 8 thế hệ.
-  2. `lich_gio_ky_va_an_tang.md`: Sổ kỵ nhật sắp xếp tuần tự theo 12 tháng Âm lịch và danh mục vị trí mồ mả, nghĩa trang tiền nhân (Động Cát, Nghĩa trang An Lợi...).
-  3. `gia_pha_chi_tiet_ho_le_van.md`: Hồ sơ từng cụ tiền nhân với cấu trúc trường dữ liệu chặt chẽ (Họ tên, Thế hệ, Phụ thân, Mẫu thân, Phối ngẫu, Hậu duệ, Ngày kỵ, Nơi an táng, Tiểu sử công đức).
+  2. `lich_gio_ky_va_an_tang.md`: Sổ kỵ nhật sắp xếp tuần tự theo 12 tháng Âm lịch và danh mục vị trí mồ mả, nghĩa trang tiền nhân (Cồn Giữa, Đồng Giám, Lai Bình...).
+  3. `gia_pha_chi_tiet_ho_le_van.md`: Hồ sơ từng cụ tiền nhân với cấu trúc trường dữ liệu chặt chẽ (Họ tên, Thế hệ, Thân phụ, Thân mẫu, Phối ngẫu, Con cái, Anh chị em ruột, Ngày kỵ, Nơi an táng, Tiểu sử công đức).
 
 - **Thuật toán Trích Xuất Ngữ Cảnh Lai (Hybrid Context Retrieval)**:
-  - **Phân tích thực thể (Named Entity Recognition)**: Bóc tách tên thành viên (ví dụ: *Lê Văn Khôi, Lê Văn Thường, Lê Gia Khánh...*), số thế hệ hoặc các mốc thời gian âm lịch.
-  - **Mở rộng quan hệ 2 thế hệ**: Khi tìm thấy một thành viên, thuật toán tự động gom thêm hồ sơ của cha mẹ, tất cả vợ/chồng và các con để đưa vào ngữ cảnh, giúp AI trả lời chính xác mối quan hệ gia tộc.
-  - **Trích xuất theo chủ đề**: Nếu câu hỏi nhắc đến "giỗ", "kỵ", "mộ", "an táng" → tự động trích lọc các trang kỵ nhật âm lịch liên quan.
+  - **Phân tích thực thể (Named Entity Recognition)**: Bóc tách tên thành viên (ví dụ: *Lê Văn Khôi, Lê Văn Thường, Lê Gia Khánh, Ben...*), số thế hệ hoặc các mốc thời gian âm lịch.
+  - **Mở rộng quan hệ đa thế hệ**: Tự động gom thêm hồ sơ của thân phụ mẫu, phối ngẫu, con cái và anh chị em ruột vào ngữ cảnh để AI trả lời chính xác, mạch lạc toàn bộ cây huyết thống.
+  - **Trích xuất theo chủ đề kỵ nhật**: Nếu câu hỏi nhắc đến "giỗ", "kỵ", "mộ", "an táng", "tháng 8"... → tự động trích lọc các trang kỵ nhật âm lịch tương ứng.
+  - **Tự động làm sạch dữ liệu đầu vào**: Lọc bỏ triệt để toàn bộ mã ID nội bộ (`ID: xxxx`) và tiền tố danh xưng sai lệch trước khi nạp ngữ cảnh vào mô hình LLM.
 
-- **Kết nối Google Gemini 3.6 Flash & Xử lý Ổn định (Resilience Engineering)**:
-  - Sử dụng mô hình **Google Gemini 3.6 Flash** thế hệ mới nhất qua Google AI Studio API.
-  - **Chuẩn hóa Khóa API**: Tương thích định dạng khóa mới bắt đầu bằng `AQ.` bằng cách gửi qua HTTP Header `x-goog-api-key: <KEY>`.
-  - **Tự Động Thử Lại (Exponential Backoff)**: Tích hợp cơ chế tự động thử lại tối đa 3 lần với khoảng cách thời gian tăng dần khi Google AI Studio báo quá tải (HTTP 503 Service Unavailable) hoặc giới hạn tần suất (HTTP 429 Rate Limit).
-  - **System Prompt Chuẩn mực Văn hóa**:
-    > "Bạn là Trợ lý Trí tuệ Nhân tạo Phả Hệ của Dòng họ Lê Văn (Phái 4 - Chi 2)... Khi nhắc đến tiền nhân, luôn xưng hô cung kính: 'Cụ', 'Ông', 'Bà', 'Ngài'... Chỉ dựa vào dữ liệu gia phả được cung cấp, tuyệt đối không suy diễn bịa đặt."
+- **Bộ Quy Tắc Prompt & Xử Lý Chuẩn Mực Văn Hóa (Culture-Aware System Prompt)**:
+  - **Mẫu trả lời chuẩn hóa đồng bộ**: Bất kể hỏi về ai, AI luôn xuất định dạng danh sách gạch đầu dòng chi tiết: Họ tên, Thế thứ, Giới tính, Tình trạng, Năm sinh, Ngày mất/giỗ nếu mất, Nguyên quán, Nghề nghiệp, Quan hệ thân tộc (Thân phụ, Thân mẫu, Phối ngẫu, Con cái, Anh chị em ruột), Tiểu sử/Ghi chú. Tuyệt đối không trả lời cụt ngủn hay tóm tắt sơ sài.
+  - **Tuyệt đối ẩn mã ID**: Toàn bộ câu trả lời không xuất hiện bất kỳ mã số ID hệ thống nào, đảm bảo văn phong tự nhiên, thuần phả hệ.
+  - **Chuẩn hóa danh xưng người không rõ giới tính**: Với các thành viên mang tên `LÊ HVVD` có giới tính "Không rõ", chỉ gọi đúng họ tên `LÊ HVVD`, tuyệt đối không tự gán danh xưng (Anh, Chị, Ông, Bà, Cụ, Cháu, Bé) để giữ gìn sự tôn kính trang nghiêm.
+  - **Kết nối Google Gemini 3.6 Flash & Xử lý Ổn định**: Tự động thử lại (Exponential Backoff) khi gặp quá tải 503 hoặc giới hạn tần suất 429 từ Google AI Studio.
 
-#### b. Microservice Python FastAPI Độc lập (`rag-service`) - *Dùng cho Local / Offline*
+#### b. Microservice Python FastAPI Độc lập (`rag-service`) - *Dùng cho Local / Docker*
 Dành riêng cho môi trường nghiên cứu hoặc triển khai cục bộ không cần kết nối Internet:
 - **Ngăn xếp công nghệ**: Python 3.10+, **FastAPI**, **LangChain**, **ChromaDB**, và **Ollama** (`qwen2.5:7b` + `nomic-embed-text`).
 - **Quy trình Ingestion (`ingest.py`)**:
-  - Phân mảnh văn bản bằng `RecursiveCharacterTextSplitter` (chunk_size: 800 ký tự, chunk_overlap: 150 ký tự).
-  - Tạo vector nhúng và lưu trữ bền vững vào ChromaDB.
+  - Phân mảnh văn bản bằng `RecursiveCharacterTextSplitter` (chunk_size: 500 ký tự, chunk_overlap: 50 ký tự).
+  - Tạo vector nhúng và lưu trữ bền vững vào ChromaDB trên đĩa (`/app/data/vector_store`).
 - **Kịch bản Tự động Sinh Tri thức (`rag-service/scripts/generate_rag_documents.py`)**:
-  - Script Python tự động quét cơ sở dữ liệu `members.json` để tạo mới/cập nhật toàn bộ các file Markdown trong kho tri thức khi có sự thay đổi về thành viên.
+  - Quét cơ sở dữ liệu `members.json` để tự động tái tạo toàn bộ các file Markdown trong kho tri thức khi có thay đổi dữ liệu gia phả.
 
 ---
 
@@ -343,7 +358,7 @@ Portal-HoLeVan-Phai4-Chi2/
 │   │   └── copy_knowledge.js             # Sao chép tệp Markdown tri thức vào thư mục dist khi build
 │   ├── src/
 │   │   ├── config/                       # db.ts (PostgreSQL Pool), initSql.ts, seed_members.ts
-│   │   ├── controllers/                  # authController, membersController, newsController, chatController
+│   │   ├── controllers/                  # authController, membersController, memorialsController, newsController, chatController
 │   │   ├── data/
 │   │   │   ├── knowledge/                # 3 Tệp Markdown tri thức phục vụ In-Backend RAG
 │   │   │   │   ├── gia_pha_chi_tiet_ho_le_van.md
@@ -351,7 +366,7 @@ Portal-HoLeVan-Phai4-Chi2/
 │   │   │   │   └── tong_quan_va_thong_ke_dong_ho.md
 │   │   │   └── members.json              # Bản ghi 313 thành viên có cấu trúc dữ liệu
 │   │   ├── middleware/                   # auth.ts (JWT RBAC), upload.ts (Supabase Storage)
-│   │   ├── routes/                       # auth.ts, members.ts, news.ts, chat.ts
+│   │   ├── routes/                       # auth.ts, members.ts, memorials.ts, news.ts, chat.ts
 │   │   ├── services/                     # ragService.ts (RAG Engine + Gemini Flash API)
 │   │   └── server.ts                     # Điểm khởi chạy ứng dụng Express
 │   ├── Dockerfile                        # Đóng gói image Node.js 22 Alpine
@@ -363,7 +378,7 @@ Portal-HoLeVan-Phai4-Chi2/
 │   │   ├── components/                   # FamilyTree (@xyflow/react), Chatbot, Layout, Modals
 │   │   ├── data/members.json             # Dữ liệu tĩnh dự phòng ngoại tuyến (Offline Fallback)
 │   │   ├── hooks/                        # useChat.ts, useAuth.ts
-│   │   ├── pages/                        # HomePage, FamilyTreePage, CalendarPage, NewsPage, AdminPage
+│   │   ├── pages/                        # HomePage, FamilyTreePage, MemorialCalendarPage, NewsPage, NewsDetailPage
 │   │   ├── services/                     # api.ts (Axios Base Instance & Interceptors)
 │   │   └── store/                        # authStore.ts (Zustand Global State)
 │   ├── vercel.json                       # Cấu hình định tuyến SPA cho Vercel Edge

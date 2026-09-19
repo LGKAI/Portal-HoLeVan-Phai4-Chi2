@@ -107,3 +107,68 @@
   shape-rendering: geometricPrecision;
 }
 
+/* ========================================================
+   TỐI ƯU HÓA GIAO DIỆN QUAY NGANG ĐIỆN THOẠI (LANDSCAPE)
+   Ngăn chặn chồng chéo, che khuất cây phả hệ khi màn hình hẹp chiều dọc
+   ======================================================== */
+@media (max-height: 550px) {
+  /* 1. Thu gọn chiều cao Navbar và padding đầu trang */
+  nav .h-16 {
+    height: 46px !important;
+  }
+  main.pt-16 {
+    padding-top: 46px !important;
+  }
+  .family-tree-wrapper {
+    height: calc(100dvh - 46px) !important;
+    min-height: calc(100vh - 46px) !important;
+  }
+
+  /* 2. Thu gọn thanh công cụ tìm kiếm / lọc */
+  .family-tree-toolbar {
+    padding: 4px 10px !important;
+    gap: 6px !important;
+  }
+  .family-tree-toolbar input,
+  .family-tree-toolbar select {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+  }
+
+  /* 3. Ẩn MiniMap trên màn hình có chiều cao thấp (tránh che 40% màn hình) */
+  .react-flow__minimap {
+    display: none !important;
+  }
+
+  /* 4. Tinh gọn nút Phóng to / Thu nhỏ */
+  .react-flow__controls {
+    bottom: 24px !important;
+    left: 10px !important;
+  }
+  .react-flow__controls-button {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .react-flow__controls-button svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  /* 5. Thu gọn nút Chatbot AI */
+  button.fixed.bottom-6.right-6,
+  button.fixed.bottom-5.right-5 {
+    bottom: 12px !important;
+    right: 12px !important;
+    padding: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  button.fixed.bottom-6.right-6 svg,
+  button.fixed.bottom-5.right-5 svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+

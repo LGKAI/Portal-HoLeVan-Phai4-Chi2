@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import logging
 from fastapi import FastAPI, HTTPException
@@ -80,7 +81,12 @@ async def chat_sync(request: ChatRequest):
     chunks = []
     async for chunk in pipeline.query(request.message, request.conversation_history):
         chunks.append(chunk)
-    return {"reply": "".join(chunks)}
+    reply_text = "".join(chunks)
+    # Loại bỏ triệt để mọi mã ID nếu mô hình vô tình sinh ra
+    clean_reply = re.sub(r'\s*\(ID:\s*\d+\)', '', reply_text)
+    clean_reply = re.sub(r'\s*ID:\s*\d+,?', '', clean_reply)
+    clean_reply = re.sub(r'\b(?:Cụ ông|Cụ bà|Cụ|Ông|Bà|Bác|Chú|Cô|Dì|Anh|Chị|Cháu|Bé)\s+(LÊ\s+HVVD)\b', r'\1', clean_reply)
+    return {"reply": clean_reply}
 
 @app.post("/ingest/raw-documents")
 async def ingest_raw_documents_route():

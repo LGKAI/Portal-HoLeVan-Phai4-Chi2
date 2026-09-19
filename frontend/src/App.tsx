@@ -4,6 +4,7 @@ import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
 import HomePage from './pages/HomePage';
 import FamilyTreePage from './pages/FamilyTreePage';
+import MemorialCalendarPage from './pages/MemorialCalendarPage';
 import NewsPage from './pages/NewsPage';
 import NewsDetailPage from './pages/NewsDetailPage';
 import ChatbotPanel from './components/Chatbot/ChatbotPanel';
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/tree" element={<FamilyTreePage />} />
+            <Route path="/memorials" element={<MemorialCalendarPage />} />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/news/:id" element={<NewsDetailPage />} />
           </Routes>

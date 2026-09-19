@@ -672,7 +672,7 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
             if (d?.is_deceased) return '#dc2626';
             return d?.gender === 'male' ? '#2563eb' : '#db2777';
           }}
-          style={{ backgroundColor: '#FFF5D6', bottom: 36, right: 16 }}
+          style={{ backgroundColor: '#FFF5D6', bottom: 84, right: 16 }}
           className="!hidden md:!block"
         />
         <Background gap={16} size={1.5} color="#E2D4B7" />

@@ -49,3 +49,17 @@ export interface ChatMessage {
   content: string;
   timestamp: Date;
 }
+
+export interface MemorialRecord {
+  id: number | null;
+  month: number;
+  gio_date: string;
+  death_date: string;
+  full_name: string;
+  generation_desc: string;
+  father_name: string;
+  mother_name: string;
+  gender: string;
+  burial_place: string;
+  notes: string;
+}

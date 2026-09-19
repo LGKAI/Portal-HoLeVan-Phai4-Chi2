@@ -30,6 +30,7 @@ COPY --from=builder /app/dist ./dist
 # Copy file sql và dữ liệu khởi tạo
 COPY --from=builder /app/src/config/init_postgres.sql ./dist/config/init_postgres.sql
 COPY --from=builder /app/src/data/members.json ./dist/data/members.json
+COPY --from=builder /app/src/data/knowledge ./dist/data/knowledge
 
 # Thư mục uploads cho avatars và thumbnails
 RUN mkdir -p /app/uploads/avatars /app/uploads/thumbnails

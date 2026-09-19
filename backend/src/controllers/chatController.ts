@@ -44,9 +44,12 @@ export const handleChat = async (req: Request, res: Response) => {
 
             if (response.ok) {
                 const data = await response.json() as { reply?: string };
+                let replyText = data.reply || 'Xin lỗi, không nhận được phản hồi từ hệ thống.';
+                replyText = replyText.replace(/\s*\(ID:\s*\d+\)/g, '').replace(/\s*ID:\s*\d+,?/g, '');
+                replyText = replyText.replace(/\b(?:Cụ ông|Cụ bà|Cụ|Ông|Bà|Bác|Chú|Cô|Dì|Anh|Chị|Cháu|Bé)\s+(LÊ\s+HVVD)\b/g, '$1');
                 return res.json({
                     success: true,
-                    reply: data.reply || 'Xin lỗi, không nhận được phản hồi từ hệ thống.'
+                    reply: replyText
                 });
             }
         } catch (err: any) {

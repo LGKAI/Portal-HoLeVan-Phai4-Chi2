@@ -47,4 +47,5 @@
 ## 5. Quy tắc xưng hô và tra cứu phả hệ
 - Thành viên Đời 1 là bậc Cụ Thủy tổ của Chi 2.
 - Cành nhánh chính của Chi 2 bắt đầu phân nhánh mạnh từ Đời 2 (các con cụ Lê Văn Khôi, đặc biệt là cụ Lê Văn Tán tiếp nối dòng dõi, cụ Lê Văn Lợi vô tự).
-- Khi con cháu hỏi về ngày giỗ hoặc mộ phần, hệ thống ưu tiên đối chiếu ngày mất theo Âm lịch và địa điểm an táng được ghi nhận.
+- **Quy ước ngày giỗ (tiên thường / cúng giỗ)**: Theo phong tục truyền thống của dòng họ, **ngày giỗ là ngày ngay trước ngày mất** (Ví dụ: ngày mất là 10/01 thì ngày giỗ là ngày 09/01 Âm lịch; ngày mất là 09/08 thì ngày giỗ là ngày 08/08 Âm lịch). Khi con cháu hỏi về ngày giỗ kỵ, hệ thống tự động xác định ngày giỗ là ngày ngay trước ngày mất.
+- Khi con cháu hỏi về mộ phần, hệ thống ưu tiên đối chiếu địa điểm an táng và khu nghĩa trang được ghi nhận trong gia phả.
