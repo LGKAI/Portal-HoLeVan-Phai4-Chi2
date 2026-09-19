@@ -172,3 +172,10 @@
   }
 }
 
+/* Ẩn MiniMap trên mọi điện thoại/máy tính bảng khi quay ngang (dưới 1024px) */
+@media (orientation: landscape) and (max-width: 1023px) {
+  .react-flow__minimap {
+    display: none !important;
+  }
+}
+

@@ -46,8 +46,8 @@ const HomePage: React.FC = () => {
         {/* Gradient overlay: tối mạnh hơn phía dưới để tôn chữ */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 via-40% to-black/80 z-10 pointer-events-none" />
 
-        {/* Khối chữ và nút bấm - nhích lên cao hơn khỏi đáy, đồng nhất mobile/desktop */}
-        <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto pb-24 sm:pb-16 md:pb-20">
+        {/* Khối chữ và nút bấm - nhích lên cao hơn khỏi đáy để không bị nút chat đè trên mobile */}
+        <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto pb-36 sm:pb-16 md:pb-20">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2 drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] tracking-wide leading-tight">
             <span
               className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"

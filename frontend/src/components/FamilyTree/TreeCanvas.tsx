@@ -675,7 +675,7 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
             return d?.gender === 'male' ? '#2563eb' : '#db2777';
           }}
           style={{ backgroundColor: '#FFF5D6', bottom: 84, right: 16 }}
-          className="!hidden md:!block"
+          className="!hidden lg:!block"
         />
         <Background gap={16} size={1.5} color="#E2D4B7" />
       </ReactFlow>

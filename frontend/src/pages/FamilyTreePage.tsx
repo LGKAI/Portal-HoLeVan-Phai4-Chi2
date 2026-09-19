@@ -271,7 +271,7 @@ const FamilyTreePage: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowMobileStats(!showMobileStats)}
-            className="md:hidden flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 font-medium text-gray-800"
+            className="lg:hidden flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 font-medium text-gray-800"
           >
             <span className="text-blue-500 font-bold">•</span>
             <span>Tổng: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
@@ -282,8 +282,8 @@ const FamilyTreePage: React.FC = () => {
             <span className="text-[10px] text-gray-400 ml-1">{showMobileStats ? '▲' : '▼'}</span>
           </button>
 
-          {/* Full stats (collapsible on mobile/landscape, always visible on large desktop md+) */}
-          <div className={`family-tree-stats-full ${showMobileStats ? 'flex' : 'hidden'} md:flex flex-col gap-1 sm:gap-1.5 text-gray-700 font-medium px-3 sm:px-4 py-2 sm:py-2.5 border-t md:border-t-0 border-[#E8D8C3]/50`}>
+          {/* Full stats (collapsible on mobile/landscape, always visible on large desktop lg+) */}
+          <div className={`family-tree-stats-full ${showMobileStats ? 'flex' : 'hidden'} lg:flex flex-col gap-1 sm:gap-1.5 text-gray-700 font-medium px-3 sm:px-4 py-2 sm:py-2.5 border-t lg:border-t-0 border-[#E8D8C3]/50`}>
             <div className="flex items-center gap-2">
               <span className="text-blue-500 font-bold">-</span>
               <span>Tổng số thành viên: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
