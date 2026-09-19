@@ -276,9 +276,9 @@ const FamilyTreePage: React.FC = () => {
             <span className="text-blue-500 font-bold">•</span>
             <span>Tổng: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
             <span className="text-gray-300">|</span>
-            <span className="text-red-500">Mất: <strong className="font-bold text-red-600">{memberStats.deceased}</strong></span>
+            <span className="text-gray-700">Mất: <strong className="font-bold text-red-600">{memberStats.deceased}</strong></span>
             <span className="text-gray-300">|</span>
-            <span className="text-green-500">Sống: <strong className="font-bold text-green-600">{memberStats.living}</strong></span>
+            <span className="text-gray-700">Sống: <strong className="font-bold text-green-600">{memberStats.living}</strong></span>
             <span className="text-[10px] text-gray-400 ml-1">{showMobileStats ? '▲' : '▼'}</span>
           </button>
 

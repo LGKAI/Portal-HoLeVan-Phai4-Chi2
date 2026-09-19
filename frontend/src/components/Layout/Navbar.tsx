@@ -55,8 +55,8 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-4">
+            {/* Desktop Menu - only shown on true desktop (≥1024px) */}
+            <div className="hidden lg:flex items-center space-x-4">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
                 return (
@@ -104,8 +104,8 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* Mobile menu button */}
-            <div className="flex items-center md:hidden">
+            {/* Mobile / landscape menu button — visible on anything < 1024px */}
+            <div className="flex items-center lg:hidden">
               <button
                 onClick={toggleMenu}
                 className="inline-flex items-center justify-center p-2 rounded-md hover:bg-primary-dark transition-colors"
@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-primary border-t border-white/10">
+          <div className="lg:hidden bg-primary border-t border-white/10">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
