@@ -1,6 +1,8 @@
 -- ========================================
 -- Portal Họ Lê Văn - Phái 4 - Chi 2
 -- PostgreSQL DDL Initialization Script (Supabase Compatible)
+-- Chỉ giữ lại 3 bảng nghiệp vụ thực tế:
+--   users, members, news
 -- ========================================
 
 -- 1. Bảng Người dùng hệ thống (Users)
@@ -46,77 +48,34 @@ CREATE INDEX IF NOT EXISTS idx_members_father ON members(father_id);
 CREATE INDEX IF NOT EXISTS idx_members_mother ON members(mother_id);
 CREATE INDEX IF NOT EXISTS idx_members_spouse ON members(spouse_id);
 
--- 3. Bảng Tin tức / Sự kiện dòng họ (News)
+-- 3. Bảng Tin tức / Sự kiện / Tư liệu dòng họ (News)
+-- (Gộp cả "Tin tức" và "Tư liệu" vào một bảng duy nhất, phân loại qua category)
 CREATE TABLE IF NOT EXISTS news (
     id SERIAL PRIMARY KEY,
     title VARCHAR(300) NOT NULL,
     slug VARCHAR(300) NOT NULL UNIQUE,
     content TEXT NOT NULL,
     thumbnail_url VARCHAR(500),
-    category VARCHAR(20) DEFAULT 'news' CHECK (category IN ('news', 'event', 'announcement')),
+    category VARCHAR(20) DEFAULT 'event' CHECK (category IN ('news', 'event', 'announcement')),
     author_id INT REFERENCES users(id) ON DELETE SET NULL,
     published_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    is_published BOOLEAN DEFAULT FALSE,
+    is_published BOOLEAN DEFAULT TRUE,
     view_count INT DEFAULT 0
 );
 
--- 4. Bảng Tư liệu / Văn bản lịch sử (Documents)
-CREATE TABLE IF NOT EXISTS documents (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(300) NOT NULL,
-    description TEXT,
-    file_url VARCHAR(500),
-    thumbnail_url VARCHAR(500),
-    doc_type VARCHAR(20) DEFAULT 'text' CHECK (doc_type IN ('text', 'image', 'video', 'pdf')),
-    author_id INT REFERENCES users(id) ON DELETE SET NULL,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
+-- Index hỗ trợ tìm theo slug và lọc tin tức
+CREATE INDEX IF NOT EXISTS idx_news_slug ON news(slug);
+CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
+CREATE INDEX IF NOT EXISTS idx_news_published_at ON news(published_at DESC);
 
--- 5. Bảng Bộ câu hỏi đố vui gia phả (QuizSets)
-CREATE TABLE IF NOT EXISTS quiz_sets (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(300) NOT NULL,
-    description TEXT,
-    created_by INT REFERENCES users(id) ON DELETE SET NULL,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
-
--- 6. Bảng Câu hỏi (Questions)
-CREATE TABLE IF NOT EXISTS questions (
-    id SERIAL PRIMARY KEY,
-    quiz_set_id INT REFERENCES quiz_sets(id) ON DELETE CASCADE,
-    question_text TEXT NOT NULL,
-    options TEXT NOT NULL,
-    correct_answer INT NOT NULL,
-    explanation TEXT,
-    order_num INT DEFAULT 1
-);
-
--- 7. Bảng Kết quả thi đố (QuizAttempts)
-CREATE TABLE IF NOT EXISTS quiz_attempts (
-    id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id) ON DELETE SET NULL,
-    quiz_set_id INT REFERENCES quiz_sets(id) ON DELETE CASCADE,
-    score INT DEFAULT 0,
-    total_questions INT DEFAULT 0,
-    answers TEXT,
-    attempted_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
-
--- 8. Tài khoản Admin mặc định (nếu chưa có)
--- Mật khẩu mặc định: Admin@123456 (đã hash bcrypt)
+-- 4. Tài khoản Admin mặc định (mật khẩu: Admin@123456)
 INSERT INTO users (phone, password_hash, full_name, role)
-VALUES ('0901234567', '$2a$10$hKb7OsohDVfRkcW1fHEkKufWcXfvRkXBzojXhQOJaBx/mRYRHDA9W', 'Quản trị viên', 'admin')
+VALUES ('0901234567', '$2a$10$Qdu0xlJipmjUmjJJzdjEsOlr240uAkCv0pSF8O2o5iVkLoayBJ.Wu', 'Quản trị viên', 'admin')
 ON CONFLICT (phone) DO UPDATE SET password_hash = EXCLUDED.password_hash, role = 'admin';
 
 -- ========================================
--- 9. Kích hoạt Row-Level Security (RLS) bảo mật Supabase
+-- 5. Kích hoạt Row-Level Security (RLS) bảo mật Supabase
 -- ========================================
 ALTER TABLE IF EXISTS public.users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.members ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.news ENABLE ROW LEVEL SECURITY;
-ALTER TABLE IF EXISTS public.documents ENABLE ROW LEVEL SECURITY;
-ALTER TABLE IF EXISTS public.quiz_sets ENABLE ROW LEVEL SECURITY;
-ALTER TABLE IF EXISTS public.questions ENABLE ROW LEVEL SECURITY;
-ALTER TABLE IF EXISTS public.quiz_attempts ENABLE ROW LEVEL SECURITY;
-
