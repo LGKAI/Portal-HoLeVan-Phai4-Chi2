@@ -44,8 +44,16 @@ export const getNews = async (req: Request, res: Response) => {
 
 export const getNewsBySlug = async (req: Request, res: Response) => {
     const { slug } = req.params;
-    await executeQuery('UPDATE news SET view_count = view_count + 1 WHERE slug = $1', [slug]);
-    const result = await executeQuery('SELECT * FROM news WHERE slug = $1', [slug]);
+    const isNum = /^\d+$/.test(slug);
+    let result;
+    if (isNum) {
+        const id = parseInt(slug, 10);
+        await executeQuery('UPDATE news SET view_count = view_count + 1 WHERE id = $1', [id]);
+        result = await executeQuery('SELECT * FROM news WHERE id = $1', [id]);
+    } else {
+        await executeQuery('UPDATE news SET view_count = view_count + 1 WHERE slug = $1', [slug]);
+        result = await executeQuery('SELECT * FROM news WHERE slug = $1', [slug]);
+    }
     if (result.rows.length === 0) {
         return res.status(404).json({ success: false, message: 'Not found' });
     }
@@ -87,31 +95,41 @@ export const updateNews = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
         const newsId = parseInt(id, 10);
+        if (isNaN(newsId)) {
+            return res.status(400).json({ success: false, message: 'ID không hợp lệ' });
+        }
+
         const { title, content } = req.body;
         let thumbnail_url = req.body.thumbnail_url;
 
-        if (req.file) {
-            const existing = await executeQuery('SELECT thumbnail_url FROM news WHERE id = $1', [newsId]);
-            if (existing.rows.length > 0) {
-                removeUploadFile(existing.rows[0].thumbnail_url);
-            }
-            thumbnail_url = await processUploadedFile(req.file, 'thumbnails');
+        const existing = await executeQuery('SELECT id, thumbnail_url FROM news WHERE id = $1', [newsId]);
+        if (existing.rows.length === 0) {
+            return res.status(404).json({ success: false, message: 'Bài viết không tồn tại' });
         }
 
-        await executeQuery(
+        let finalThumbUrl = existing.rows[0].thumbnail_url;
+        if (req.file) {
+            removeUploadFile(existing.rows[0].thumbnail_url);
+            finalThumbUrl = await processUploadedFile(req.file, 'thumbnails');
+        } else if (thumbnail_url !== undefined) {
+            finalThumbUrl = thumbnail_url || null;
+        }
+
+        const updateResult = await executeQuery(
             `UPDATE news SET 
                 title = COALESCE($1, title), 
                 content = COALESCE($2, content), 
-                thumbnail_url = COALESCE($3, thumbnail_url) 
-             WHERE id = $4`,
+                thumbnail_url = $3 
+             WHERE id = $4
+             RETURNING id, title, slug, content, thumbnail_url`,
             [
-                title || null,
-                content || null,
-                thumbnail_url || null,
+                title ? title.trim() : null,
+                content ? content : null,
+                finalThumbUrl,
                 newsId
             ]
         );
-        res.json({ success: true, message: 'News updated' });
+        res.json({ success: true, message: 'Cập nhật bài viết thành công', data: updateResult.rows[0] });
     } catch (err: any) {
         console.error("Update News Error: ", err);
         res.status(500).json({ success: false, message: err.message });
@@ -128,4 +146,17 @@ export const deleteNews = async (req: Request, res: Response) => {
     }
     await executeQuery('DELETE FROM news WHERE id = $1', [newsId]);
     res.json({ success: true, message: 'News deleted' });
+};
+
+export const uploadNewsImage = async (req: Request, res: Response) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({ success: false, message: 'Chưa có file ảnh được tải lên' });
+        }
+        const imageUrl = await processUploadedFile(req.file, 'general');
+        res.json({ success: true, url: imageUrl, message: 'Tải ảnh thành công' });
+    } catch (err: any) {
+        console.error("Upload News Image Error: ", err);
+        res.status(500).json({ success: false, message: err.message });
+    }
 };

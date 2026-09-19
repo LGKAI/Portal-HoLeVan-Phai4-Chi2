@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import { seedMembersIfEmpty } from './seed_members';
+import { seedNewsIfEmpty } from './seed_news';
 import { defaultPostgresSchema } from './initSql';
 
 dotenv.config();
@@ -123,6 +124,9 @@ export const initDb = async () => {
 
         // Tự động nạp dữ liệu gia phả ban đầu nếu bảng members đang trống
         await seedMembersIfEmpty(p);
+
+        // Tự động nạp dữ liệu tin tức / sự kiện ban đầu nếu bảng news đang trống
+        await seedNewsIfEmpty(p);
     } catch (err) {
         console.error('Database initialization failed:', err);
     }

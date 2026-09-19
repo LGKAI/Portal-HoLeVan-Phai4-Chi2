@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import NewsCard from '../components/News/NewsCard';
 import { newsService } from '../services/newsService';
 import { NewsItem } from '../types';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import { useAuthStore } from '../store/authStore';
+import Cropper from 'react-easy-crop';
+import { getCroppedImg } from '../utils/cropImage';
+import { Crop as CropIcon, X, Upload, Trash2 } from 'lucide-react';
+import RichDocEditor, { toHtmlFormat } from '../components/News/RichDocEditor';
 
 const NewsPage: React.FC = () => {
   const [news, setNews] = useState<NewsItem[]>([]);
@@ -17,6 +21,16 @@ const NewsPage: React.FC = () => {
   const [newContent, setNewContent] = useState('');
   const [newThumb, setNewThumb] = useState('');
   const [file, setFile] = useState<File | null>(null);
+
+  // States for cover image cropper
+  const [coverImageSrc, setCoverImageSrc] = useState<string | null>(null);
+  const [isCroppingCover, setIsCroppingCover] = useState(false);
+  const [crop, setCrop] = useState({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [aspectRatio, setAspectRatio] = useState<number | undefined>(16 / 9);
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState<any>(null);
+  const [coverPreviewUrl, setCoverPreviewUrl] = useState<string | null>(null);
+  const coverFileInputRef = useRef<HTMLInputElement>(null);
 
   const fetchNews = async () => {
     try {
@@ -48,15 +62,25 @@ const NewsPage: React.FC = () => {
     setNewContent('');
     setNewThumb('');
     setFile(null);
+    if (coverPreviewUrl && coverPreviewUrl.startsWith('blob:')) {
+      URL.revokeObjectURL(coverPreviewUrl);
+    }
+    setCoverPreviewUrl(null);
+    setCoverImageSrc(null);
     setIsAddOpen(true);
   };
 
   const openEdit = (item: NewsItem) => {
     setEditingId(item.id);
     setNewTitle(item.title);
-    setNewContent(item.content);
+    setNewContent(toHtmlFormat(item.content));
     setNewThumb(item.thumbnail_url || '');
     setFile(null);
+    if (coverPreviewUrl && coverPreviewUrl.startsWith('blob:')) {
+      URL.revokeObjectURL(coverPreviewUrl);
+    }
+    setCoverPreviewUrl(item.thumbnail_url || null);
+    setCoverImageSrc(null);
     setIsAddOpen(true);
   };
 
@@ -71,21 +95,75 @@ const NewsPage: React.FC = () => {
     }
   };
 
+  // Xử lý khi chọn file ảnh bìa từ máy tính -> mở Cropper
+  const onCoverFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      const selectedFile = e.target.files[0];
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        setCoverImageSrc(reader.result?.toString() || null);
+        setZoom(1);
+        setCrop({ x: 0, y: 0 });
+        setIsCroppingCover(true);
+      });
+      reader.readAsDataURL(selectedFile);
+      e.target.value = '';
+    }
+  };
+
+  const onCropComplete = useCallback((_croppedArea: any, pixels: any) => {
+    setCroppedAreaPixels(pixels);
+  }, []);
+
+  // Áp dụng ảnh bìa sau khi cắt
+  const applyCroppedCover = useCallback(async () => {
+    try {
+      if (coverImageSrc && croppedAreaPixels) {
+        const croppedFile = await getCroppedImg(coverImageSrc, croppedAreaPixels, 'cover.jpg');
+        setFile(croppedFile);
+        if (coverPreviewUrl && coverPreviewUrl.startsWith('blob:')) {
+          URL.revokeObjectURL(coverPreviewUrl);
+        }
+        setCoverPreviewUrl(URL.createObjectURL(croppedFile));
+        setNewThumb('');
+        setIsCroppingCover(false);
+      }
+    } catch (err) {
+      console.error('Lỗi khi cắt ảnh bìa:', err);
+      alert('Không thể cắt ảnh bìa. Vui lòng thử lại.');
+    }
+  }, [coverImageSrc, croppedAreaPixels, coverPreviewUrl]);
+
+  // Gỡ ảnh bìa
+  const removeCoverImage = () => {
+    setFile(null);
+    if (coverPreviewUrl && coverPreviewUrl.startsWith('blob:')) {
+      URL.revokeObjectURL(coverPreviewUrl);
+    }
+    setCoverPreviewUrl(null);
+    setCoverImageSrc(null);
+    setNewThumb('');
+  };
+
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newTitle || !newContent) {
-      alert("Vui lòng nhập đủ tiêu đề và nội dung.");
+    if (!newTitle.trim()) {
+      alert("Vui lòng nhập tiêu đề bài viết.");
+      return;
+    }
+    if (!newContent.trim()) {
+      alert("Vui lòng nhập nội dung bài viết.");
       return;
     }
 
     try {
       const formData = new FormData();
-      formData.append('title', newTitle);
+      formData.append('title', newTitle.trim());
       formData.append('content', newContent);
       if (file) {
         formData.append('thumbnail', file);
       } else {
-        formData.append('thumbnail_url', newThumb);
+        formData.append('thumbnail_url', newThumb || coverPreviewUrl || '');
       }
 
       if (editingId) {
@@ -104,6 +182,8 @@ const NewsPage: React.FC = () => {
       setNewContent('');
       setNewThumb('');
       setFile(null);
+      setCoverPreviewUrl(null);
+      setCoverImageSrc(null);
       fetchNews();
     } catch (error: any) {
       console.error("Lỗi khi lưu bài viết:", error?.response?.data || error);
@@ -121,7 +201,7 @@ const NewsPage: React.FC = () => {
         {isAdmin && (
           <button
             onClick={openAdd}
-            className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium shadow transition-colors"
+            className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium shadow transition-colors flex items-center gap-2"
           >
             + Đăng bài mới
           </button>
@@ -150,66 +230,256 @@ const NewsPage: React.FC = () => {
 
       {/* Modal Add/Edit News */}
       {isAddOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            <h2 className="text-2xl font-bold mb-4 text-dark">{editingId ? 'Sửa bài viết' : 'Đăng tư liệu / sự kiện mới'}</h2>
-            <form onSubmit={handleAdd} className="space-y-4">
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 animate-fadeIn">
+          <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-4xl max-h-[92vh] overflow-y-auto flex flex-col">
+            <div className="flex justify-between items-center mb-5 pb-3 border-b">
+              <h2 className="text-2xl font-bold text-dark">
+                {editingId ? 'Sửa bài viết' : 'Đăng tư liệu / sự kiện mới'}
+              </h2>
+              <button
+                type="button"
+                onClick={() => setIsAddOpen(false)}
+                className="text-gray-400 hover:text-gray-600 p-1 rounded-full hover:bg-gray-100"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <form onSubmit={handleAdd} className="space-y-5">
+              {/* Tiêu đề */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Tiêu đề *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Tiêu đề bài viết *</label>
                 <input
                   type="text"
                   required
+                  placeholder="Nhập tiêu đề tư liệu hoặc sự kiện..."
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Ảnh bìa (Tải lên)</label>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => setFile(e.target.files?.[0] || null)}
-                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-dark cursor-pointer border rounded-md"
-                />
-              </div>
-              <div className="text-center text-sm text-gray-500">Hoặc sử dụng URL ảnh:</div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">URL Ảnh bìa</label>
-                <input
-                  type="text"
-                  placeholder="https://..."
-                  value={newThumb}
-                  onChange={(e) => setNewThumb(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Nội dung *</label>
-                <textarea
-                  required
-                  value={newContent}
-                  onChange={(e) => setNewContent(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary min-h-[200px]"
+                  className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 
-              <div className="flex justify-end gap-3 mt-6 pt-4 border-t">
+              {/* Ảnh bìa */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                  Ảnh bìa bài viết (Hỗ trợ căn chỉnh & cắt ảnh)
+                </label>
+
+                {/* Khung xem trước hoặc nút chọn ảnh bìa */}
+                {coverPreviewUrl || newThumb ? (
+                  <div className="relative border-2 border-dashed border-gray-300 rounded-xl overflow-hidden bg-gray-50 group">
+                    <div className="w-full aspect-[16/9] max-h-[260px] overflow-hidden flex items-center justify-center bg-black/5">
+                      <img
+                        src={coverPreviewUrl || newThumb}
+                        alt="Ảnh bìa bài viết"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                      {coverImageSrc && (
+                        <button
+                          type="button"
+                          onClick={() => setIsCroppingCover(true)}
+                          className="px-3.5 py-2 bg-white text-gray-800 rounded-lg shadow-md font-medium text-sm hover:bg-gray-100 flex items-center gap-1.5"
+                        >
+                          <CropIcon size={16} /> Cắt lại ảnh
+                        </button>
+                      )}
+                      <button
+                        type="button"
+                        onClick={() => coverFileInputRef.current?.click()}
+                        className="px-3.5 py-2 bg-primary text-white rounded-lg shadow-md font-medium text-sm hover:bg-primary-dark flex items-center gap-1.5"
+                      >
+                        <Upload size={16} /> Đổi ảnh khác
+                      </button>
+                      <button
+                        type="button"
+                        onClick={removeCoverImage}
+                        className="px-3.5 py-2 bg-red-600 text-white rounded-lg shadow-md font-medium text-sm hover:bg-red-700 flex items-center gap-1.5"
+                      >
+                        <Trash2 size={16} /> Gỡ ảnh
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex flex-col sm:flex-row items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => coverFileInputRef.current?.click()}
+                      className="w-full sm:w-auto px-5 py-3 border-2 border-dashed border-primary/50 hover:border-primary rounded-xl text-primary bg-primary/5 hover:bg-primary/10 font-medium text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    >
+                      <Upload size={18} />
+                      Tải ảnh bìa lên & Căn chỉnh
+                    </button>
+                    <span className="text-xs text-gray-400">hoặc nhập URL:</span>
+                    <input
+                      type="text"
+                      placeholder="Dán link ảnh https://..."
+                      value={newThumb}
+                      onChange={(e) => {
+                        setNewThumb(e.target.value);
+                        setCoverPreviewUrl(e.target.value);
+                      }}
+                      className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                    />
+                  </div>
+                )}
+                <input
+                  ref={coverFileInputRef}
+                  type="file"
+                  accept="image/*"
+                  onChange={onCoverFileChange}
+                  className="hidden"
+                />
+              </div>
+
+              {/* Nội dung bài viết (Trình soạn thảo phong phú như tài liệu Word) */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Nội dung bài viết * (Hỗ trợ chèn & dán ảnh trực tiếp Ctrl+V)
+                </label>
+                <RichDocEditor
+                  value={newContent}
+                  onChange={setNewContent}
+                />
+              </div>
+
+              {/* Nút hành động */}
+              <div className="flex justify-end gap-3 pt-4 border-t">
                 <button
                   type="button"
                   onClick={() => setIsAddOpen(false)}
-                  className="px-4 py-2 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-md font-medium"
+                  className="px-5 py-2.5 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors"
                 >
                   Hủy
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark font-medium"
+                  className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary-dark font-medium shadow-md transition-colors"
                 >
-                  {editingId ? 'Cập nhật' : 'Đăng tải'}
+                  {editingId ? 'Cập nhật bài viết' : 'Đăng bài viết'}
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* Modal Căn chỉnh & Cắt ảnh bìa (Cover Image Cropper Modal) */}
+      {isCroppingCover && coverImageSrc && (
+        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 p-4 animate-fadeIn">
+          <div className="bg-white rounded-2xl w-full max-w-2xl shadow-2xl flex flex-col h-[560px] overflow-hidden">
+            {/* Header */}
+            <div className="flex justify-between items-center px-5 py-4 border-b">
+              <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+                <CropIcon size={20} className="text-primary" /> Căn chỉnh & Cắt ảnh bìa
+              </h3>
+              <button
+                type="button"
+                onClick={() => setIsCroppingCover(false)}
+                className="text-gray-400 hover:text-gray-600 p-1 rounded-full hover:bg-gray-100"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Thanh công cụ tỉ lệ khung hình (Aspect Ratio Bar) */}
+            <div className="px-5 py-2.5 bg-gray-50 border-b flex items-center justify-between gap-2 flex-wrap">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-semibold text-gray-600">Tỉ lệ cắt:</span>
+                <button
+                  type="button"
+                  onClick={() => setAspectRatio(16 / 9)}
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
+                    aspectRatio === 16 / 9
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  16:9 (Chuẩn bìa)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAspectRatio(4 / 3)}
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
+                    aspectRatio === 4 / 3
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  4:3
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAspectRatio(1)}
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
+                    aspectRatio === 1
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  1:1 (Vuông)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAspectRatio(undefined)}
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
+                    aspectRatio === undefined
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  Tự do
+                </button>
+              </div>
+
+              {/* Thanh trượt zoom */}
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gray-500">Phóng to:</span>
+                <input
+                  type="range"
+                  min={1}
+                  max={3}
+                  step={0.05}
+                  value={zoom}
+                  onChange={(e) => setZoom(Number(e.target.value))}
+                  className="w-28 accent-primary cursor-pointer"
+                />
+              </div>
+            </div>
+
+            {/* Vùng Cropper */}
+            <div className="relative flex-1 bg-gray-900">
+              <Cropper
+                image={coverImageSrc}
+                crop={crop}
+                zoom={zoom}
+                aspect={aspectRatio}
+                cropShape="rect"
+                showGrid={true}
+                onCropChange={setCrop}
+                onCropComplete={onCropComplete}
+                onZoomChange={setZoom}
+              />
+            </div>
+
+            {/* Footer */}
+            <div className="px-5 py-3.5 border-t flex justify-end gap-3 bg-gray-50">
+              <button
+                type="button"
+                onClick={() => setIsCroppingCover(false)}
+                className="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-100 font-medium text-sm transition-colors"
+              >
+                Hủy
+              </button>
+              <button
+                type="button"
+                onClick={applyCroppedCover}
+                className="px-5 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark font-medium text-sm shadow transition-colors"
+              >
+                Áp dụng ảnh này
+              </button>
+            </div>
           </div>
         </div>
       )}

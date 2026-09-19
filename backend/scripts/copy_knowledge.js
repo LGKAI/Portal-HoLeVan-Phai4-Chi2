@@ -14,3 +14,17 @@ if (fs.existsSync(srcDir)) {
 } else {
     console.warn('[Build] Thư mục src/data/knowledge không tồn tại.');
 }
+
+// Sao chép các file JSON dữ liệu hạt giống (seed data)
+const srcDataDir = path.join(__dirname, '..', 'src', 'data');
+const distDataDir = path.join(__dirname, '..', 'dist', 'data');
+if (fs.existsSync(srcDataDir)) {
+    fs.mkdirSync(distDataDir, { recursive: true });
+    const files = fs.readdirSync(srcDataDir);
+    for (const file of files) {
+        if (file.endsWith('.json')) {
+            fs.copyFileSync(path.join(srcDataDir, file), path.join(distDataDir, file));
+            console.log(`[Build] Đã sao chép file seed data ${file} vào ${distDataDir}`);
+        }
+    }
+}

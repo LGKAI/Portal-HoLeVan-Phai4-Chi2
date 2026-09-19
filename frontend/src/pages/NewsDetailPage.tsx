@@ -69,8 +69,15 @@ const NewsDetailPage: React.FC = () => {
         </div>
       )}
 
-      <div className="prose max-w-none prose-lg">
-        <p className="whitespace-pre-wrap">{news.content}</p>
+      <div className="prose max-w-none prose-lg text-gray-800 leading-relaxed">
+        {news.content && (news.content.includes('<p') || news.content.includes('<img') || news.content.includes('<div') || news.content.includes('<h') || news.content.includes('<ul') || news.content.includes('<ol')) ? (
+          <div
+            className="article-rich-content [&_img]:rounded-xl [&_img]:shadow-md [&_img]:my-6 [&_img]:mx-auto [&_img]:max-w-full [&_img]:max-h-[650px] [&_img]:object-contain [&_p]:my-4 [&_p]:leading-relaxed [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-gray-900 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6"
+            dangerouslySetInnerHTML={{ __html: news.content }}
+          />
+        ) : (
+          <p className="whitespace-pre-wrap leading-relaxed">{news.content}</p>
+        )}
       </div>
     </div>
   );
