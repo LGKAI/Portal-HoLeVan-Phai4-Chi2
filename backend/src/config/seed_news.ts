@@ -15,15 +15,6 @@ interface NewsSeed {
 
 export const seedNewsIfEmpty = async (pool: Pool) => {
     try {
-        const countRes = await pool.query('SELECT COUNT(*)::int AS count FROM news');
-        const count = countRes.rows[0]?.count || 0;
-
-        if (count > 0) {
-            console.log(`Bảng news đã có ${count} bản ghi. Bỏ qua nạp dữ liệu ban đầu.`);
-            return;
-        }
-
-        console.log('Bảng news đang trống. Bắt đầu nạp dữ liệu ban đầu từ news.json...');
         const newsList: NewsSeed[] = newsJsonData as unknown as NewsSeed[];
         if (!Array.isArray(newsList) || newsList.length === 0) {
             console.log('File news.json không có dữ liệu.');
@@ -40,7 +31,11 @@ export const seedNewsIfEmpty = async (pool: Pool) => {
                 ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
                 ON CONFLICT (id) DO UPDATE SET
                     title = EXCLUDED.title,
-                    content = EXCLUDED.content;
+                    slug = EXCLUDED.slug,
+                    content = EXCLUDED.content,
+                    thumbnail_url = EXCLUDED.thumbnail_url,
+                    category = EXCLUDED.category,
+                    is_published = EXCLUDED.is_published;
             `;
 
             for (const item of newsList) {
@@ -67,14 +62,14 @@ export const seedNewsIfEmpty = async (pool: Pool) => {
             `);
 
             await client.query('COMMIT');
-            console.log(`Đã nạp thành công ${newsList.length} bài viết/sự kiện vào bảng news!`);
+            console.log(`Đã đồng bộ thành công ${newsList.length} bài viết/sự kiện từ news.json vào bảng news!`);
         } catch (err) {
             await client.query('ROLLBACK');
-            console.error('Lỗi khi nạp dữ liệu news.json:', err);
+            console.error('Lỗi khi đồng bộ news.json:', err);
         } finally {
             client.release();
         }
     } catch (err) {
-        console.error('Không thể kiểm tra/nạp dữ liệu news ban đầu:', err);
+        console.error('Không thể kiểm tra/nạp dữ liệu news:', err);
     }
 };
