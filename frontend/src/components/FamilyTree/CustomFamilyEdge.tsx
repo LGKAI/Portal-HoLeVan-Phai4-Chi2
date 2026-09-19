@@ -20,7 +20,7 @@ function CustomFamilyEdge({
   if (spouseCenterX !== undefined && spouseCenterY !== undefined) {
     startY = spouseCenterY;
     const husbandWifeDist = spouseCenterX - sourceX;
-    if (husbandWifeDist > 600) {
+    if (husbandWifeDist > 1000) {
       // Vợ 3 trở lên (nằm xa bên phải): điểm nối xuất phát tại cột của người vợ đó
       startX = spouseCenterX;
     } else {

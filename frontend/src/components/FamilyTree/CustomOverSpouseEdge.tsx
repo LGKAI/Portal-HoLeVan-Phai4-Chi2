@@ -46,7 +46,7 @@ function CustomOverSpouseEdge({
               transform: `translate(-50%, -50%) translate(${labelX}px, ${labelY}px)`,
               pointerEvents: 'all',
             }}
-            className="bg-[#FFFDF5] px-2.5 py-0.5 rounded-full border-2 border-red-500 text-red-700 text-[11px] font-bold shadow-md whitespace-nowrap z-20"
+            className="bg-[#FFFDF5] px-4 py-1 rounded-full border-2 border-red-500 text-red-700 text-[15px] font-bold shadow-md whitespace-nowrap z-20"
           >
             {label}
           </div>

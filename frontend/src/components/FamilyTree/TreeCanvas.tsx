@@ -36,9 +36,11 @@ const edgeTypes = {
   straightSpouseEdge: CustomSpouseStraightEdge,
 };
 
-const NODE_WIDTH = 380;
-const BASE_NODE_HEIGHT = 170;
+const NODE_WIDTH = 570;
+const BASE_NODE_HEIGHT = 256;
 const SIBLING_GAP = 120;
+// Giãn dây nối vợ chồng (nét đứt màu đỏ) theo yêu cầu
+const SPOUSE_GAP = 190;
 // Khoảng cách phân tách rõ ràng giữa nhánh con của các bà vợ (Chánh phối, Thứ phối...)
 const WIFE_BRANCH_GAP = 240;
 const RANK_SEP = 600;
@@ -187,7 +189,7 @@ function layoutTreeCore(members: Member[], canonicalXMap?: Map<number, number>) 
     }
 
     // Chánh phối luôn nằm bên trái Chồng
-    const husbandOffset = NODE_WIDTH + SIBLING_GAP;
+    const husbandOffset = NODE_WIDTH + SPOUSE_GAP;
     const wifePositions: { wifeId: number; offset: number; rank: number }[] = [];
 
     wifeIds.forEach((wId, idx) => {
@@ -196,7 +198,7 @@ function layoutTreeCore(members: Member[], canonicalXMap?: Map<number, number>) 
       } else {
         wifePositions.push({
           wifeId: wId,
-          offset: husbandOffset + idx * (NODE_WIDTH + SIBLING_GAP),
+          offset: husbandOffset + idx * (NODE_WIDTH + SPOUSE_GAP),
           rank: idx,
         });
       }
@@ -205,7 +207,7 @@ function layoutTreeCore(members: Member[], canonicalXMap?: Map<number, number>) 
     const clusterWidth =
       husbandOffset +
       NODE_WIDTH +
-      (numWives > 1 ? (numWives - 1) * (NODE_WIDTH + SIBLING_GAP) : 0);
+      (numWives > 1 ? (numWives - 1) * (NODE_WIDTH + SPOUSE_GAP) : 0);
 
     return { clusterWidth, husbandOffset, wifePositions };
   };
@@ -394,8 +396,8 @@ const getLayoutedElements = (
       let spouseCenterY: number | undefined;
       if (wifeId && memberPositions.has(wifeId)) {
         const wifePos = memberPositions.get(wifeId)!;
-        spouseCenterX = wifePos.x - centerOffset + 190;
-        spouseCenterY = wifePos.y + 85;
+        spouseCenterX = wifePos.x - centerOffset + NODE_WIDTH / 2;
+        spouseCenterY = wifePos.y + BASE_NODE_HEIGHT / 2;
       }
 
       g.children.forEach((child) => {
