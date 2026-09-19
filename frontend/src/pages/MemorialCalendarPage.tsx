@@ -3,6 +3,8 @@ import { Calendar, Search, MapPin, Filter } from 'lucide-react';
 import { MemorialRecord } from '../types';
 import defaultMemorials from '../data/memorials.json';
 
+import api from '../services/api';
+
 const MONTH_OPTIONS = [
   { id: 0, label: 'Tất cả 12 tháng', shortLabel: 'Tất cả' },
   { id: 1, label: 'Tháng Giêng (Tháng 1)', shortLabel: 'Tháng 1' },
@@ -28,15 +30,14 @@ const MemorialCalendarPage: React.FC = () => {
 
   // Tự động đồng bộ với CSDL qua API để khi admin cập nhật/thêm người mất mới sẽ tự động nạp vào
   useEffect(() => {
-    fetch('/api/memorials')
-      .then((r) => r.json())
-      .then((json) => {
-        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
-          setMemorials(json.data as MemorialRecord[]);
+    api.get('/memorials')
+      .then((res) => {
+        if (res.data?.success && Array.isArray(res.data.data) && res.data.data.length > 0) {
+          setMemorials(res.data.data as MemorialRecord[]);
         }
       })
       .catch((err) => {
-        console.warn('API /api/memorials fetch error, sử dụng dữ liệu mặc định:', err);
+        console.warn('API /memorials fetch error, sử dụng dữ liệu mặc định:', err);
       });
   }, []);
 

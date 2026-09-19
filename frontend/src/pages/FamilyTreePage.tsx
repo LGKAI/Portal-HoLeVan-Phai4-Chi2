@@ -122,14 +122,7 @@ const FamilyTreePage: React.FC = () => {
         const newMemberId = res.data?.id || res.id;
         
         if (newMemberId && avatarFile) {
-          const formData = new FormData();
-          formData.append('avatar', avatarFile);
-          const token = useAuthStore.getState().token;
-          await fetch(`/api/members/${newMemberId}/avatar`, {
-            method: 'POST',
-            headers: { 'Authorization': `Bearer ${token}` },
-            body: formData
-          });
+          await memberService.uploadAvatar(newMemberId, avatarFile);
         }
         
         alert('Đã thêm thành viên thành công!');
@@ -137,14 +130,7 @@ const FamilyTreePage: React.FC = () => {
         await memberService.updateMember(selectedMember.id, memberData);
         
         if (avatarFile) {
-          const formData = new FormData();
-          formData.append('avatar', avatarFile);
-          const token = useAuthStore.getState().token;
-          await fetch(`/api/members/${selectedMember.id}/avatar`, {
-            method: 'POST',
-            headers: { 'Authorization': `Bearer ${token}` },
-            body: formData
-          });
+          await memberService.uploadAvatar(selectedMember.id, avatarFile);
         }
         
         alert('Đã cập nhật thông tin thành viên!');
@@ -380,24 +366,13 @@ const FamilyTreePage: React.FC = () => {
                   onChange={async (e) => {
                     const file = e.target.files?.[0];
                     if (file) {
-                      const formData = new FormData();
-                      formData.append('avatar', file);
                       try {
-                        const token = useAuthStore.getState().token;
-                        const res = await fetch(`/api/members/${selectedMember.id}/avatar`, {
-                          method: 'POST',
-                          headers: { 'Authorization': `Bearer ${token}` },
-                          body: formData
-                        });
-                        if (res.ok) {
-                          alert('Cập nhật ảnh thành công!');
-                          setIsDetailOpen(false);
-                          await refetch();
-                        } else {
-                          alert('Có lỗi xảy ra khi tải ảnh lên.');
-                        }
+                        await memberService.uploadAvatar(selectedMember.id, file);
+                        alert('Cập nhật ảnh thành công!');
+                        setIsDetailOpen(false);
+                        await refetch();
                       } catch (error) {
-                        alert('Lỗi kết nối.');
+                        alert('Có lỗi xảy ra khi tải ảnh lên.');
                       }
                     }
                   }}

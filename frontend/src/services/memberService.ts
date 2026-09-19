@@ -42,4 +42,11 @@ export const memberService = {
   deleteMember: async (id: number): Promise<void> => {
     await api.delete(`/members/${id}`);
   },
+
+  uploadAvatar: async (id: number, file: File): Promise<any> => {
+    const formData = new FormData();
+    formData.append('avatar', file);
+    const response = await api.post(`/members/${id}/avatar`, formData);
+    return response.data;
+  },
 };
