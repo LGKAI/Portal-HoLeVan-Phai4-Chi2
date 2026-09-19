@@ -13,6 +13,8 @@ interface NewsCardProps {
 }
 
 const NewsCard: React.FC<NewsCardProps> = ({ news, isAdmin, onEdit, onDelete }) => {
+  const [imgError, setImgError] = React.useState(false);
+
   const handleDelete = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onDelete) onDelete(news.id);
@@ -26,15 +28,17 @@ const NewsCard: React.FC<NewsCardProps> = ({ news, isAdmin, onEdit, onDelete }) 
   return (
     <Link to={`/news/${news.slug}`} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden group flex flex-col h-full border border-gray-100 relative">
       <div className="relative h-48 overflow-hidden bg-gray-200">
-        {news.thumbnail_url ? (
+        {news.thumbnail_url && !imgError ? (
           <img 
             src={news.thumbnail_url} 
             alt={news.title} 
+            onError={() => setImgError(true)}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-gray-400">
-            <span className="text-sm">Không có ảnh</span>
+          <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 text-gray-400 p-4 text-center">
+            <span className="text-sm font-medium">Tư liệu - Sự kiện</span>
+            <span className="text-xs text-gray-400 mt-1">Họ Lê Văn - Phái 4 - Chi 2</span>
           </div>
         )}
         {isAdmin && (

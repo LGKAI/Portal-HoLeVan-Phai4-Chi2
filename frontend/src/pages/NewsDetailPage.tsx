@@ -65,6 +65,10 @@ const NewsDetailPage: React.FC = () => {
             src={news.thumbnail_url} 
             alt={news.title} 
             className="max-w-full h-auto rounded-lg shadow-md border border-[#E8D8C3]/50"
+            onError={(e) => {
+              const parent = e.currentTarget.parentElement;
+              if (parent) parent.style.display = 'none';
+            }}
           />
         </div>
       )}

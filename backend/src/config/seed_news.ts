@@ -29,13 +29,7 @@ export const seedNewsIfEmpty = async (pool: Pool) => {
                 INSERT INTO news (
                     id, title, slug, content, thumbnail_url, category, published_at, view_count, is_published
                 ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
-                ON CONFLICT (id) DO UPDATE SET
-                    title = EXCLUDED.title,
-                    slug = EXCLUDED.slug,
-                    content = EXCLUDED.content,
-                    thumbnail_url = EXCLUDED.thumbnail_url,
-                    category = EXCLUDED.category,
-                    is_published = EXCLUDED.is_published;
+                ON CONFLICT (id) DO NOTHING;
             `;
 
             for (const item of newsList) {

@@ -34,17 +34,23 @@ export const upload = multer({
     limits: { fileSize: 10 * 1024 * 1024 } // 10MB
 });
 
-// Khởi tạo Supabase Storage client (chuyên biệt cho file, không cần WebSocket/Realtime)
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
-const supabaseBucket = process.env.SUPABASE_STORAGE_BUCKET || 'uploads';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const storageClient = (supabaseUrl && supabaseKey)
-    ? new StorageClient(`${supabaseUrl.replace(/\/$/, '')}/storage/v1`, {
-        apikey: supabaseKey,
-        Authorization: `Bearer ${supabaseKey}`
-    })
-    : null;
+let storageClient: StorageClient | null = null;
+
+const getStorageClient = (): StorageClient | null => {
+    if (storageClient) return storageClient;
+    const supabaseUrl = process.env.SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
+    if (supabaseUrl && supabaseKey) {
+        storageClient = new StorageClient(`${supabaseUrl.replace(/\/$/, '')}/storage/v1`, {
+            apikey: supabaseKey,
+            Authorization: `Bearer ${supabaseKey}`
+        });
+    }
+    return storageClient;
+};
 
 /**
  * Xử lý file tải lên:
@@ -55,14 +61,16 @@ export const processUploadedFile = async (
     file: Express.Multer.File,
     subfolder: 'avatars' | 'thumbnails' | 'general' = 'general'
 ): Promise<string> => {
-    if (storageClient) {
+    const client = getStorageClient();
+    const supabaseBucket = process.env.SUPABASE_STORAGE_BUCKET || 'uploads';
+    if (client) {
         try {
             const fileBuffer = file.buffer || (file.path && fs.existsSync(file.path) ? fs.readFileSync(file.path) : null);
             if (fileBuffer) {
                 const ext = path.extname(file.originalname) || '.jpg';
                 const remotePath = `${subfolder}/${subfolder}-${Date.now()}-${Math.round(Math.random() * 1e9)}${ext}`;
 
-                const { data, error } = await storageClient
+                const { data, error } = await client
                     .from(supabaseBucket)
                     .upload(remotePath, fileBuffer, {
                         contentType: file.mimetype || 'image/jpeg',
@@ -72,7 +80,7 @@ export const processUploadedFile = async (
                 if (error) {
                     console.error('Supabase Storage upload error:', error.message);
                 } else if (data) {
-                    const { data: publicData } = storageClient
+                    const { data: publicData } = client
                         .from(supabaseBucket)
                         .getPublicUrl(remotePath);
 

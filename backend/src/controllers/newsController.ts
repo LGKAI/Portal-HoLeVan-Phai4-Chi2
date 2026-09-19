@@ -104,7 +104,35 @@ export const updateNews = async (req: Request, res: Response) => {
 
         const existing = await executeQuery('SELECT id, thumbnail_url FROM news WHERE id = $1', [newsId]);
         if (existing.rows.length === 0) {
-            return res.status(404).json({ success: false, message: 'Bài viết không tồn tại' });
+            let finalThumbUrl = thumbnail_url || null;
+            if (req.file) {
+                finalThumbUrl = await processUploadedFile(req.file, 'thumbnails');
+            }
+            const autoSlug = (req.body.slug || (title ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-') : 'bai-viet')) + '-' + Date.now();
+            await executeQuery(
+                `INSERT INTO news (id, title, slug, content, thumbnail_url, category, is_published)
+                 VALUES ($1, $2, $3, $4, $5, $6, true)
+                 ON CONFLICT (id) DO UPDATE SET
+                   title = EXCLUDED.title,
+                   content = EXCLUDED.content,
+                   thumbnail_url = EXCLUDED.thumbnail_url`,
+                [
+                    newsId,
+                    title ? title.trim() : 'Chưa đặt tiêu đề',
+                    autoSlug,
+                    content || '',
+                    finalThumbUrl,
+                    req.body.category || 'event'
+                ]
+            );
+            await executeQuery(`
+                SELECT setval(
+                    pg_get_serial_sequence('news', 'id'),
+                    COALESCE((SELECT MAX(id) FROM news), 1) + 1,
+                    false
+                );
+            `);
+            return res.json({ success: true, message: 'Đã lưu bài viết thành công vào cơ sở dữ liệu' });
         }
 
         let finalThumbUrl = existing.rows[0].thumbnail_url;

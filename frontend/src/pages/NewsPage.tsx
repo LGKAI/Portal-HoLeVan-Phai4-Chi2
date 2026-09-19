@@ -267,38 +267,63 @@ const NewsPage: React.FC = () => {
 
                 {/* Khung xem trước hoặc nút chọn ảnh bìa */}
                 {coverPreviewUrl || newThumb ? (
-                  <div className="relative border-2 border-dashed border-gray-300 rounded-xl overflow-hidden bg-gray-50 group">
-                    <div className="w-full aspect-[16/9] max-h-[260px] overflow-hidden flex items-center justify-center bg-black/5">
-                      <img
-                        src={coverPreviewUrl || newThumb}
-                        alt="Ảnh bìa bài viết"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                      {coverImageSrc && (
+                  <div className="space-y-2">
+                    <div className="relative border-2 border-dashed border-gray-300 rounded-xl overflow-hidden bg-gray-50 group">
+                      <div className="w-full aspect-[16/9] max-h-[260px] overflow-hidden flex items-center justify-center bg-black/5">
+                        <img
+                          src={coverPreviewUrl || newThumb}
+                          alt="Ảnh bìa bài viết"
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLElement).style.display = 'none';
+                          }}
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                        {coverImageSrc && (
+                          <button
+                            type="button"
+                            onClick={() => setIsCroppingCover(true)}
+                            className="px-3.5 py-2 bg-white text-gray-800 rounded-lg shadow-md font-medium text-sm hover:bg-gray-100 flex items-center gap-1.5"
+                          >
+                            <CropIcon size={16} /> Cắt lại ảnh
+                          </button>
+                        )}
                         <button
                           type="button"
-                          onClick={() => setIsCroppingCover(true)}
-                          className="px-3.5 py-2 bg-white text-gray-800 rounded-lg shadow-md font-medium text-sm hover:bg-gray-100 flex items-center gap-1.5"
+                          onClick={() => coverFileInputRef.current?.click()}
+                          className="px-3.5 py-2 bg-primary text-white rounded-lg shadow-md font-medium text-sm hover:bg-primary-dark flex items-center gap-1.5"
                         >
-                          <CropIcon size={16} /> Cắt lại ảnh
+                          <Upload size={16} /> Đổi ảnh khác
                         </button>
-                      )}
-                      <button
-                        type="button"
-                        onClick={() => coverFileInputRef.current?.click()}
-                        className="px-3.5 py-2 bg-primary text-white rounded-lg shadow-md font-medium text-sm hover:bg-primary-dark flex items-center gap-1.5"
-                      >
-                        <Upload size={16} /> Đổi ảnh khác
-                      </button>
-                      <button
-                        type="button"
-                        onClick={removeCoverImage}
-                        className="px-3.5 py-2 bg-red-600 text-white rounded-lg shadow-md font-medium text-sm hover:bg-red-700 flex items-center gap-1.5"
-                      >
-                        <Trash2 size={16} /> Gỡ ảnh
-                      </button>
+                        <button
+                          type="button"
+                          onClick={removeCoverImage}
+                          className="px-3.5 py-2 bg-red-600 text-white rounded-lg shadow-md font-medium text-sm hover:bg-red-700 flex items-center gap-1.5"
+                        >
+                          <Trash2 size={16} /> Gỡ ảnh
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between text-xs text-gray-500">
+                      <span>Ảnh bìa bài viết</span>
+                      <div className="flex gap-2">
+                        <button
+                          type="button"
+                          onClick={() => coverFileInputRef.current?.click()}
+                          className="text-primary hover:underline font-medium flex items-center gap-1"
+                        >
+                          <Upload size={13} /> Tải ảnh mới từ máy tính
+                        </button>
+                        <span>•</span>
+                        <button
+                          type="button"
+                          onClick={removeCoverImage}
+                          className="text-red-500 hover:underline font-medium flex items-center gap-1"
+                        >
+                          <Trash2 size={13} /> Gỡ ảnh
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ) : (
