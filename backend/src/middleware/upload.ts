@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
@@ -34,9 +37,7 @@ export const upload = multer({
     limits: { fileSize: 10 * 1024 * 1024 } // 10MB
 });
 
-import dotenv from 'dotenv';
-dotenv.config();
-
+// Khởi tạo Supabase Storage client (lazy init — đọc env khi lần đầu dùng)
 let storageClient: StorageClient | null = null;
 
 const getStorageClient = (): StorageClient | null => {
@@ -54,7 +55,7 @@ const getStorageClient = (): StorageClient | null => {
 
 /**
  * Xử lý file tải lên:
- * - Nếu có Supabase Storage: Tải trực tiếp lên Cloud bucket và trả về URL HTTPS vĩnh viễn (chống mất file trên Render).
+ * - Nếu có Supabase Storage: Tải trực tiếp lên Cloud bucket → trả về URL HTTPS vĩnh viễn.
  * - Nếu không có Supabase: Dùng đường dẫn cục bộ /uploads/...
  */
 export const processUploadedFile = async (
@@ -63,6 +64,7 @@ export const processUploadedFile = async (
 ): Promise<string> => {
     const client = getStorageClient();
     const supabaseBucket = process.env.SUPABASE_STORAGE_BUCKET || 'uploads';
+
     if (client) {
         try {
             const fileBuffer = file.buffer || (file.path && fs.existsSync(file.path) ? fs.readFileSync(file.path) : null);
