@@ -15,9 +15,9 @@ export type MemberNodeData = Member & {
 };
 
 // These MUST match NODE_WIDTH / BASE_NODE_HEIGHT in TreeCanvas.tsx
-// 570 * 1.2 = 684, 256 * 1.2 ≈ 307
-const NODE_W = 684;
-const NODE_H = 307;
+// NODE_W=702 (user specified), NODE_H=398
+const NODE_W = 702;
+const NODE_H = 398;
 
 const MemberNode: React.FC<NodeProps> = ({ data }) => {
   const nodeData = data as MemberNodeData;
@@ -37,12 +37,21 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
 
   // Viền đậm hơn, sắc nét với độ dày 3px để nhìn rõ cây gia phả cả khi thu nhỏ
   const borderColor = isDeceased
-    ? "border-[#dc2626] shadow-red-900/15" // Đã mất: viền đỏ đậm
+    ? "border-[#dc2626]" // Đã mất: viền đỏ đậm
     : isMale
-    ? "border-[#1d4ed8] shadow-blue-900/20" // Nam còn sống: viền xanh dương đậm (blue-700)
+    ? "border-[#1d4ed8]" // Nam còn sống: viền xanh dương đậm (blue-700)
     : isFemale
-    ? "border-[#be185d] shadow-pink-900/20" // Nữ còn sống: viền hồng đậm (pink-700)
-    : "border-slate-600 shadow-gray-900/10";
+    ? "border-[#be185d]" // Nữ còn sống: viền hồng đậm (pink-700)
+    : "border-slate-600";
+
+  // Hiệu ứng bóng: người đã mất có hiệu ứng bóng màu đen xung quanh node
+  const shadowClass = isDeceased
+    ? "shadow-[0_0_24px_3px_rgba(0,0,0,0.55),0_10px_22px_rgba(0,0,0,0.4)] hover:shadow-[0_0_32px_4px_rgba(0,0,0,0.7),0_14px_28px_rgba(0,0,0,0.5)]"
+    : isMale
+    ? "shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30"
+    : isFemale
+    ? "shadow-lg shadow-pink-900/20 hover:shadow-xl hover:shadow-pink-900/30"
+    : "shadow-lg shadow-gray-900/15";
 
   const hasValidOccupation =
     nodeData.occupation &&
@@ -52,11 +61,11 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
 
   return (
     <div
-      className={`relative rounded-xl border-[3px] ${bgColor} ${borderColor} shadow-lg overflow-visible transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5`}
+      className={`relative rounded-xl border-[3px] ${bgColor} ${borderColor} ${shadowClass} overflow-visible transition-all duration-200 hover:-translate-y-0.5`}
       style={{ width: `${NODE_W}px`, height: `${NODE_H}px` }}
     >
       {/* Generation Badge */}
-      <div className="absolute -top-[27px] left-1/2 -translate-x-1/2 bg-primary text-white text-[20px] font-bold px-6 py-1.5 rounded-full shadow-md border-2 border-white !z-40 whitespace-nowrap select-none">
+      <div className="absolute -top-[26px] left-1/2 -translate-x-1/2 bg-primary text-white text-[30px] font-bold px-8 py-2 rounded-full shadow-md border-2 border-white !z-40 whitespace-nowrap select-none flex items-center justify-center leading-none tracking-wide">
         Đời {Number(nodeData.generation_in_branch) + 8}
       </div>
 
@@ -71,8 +80,8 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
           />
         )}
         {/* Top: Name centered in the whole box */}
-        <div className="pt-[34px] px-6 w-full text-center">
-          <h3 className="font-bold text-gray-900 text-[31px] leading-snug truncate" title={nodeData.full_name}>
+        <div className="pt-[46px] px-6 w-full text-center">
+          <h3 className="font-bold text-gray-900 text-[42px] leading-normal pt-2.5 pb-1 px-1 truncate" title={nodeData.full_name}>
             {nodeData.full_name}
           </h3>
         </div>
@@ -84,7 +93,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
           title="Bấm để xem chi tiết"
         >
           {/* Avatar */}
-          <div className="w-[137px] h-[137px] rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0 bg-white flex items-center justify-center">
+          <div className="w-[148px] h-[148px] rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0 bg-white flex items-center justify-center">
             {nodeData.avatar_url ? (
               <img
                 src={nodeData.avatar_url}
@@ -93,7 +102,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
               />
             ) : (
               <UserIcon
-                size={72}
+                size={75}
                 className={isMale ? "text-blue-600" : isFemale ? "text-pink-600" : "text-gray-500"}
               />
             )}
@@ -101,22 +110,21 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
 
           {/* Info */}
           <div className="flex-1 min-w-0 flex flex-col justify-center space-y-2">
-            <p className="text-[20px] text-gray-700 leading-snug">
-              <span className="font-medium text-gray-700">Ngày sinh:</span>{" "}
-              <span className="font-semibold text-gray-900">{nodeData.birth_date || "Không rõ"}</span>
+            <p className="text-[24px] leading-snug">
+              <span className="font-medium text-gray-900">Sinh:</span>{" "}
+              <span className="font-semibold text-emerald-800">{nodeData.birth_date || "Không rõ"}</span>
             </p>
 
             {nodeData.is_deceased && (
-              <p className="text-[20px] text-red-700 leading-snug">
-                <span className="font-medium text-red-700">Mất:</span>{" "}
-                <span className="font-semibold text-red-900">{nodeData.death_date || "Đã mất"}</span>
+              <p className="text-[24px] leading-snug">
+                <span className="font-medium text-gray-900">Mất:</span>{" "}
+                <span className="font-semibold text-red-800">{nodeData.death_date || "Đã mất"}</span>
               </p>
             )}
 
             {hasValidOccupation && (
-              <p className="text-[20px] text-blue-700 leading-snug truncate" title={nodeData.occupation!}>
-                <span className="font-medium text-gray-700">Nghề nghiệp:</span>{" "}
-                <span className="font-semibold text-blue-900">{nodeData.occupation}</span>
+              <p className="text-[24px] font-semibold text-blue-900 leading-snug truncate" title={nodeData.occupation!}>
+                {nodeData.occupation}
               </p>
             )}
           </div>
@@ -130,7 +138,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
               e.stopPropagation();
               nodeData.onClickDetail?.(nodeData as Member);
             }}
-            className="nodrag nopan flex-1 text-center text-[20px] font-semibold text-primary hover:bg-primary/10 py-1 rounded transition-colors cursor-pointer"
+            className="nodrag nopan flex-1 text-center text-[25px] font-semibold text-primary hover:bg-primary/10 py-1 rounded transition-colors cursor-pointer"
           >
             Chi tiết
           </button>
@@ -146,7 +154,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
                 className="nodrag nopan p-3 text-pink-600 hover:bg-pink-100 rounded transition-colors"
                 title="Thêm Vợ/Chồng"
               >
-                <Heart size={26} />
+                <Heart size={30} />
               </button>
               <button
                 type="button"
@@ -157,7 +165,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
                 className="nodrag nopan p-3 text-green-600 hover:bg-green-100 rounded transition-colors"
                 title="Thêm con"
               >
-                <Plus size={26} />
+                <Plus size={30} />
               </button>
               <button
                 type="button"
@@ -168,7 +176,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
                 className="nodrag nopan p-3 text-blue-600 hover:bg-blue-100 rounded transition-colors"
                 title="Sửa"
               >
-                <Edit2 size={26} />
+                <Edit2 size={30} />
               </button>
               <button
                 type="button"
@@ -179,7 +187,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
                 className="nodrag nopan p-3 text-red-600 hover:bg-red-100 rounded transition-colors"
                 title="Xóa"
               >
-                <Trash2 size={26} />
+                <Trash2 size={30} />
               </button>
             </>
           )}

@@ -5,7 +5,6 @@ import {
   Background,
   useNodesState,
   useEdgesState,
-  MiniMap,
   Node,
   Edge,
   ReactFlowProvider,
@@ -36,8 +35,8 @@ const edgeTypes = {
   straightSpouseEdge: CustomSpouseStraightEdge,
 };
 
-const NODE_WIDTH = 684;
-const BASE_NODE_HEIGHT = 307;
+const NODE_WIDTH = 702;
+const BASE_NODE_HEIGHT = 398;
 const SIBLING_GAP = 120;
 // Giãn dây nối vợ chồng (nét đứt màu đỏ) theo yêu cầu
 const SPOUSE_GAP = 230;
@@ -525,21 +524,40 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
     setEdges(layoutedEdges);
   }, [layoutedNodes, layoutedEdges, setNodes, setEdges]);
 
-  // Tính toán khung toạ độ X của toàn bộ cây gia phả
-  const { minX, maxX } = useMemo(() => {
-    if (nodes.length === 0) return { minX: -1000, maxX: 1000 };
-    let min = Infinity;
-    let max = -Infinity;
+  // Tính toán khung toạ độ X và Y của toàn bộ cây gia phả
+  const { minX, maxX, minY, maxY } = useMemo(() => {
+    if (nodes.length === 0) return { minX: -1000, maxX: 1000, minY: -200, maxY: 3000 };
+    let minx = Infinity;
+    let maxx = -Infinity;
+    let miny = Infinity;
+    let maxy = -Infinity;
     nodes.forEach((n) => {
-      min = Math.min(min, n.position.x);
-      max = Math.max(max, n.position.x + NODE_WIDTH);
+      minx = Math.min(minx, n.position.x);
+      maxx = Math.max(maxx, n.position.x + NODE_WIDTH);
+      miny = Math.min(miny, n.position.y);
+      maxy = Math.max(maxy, n.position.y + BASE_NODE_HEIGHT);
     });
     // Lề 2 bên để cuộn thoải mái
-    const margin = 1200;
-    return { minX: min - margin, maxX: max + margin };
+    const marginX = 1200;
+    // Lề trên và dưới giữ gọn gàng, tránh khoảng trống quá lớn làm vuốt lố tay mất dấu cây
+    const marginTop = 300;
+    const marginBottom = 400;
+    return {
+      minX: minx - marginX,
+      maxX: maxx + marginX,
+      minY: miny - marginTop,
+      maxY: maxy + marginBottom,
+    };
   }, [nodes]);
 
   const worldWidth = maxX - minX;
+
+  const translateExtent: [[number, number], [number, number]] = useMemo(() => {
+    return [
+      [minX, minY],
+      [maxX, maxY],
+    ];
+  }, [minX, maxX, minY, maxY]);
 
   // Khởi tạo hoặc cập nhật viewport khi tải hoặc khi đổi bộ lọc
   useEffect(() => {
@@ -557,11 +575,14 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
     const timer = setTimeout(() => {
       if (!containerRef.current) return;
       const width = containerRef.current.clientWidth || window.innerWidth;
+      const height = containerRef.current.clientHeight || window.innerHeight;
       const initialZoom = 0.045;
       // Do các node đã được căn giữa tại X = 0 (Thủy tổ ở quanh x = 0)
       // Để hiển thị Thủy tổ chính giữa màn hình: screenX = 0 * zoom + flowX = width / 2 => flowX = width / 2
       const initialX = width / 2;
-      const initialY = 220; // Vị trí thanh nhã, hiển thị trọn vẹn tổng quan các thế hệ
+      // Căn gọn gàng vị trí Y theo chiều cao màn hình, không để khoảng trống trên/dưới quá lớn
+      const treeHeightPx = (maxY - minY) * initialZoom;
+      const initialY = Math.max(80, Math.round((height - treeHeightPx) / 2));
 
       currentViewportRef.current = { x: initialX, y: initialY, zoom: initialZoom };
       setViewport({ x: initialX, y: initialY, zoom: initialZoom }, { duration: 0 });
@@ -578,7 +599,7 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
     }, 60);
 
     return () => clearTimeout(timer);
-  }, [members, minX, worldWidth, setViewport, fitView]);
+  }, [members, minX, minY, maxY, worldWidth, setViewport, fitView]);
 
   // Đồng bộ từ thao tác kéo/zoom trên canvas sang thanh cuộn ngang
   const handleMove = useCallback(
@@ -649,10 +670,11 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         edgeTypes={edgeTypes}
         defaultViewport={{
           x: (typeof window !== 'undefined' ? window.innerWidth : 1200) / 2,
-          y: 220,
+          y: 180,
           zoom: 0.045,
         }}
-        minZoom={0.01}
+        translateExtent={translateExtent}
+        minZoom={0.02}
         maxZoom={2}
         nodesDraggable={false}
         nodesConnectable={false}
@@ -665,17 +687,6 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
           showInteractive={false}
           showFitView={false}
           style={{ bottom: 36, left: 16 }}
-        />
-        <MiniMap
-          zoomable
-          pannable
-          nodeColor={(n) => {
-            const d = n.data as any;
-            if (d?.is_deceased) return '#dc2626';
-            return d?.gender === 'male' ? '#2563eb' : '#db2777';
-          }}
-          style={{ backgroundColor: '#FFF5D6', bottom: 84, right: 16 }}
-          className="!hidden lg:!block"
         />
         <Background gap={16} size={1.5} color="#E2D4B7" />
       </ReactFlow>
