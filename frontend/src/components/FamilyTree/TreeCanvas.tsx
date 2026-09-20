@@ -36,11 +36,11 @@ const edgeTypes = {
   straightSpouseEdge: CustomSpouseStraightEdge,
 };
 
-const NODE_WIDTH = 570;
-const BASE_NODE_HEIGHT = 256;
+const NODE_WIDTH = 684;
+const BASE_NODE_HEIGHT = 307;
 const SIBLING_GAP = 120;
 // Giãn dây nối vợ chồng (nét đứt màu đỏ) theo yêu cầu
-const SPOUSE_GAP = 190;
+const SPOUSE_GAP = 230;
 // Khoảng cách phân tách rõ ràng giữa nhánh con của các bà vợ (Chánh phối, Thứ phối...)
 const WIFE_BRANCH_GAP = 240;
 const RANK_SEP = 600;
