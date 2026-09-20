@@ -22,6 +22,19 @@ const MONTH_OPTIONS = [
   { id: 99, label: 'Chưa rõ ngày tháng (chỉ có năm mất)', shortLabel: 'Chưa rõ ngày' },
 ];
 
+function getPhaiGeneration(desc?: string): string {
+  if (!desc) return '-';
+  const phaiMatch = desc.match(/[Đđ]ời\s*(\d+)\s*Phái/i);
+  if (phaiMatch) return phaiMatch[1];
+  const phaiMatch2 = desc.match(/Phái[^\d]*[Đđ]ời\s*(\d+)/i);
+  if (phaiMatch2) return phaiMatch2[1];
+  const allDoi = [...desc.matchAll(/[Đđ]ời\s*(\d+)/gi)];
+  if (allDoi.length > 1) return allDoi[allDoi.length - 1][1];
+  if (allDoi.length === 1) return allDoi[0][1];
+  const numMatch = desc.match(/\d+/);
+  return numMatch ? numMatch[0] : desc;
+}
+
 const MemorialCalendarPage: React.FC = () => {
   // Khởi tạo sẵn từ dữ liệu hiện có để luôn có đầy đủ 109 ngày giỗ ngay lập tức
   const [memorials, setMemorials] = useState<MemorialRecord[]>(defaultMemorials as MemorialRecord[]);
@@ -218,12 +231,12 @@ const MemorialCalendarPage: React.FC = () => {
                     <table className="w-full text-left text-sm">
                       <thead className="bg-primary text-white text-xs uppercase tracking-wider font-semibold">
                         <tr>
-                          <th className="py-3.5 px-4 w-56">Ngày giỗ</th>
-                          <th className="py-3.5 px-4 min-w-[200px]">Họ và tên</th>
-                          <th className="py-3.5 px-4 min-w-[140px]">Đời thứ</th>
-                          <th className="py-3.5 px-4 min-w-[150px]">Thân phụ (Cha)</th>
-                          <th className="py-3.5 px-4 min-w-[150px]">Thân mẫu (Mẹ)</th>
-                          <th className="py-3.5 px-4 min-w-[170px]">Nơi an táng</th>
+                          <th className="py-3.5 px-4 w-60 min-w-[225px]">Ngày giỗ</th>
+                          <th className="py-3.5 px-4 min-w-[215px]">Họ và tên</th>
+                          <th className="py-3.5 px-3 w-24 min-w-[96px] text-center">Đời thứ</th>
+                          <th className="py-3.5 px-4 min-w-[185px]">Thân phụ (Cha)</th>
+                          <th className="py-3.5 px-4 min-w-[185px]">Thân mẫu (Mẹ)</th>
+                          <th className="py-3.5 px-4 min-w-[185px]">Nơi an táng</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-100">
@@ -280,9 +293,12 @@ const MemorialCalendarPage: React.FC = () => {
                               </td>
 
                               {/* Đời thứ */}
-                              <td className="py-3.5 px-4 align-top">
-                                <span className="inline-block bg-primary/5 text-primary-dark px-2 py-0.5 rounded text-xs font-semibold border border-primary/10">
-                                  {item.generation_desc || '-'}
+                              <td className="py-3.5 px-3 text-center align-top">
+                                <span
+                                  className="inline-flex items-center justify-center min-w-[32px] px-2 py-0.5 bg-primary/10 text-primary-dark rounded-full text-sm font-bold border border-primary/20"
+                                  title={item.generation_desc}
+                                >
+                                  {getPhaiGeneration(item.generation_desc)}
                                 </span>
                               </td>
 

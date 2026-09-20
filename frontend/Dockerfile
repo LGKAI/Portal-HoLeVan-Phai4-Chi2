@@ -20,6 +20,9 @@ RUN npm run build
 # Stage 2: Nginx để serve static files
 FROM nginx:alpine AS production
 
+# Ngăn ngừa lỗi treo khi khởi động do apk manifest trong script ipv6 mặc định của nginx:alpine
+RUN rm -f /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+
 # Copy Nginx config tùy chỉnh
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
