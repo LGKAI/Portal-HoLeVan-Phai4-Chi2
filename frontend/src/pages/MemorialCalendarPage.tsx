@@ -218,12 +218,12 @@ const MemorialCalendarPage: React.FC = () => {
                     <table className="w-full text-left text-sm">
                       <thead className="bg-primary text-white text-xs uppercase tracking-wider font-semibold">
                         <tr>
-                          <th className="py-3.5 px-4 w-44">Ngày giỗ</th>
-                          <th className="py-3.5 px-4 min-w-[160px]">Họ và tên</th>
+                          <th className="py-3.5 px-4 w-56">Ngày giỗ</th>
+                          <th className="py-3.5 px-4 min-w-[200px]">Họ và tên</th>
                           <th className="py-3.5 px-4 min-w-[140px]">Đời thứ</th>
                           <th className="py-3.5 px-4 min-w-[150px]">Thân phụ (Cha)</th>
                           <th className="py-3.5 px-4 min-w-[150px]">Thân mẫu (Mẹ)</th>
-                          <th className="py-3.5 px-4 min-w-[200px]">Nơi an táng</th>
+                          <th className="py-3.5 px-4 min-w-[170px]">Nơi an táng</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-100">
