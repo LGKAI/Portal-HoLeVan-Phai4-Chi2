@@ -9,8 +9,8 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 
 ## Tháng Giêng (Tháng 1)
 
+- **Ngày giỗ: 07/01 Âm lịch** (Ngày mất: 08/01 Âm lịch): **LÊ VĂN TÂM** (ID: 6034, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN XÍCH, thân mẫu: ĐOÀN THỊ TÚ). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 09/01 Âm lịch** (Ngày mất: 10/01 Âm lịch): **LÊ THỊ LÀI** (ID: 5007, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN KỈNH, thân mẫu: HOÀNG THỊ ẨN). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
-- **Ngày giỗ: 09/01 Âm lịch** (Ngày mất: 10/01 Âm lịch): **LÊ VĂN TÂM** (ID: 6034, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN XÍCH, thân mẫu: ĐOÀN THỊ TÚ). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 
 ## Tháng 2
 
@@ -20,6 +20,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **Ngày giỗ: 09/02 Âm lịch** (Ngày mất: 10/02/1968 (Mậu Thân)): **LÊ VĂN VỊNH** (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN DỤ, thân mẫu: TRẦN THỊ XA). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 09/02 Âm lịch** (Ngày mất: 10/02 Âm lịch): **LÊ THỊ HỮU** (ID: 3031, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN SANH, thân mẫu: NGUYỄN THỊ VẬN). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 10/02 Âm lịch** (Ngày mất: 11/02/1974 (Giáp Dần)): **LÊ VĂN PHỔ** (ID: 3015, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN DỤ, thân mẫu: TRẦN THỊ XA). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Nguyên Hội chủ Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
+- **Ngày giỗ: 12/02 Âm lịch** (Ngày mất: 13/02 Âm lịch): **LÊ VĂN BẠCH** (ID: 4010, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN VỊNH, thân mẫu: VÕ THỊ TƯỜNG). Giới tính: Nam. Nơi an táng: Không rõ. (Nguyên Hội chủ Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 - **Ngày giỗ: 13/02 Âm lịch** (Ngày mất: 14/02 Âm lịch): **LÊ THỊ SẢN** (ID: 3052, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DƯỢNG, thân mẫu: LÊ THỊ SAY). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Trương Xin ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)), Cải giá lấy Ông Võ Phức ở Thôn Quảng Lượng, Xã Triệu Đại, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 - **Ngày giỗ: 17/02 Âm lịch** (Ngày mất: 18/02 Âm lịch): **LÊ VĂN HVVD** (ID: 2010, Đời 3 Chi 2 - Đời 11 Phái 4, thân phụ: LÊ VĂN NGHỊ, thân mẫu: THỊ MẸO (Không rõ Họ)). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 25/02 Âm lịch** (Ngày mất: 26/02/1984 (Giáp Tý)): **LÊ VĂN LỢI** (ID: 7028, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN TƯƠNG, thân mẫu: NGUYỄN THỊ THẮM). Giới tính: Nam. Nơi an táng: Không rõ.
@@ -27,7 +28,10 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 
 ## Tháng 3
 
+- **Ngày giỗ: 03/03 Âm lịch** (Ngày mất: 04/03 Âm lịch): **LÊ THỊ SƠ** (ID: 3037, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: HOÀNG THỊ NGỮ). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Lê Huyền, Thôn Dương Lệ Văn, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
 - **Ngày giỗ: 11/03 Âm lịch** (Ngày mất: 12/03 Âm lịch): **LÊ THỊ AN** (ID: 2028, Đời 3 Chi 2 - Đời 11 Phái 4, thân phụ: LÊ VĂN TUYÊN, thân mẫu: ĐẶNG THỊ HIỆP). Giới tính: Nữ. Nơi an táng: Không rõ.
+- **Ngày giỗ: 15/03 Âm lịch** (Ngày mất: 16/03 Âm lịch): **TRƯƠNG THỊ CÚC** (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4). Giới tính: Nữ. Nơi an táng: Không rõ.
+- **Ngày giỗ: 18/03 Âm lịch** (Ngày mất: 19/03 Âm lịch): **LÊ VĂN TƯỢNG** (ID: 6021, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN BẠCH, thân mẫu: HOÀNG THỊ THẠCH). Giới tính: Nam. Nơi an táng: Không rõ. (Mất tích Năm 1975 (Ất Mão))
 - **Ngày giỗ: 20/03 Âm lịch** (Ngày mất: 21/03 Âm lịch): **NGUYỄN THỊ VẬN** (ID: 3028, Đời 3 Chi 2 - Đời 11 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 22/03 Âm lịch** (Ngày mất: 23/03 Âm lịch): **LÊ THỊ ĐƠN** (ID: 3039, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: HOÀNG THỊ NGỮ). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 25/03 Âm lịch** (Ngày mất: 26/03 Âm lịch): **LÊ VĂN HUYNH** (ID: 4009, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN VỊNH, thân mẫu: VÕ THỊ TƯỜNG). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
@@ -42,7 +46,9 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **Ngày giỗ: 11/04 Âm lịch** (Ngày mất: 12/04 Âm lịch): **LÊ THỊ HVVD** (ID: 4039, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN HẢI, thân mẫu: TRƯƠNG THỊ QUY). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 12/04 Âm lịch** (Ngày mất: 13/04 Âm lịch): **LÊ VĂN NGÔ** (ID: 2031, Đời 3 Chi 2 - Đời 11 Phái 4, thân phụ: LÊ VĂN TUYÊN, thân mẫu: ĐẶNG THỊ HIỆP). Giới tính: Nam. Nơi an táng: Không rõ.
 - **Ngày giỗ: 13/04 Âm lịch** (Ngày mất: 14/04 Âm lịch): **LÊ VĂN PHƯỚC** (ID: 4013, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN VỊNH, thân mẫu: VÕ THỊ TƯỜNG). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 14/04 Âm lịch** (Ngày mất: 15/04 Âm lịch): **LÊ THỊ CỌT** (ID: 2030, Đời 3 Chi 2 - Đời 11 Phái 4, thân phụ: LÊ VĂN TUYÊN, thân mẫu: ĐẶNG THỊ HIỆP). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Nguyễn (Không rõ Tên), Thôn Dương Xuân, Xã Triệu Phước, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
 - **Ngày giỗ: 14/04 Âm lịch** (Ngày mất: 15/04 Âm lịch): **LÊ THỊ SỎI** (ID: 4027, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Phạm Ký ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
+- **Ngày giỗ: 15/04 Âm lịch** (Ngày mất: 16/04 Âm lịch): **LÊ THỊ THÊ** (ID: 6008, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN NINH, thân mẫu: TRƯƠNG THỊ CÚC). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 16/04 Âm lịch** (Ngày mất: 17/04 Âm lịch): **NGUYỄN THỊ THẢO** (ID: 2034, Đời 3 Chi 2 - Đời 11 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 16/04 Âm lịch** (Ngày mất: 17/04 Âm lịch): **LÊ VĂN ĐA** (ID: 3032, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN SANH, thân mẫu: NGUYỄN THỊ VẬN). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Tham gia Du kích, Hy sinh được Nhà nước suy tôn Liệt sĩ)
 - **Ngày giỗ: 17/04 Âm lịch** (Ngày mất: 18/04 Âm lịch): **LÊ VĂN NGHIÊM** (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4, thân phụ: LÊ VĂN TÁN, thân mẫu: NGUYỄN THỊ CẨN). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
@@ -50,18 +56,23 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **Ngày giỗ: 20/04 Âm lịch** (Ngày mất: 21/04/1990 (Canh Ngọ)): **LÊ VĂN HOÀ** (ID: 9019, Đời 7 Chi 2 - Đời 15 Phái 4, thân phụ: LÊ VĂN ĐẠO, thân mẫu: HOÀNG THỊ LUẬN). Giới tính: Nam. Nơi an táng: Không rõ.
 - **Ngày giỗ: 22/04 Âm lịch** (Ngày mất: 23/04/2004 (Giáp Thân)): **LÊ VĂN TÀI** (ID: 9054, Đời 7 Chi 2 - Đời 15 Phái 4, thân phụ: LÊ VĂN TÙNG, thân mẫu: PHAN THỊ BÍCH LIÊN). Giới tính: Nam. Nơi an táng: Tỉnh Lâm Đồng.
 - **Ngày giỗ: 24/04 Âm lịch** (Ngày mất: 25/04 Âm lịch): **LÊ THỊ BẰNG** (ID: 3013, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN DỤ, thân mẫu: TRẦN THỊ XA). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Trần Tốn ở Thôn Phúc Lộc, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
+- **Ngày giỗ: 25/04 Âm lịch** (Ngày mất: 26/04 Âm lịch): **LÊ THỊ SẼ** (ID: 4026, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Nguyễn Tộ ở Thôn Thanh Liêm, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)), Cải giá lấy Ông Trương Thủ ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ## Tháng 5
 
 - **Ngày giỗ: 02/05 Âm lịch** (Ngày mất: 03/05 Âm lịch): **LÊ VĂN NGHỊ** (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4, thân phụ: LÊ VĂN KHÔI, thân mẫu: PHAN THỊ MƯU). Giới tính: Nam. Nơi an táng: Lấp Lổ, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
-- **Ngày giỗ: 04/05 Âm lịch** (Ngày mất: 05/05 Âm lịch): **LÊ THỊ SẠN** (ID: 4029, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nữ. Nơi an táng: Không rõ.
+- **Ngày giỗ: 03/05 Âm lịch** (Ngày mất: 04/05 ��m lịch): **LÊ THỊ SẠN** (ID: 4029, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nữ. Nơi an táng: Không rõ.
+- **Ngày giỗ: 12/05 Âm lịch** (Ngày mất: 13/05 Âm lịch): **LÊ VĂN GIA** (ID: 5009, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN KỈNH, thân mẫu: HOÀNG THỊ ẨN). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 14/05 Âm lịch** (Ngày mất: 15/05 Âm lịch): **LÊ THỊ ĐỐC** (ID: 3038, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: HOÀNG THỊ NGỮ). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 22/05 Âm lịch** (Ngày mất: 23/05 Âm lịch): **LÊ THỊ THỈ** (ID: 3046, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: LÊ THỊ HOÀNH). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Nguyễn Tụ ở Thôn Dương Lệ Đông, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
 
 ## Tháng 6
 
 - **Ngày giỗ: 02/06 Âm lịch** (Ngày mất: 03/06/2009 Âm lịch (Kỷ Sửu)): **LÊ THỊ TÚ TRINH** (ID: 8009, Đời 6 Chi 2 - Đời 14 Phái 4). Giới tính: Nữ. Nơi an táng: Không rõ.
 - **Ngày giỗ: 04/06 Âm lịch** (Ngày mất: 05/06 Âm lịch): **LÊ VĂN THỤY (Thoại)** (ID: 3006, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN NGHIÊM, thân mẫu: NGUYỄN THỊ THẢO). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 04/06 Âm lịch** (Ngày mất: 05/06 Âm lịch): **PHAN THỊ DUYẾN** (ID: 7013, Đời 5 Chi 2 - Đời 13 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 04/06 Âm lịch** (Ngày mất: 05/06/1972 (Nhâm Tý)): **LÊ THỊ BỜ** (ID: 6007, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN NINH, thân mẫu: TRƯƠNG THỊ CÚC). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Tham gia Chiến sĩ Du kích, Hy sinh được Nhà nước suy tôn Liệt sĩ)
+- **Ngày giỗ: 08/06 Âm lịch** (Ngày mất: 09/06 Âm lịch): **LÊ THỊ ƯU** (ID: 3042, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: HOÀNG THỊ NGỮ). Giới tính: Nữ. Nơi an táng: Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 09/06 Âm lịch** (Ngày mất: 10/06 Âm lịch): **TRẦN THỊ XA** (ID: 3009, Đời 3 Chi 2 - Đời 11 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 12/06 Âm lịch** (Ngày mất: 13/06/1972 (Nhâm Tý)): **HOÀNG THỊ THẠCH** (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 12/06 Âm lịch** (Ngày mất: 13/06 Âm lịch): **ĐOÀN THỊ TÚ** (ID: 6033, Đời 5 Chi 2 - Đời 13 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
@@ -69,9 +80,10 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **Ngày giỗ: 12/06 Âm lịch** (Ngày mất: 13/06/1972 (Nhâm Tý)): **LÊ VĂN QUỲNH** (ID: 6027, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN BẠCH, thân mẫu: HOÀNG THỊ THẠCH). Giới tính: Nam. Nơi an táng: Không rõ.
 - **Ngày giỗ: 12/06 Âm lịch** (Ngày mất: 13/06/1972 (Nhâm Tý)): **LÊ VĂN PHONG** (ID: 6029, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN BẠCH, thân mẫu: HOÀNG THỊ THẠCH). Giới tính: Nam. Nơi an táng: Không rõ.
 - **Ngày giỗ: 15/06 Âm lịch** (Ngày mất: 16/06 Âm lịch): **NGUYỄN THỊ MIÊN** (ID: 3033, Đời 4 Chi 2 - Đời 12 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
-- **Ngày giỗ: 18/06 Âm lịch** (Ngày mất: 19/06 Âm lịch): **TRƯƠNG THỊ TUYẾT** (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 18/06 Âm lịch** (Ngày mất: 19/06 Âm lịch): **TRƯƠNG THỊ TIẾT** (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 26/06 Âm lịch** (Ngày mất: 27/06 Âm lịch): **LÊ THỊ THÁO** (ID: 3050, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: LÊ THỊ HOÀNH). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Trương An ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
 - **Ngày giỗ: 27/06 Âm lịch** (Ngày mất: 28/06): **LÊ HVVD** (ID: 8018, Đời 7 Chi 2 - Đời 15 Phái 4, thân phụ: LÊ VĂN SAU, thân mẫu: NGUYỄN THỊ LIÊN). Giới tính: Không rõ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị.
-- **Ngày giỗ: 29/06 Âm lịch** (Ngày mất: 30/06): **LÊ THỊ DUNG** (ID: 4020, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DỤNG, thân mẫu: TRƯƠNG THỊ TUYẾT). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 29/06 Âm lịch** (Ngày mất: 30/06): **LÊ THỊ DUNG** (ID: 4020, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DỤNG, thân mẫu: TRƯƠNG THỊ TIẾT). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 
 ## Tháng 7
 
@@ -80,6 +92,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **Ngày giỗ: 14/07 Âm lịch** (Ngày mất: 15/07): **LÊ VĂN TÂM** (ID: 6009, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN NINH, thân mẫu: TRƯƠNG THỊ CÚC). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 19/07 Âm lịch** (Ngày mất: 20/07 Âm lịch): **LÊ VĂN LỊCH** (ID: 2035, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN NGHIÊM, thân mẫu: NGUYỄN THỊ THẢO). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 21/07 Âm lịch** (Ngày mất: 22/07 Âm lịch): **HOÀNG THỊ ẨN** (ID: 5006, Đời 5 Chi 2 - Đời 13 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 22/07 Âm lịch** (Ngày mất: 23/07 Âm lịch): **LÊ VĂN XÍCH** (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN VỊNH, thân mẫu: VÕ THỊ TƯỜNG). Giới tính: Nam. Nơi an táng: Không rõ. (Lập nghiệp tại Thôn 1, Xã Triệu Hải, Huyện Đa Tẻ, Tỉnh Lâm Đồng (cũ), Nguyên Trưởng tộc Họ Lê tại đây)
 - **Ngày giỗ: 22/07 Âm lịch** (Ngày mất: 23/07/2002 (Nhâm Ngọ)): **LÊ VĂN VÂN** (ID: 9008, Đời 7 Chi 2 - Đời 15 Phái 4, thân phụ: LÊ VĂN GIA, thân mẫu: TRẦN THỊ HUÊ). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị.
 - **Ngày giỗ: 25/07 Âm lịch** (Ngày mất: 26/07/1980 (Canh Thân)): **LÊ VĂN THĂNG** (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 29/07 Âm lịch** (Ngày mất: 30/07 Âm lịch): **LÊ VĂN TÁN** (ID: 1010, Đời 2 Chi 2 - Đời 10 Phái 4, thân phụ: LÊ VĂN KHÔI, thân mẫu: PHAN THỊ MƯU). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
@@ -90,15 +103,15 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 
 - **Ngày giỗ: 02/08 Âm lịch** (Ngày mất: 03/08 Âm lịch): **LÊ THỊ YÊM** (ID: 1017, Đời 2 Chi 2 - Đời 10 Phái 4, thân phụ: LÊ VĂN KHÔI, thân mẫu: PHAN THỊ MƯU). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Chồng ở Thôn Phú Lễ, Phường Đông Lễ, Thị xã Đông Hà, Tỉnh Quảng Trị (cũ)))
 - **Ngày giỗ: 05/08 Âm lịch** (Ngày mất: 06/08 Âm lịch): **LÊ THỊ LẬP (Ý)** (ID: 3034, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN THỤY (Thoại), thân mẫu: NGUYỄN THỊ MIÊN). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Lê Quang Mãn ở Thôn Quảng Điền, Xã Triệu Đại, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ), Cải giá lấy Ông Lê Thế Mãn ở Thôn Dương Lệ Văn, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
+- **Ngày giỗ: 07/08 Âm lịch** (Ngày mất: 08/08 Âm lịch): **LÊ VĂN ĐỒNG** (ID: 6035, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN XÍCH, thân mẫu: ĐOÀN THỊ TÚ). Giới tính: Nam. Nơi an táng: Tỉnh Lâm Đồng (cũ).
 - **Ngày giỗ: 08/08 Âm lịch** (Ngày mất: 09/08 Âm lịch): **LÊ VĂN KHÔI** (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Ngài Thuỷ tổ của Chi 2 - Phái 4 - Họ Lê Văn, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 - **Ngày giỗ: 09/08 Âm lịch** (Ngày mất: 10/08 Âm lịch): **LÊ VĂN HVVD** (ID: 4038, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN HẢI, thân mẫu: TRƯƠNG THỊ QUY). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
-- **Ngày giỗ: 16/08 Âm lịch** (Ngày mất: 17/08 Âm lịch): **LÊ VĂN ĐỒNG** (ID: 6035, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN XÍCH, thân mẫu: ĐOÀN THỊ TÚ). Giới tính: Nam. Nơi an táng: Tỉnh Lâm Đồng (cũ).
-- **Ngày giỗ: 17/08 Âm lịch** (Ngày mất: 18/08 Âm lịch): **LÊ VĂN THẨM (Châu)** (ID: 4030, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 16/08 Âm lịch** (Ngày mất: 17/08 Âm lịch): **LÊ VĂN THẨM (Châu)** (ID: 4030, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 24/08 Âm lịch** (Ngày mất: 25/08 Âm lịch): **LÊ VĂN SANH** (ID: 2024, Đời 3 Chi 2 - Đời 11 Phái 4, thân phụ: LÊ VĂN TUYÊN, thân mẫu: ĐẶNG THỊ HIỆP). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 26/08 Âm lịch** (Ngày mất: 27/08/1993 (Quý Dậu)): **LÊ VĂN KỈNH** (ID: 3053, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DƯỢNG, thân mẫu: LÊ THỊ SAY). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 27/08 Âm lịch** (Ngày mất: 28/08/2001 (Tân Tỵ)): **LÊ VĂN NINH** (ID: 3056, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DƯỢNG, thân mẫu: LÊ THỊ SAY). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Nguyên Tập đoàn Trưởng Tập đoàn 4 Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 - **Ngày giỗ: 28/08 Âm lịch** (Ngày mất: 29/08 Âm lịch): **PHAN THỊ MƯU** (ID: 1006, Đời 1 Chi 2 - Đời 9 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Chánh phối của Ngài Thuỷ tổ Chi 2 - Phái 4 - Họ Lê Văn, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
-- **Ngày giỗ: 29 hoặc 30/08 Âm lịch (ngày cuối tháng 8)** (Ngày mất: 01/09/2025 (Ất Tỵ)): **LÊ THỊ HƯỜNG** (ID: 3045, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: LÊ THỊ HOÀNH). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Đã lấy Chồng (Ông Phan Chí ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
+- **Ngày giỗ: 29 hoặc 30/08 Âm lịch (ngày cuối tháng 8)** (Ngày mất: 01/09/2010 (Canh Dần)): **LÊ THỊ LỰU** (ID: 4033, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN HẢI, thân mẫu: TRƯƠNG THỊ QUY). Giới tính: Nữ. Nơi an táng: Không rõ. (Xuất gia (Hiệu là Giới Quang) tại Chùa Quang Minh, TP. Đà Nẵng (cũ))
 
 ## Tháng 9
 
@@ -107,9 +120,11 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **Ngày giỗ: 03/09 Âm lịch** (Ngày mất: 04/09/1952): **LÊ VĂN HƯNG** (ID: 4007, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN THỈNH, thân mẫu: ĐOÀN THỊ CƯỞNG). Giới tính: Nam. Nơi an táng: Không rõ. (Tham gia Chiến sĩ QĐND Việt Nam, Hy sinh được Nhà nước suy tôn Liệt Sĩ)
 - **Ngày giỗ: 05/09 Âm lịch** (Ngày mất: 06/09/2008 (Mậu Tý)): **TRƯƠNG THỊ QUY** (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Pháp danh Nguyên Hướng)
 - **Ngày giỗ: 09/09 Âm lịch** (Ngày mất: 10/09 Âm lịch): **LÊ THỊ CÁO** (ID: 3012, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN DỤ, thân mẫu: TRẦN THỊ XA). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Lê Quang Toản ở Thôn Quảng Điền, Xã Triệu Đại, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
+- **Ngày giỗ: 09/09 Âm lịch** (Ngày mất: 10/09/2025 (Ất Tỵ)): **LÊ THỊ HƯỜNG** (ID: 3045, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: LÊ THỊ HOÀNH). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Đã lấy Chồng (Ông Phan Chí ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
 - **Ngày giỗ: 11/09 Âm lịch** (Ngày mất: 12/09 Âm lịch): **LÊ VĂN LỢI** (ID: 1009, Đời 2 Chi 2 - Đời 10 Phái 4, thân phụ: LÊ VĂN KHÔI, thân mẫu: PHAN THỊ MƯU). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Vô tự)
 - **Ngày giỗ: 14/09 Âm lịch** (Ngày mất: 15/09 Âm lịch): **LÊ VĂN THỈNH** (ID: 3017, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN DỤ, thân mẫu: TRẦN THỊ XA). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 16/09 Âm lịch** (Ngày mất: 17/09/1996 (Bính Tý)): **VÕ THỊ TƯỜNG** (ID: 4008, Đời 4 Chi 2 - Đời 12 Phái 4). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ). (Thọ 94 tuổi)
+- **Ngày giỗ: 16/09 Âm lịch** (Ngày mất: 17/09 Âm lịch): **LÊ THỊ THAM** (ID: 4014, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN VỊNH, thân mẫu: VÕ THỊ TƯỜNG). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Phan Bạo ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
 - **Ngày giỗ: 16/09 Âm lịch** (Ngày mất: 17/09/1985 (Ất Sửu)): **LÊ VĂN TRIỆU** (ID: 6031, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN BẠCH, thân mẫu: TRƯƠNG THỊ LƠN). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 18/09 Âm lịch** (Ngày mất: 19/09 Âm lịch): **NGUYỄN THỊ THẮM** (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4). Giới tính: Nữ. Nơi an táng: Thị trấn Khe Sanh, Huyện Hướng Hoá, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 21/09 Âm lịch** (Ngày mất: 22/09/1982 (Nhâm Tuất)): **LÊ THỊ LÃNH** (ID: 3029, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN SANH, thân mẫu: NGUYỄN THỊ VẬN). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Nguyễn Cằng ở Thôn Mỹ Lộc, Xã Triệu Hoà, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
@@ -144,9 +159,10 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 ## Tháng Chạp (Tháng 12)
 
 - **Ngày giỗ: 07/12 Âm lịch** (Ngày mất: 08/12 Âm lịch): **LÊ THỊ TỴ** (ID: 2041, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN NGHIÊM, thân mẫu: NGUYỄN THỊ THẢO). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Nguyễn Kế ở Thôn Dương Lệ Đông, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
+- **Ngày giỗ: 16/12 Âm lịch** (Ngày mất: 17/12 Âm lịch): **LÊ THỊ THẠCH** (ID: 4021, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DỤNG, thân mẫu: TRƯƠNG THỊ TIẾT). Giới tính: Nữ. Nơi an táng: Không rõ.
 - **Ngày giỗ: 19/12 Âm lịch** (Ngày mất: 20/12): **LÊ THỊ SOẠN (Suyền)** (ID: 3007, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN NGHIÊM, thân mẫu: NGUYỄN THỊ THẢO). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Nguyễn Gia Ân ở Họ Nguyễn 1, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
 - **Ngày giỗ: 20/12 Âm lịch** (Ngày mất: 21/12 Âm lịch): **LÊ VĂN TUYÊN** (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4, thân phụ: LÊ VĂN KHÔI, thân mẫu: PHAN THỊ MƯU). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
-- **Ngày giỗ: 20/12 Âm lịch** (Ngày mất: 21/12/1980 (Canh Thân)): **LÊ VĂN GIÁO** (ID: 4022, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DỤNG, thân mẫu: TRƯƠNG THỊ TUYẾT). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
+- **Ngày giỗ: 20/12 Âm lịch** (Ngày mất: 21/12/1980 (Canh Thân)): **LÊ VĂN GIÁO** (ID: 4022, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN DỤNG, thân mẫu: TRƯƠNG THỊ TIẾT). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 22/12 Âm lịch** (Ngày mất: 23/12): **LÊ VĂN HIỆT** (ID: 3044, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: LÊ THỊ HOÀNH). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 24/12 Âm lịch** (Ngày mất: 25/12/1973 (Quý Sửu)): **LÊ VĂN DƯỢNG** (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4, thân phụ: LÊ VĂN DỤ, thân mẫu: TRẦN THỊ XA). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 
@@ -158,7 +174,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 
 ## Danh sách nơi an táng và mộ phần tiền nhân
 
-### Khu vực: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ) (87 vị)
+### Khu vực: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ) (88 vị)
 - **LÊ VĂN KHÔI** (ID: 1005, Đời 1) - Ngày mất: 09/08 Âm lịch | Ngày giỗ: 08/08 Âm lịch
 - **PHAN THỊ MƯU** (ID: 1006, Đời 1) - Ngày mất: 29/08 Âm lịch | Ngày giỗ: 28/08 Âm lịch
 - **LÊ VĂN LỢI** (ID: 1009, Đời 2) - Ngày mất: 12/09 Âm lịch | Ngày giỗ: 11/09 Âm lịch
@@ -194,14 +210,14 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **LÊ THỊ HOÀNH** (ID: 3043, Đời 4) - Ngày mất: 04/07/1989 (Kỷ Tỵ) | Ngày giỗ: 03/07 Âm lịch
 - **LÊ THỊ SAY** (ID: 3051, Đời 4) - Ngày mất: 08/02 Âm lịch | Ngày giỗ: 07/02 Âm lịch
 - **VÕ THỊ TƯỜNG** (ID: 4008, Đời 4) - Ngày mất: 17/09/1996 (Bính Tý) | Ngày giỗ: 16/09 Âm lịch
-- **TRƯƠNG THỊ TUYẾT** (ID: 4018, Đời 4) - Ngày mất: 19/06 Âm lịch | Ngày giỗ: 18/06 Âm lịch
+- **TRƯƠNG THỊ TIẾT** (ID: 4018, Đời 4) - Ngày mất: 19/06 Âm lịch | Ngày giỗ: 18/06 Âm lịch
 - **PHAN THỊ SỎ** (ID: 4025, Đời 4) - Ngày mất: 11/07 Âm lịch | Ngày giỗ: 10/07 Âm lịch
 - **LÊ THỊ TÁC** (ID: 3035, Đời 5) - Ngày mất: 20/10 Âm lịch | Ngày giỗ: 19/10 Âm lịch
 - **LÊ THỊ ĐỐC** (ID: 3038, Đời 5) - Ngày mất: 15/05 Âm lịch | Ngày giỗ: 14/05 Âm lịch
 - **LÊ THỊ ĐƠN** (ID: 3039, Đời 5) - Ngày mất: 23/03 Âm lịch | Ngày giỗ: 22/03 Âm lịch
 - **LÊ VĂN HẢI** (ID: 3041, Đời 5) - Ngày mất: 17/10/1991 (Tân Mùi) | Ngày giỗ: 16/10 Âm lịch
 - **LÊ VĂN HIỆT** (ID: 3044, Đời 5) - Ngày mất: 23/12 | Ngày giỗ: 22/12 Âm lịch
-- **LÊ THỊ HƯỜNG** (ID: 3045, Đời 5) - Ngày mất: 01/09/2025 (Ất Tỵ) | Ngày giỗ: 29 hoặc 30/08 Âm lịch (ngày cuối tháng 8)
+- **LÊ THỊ HƯỜNG** (ID: 3045, Đời 5) - Ngày mất: 10/09/2025 (Ất Tỵ) | Ngày giỗ: 09/09 Âm lịch
 - **LÊ THỊ HVVD** (ID: 3047, Đời 5) - Ngày mất: Không rõ
 - **LÊ THỊ TẦM** (ID: 3049, Đời 5) - Ngày mất: Không rõ
 - **LÊ VĂN KỈNH** (ID: 3053, Đời 5) - Ngày mất: 27/08/1993 (Quý Dậu) | Ngày giỗ: 26/08 Âm lịch
@@ -218,22 +234,23 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **LÊ VĂN GIÁO** (ID: 4022, Đời 5) - Ngày mất: 21/12/1980 (Canh Thân) | Ngày giỗ: 20/12 Âm lịch
 - **LÊ THỊ HVVD** (ID: 4023, Đời 5) - Ngày mất: Không rõ
 - **LÊ VĂN THĂNG** (ID: 4028, Đời 5) - Ngày mất: 26/07/1980 (Canh Thân) | Ngày giỗ: 25/07 Âm lịch
-- **LÊ VĂN THẨM (Châu)** (ID: 4030, Đời 5) - Ngày mất: 18/08 Âm lịch | Ngày giỗ: 17/08 Âm lịch
+- **LÊ VĂN THẨM (Châu)** (ID: 4030, Đời 5) - Ngày mất: 17/08 Âm lịch | Ngày giỗ: 16/08 Âm lịch
 - **TRƯƠNG THỊ QUY** (ID: 4031, Đời 5) - Ngày mất: 06/09/2008 (Mậu Tý) | Ngày giỗ: 05/09 Âm lịch
 - **HOÀNG THỊ ẨN** (ID: 5006, Đời 5) - Ngày mất: 22/07 Âm lịch | Ngày giỗ: 21/07 Âm lịch
 - **HOÀNG THỊ THẠCH** (ID: 6018, Đời 5) - Ngày mất: 13/06/1972 (Nhâm Tý) | Ngày giỗ: 12/06 Âm lịch
 - **ĐOÀN THỊ TÚ** (ID: 6033, Đời 5) - Ngày mất: 13/06 Âm lịch | Ngày giỗ: 12/06 Âm lịch
-- **PHAN THỊ DUYẾN** (ID: 7013, Đời 5) - Ngày mất: Không rõ
+- **PHAN THỊ DUYẾN** (ID: 7013, Đời 5) - Ngày mất: 05/06 Âm lịch | Ngày giỗ: 04/06 Âm lịch
 - **LÊ VĂN HVVD** (ID: 4038, Đời 6) - Ngày mất: 10/08 Âm lịch | Ngày giỗ: 09/08 Âm lịch
 - **LÊ THỊ HVVD** (ID: 4039, Đời 6) - Ngày mất: 12/04 Âm lịch | Ngày giỗ: 11/04 Âm lịch
 - **LÊ HVVD** (ID: 4040, Đời 6) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 4042, Đời 6) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 4043, Đời 6) - Ngày mất: Không rõ
 - **LÊ THỊ LÀI** (ID: 5007, Đời 6) - Ngày mất: 10/01 Âm lịch | Ngày giỗ: 09/01 Âm lịch
-- **LÊ VĂN GIA** (ID: 5009, Đời 6) - Ngày mất: Không rõ
+- **LÊ VĂN GIA** (ID: 5009, Đời 6) - Ngày mất: 13/05 Âm lịch | Ngày giỗ: 12/05 Âm lịch
 - **LÊ VĂN THÁC** (ID: 5011, Đời 6) - Ngày mất: Không rõ
 - **LÊ VĂN ĐÀ** (ID: 5012, Đời 6) - Ngày mất: 29/09/1972 (Nhâm Tý) | Ngày giỗ: 28/09 Âm lịch
 - **LÊ THỊ BỜ** (ID: 6007, Đời 6) - Ngày mất: 05/06/1972 (Nhâm Tý) | Ngày giỗ: 04/06 Âm lịch
+- **LÊ THỊ THÊ** (ID: 6008, Đời 6) - Ngày mất: 16/04 Âm lịch | Ngày giỗ: 15/04 Âm lịch
 - **LÊ VĂN TÂM** (ID: 6009, Đời 6) - Ngày mất: 15/07 | Ngày giỗ: 14/07 Âm lịch
 - **LÊ HVVD** (ID: 6016, Đời 6) - Ngày mất: 20/10 Âm lịch | Ngày giỗ: 19/10 Âm lịch
 - **LÊ VĂN KHÂM** (ID: 6017, Đời 6) - Ngày mất: 20/10 Âm lịch | Ngày giỗ: 19/10 Âm lịch
@@ -242,7 +259,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **LÊ HVVD** (ID: 6025, Đời 6) - Ngày mất: Không rõ
 - **LÊ VĂN HVVD** (ID: 6028, Đời 6) - Ngày mất: Không rõ
 - **LÊ VĂN TRIỆU** (ID: 6031, Đời 6) - Ngày mất: 17/09/1985 (Ất Sửu) | Ngày giỗ: 16/09 Âm lịch
-- **LÊ VĂN TÂM** (ID: 6034, Đời 6) - Ngày mất: 10/01 Âm lịch | Ngày giỗ: 09/01 Âm lịch
+- **LÊ VĂN TÂM** (ID: 6034, Đời 6) - Ngày mất: 08/01 Âm lịch | Ngày giỗ: 07/01 Âm lịch
 - **LÊ VĂN HVVD** (ID: 7014, Đời 6) - Ngày mất: 01/12 Âm lịch | Ngày giỗ: 29 hoặc 30/11 Âm lịch (ngày cuối tháng 11)
 - **LÊ VĂN HVVD** (ID: 7019, Đời 6) - Ngày mất: Không rõ
 - **LÊ THỊ CHUYỂN** (ID: 7041, Đời 6) - Ngày mất: 17/11/2004 (Giáp Thân) | Ngày giỗ: 16/11 Âm lịch
@@ -253,7 +270,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **LÊ HVVD** (ID: 8011, Đời 7) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 8017, Đời 7) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 8018, Đời 7) - Ngày mất: 28/06 | Ngày giỗ: 27/06 Âm lịch
-- **LÊ HVVD** (ID: 8020, Đời 7) - Ngày mất: 1991 | Ngày giỗ: Chưa rõ ngày cụ thể (mất 1991)
+- **LÊ HVVD** (ID: 8020, Đời 7) - Ngày mất: 1991 (Tân Mùi) | Ngày giỗ: Chưa rõ ngày cụ thể (mất 1991 (Tân Mùi))
 - **LÊ HVVD** (ID: 8023, Đời 7) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 8024, Đời 7) - Ngày mất: Không rõ
 - **LÊ THỊ HVVD** (ID: 8025, Đời 7) - Ngày mất: 27/11/1994 Âm lịch (Giáp Tuất) | Ngày giỗ: 26/11 Âm lịch
@@ -261,7 +278,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **LÊ HVVD** (ID: 9058, Đời 8) - Ngày mất: 2023 (Quý Mão) | Ngày giỗ: Chưa rõ ngày cụ thể (mất 2023 (Quý Mão))
 
 ### Khu vực: Tỉnh Lâm Đồng (cũ) (2 vị)
-- **LÊ VĂN ĐỒNG** (ID: 6035, Đời 6) - Ngày mất: 17/08 Âm lịch | Ngày giỗ: 16/08 Âm lịch
+- **LÊ VĂN ĐỒNG** (ID: 6035, Đời 6) - Ngày mất: 08/08 Âm lịch | Ngày giỗ: 07/08 Âm lịch
 - **LÊ VĂN NGỌC** (ID: 7009, Đời 6) - Ngày mất: 08/02/1984 (Giáp Tý) | Ngày giỗ: 07/02 Âm lịch
 
 ### Khu vực: Lấp Lổ, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ) (1 vị)
@@ -277,7 +294,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **HOÀNG THỊ NGỮ** (ID: 3036, Đời 4) - Ngày mất: 23/09 Âm lịch | Ngày giỗ: 22/09 Âm lịch
 
 ### Khu vực: Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ) (1 vị)
-- **LÊ THỊ ƯU** (ID: 3042, Đời 5) - Ngày mất: Không rõ
+- **LÊ THỊ ƯU** (ID: 3042, Đời 5) - Ngày mất: 09/06 Âm lịch | Ngày giỗ: 08/06 Âm lịch
 
 ### Khu vực: Thị trấn Khe Sanh, Huyện Hướng Hoá, Tỉnh Quảng Trị (cũ) (1 vị)
 - **NGUYỄN THỊ THẮM** (ID: 7020, Đời 5) - Ngày mất: 19/09 Âm lịch | Ngày giỗ: 18/09 Âm lịch

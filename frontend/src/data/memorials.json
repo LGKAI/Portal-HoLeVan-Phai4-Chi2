@@ -1,5 +1,18 @@
 [
   {
+    "id": 6034,
+    "month": 1,
+    "gio_date": "07/01 Âm lịch",
+    "death_date": "08/01 Âm lịch",
+    "full_name": "LÊ VĂN TÂM",
+    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
+    "father_name": "LÊ VĂN XÍCH",
+    "mother_name": "ĐOÀN THỊ TÚ",
+    "gender": "Nam",
+    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
+    "notes": ""
+  },
+  {
     "id": 5007,
     "month": 1,
     "gio_date": "09/01 Âm lịch",
@@ -9,19 +22,6 @@
     "father_name": "LÊ VĂN KỈNH",
     "mother_name": "HOÀNG THỊ ẨN",
     "gender": "Nữ",
-    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
-    "notes": ""
-  },
-  {
-    "id": 6034,
-    "month": 1,
-    "gio_date": "09/01 Âm lịch",
-    "death_date": "10/01 Âm lịch",
-    "full_name": "LÊ VĂN TÂM",
-    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
-    "father_name": "LÊ VĂN XÍCH",
-    "mother_name": "ĐOÀN THỊ TÚ",
-    "gender": "Nam",
     "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": ""
   },
@@ -104,6 +104,19 @@
     "notes": "Nguyên Hội chủ Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)"
   },
   {
+    "id": 4010,
+    "month": 2,
+    "gio_date": "12/02 Âm lịch",
+    "death_date": "13/02 Âm lịch",
+    "full_name": "LÊ VĂN BẠCH",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN VỊNH",
+    "mother_name": "VÕ THỊ TƯỜNG",
+    "gender": "Nam",
+    "burial_place": "Không rõ",
+    "notes": "Nguyên Hội chủ Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)"
+  },
+  {
     "id": 3052,
     "month": 2,
     "gio_date": "13/02 Âm lịch",
@@ -156,6 +169,19 @@
     "notes": ""
   },
   {
+    "id": 3037,
+    "month": 3,
+    "gio_date": "03/03 Âm lịch",
+    "death_date": "04/03 Âm lịch",
+    "full_name": "LÊ THỊ SƠ",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN PHỔ",
+    "mother_name": "HOÀNG THỊ NGỮ",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": "Đã lấy Chồng (Ông Lê Huyền, Thôn Dương Lệ Văn, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
+  },
+  {
     "id": 2028,
     "month": 3,
     "gio_date": "11/03 Âm lịch",
@@ -167,6 +193,32 @@
     "gender": "Nữ",
     "burial_place": "Không rõ",
     "notes": ""
+  },
+  {
+    "id": 6006,
+    "month": 3,
+    "gio_date": "15/03 Âm lịch",
+    "death_date": "16/03 Âm lịch",
+    "full_name": "TRƯƠNG THỊ CÚC",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "-",
+    "mother_name": "-",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": ""
+  },
+  {
+    "id": 6021,
+    "month": 3,
+    "gio_date": "18/03 Âm lịch",
+    "death_date": "19/03 Âm lịch",
+    "full_name": "LÊ VĂN TƯỢNG",
+    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
+    "father_name": "LÊ VĂN BẠCH",
+    "mother_name": "HOÀNG THỊ THẠCH",
+    "gender": "Nam",
+    "burial_place": "Không rõ",
+    "notes": "Mất tích Năm 1975 (Ất Mão)"
   },
   {
     "id": 3028,
@@ -312,6 +364,19 @@
     "notes": ""
   },
   {
+    "id": 2030,
+    "month": 4,
+    "gio_date": "14/04 Âm lịch",
+    "death_date": "15/04 Âm lịch",
+    "full_name": "LÊ THỊ CỌT",
+    "generation_desc": "Đời 3 Chi 2 - Đời 11 Phái 4",
+    "father_name": "LÊ VĂN TUYÊN",
+    "mother_name": "ĐẶNG THỊ HIỆP",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": "Đã lấy Chồng (Ông Nguyễn (Không rõ Tên), Thôn Dương Xuân, Xã Triệu Phước, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
+  },
+  {
     "id": 4027,
     "month": 4,
     "gio_date": "14/04 Âm lịch",
@@ -323,6 +388,19 @@
     "gender": "Nữ",
     "burial_place": "Không rõ",
     "notes": "Đã lấy Chồng (Ông Phạm Ký ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
+  },
+  {
+    "id": 6008,
+    "month": 4,
+    "gio_date": "15/04 Âm lịch",
+    "death_date": "16/04 Âm lịch",
+    "full_name": "LÊ THỊ THÊ",
+    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
+    "father_name": "LÊ VĂN NINH",
+    "mother_name": "TRƯƠNG THỊ CÚC",
+    "gender": "Nữ",
+    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
+    "notes": ""
   },
   {
     "id": 2034,
@@ -416,6 +494,19 @@
     "notes": "Đã lấy Chồng (Ông Trần Tốn ở Thôn Phúc Lộc, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
   },
   {
+    "id": 4026,
+    "month": 4,
+    "gio_date": "25/04 Âm lịch",
+    "death_date": "26/04 Âm lịch",
+    "full_name": "LÊ THỊ SẼ",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN ĐA",
+    "mother_name": "PHAN THỊ SỎ",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": "Đã lấy Chồng (Ông Nguyễn Tộ ở Thôn Thanh Liêm, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)), Cải giá lấy Ông Trương Thủ ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)"
+  },
+  {
     "id": 1015,
     "month": 5,
     "gio_date": "02/05 Âm lịch",
@@ -431,14 +522,27 @@
   {
     "id": 4029,
     "month": 5,
-    "gio_date": "04/05 Âm lịch",
-    "death_date": "05/05 Âm lịch",
+    "gio_date": "03/05 Âm lịch",
+    "death_date": "04/05 Âm lịch",
     "full_name": "LÊ THỊ SẠN",
     "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
     "father_name": "LÊ VĂN ĐA",
     "mother_name": "PHAN THỊ SỎ",
     "gender": "Nữ",
     "burial_place": "Không rõ",
+    "notes": ""
+  },
+  {
+    "id": 5009,
+    "month": 5,
+    "gio_date": "12/05 Âm lịch",
+    "death_date": "13/05 Âm lịch",
+    "full_name": "LÊ VĂN GIA",
+    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
+    "father_name": "LÊ VĂN KỈNH",
+    "mother_name": "HOÀNG THỊ ẨN",
+    "gender": "Nam",
+    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": ""
   },
   {
@@ -453,6 +557,19 @@
     "gender": "Nữ",
     "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": ""
+  },
+  {
+    "id": 3046,
+    "month": 5,
+    "gio_date": "22/05 Âm lịch",
+    "death_date": "23/05 Âm lịch",
+    "full_name": "LÊ THỊ THỈ",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN PHỔ",
+    "mother_name": "LÊ THỊ HOÀNH",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": "Đã lấy Chồng (Ông Nguyễn Tụ ở Thôn Dương Lệ Đông, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
   },
   {
     "id": 8009,
@@ -494,6 +611,32 @@
     "notes": "Tham gia Chiến sĩ Du kích, Hy sinh được Nhà nước suy tôn Liệt sĩ"
   },
   {
+    "id": 7013,
+    "month": 6,
+    "gio_date": "04/06 Âm lịch",
+    "death_date": "05/06 Âm lịch",
+    "full_name": "PHAN THỊ DUYẾN",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "-",
+    "mother_name": "-",
+    "gender": "Nữ",
+    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
+    "notes": ""
+  },
+  {
+    "id": 3042,
+    "month": 6,
+    "gio_date": "08/06 Âm lịch",
+    "death_date": "09/06 Âm lịch",
+    "full_name": "LÊ THỊ ƯU",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN PHỔ",
+    "mother_name": "HOÀNG THỊ NGỮ",
+    "gender": "Nữ",
+    "burial_place": "Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
+    "notes": ""
+  },
+  {
     "id": 3009,
     "month": 6,
     "gio_date": "09/06 Âm lịch",
@@ -512,19 +655,6 @@
     "gio_date": "12/06 Âm lịch",
     "death_date": "13/06/1972 (Nhâm Tý)",
     "full_name": "HOÀNG THỊ THẠCH",
-    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
-    "father_name": "-",
-    "mother_name": "-",
-    "gender": "Nữ",
-    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
-    "notes": ""
-  },
-  {
-    "id": 6033,
-    "month": 6,
-    "gio_date": "12/06 Âm lịch",
-    "death_date": "13/06 Âm lịch",
-    "full_name": "ĐOÀN THỊ TÚ",
     "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
     "father_name": "-",
     "mother_name": "-",
@@ -572,6 +702,19 @@
     "notes": ""
   },
   {
+    "id": 6033,
+    "month": 6,
+    "gio_date": "12/06 Âm lịch",
+    "death_date": "13/06 Âm lịch",
+    "full_name": "ĐOÀN THỊ TÚ",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "-",
+    "mother_name": "-",
+    "gender": "Nữ",
+    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
+    "notes": ""
+  },
+  {
     "id": 3033,
     "month": 6,
     "gio_date": "15/06 Âm lịch",
@@ -589,13 +732,26 @@
     "month": 6,
     "gio_date": "18/06 Âm lịch",
     "death_date": "19/06 Âm lịch",
-    "full_name": "TRƯƠNG THỊ TUYẾT",
+    "full_name": "TRƯƠNG THỊ TIẾT",
     "generation_desc": "Đời 4 Chi 2 - Đời 12 Phái 4",
     "father_name": "-",
     "mother_name": "-",
     "gender": "Nữ",
     "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": ""
+  },
+  {
+    "id": 3050,
+    "month": 6,
+    "gio_date": "26/06 Âm lịch",
+    "death_date": "27/06 Âm lịch",
+    "full_name": "LÊ THỊ THÁO",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN PHỔ",
+    "mother_name": "LÊ THỊ HOÀNH",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": "Đã lấy Chồng (Ông Trương An ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
   },
   {
     "id": 8018,
@@ -618,7 +774,7 @@
     "full_name": "LÊ THỊ DUNG",
     "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
     "father_name": "LÊ VĂN DỤNG",
-    "mother_name": "TRƯƠNG THỊ TUYẾT",
+    "mother_name": "TRƯƠNG THỊ TIẾT",
     "gender": "Nữ",
     "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": ""
@@ -687,6 +843,19 @@
     "gender": "Nữ",
     "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": ""
+  },
+  {
+    "id": 4016,
+    "month": 7,
+    "gio_date": "22/07 Âm lịch",
+    "death_date": "23/07 Âm lịch",
+    "full_name": "LÊ VĂN XÍCH",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN VỊNH",
+    "mother_name": "VÕ THỊ TƯỜNG",
+    "gender": "Nam",
+    "burial_place": "Không rõ",
+    "notes": "Lập nghiệp tại Thôn 1, Xã Triệu Hải, Huyện Đa Tẻ, Tỉnh Lâm Đồng (cũ), Nguyên Trưởng tộc Họ Lê tại đây"
   },
   {
     "id": 9008,
@@ -780,6 +949,19 @@
     "notes": "Đã lấy Chồng (Ông Lê Quang Mãn ở Thôn Quảng Điền, Xã Triệu Đại, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ), Cải giá lấy Ông Lê Thế Mãn ở Thôn Dương Lệ Văn, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)"
   },
   {
+    "id": 6035,
+    "month": 8,
+    "gio_date": "07/08 Âm lịch",
+    "death_date": "08/08 Âm lịch",
+    "full_name": "LÊ VĂN ĐỒNG",
+    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
+    "father_name": "LÊ VĂN XÍCH",
+    "mother_name": "ĐOÀN THỊ TÚ",
+    "gender": "Nam",
+    "burial_place": "Tỉnh Lâm Đồng (cũ)",
+    "notes": ""
+  },
+  {
     "id": 1005,
     "month": 8,
     "gio_date": "08/08 Âm lịch",
@@ -806,23 +988,10 @@
     "notes": ""
   },
   {
-    "id": 6035,
+    "id": 4030,
     "month": 8,
     "gio_date": "16/08 Âm lịch",
     "death_date": "17/08 Âm lịch",
-    "full_name": "LÊ VĂN ĐỒNG",
-    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
-    "father_name": "LÊ VĂN XÍCH",
-    "mother_name": "ĐOÀN THỊ TÚ",
-    "gender": "Nam",
-    "burial_place": "Tỉnh Lâm Đồng (cũ)",
-    "notes": ""
-  },
-  {
-    "id": 4030,
-    "month": 8,
-    "gio_date": "17/08 Âm lịch",
-    "death_date": "18/08 Âm lịch",
     "full_name": "LÊ VĂN THẨM (Châu)",
     "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
     "father_name": "LÊ VĂN ĐA",
@@ -884,17 +1053,17 @@
     "notes": "Chánh phối của Ngài Thuỷ tổ Chi 2 - Phái 4 - Họ Lê Văn, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)"
   },
   {
-    "id": 3045,
+    "id": 4033,
     "month": 8,
     "gio_date": "29 hoặc 30/08 Âm lịch (ngày cuối tháng 8)",
-    "death_date": "01/09/2025 (Ất Tỵ)",
-    "full_name": "LÊ THỊ HƯỜNG",
-    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
-    "father_name": "LÊ VĂN PHỔ",
-    "mother_name": "LÊ THỊ HOÀNH",
+    "death_date": "01/09/2010 (Canh Dần)",
+    "full_name": "LÊ THỊ LỰU",
+    "generation_desc": "Đời 6 Chi 2 - Đời 14 Phái 4",
+    "father_name": "LÊ VĂN HẢI",
+    "mother_name": "TRƯƠNG THỊ QUY",
     "gender": "Nữ",
-    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
-    "notes": "Đã lấy Chồng (Ông Phan Chí ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
+    "burial_place": "Không rõ",
+    "notes": "Xuất gia (Hiệu là Giới Quang) tại Chùa Quang Minh, TP. Đà Nẵng (cũ)"
   },
   {
     "id": 2020,
@@ -962,6 +1131,19 @@
     "notes": "Đã lấy Chồng (Ông Lê Quang Toản ở Thôn Quảng Điền, Xã Triệu Đại, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
   },
   {
+    "id": 3045,
+    "month": 9,
+    "gio_date": "09/09 Âm lịch",
+    "death_date": "10/09/2025 (Ất Tỵ)",
+    "full_name": "LÊ THỊ HƯỜNG",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN PHỔ",
+    "mother_name": "LÊ THỊ HOÀNH",
+    "gender": "Nữ",
+    "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
+    "notes": "Đã lấy Chồng (Ông Phan Chí ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
+  },
+  {
     "id": 1009,
     "month": 9,
     "gio_date": "11/09 Âm lịch",
@@ -999,6 +1181,19 @@
     "gender": "Nữ",
     "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": "Thọ 94 tuổi"
+  },
+  {
+    "id": 4014,
+    "month": 9,
+    "gio_date": "16/09 Âm lịch",
+    "death_date": "17/09 Âm lịch",
+    "full_name": "LÊ THỊ THAM",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN VỊNH",
+    "mother_name": "VÕ THỊ TƯỜNG",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": "Đã lấy Chồng (Ông Phan Bạo ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
   },
   {
     "id": 6031,
@@ -1326,6 +1521,19 @@
     "notes": "Đã lấy Chồng (Ông Nguyễn Kế ở Thôn Dương Lệ Đông, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))"
   },
   {
+    "id": 4021,
+    "month": 12,
+    "gio_date": "16/12 Âm lịch",
+    "death_date": "17/12 Âm lịch",
+    "full_name": "LÊ THỊ THẠCH",
+    "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
+    "father_name": "LÊ VĂN DỤNG",
+    "mother_name": "TRƯƠNG THỊ TIẾT",
+    "gender": "Nữ",
+    "burial_place": "Không rõ",
+    "notes": ""
+  },
+  {
     "id": 3007,
     "month": 12,
     "gio_date": "19/12 Âm lịch",
@@ -1359,7 +1567,7 @@
     "full_name": "LÊ VĂN GIÁO",
     "generation_desc": "Đời 5 Chi 2 - Đời 13 Phái 4",
     "father_name": "LÊ VĂN DỤNG",
-    "mother_name": "TRƯƠNG THỊ TUYẾT",
+    "mother_name": "TRƯƠNG THỊ TIẾT",
     "gender": "Nam",
     "burial_place": "Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)",
     "notes": ""
@@ -1394,7 +1602,7 @@
     "id": 8020,
     "month": 0,
     "gio_date": "Chưa rõ ngày cụ thể (mất 1991 (Tân Mùi))",
-    "death_date": "1991",
+    "death_date": "1991 (Tân Mùi)",
     "full_name": "LÊ HVVD",
     "generation_desc": "Đời 7 Chi 2 - Đời 15 Phái 4",
     "father_name": "LÊ VĂN NHÂM",

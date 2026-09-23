@@ -28,24 +28,24 @@ export const seedMembersIfEmpty = async (pool: Pool) => {
         const countRes = await pool.query('SELECT COUNT(*)::int AS count FROM members');
         const count = countRes.rows[0]?.count || 0;
 
-        if (count > 0) {
-            console.log(`Bảng members đã có ${count} bản ghi. Bỏ qua nạp dữ liệu ban đầu.`);
-            return;
-        }
-
-        console.log('Bảng members đang trống. Bắt đầu tự động nạp dữ liệu gia phả từ members.json...');
-
         const members: MemberSeed[] = membersJsonData as unknown as MemberSeed[];
         if (!Array.isArray(members) || members.length === 0) {
             console.log('File members.json không có dữ liệu.');
             return;
         }
 
+        if (count >= members.length) {
+            console.log(`Bảng members đã có ${count} bản ghi (đầy đủ ${members.length}). Bỏ qua nạp dữ liệu.`);
+            return;
+        }
+
+        console.log(`Bảng members hiện có ${count} bản ghi, đang đồng bộ ${members.length} bản ghi từ members.json...`);
+
         const client = await pool.connect();
         try {
             await client.query('BEGIN');
 
-            // Bước 1: Thêm tất cả thành viên với thông tin cơ bản
+            // Bước 1: Thêm/cập nhật tất cả thành viên với thông tin cơ bản
             const insertQuery = `
                 INSERT INTO members (
                     id, full_name, birth_name, generation_in_branch, gender,
@@ -54,7 +54,18 @@ export const seedMembersIfEmpty = async (pool: Pool) => {
                 ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
                 ON CONFLICT (id) DO UPDATE SET
                     full_name = EXCLUDED.full_name,
-                    generation_in_branch = EXCLUDED.generation_in_branch;
+                    birth_name = EXCLUDED.birth_name,
+                    generation_in_branch = EXCLUDED.generation_in_branch,
+                    gender = EXCLUDED.gender,
+                    birth_date = EXCLUDED.birth_date,
+                    death_date = EXCLUDED.death_date,
+                    is_deceased = EXCLUDED.is_deceased,
+                    occupation = EXCLUDED.occupation,
+                    avatar_url = EXCLUDED.avatar_url,
+                    bio = EXCLUDED.bio,
+                    burial_place = EXCLUDED.burial_place,
+                    hometown = EXCLUDED.hometown,
+                    spouse_type = EXCLUDED.spouse_type;
             `;
 
             for (const m of members) {

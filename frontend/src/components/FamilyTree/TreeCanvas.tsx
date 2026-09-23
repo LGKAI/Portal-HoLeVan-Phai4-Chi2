@@ -538,10 +538,10 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
       maxy = Math.max(maxy, n.position.y + BASE_NODE_HEIGHT);
     });
     // Lề 2 bên để cuộn thoải mái
-    const marginX = 1200;
-    // Lề trên và dưới giữ gọn gàng, tránh khoảng trống quá lớn làm vuốt lố tay mất dấu cây
-    const marginTop = 300;
-    const marginBottom = 400;
+    const marginX = 3500;
+    // Lề trên và dưới rộng rãi, cho phép tự do kéo lên/xuống khi phóng to cây gia phả
+    const marginTop = 3000;
+    const marginBottom = 4000;
     return {
       minX: minx - marginX,
       maxX: maxx + marginX,

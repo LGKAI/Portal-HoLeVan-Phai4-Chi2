@@ -17,7 +17,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 09/08 Âm lịch
 - **Ngày giỗ**: 08/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Không rõ
@@ -36,7 +36,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 29/08 Âm lịch
 - **Ngày giỗ**: 28/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
+- **Nguyên quán**: Họ Phan, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Không rõ
@@ -59,7 +59,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 12/09 Âm lịch
 - **Ngày giỗ**: 11/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
@@ -78,13 +78,13 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 30/07 Âm lịch
 - **Ngày giỗ**: 29/07 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà Thủy tổ PHAN THỊ MƯU (ID: 1006, Đời 1 Chi 2 - Đời 9 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà NGUYỄN THỊ CẨN (ID: 2005, Chánh phối)
-  - Con cái: 3 người: LÊ HVVD (ID: 2006, Không rõ, Đời 3); Cụ ông LÊ VĂN HVVD (ID: 2007, Nam, Đời 3); Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Nam, Đời 3)
+  - Con cái: 3 người: Cụ bà LÊ THỊ HVVD (ID: 2006, Nữ, Đời 3); Cụ ông LÊ VĂN HVVD (ID: 2007, Nam, Đời 3); Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Nam, Đời 3)
   - Anh chị em ruột: Cụ ông LÊ VĂN LỢI (ID: 1009), Cụ bà LÊ THỊ NĂM (ID: 1011), Cụ bà LÊ THỊ HVVD (ID: 1012), Cụ bà LÊ THỊ NỞ (ID: 1013), Cụ bà LÊ THỊ NỮ (ID: 1014), Cụ ông LÊ VĂN NGHỊ (ID: 1015), Cụ ông LÊ VĂN TUYÊN (ID: 1016), Cụ bà LÊ THỊ YÊM (ID: 1017)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -97,7 +97,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 20/10 Âm lịch
 - **Ngày giỗ**: 19/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
@@ -116,7 +116,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
@@ -135,7 +135,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
@@ -154,7 +154,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 07/10 Âm lịch
 - **Ngày giỗ**: 06/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
@@ -173,12 +173,12 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/05 Âm lịch
 - **Ngày giỗ**: 02/05 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Lấp Lổ, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà Thủy tổ PHAN THỊ MƯU (ID: 1006, Đời 1 Chi 2 - Đời 9 Phái 4)
-  - Phối ngẫu (Vợ/Chồng): Cụ bà THỊ MẸO (Không rõ Họ) (ID: 2009, Chánh phối)
+  - Phối ngẫu (Vợ/Chồng): Cụ bà THỊ MẸO (Không rõ Họ) (ID: 2009, Chánh phối), Cụ bà LÊ THỊ CỬA (ID: 11011, Thứ phối)
   - Con cái: 9 người: Cụ ông LÊ VĂN HVVD (ID: 2010, Nam, Đời 3); Cụ bà LÊ THỊ HIỆT (ID: 2011, Nữ, Đời 3); Cụ bà LÊ THỊ TỰ (ID: 2012, Nữ, Đời 3); Cụ ông LÊ VĂN ĐỚI (ID: 2013, Nam, Đời 3); Cụ ông LÊ VĂN DỤ (ID: 2014, Nam, Đời 3); Cụ ông LÊ VĂN HVVD (ID: 2015, Nam, Đời 3); Cụ bà LÊ THỊ CHÚT (ID: 2016, Nữ, Đời 3); Cụ bà LÊ THỊ HVVD (ID: 2017, Nữ, Đời 3); Cụ bà LÊ THỊ MỌT (ID: 2018, Nữ, Đời 3)
   - Anh chị em ruột: Cụ ông LÊ VĂN LỢI (ID: 1009), Cụ ông LÊ VĂN TÁN (ID: 1010), Cụ bà LÊ THỊ NĂM (ID: 1011), Cụ bà LÊ THỊ HVVD (ID: 1012), Cụ bà LÊ THỊ NỞ (ID: 1013), Cụ bà LÊ THỊ NỮ (ID: 1014), Cụ ông LÊ VĂN TUYÊN (ID: 1016), Cụ bà LÊ THỊ YÊM (ID: 1017)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
@@ -192,7 +192,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 21/12 Âm lịch
 - **Ngày giỗ**: 20/12 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
@@ -211,7 +211,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/08 Âm lịch
 - **Ngày giỗ**: 02/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ngài Thủy tổ LÊ VĂN KHÔI (ID: 1005, Đời 1 Chi 2 - Đời 9 Phái 4)
@@ -236,7 +236,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN TÁN (ID: 1010, Chánh phối)
-  - Con cái: 3 người: LÊ HVVD (ID: 2006, Không rõ, Đời 3); Cụ ông LÊ VĂN HVVD (ID: 2007, Nam, Đời 3); Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Nam, Đời 3)
+  - Con cái: 3 người: Cụ bà LÊ THỊ HVVD (ID: 2006, Nữ, Đời 3); Cụ ông LÊ VĂN HVVD (ID: 2007, Nam, Đời 3); Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Nam, Đời 3)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -278,20 +278,39 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
-
----
-# THẾ HỆ THỨ 3 (CHI 2) - TƯƠNG ỨNG ĐỜI THỨ 11 (PHÁI 4 HỌ LÊ VĂN)
-
-### LÊ HVVD (ID: 2006)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
-- **Đời thứ**: Đời 3 Chi 2 (Đời 11 Phái 4)
-- **Giới tính**: Không rõ
+### LÊ THỊ CỬA (ID: 11011)
+- **Danh xưng chuẩn mực**: Cụ bà
+- **Đời thứ**: Đời 2 Chi 2 (Đời 10 Phái 4)
+- **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Không rõ
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn Phú Lễ, Phường Đông Lễ, Thị xã Đông Hà, Tỉnh Quảng Trị (cũ)
+- **Nghề nghiệp**: Không rõ
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Không rõ
+  - Thân mẫu (Mẹ): Không rõ
+  - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Thứ phối)
+  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Anh chị em ruột: Không có ghi nhận
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
+
+---
+# THẾ HỆ THỨ 3 (CHI 2) - TƯƠNG ỨNG ĐỜI THỨ 11 (PHÁI 4 HỌ LÊ VĂN)
+
+### LÊ THỊ HVVD (ID: 2006)
+- **Danh xưng chuẩn mực**: Cụ bà
+- **Đời thứ**: Đời 3 Chi 2 (Đời 11 Phái 4)
+- **Giới tính**: Nữ
+- **Tình trạng**: Đã mất (Quy tiên)
+- **Năm sinh**: Không rõ
+- **Ngày mất**: Không rõ
+- **Ngày giỗ**: Không rõ
+- **Nơi an táng**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TÁN (ID: 1010, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -310,14 +329,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TÁN (ID: 1010, Đời 2 Chi 2 - Đời 10 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ CẨN (ID: 2005, Đời 2 Chi 2 - Đời 10 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 2006), Cụ ông LÊ VĂN NGHIÊM (ID: 2008)
+  - Anh chị em ruột: Cụ bà LÊ THỊ HVVD (ID: 2006), Cụ ông LÊ VĂN NGHIÊM (ID: 2008)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN NGHIÊM (ID: 2008)
@@ -329,14 +348,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 18/04 Âm lịch
 - **Ngày giỗ**: 17/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TÁN (ID: 1010, Đời 2 Chi 2 - Đời 10 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ CẨN (ID: 2005, Đời 2 Chi 2 - Đời 10 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà NGUYỄN THỊ THẢO (ID: 2034, Chánh phối)
   - Con cái: 10 người: Cụ ông LÊ VĂN LỊCH (ID: 2035, Nam, Đời 4); Cụ bà LÊ THỊ TẤN (ID: 2036, Nữ, Đời 4); Cụ ông LÊ VĂN HVVD (ID: 2037, Nam, Đời 4); Cụ ông LÊ VĂN CHỈNH (ID: 2038, Nam, Đời 4); Cụ ông LÊ VĂN HVVD (ID: 2039, Nam, Đời 4); Cụ ông LÊ VĂN NUÔI (ID: 2040, Nam, Đời 4); Cụ bà LÊ THỊ TỴ (ID: 2041, Nữ, Đời 4); Cụ ông LÊ VĂN THỤY (Thoại) (ID: 3006, Nam, Đời 4); Cụ bà LÊ THỊ SOẠN (Suyền) (ID: 3007, Nữ, Đời 4); Cụ bà LÊ THỊ MIỄN (ID: 3008, Nữ, Đời 4)
-  - Anh chị em ruột: LÊ HVVD (ID: 2006), Cụ ông LÊ VĂN HVVD (ID: 2007)
+  - Anh chị em ruột: Cụ bà LÊ THỊ HVVD (ID: 2006), Cụ ông LÊ VĂN HVVD (ID: 2007)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN HVVD (ID: 2010)
@@ -348,7 +367,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 18/02 Âm lịch
 - **Ngày giỗ**: 17/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Thôn Phú Lễ, Phường Đông Lễ, Thị xã Đông Hà, Tỉnh Quảng Trị (cũ)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -367,7 +386,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/10 Âm lịch
 - **Ngày giỗ**: 02/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Tri��u Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -386,7 +405,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -405,7 +424,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -424,7 +443,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 30/03 Âm lịch
 - **Ngày giỗ**: 29/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -443,7 +462,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -462,7 +481,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 30/07 Âm lịch
 - **Ngày giỗ**: 29/07 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -481,7 +500,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -500,7 +519,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 28/10 Âm lịch
 - **Ngày giỗ**: 27/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -519,7 +538,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/09 Âm lịch
 - **Ngày giỗ**: 02/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -538,7 +557,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 21/04 Âm lịch
 - **Ngày giỗ**: 20/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -557,7 +576,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/09 Âm lịch
 - **Ngày giỗ**: 02/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -576,7 +595,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -595,7 +614,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 25/08 Âm lịch
 - **Ngày giỗ**: 24/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -614,7 +633,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -633,7 +652,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -652,7 +671,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 27/03 Âm lịch
 - **Ngày giỗ**: 26/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -671,7 +690,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 12/03 Âm lịch
 - **Ngày giỗ**: 11/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -690,7 +709,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -706,10 +725,10 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Không rõ
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 15/04 Âm lịch
+- **Ngày giỗ**: 14/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -728,7 +747,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 13/04 Âm lịch
 - **Ngày giỗ**: 12/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -747,7 +766,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -766,7 +785,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TUYÊN (ID: 1016, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -903,7 +922,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 20/07 Âm lịch
 - **Ngày giỗ**: 19/07 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -922,7 +941,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 30/07 Âm lịch
 - **Ngày giỗ**: 29/07 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -941,7 +960,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -960,7 +979,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Thôn Đồng Giám, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -979,7 +998,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -998,7 +1017,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1017,7 +1036,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 08/12 Âm lịch
 - **Ngày giỗ**: 07/12 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1036,7 +1055,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 05/06 Âm lịch
 - **Ngày giỗ**: 04/06 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1055,7 +1074,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 20/12
 - **Ngày giỗ**: 19/12 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1074,7 +1093,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHIÊM (ID: 2008, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1093,7 +1112,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1112,7 +1131,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 06/04
 - **Ngày giỗ**: 05/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1131,7 +1150,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 10/09 Âm lịch
 - **Ngày giỗ**: 09/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1150,7 +1169,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 25/04 Âm lịch
 - **Ngày giỗ**: 24/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, T��nh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1169,7 +1188,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 28/02 Âm lịch
 - **Ngày giỗ**: 27/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1188,7 +1207,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 11/02/1974 (Giáp Dần)
 - **Ngày giỗ**: 10/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1207,7 +1226,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 25/12/1973 (Quý Sửu)
 - **Ngày giỗ**: 24/12 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1226,7 +1245,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 15/09 Âm lịch
 - **Ngày giỗ**: 14/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1245,7 +1264,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 10/02/1968 (Mậu Thân)
 - **Ngày giỗ**: 09/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1264,7 +1283,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 27/03 Âm lịch
 - **Ngày giỗ**: 26/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TRỨ (ID: 2020, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1284,7 +1303,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TRỨ (ID: 2020, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1304,7 +1323,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TRỨ (ID: 2020, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1324,7 +1343,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TRỨ (ID: 2020, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1344,7 +1363,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 21/10 Âm lịch
 - **Ngày giỗ**: 20/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Thôn Lai Bình, Xã Vĩnh Chấp, Huyện Vĩnh Linh, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN SANH (ID: 2024, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1364,7 +1383,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN SANH (ID: 2024, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1384,7 +1403,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 22/09/1982 (Nhâm Tuất)
 - **Ngày giỗ**: 21/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN SANH (ID: 2024, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1404,12 +1423,12 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/02 Âm lịch
 - **Ngày giỗ**: 02/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN SANH (ID: 2024, Đời 3 Chi 2 - Đời 11 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ VẬN (ID: 3028, Đời 3 Chi 2 - Đời 11 Phái 4)
-  - Phối ngẫu (Vợ/Chồng): Cụ bà TRƯƠNG THỊ TUYẾT (ID: 4018, Chánh phối)
+  - Phối ngẫu (Vợ/Chồng): Cụ bà TRƯƠNG THỊ TIẾT (ID: 4018, Chánh phối)
   - Con cái: 6 người: Cụ ông LÊ VĂN HVVD (ID: 4019, Nam, Đời 5); Cụ bà LÊ THỊ DUNG (ID: 4020, Nữ, Đời 5); Cụ bà LÊ THỊ THẠCH (ID: 4021, Nữ, Đời 5); Cụ ông LÊ VĂN GIÁO (ID: 4022, Nam, Đời 5); Cụ bà LÊ THỊ HVVD (ID: 4023, Nữ, Đời 5); Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Nam, Đời 5)
   - Anh chị em ruột: Cụ bà LÊ THỊ LÃNH (ID: 3029), Cụ bà LÊ THỊ HỮU (ID: 3031), Cụ ông LÊ VĂN ĐA (ID: 3032)
   - Anh chị em cùng cha khác mẹ: Cụ bà LÊ THỊ CHẢNH (ID: 3026), Cụ bà LÊ THỊ LỰ (ID: 3027)
@@ -1424,7 +1443,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 10/02 Âm lịch
 - **Ngày giỗ**: 09/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN SANH (ID: 2024, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -1444,13 +1463,13 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 17/04 Âm lịch
 - **Ngày giỗ**: 16/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN SANH (ID: 2024, Đời 3 Chi 2 - Đời 11 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ VẬN (ID: 3028, Đời 3 Chi 2 - Đời 11 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà PHAN THỊ SỎ (ID: 4025, Chánh phối)
-  - Con cái: 5 người: Cụ bà LÊ THỊ SẺ (ID: 4026, Nữ, Đời 5); Cụ bà LÊ THỊ SỎI (ID: 4027, Nữ, Đời 5); Cụ ông LÊ VĂN THĂNG (ID: 4028, Nam, Đời 5); Cụ bà LÊ THỊ SẠN (ID: 4029, Nữ, Đời 5); Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030, Nam, Đời 5)
+  - Con cái: 5 người: Cụ bà LÊ THỊ SẼ (ID: 4026, Nữ, Đời 5); Cụ bà LÊ THỊ SỎI (ID: 4027, Nữ, Đời 5); Cụ ông LÊ VĂN THĂNG (ID: 4028, Nam, Đời 5); Cụ bà LÊ THỊ SẠN (ID: 4029, Nữ, Đời 5); Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030, Nam, Đời 5)
   - Anh chị em ruột: Cụ bà LÊ THỊ LÃNH (ID: 3029), Cụ ông LÊ VĂN DỤNG (ID: 3030), Cụ bà LÊ THỊ HỮU (ID: 3031)
   - Anh chị em cùng cha khác mẹ: Cụ bà LÊ THỊ CHẢNH (ID: 3026), Cụ bà LÊ THỊ LỰ (ID: 3027)
 - **Tiểu sử / Ghi chú**: Tham gia Du kích, Hy sinh được Nhà nước suy tôn Liệt sĩ
@@ -1569,7 +1588,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Thọ 94 tuổi
 
-### TRƯƠNG THỊ TUYẾT (ID: 4018)
+### TRƯƠNG THỊ TIẾT (ID: 4018)
 - **Danh xưng chuẩn mực**: Cụ bà
 - **Đời thứ**: Đời 4 Chi 2 (Đời 12 Phái 4)
 - **Giới tính**: Nữ
@@ -1603,7 +1622,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN ĐA (ID: 3032, Chánh phối)
-  - Con cái: 5 người: Cụ bà LÊ THỊ SẺ (ID: 4026, Nữ, Đời 5); Cụ bà LÊ THỊ SỎI (ID: 4027, Nữ, Đời 5); Cụ ông LÊ VĂN THĂNG (ID: 4028, Nam, Đời 5); Cụ bà LÊ THỊ SẠN (ID: 4029, Nữ, Đời 5); Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030, Nam, Đời 5)
+  - Con cái: 5 người: Cụ bà LÊ THỊ SẼ (ID: 4026, Nữ, Đời 5); Cụ bà LÊ THỊ SỎI (ID: 4027, Nữ, Đời 5); Cụ ông LÊ VĂN THĂNG (ID: 4028, Nam, Đời 5); Cụ bà LÊ THỊ SẠN (ID: 4029, Nữ, Đời 5); Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030, Nam, Đời 5)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -1620,7 +1639,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 06/08 Âm lịch
 - **Ngày giỗ**: 05/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THỤY (Thoại) (ID: 3006, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -1639,7 +1658,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 20/10 Âm lịch
 - **Ngày giỗ**: 19/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THỤY (Thoại) (ID: 3006, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -1655,8 +1674,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1913 (Quý Sửu)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 04/03 Âm lịch
+- **Ngày giỗ**: 03/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
@@ -1734,7 +1753,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Đời thứ**: Đời 5 Chi 2 (Đời 13 Phái 4)
 - **Giới tính**: Nam
 - **Tình trạng**: Đã mất (Quy tiên)
-- **Năm sinh**: Giờ Thìn, 25/07/1924 (Giáp Tý)
+- **Năm sinh**: 25/07/1924 (Giáp Tý)
 - **Ngày mất**: 17/10/1991 (Tân Mùi)
 - **Ngày giỗ**: 16/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
@@ -1744,7 +1763,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Cụ ông LÊ VĂN PHỔ (ID: 3015, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ NGỮ (ID: 3036, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Chánh phối)
-  - Con cái: 13 người: Bà LÊ THỊ ĐĂNG (ID: 4032, Nữ, Đời 6); Bà LÊ THỊ LỰU (ID: 4033, Nữ, Đời 6); Bà LÊ THỊ ĐÀO (ID: 4034, Nữ, Đời 6); Ông LÊ VĂN NĂM (ID: 4035, Nam, Đời 6); Ông LÊ VĂN SAU (ID: 4036, Nam, Đời 6); Ông LÊ VĂN NHÂM (ID: 4037, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 4038, Nam, Đời 6); Bà LÊ THỊ HVVD (ID: 4039, Nữ, Đời 6); LÊ HVVD (ID: 4040, Không rõ, Đời 6); Ông LÊ VĂN NHÀN (ID: 4041, Nam, Đời 6); LÊ HVVD (ID: 4042, Không rõ, Đời 6); LÊ HVVD (ID: 4043, Không rõ, Đời 6); Ông LÊ VĂN NHÂN (ID: 4044, Nam, Đời 6)
+  - Con cái: 13 người: Bà LÊ THỊ ĐĂNG (ID: 4032, Nữ, Đời 6); Bà LÊ THỊ LỰU (ID: 4033, Nữ, Đời 6); Bà LÊ THỊ ĐÀO (ID: 4034, Nữ, Đời 6); Ông LÊ VĂN NĂM (ID: 4035, Nam, Đời 6); Ông LÊ VĂN SAU (ID: 4036, Nam, Đời 6); Ông LÊ VĂN NHÂM (ID: 4037, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 4038, Nam, Đời 6); Bà LÊ THỊ HVVD (ID: 4039, Nữ, Đời 6); Ông LÊ HVVD (ID: 4040, Không rõ, Đời 6); Ông LÊ VĂN NHÀN (ID: 4041, Nam, Đời 6); Ông LÊ HVVD (ID: 4042, Không rõ, Đời 6); Ông LÊ HVVD (ID: 4043, Không rõ, Đời 6); Ông LÊ VĂN NHÂN (ID: 4044, Nam, Đời 6)
   - Anh chị em ruột: Cụ bà LÊ THỊ SƠ (ID: 3037), Cụ bà LÊ THỊ ĐỐC (ID: 3038), Cụ bà LÊ THỊ ĐƠN (ID: 3039), Cụ ông LÊ VĂN HVVD (ID: 3040), Cụ bà LÊ THỊ ƯU (ID: 3042)
   - Anh chị em cùng cha khác mẹ: Cụ ông LÊ VĂN HIỆT (ID: 3044), Cụ bà LÊ THỊ HƯỜNG (ID: 3045), Cụ bà LÊ THỊ THỈ (ID: 3046), Cụ bà LÊ THỊ HVVD (ID: 3047), Cụ bà LÊ THỊ THƯƠNG (ID: 3048), Cụ bà LÊ THỊ TẦM (ID: 3049), Cụ bà LÊ THỊ THÁO (ID: 3050)
 - **Tiểu sử / Ghi chú**: Pháp danh Tâm Khê, Nguyên Hội chủ Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ), Chánh đại diện niệm Phật đường An Lợi
@@ -1755,8 +1774,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 05/03/1928 (Mậu Thìn)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 09/06 Âm lịch
+- **Ngày giỗ**: 08/06 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
@@ -1795,8 +1814,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 02/05/1934 (Giáp Tuất)
-- **Ngày mất**: 01/09/2025 (Ất Tỵ)
-- **Ngày giỗ**: 29 hoặc 30/08 Âm lịch (ngày cuối tháng 8) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày mất**: 10/09/2025 (Ất Tỵ)
+- **Ngày giỗ**: 09/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
@@ -1815,8 +1834,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 23/08/1936 (Bính Tý)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 23/05 Âm lịch
+- **Ngày giỗ**: 22/05 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
@@ -1895,8 +1914,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1944 (Giáp Thân)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 27/06 Âm lịch
+- **Ngày giỗ**: 26/06 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
@@ -1918,7 +1937,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 14/02 Âm lịch
 - **Ngày giỗ**: 13/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -1937,7 +1956,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 27/08/1993 (Quý Dậu)
 - **Ngày giỗ**: 26/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -1956,7 +1975,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -1975,7 +1994,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 22/10 Âm lịch
 - **Ngày giỗ**: 21/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -1994,13 +2013,13 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 28/08/2001 (Tân Tỵ)
 - **Ngày giỗ**: 27/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà LÊ THỊ SAY (ID: 3051, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Chánh phối)
-  - Con cái: 11 người: Bà LÊ THỊ BỜ (ID: 6007, Nữ, Đời 6); Bà LÊ THỊ THÊ (ID: 6008, Nữ, Đời 6); Ông LÊ VĂN TÂM (ID: 6009, Nam, Đời 6); Bà LÊ THỊ PHU (ID: 6010, Nữ, Đời 6); Ông LÊ VĂN ĐẠO (ID: 6011, Nam, Đời 6); Bà LÊ THỊ ĐƯỜNG (ID: 6012, Nữ, Đời 6); Ông LÊ VĂN CÔNG (ID: 6013, Nam, Đời 6); Bà LÊ THỊ THÙY (ID: 6014, Nữ, Đời 6); Bà LÊ THỊ THÚY (ID: 6015, Nữ, Đời 6); LÊ HVVD (ID: 6016, Không rõ, Đời 6); Ông LÊ VĂN KHÂM (ID: 6017, Nam, Đời 6)
+  - Con cái: 11 người: Bà LÊ THỊ BỜ (ID: 6007, Nữ, Đời 6); Bà LÊ THỊ THÊ (ID: 6008, Nữ, Đời 6); Ông LÊ VĂN TÂM (ID: 6009, Nam, Đời 6); Bà LÊ THỊ PHU (ID: 6010, Nữ, Đời 6); Ông LÊ VĂN ĐẠO (ID: 6011, Nam, Đời 6); Bà LÊ THỊ ĐƯỜNG (ID: 6012, Nữ, Đời 6); Ông LÊ VĂN CÔNG (ID: 6013, Nam, Đời 6); Bà LÊ THỊ THÙY (ID: 6014, Nữ, Đời 6); Bà LÊ THỊ THÚY (ID: 6015, Nữ, Đời 6); Ông LÊ HVVD (ID: 6016, Không rõ, Đời 6); Ông LÊ VĂN KHÂM (ID: 6017, Nam, Đời 6)
   - Anh chị em ruột: Cụ bà LÊ THỊ SẢN (ID: 3052), Cụ ông LÊ VĂN KỈNH (ID: 3053), Cụ ông LÊ VĂN HVVD (ID: 3054), Cụ bà LÊ THỊ ĐÁO (ID: 3055), Cụ ông LÊ VĂN THỪA (ID: 3057), Cụ bà LÊ THỊ QUÝ (Phức) (ID: 3058), Cụ bà LÊ THỊ SỬU (ID: 3059), Cụ ông LÊ VĂN HVVD (ID: 3060)
 - **Tiểu sử / Ghi chú**: Nguyên Tập đoàn Trưởng Tập đoàn 4 Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 
@@ -2013,7 +2032,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 02/10 Âm lịch
 - **Ngày giỗ**: 01/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2032,7 +2051,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2051,7 +2070,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 26/10 Âm lịch
 - **Ngày giỗ**: 25/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2070,7 +2089,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DƯỢNG (ID: 3016, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2089,7 +2108,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 04/09/1952
 - **Ngày giỗ**: 03/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THỈNH (ID: 3017, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2108,7 +2127,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 26/03 Âm lịch
 - **Ngày giỗ**: 25/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2124,16 +2143,16 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 06/09/1927 (Đinh Mão)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 13/02 Âm lịch
+- **Ngày giỗ**: 12/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà VÕ THỊ TƯỜNG (ID: 4008, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Chánh phối), Cụ bà TRƯƠNG THỊ LƠN (ID: 6030, Thứ phối)
-  - Con cái: 13 người: LÊ HVVD (ID: 6019, Không rõ, Đời 6); Bà LÊ THỊ PHỤ (ID: 6020, Nữ, Đời 6); Ông LÊ VĂN TƯỢNG (ID: 6021, Nam, Đời 6); Ông LÊ VĂN NGƯU (ID: 6022, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6023, Nam, Đời 6); Ông LÊ THỊ DƠI (Dung) (ID: 6024, Nam, Đời 6); LÊ HVVD (ID: 6025, Không rõ, Đời 6); Bà LÊ THỊ BƯỚM (ID: 6026, Nữ, Đời 6); Ông LÊ VĂN QUỲNH (ID: 6027, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6028, Nam, Đời 6); Ông LÊ VĂN PHONG (ID: 6029, Nam, Đời 6); Ông LÊ VĂN TRIỆU (ID: 6031, Nam, Đời 6); Bà LÊ THỊ HVVD (ID: 6032, Nữ, Đời 6)
+  - Con cái: 13 người: Ông LÊ HVVD (ID: 6019, Không rõ, Đời 6); Bà LÊ THỊ PHỤ (ID: 6020, Nữ, Đời 6); Ông LÊ VĂN TƯỢNG (ID: 6021, Nam, Đời 6); Ông LÊ VĂN NGƯU (ID: 6022, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6023, Nam, Đời 6); Ông LÊ THỊ DƠI (Dung) (ID: 6024, Nam, Đời 6); Ông LÊ HVVD (ID: 6025, Không rõ, Đời 6); Bà LÊ THỊ BƯỚM (ID: 6026, Nữ, Đời 6); Ông LÊ VĂN QUỲNH (ID: 6027, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6028, Nam, Đời 6); Ông LÊ VĂN PHONG (ID: 6029, Nam, Đời 6); Ông LÊ VĂN TRIỆU (ID: 6031, Nam, Đời 6); Bà LÊ THỊ HVVD (ID: 6032, Nữ, Đời 6)
   - Anh chị em ruột: Cụ ông LÊ VĂN HUYNH (ID: 4009), Cụ bà LÊ THỊ ĐIỀN (ID: 4011), Cụ bà LÊ THỊ HVVD (ID: 4012), Cụ ông LÊ VĂN PHƯỚC (ID: 4013), Cụ bà LÊ THỊ THAM (ID: 4014), Cụ bà LÊ THỊ CỪU (ID: 4015), Cụ ông LÊ VĂN XÍCH (ID: 4016), Cụ bà LÊ THỊ TRỪU (ID: 4017)
 - **Tiểu sử / Ghi chú**: Nguyên Hội chủ Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 
@@ -2146,7 +2165,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2165,7 +2184,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2184,7 +2203,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 14/04 Âm lịch
 - **Ngày giỗ**: 13/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2200,10 +2219,10 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 27/06/1935 (Ất Hợi)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 17/09 Âm lịch
+- **Ngày giỗ**: 16/09 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2219,7 +2238,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 27/10/1938 (Mậu Dần)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2235,10 +2254,10 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 03/07/1941 (Tân Tỵ)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 23/07 Âm lịch
+- **Ngày giỗ**: 22/07 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Y tá Quân Y
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2254,7 +2273,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1944 (Giáp Thân)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN VỊNH (ID: 3018, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2273,11 +2292,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤNG (ID: 3030, Đời 4 Chi 2 - Đời 12 Phái 4)
-  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TUYẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
+  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TIẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Cụ bà LÊ THỊ DUNG (ID: 4020), Cụ bà LÊ THỊ THẠCH (ID: 4021), Cụ ông LÊ VĂN GIÁO (ID: 4022), Cụ bà LÊ THỊ HVVD (ID: 4023), Cụ ông LÊ VĂN TƯƠNG (ID: 4024)
@@ -2292,11 +2311,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 30/06
 - **Ngày giỗ**: 29/06 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤNG (ID: 3030, Đời 4 Chi 2 - Đời 12 Phái 4)
-  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TUYẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
+  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TIẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Cụ ông LÊ VĂN HVVD (ID: 4019), Cụ bà LÊ THỊ THẠCH (ID: 4021), Cụ ông LÊ VĂN GIÁO (ID: 4022), Cụ bà LÊ THỊ HVVD (ID: 4023), Cụ ông LÊ VĂN TƯƠNG (ID: 4024)
@@ -2308,14 +2327,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Tháng 5/1933 (Quý Dậu)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 17/12 Âm lịch
+- **Ngày giỗ**: 16/12 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤNG (ID: 3030, Đời 4 Chi 2 - Đời 12 Phái 4)
-  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TUYẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
+  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TIẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Cụ ông LÊ VĂN HVVD (ID: 4019), Cụ bà LÊ THỊ DUNG (ID: 4020), Cụ ông LÊ VĂN GIÁO (ID: 4022), Cụ bà LÊ THỊ HVVD (ID: 4023), Cụ ông LÊ VĂN TƯƠNG (ID: 4024)
@@ -2330,11 +2349,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 21/12/1980 (Canh Thân)
 - **Ngày giỗ**: 20/12 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤNG (ID: 3030, Đời 4 Chi 2 - Đời 12 Phái 4)
-  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TUYẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
+  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TIẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà PHAN THỊ DUYẾN (ID: 7013, Chánh phối)
   - Con cái: 6 người: Ông LÊ VĂN HVVD (ID: 7014, Nam, Đời 6); Bà LÊ THỊ LOAN (ID: 7015, Nữ, Đời 6); Bà LÊ THỊ NHUẬN (Duận) (ID: 7016, Nữ, Đời 6); Ông LÊ VĂN HUẤN (ID: 7017, Nam, Đời 6); Bà LÊ THỊ BÊ (ID: 7018, Nữ, Đời 6); Ông LÊ VĂN HVVD (ID: 7019, Nam, Đời 6)
   - Anh chị em ruột: Cụ ông LÊ VĂN HVVD (ID: 4019), Cụ bà LÊ THỊ DUNG (ID: 4020), Cụ bà LÊ THỊ THẠCH (ID: 4021), Cụ bà LÊ THỊ HVVD (ID: 4023), Cụ ông LÊ VĂN TƯƠNG (ID: 4024)
@@ -2349,11 +2368,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤNG (ID: 3030, Đời 4 Chi 2 - Đời 12 Phái 4)
-  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TUYẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
+  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TIẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Cụ ông LÊ VĂN HVVD (ID: 4019), Cụ bà LÊ THỊ DUNG (ID: 4020), Cụ bà LÊ THỊ THẠCH (ID: 4021), Cụ ông LÊ VĂN GIÁO (ID: 4022), Cụ ông LÊ VĂN TƯƠNG (ID: 4024)
@@ -2365,26 +2384,26 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 04/04/1941 (Tân Tỵ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤNG (ID: 3030, Đời 4 Chi 2 - Đời 12 Phái 4)
-  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TUYẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
+  - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ TIẾT (ID: 4018, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Chánh phối), Cụ bà HOÀNG THỊ BÊ (ID: 7030, Thứ phối)
-  - Con cái: 11 người: Ông LÊ VĂN TUẤN (ID: 7021, Nam, Đời 6); LÊ HVVD (ID: 7022, Không rõ, Đời 6); Ông LÊ VĂN KHANH (ID: 7023, Nam, Đời 6); Bà LÊ THỊ THU (ID: 7024, Nữ, Đời 6); LÊ HVVD (ID: 7025, Không rõ, Đời 6); Bà LÊ THỊ THỦY (ID: 7026, Nữ, Đời 6); LÊ HVVD (ID: 7027, Không rõ, Đời 6); Ông LÊ VĂN LỢI (ID: 7028, Nam, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7029, Nữ, Đời 6); Bà LÊ THỊ HOÀNG LAN (ID: 7031, Nữ, Đời 6); Ông LÊ VĂN HOÀNG ANH (ID: 7032, Nam, Đời 6)
+  - Con cái: 11 người: Ông LÊ VĂN TUẤN (ID: 7021, Nam, Đời 6); Ông LÊ HVVD (ID: 7022, Không rõ, Đời 6); Ông LÊ VĂN KHANH (ID: 7023, Nam, Đời 6); Bà LÊ THỊ THU (ID: 7024, Nữ, Đời 6); Ông LÊ HVVD (ID: 7025, Không rõ, Đời 6); Bà LÊ THỊ THỦY (ID: 7026, Nữ, Đời 6); Ông LÊ HVVD (ID: 7027, Không rõ, Đời 6); Ông LÊ VĂN LỢI (ID: 7028, Nam, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7029, Nữ, Đời 6); Bà LÊ THỊ HOÀNG LAN (ID: 7031, Nữ, Đời 6); Ông LÊ VĂN HOÀNG ANH (ID: 7032, Nam, Đời 6)
   - Anh chị em ruột: Cụ ông LÊ VĂN HVVD (ID: 4019), Cụ bà LÊ THỊ DUNG (ID: 4020), Cụ bà LÊ THỊ THẠCH (ID: 4021), Cụ ông LÊ VĂN GIÁO (ID: 4022), Cụ bà LÊ THỊ HVVD (ID: 4023)
 - **Tiểu sử / Ghi chú**: Nguyên Tập đoàn Trưởng Tập đoàn Tân Lợi, Thị trấn Khe Sanh, Huyện Hướng Hoá, Tỉnh Quảng Trị (cũ), Lập nghiệp tại đây
 
-### LÊ THỊ SẺ (ID: 4026)
+### LÊ THỊ SẼ (ID: 4026)
 - **Danh xưng chuẩn mực**: Cụ bà
 - **Đời thứ**: Đời 5 Chi 2 (Đời 13 Phái 4)
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 14/11/1935 (Ất Hợi)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 26/04 Âm lịch
+- **Ngày giỗ**: 25/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN ĐA (ID: 3032, Đời 4 Chi 2 - Đời 12 Phái 4)
@@ -2403,14 +2422,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 15/04 Âm lịch
 - **Ngày giỗ**: 14/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN ĐA (ID: 3032, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ SỎ (ID: 4025, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Cụ bà LÊ THỊ SẺ (ID: 4026), Cụ ông LÊ VĂN THĂNG (ID: 4028), Cụ bà LÊ THỊ SẠN (ID: 4029), Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030)
+  - Anh chị em ruột: Cụ bà LÊ THỊ SẼ (ID: 4026), Cụ ông LÊ VĂN THĂNG (ID: 4028), Cụ bà LÊ THỊ SẠN (ID: 4029), Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Phạm Ký ở Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ VĂN THĂNG (ID: 4028)
@@ -2422,14 +2441,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 26/07/1980 (Canh Thân)
 - **Ngày giỗ**: 25/07 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN ĐA (ID: 3032, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ SỎ (ID: 4025, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Cụ bà PHAN THỊ TRAO (ID: 7033, Chánh phối)
-  - Con cái: 7 người: LÊ HVVD (ID: 7034, Không rõ, Đời 6); Ông LÊ VĂN DIỆU (ID: 7035, Nam, Đời 6); Ông LÊ VĂN TÙNG (ID: 7036, Nam, Đời 6); Bà LÊ THỊ HUỆ (ID: 7037, Nữ, Đời 6); Ông LÊ VĂN TRUNG (ID: 7038, Nam, Đời 6); LÊ HVVD (ID: 7039, Không rõ, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7040, Nữ, Đời 6)
-  - Anh chị em ruột: Cụ bà LÊ THỊ SẺ (ID: 4026), Cụ bà LÊ THỊ SỎI (ID: 4027), Cụ bà LÊ THỊ SẠN (ID: 4029), Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030)
+  - Con cái: 7 người: Ông LÊ HVVD (ID: 7034, Không rõ, Đời 6); Ông LÊ VĂN DIỆU (ID: 7035, Nam, Đời 6); Ông LÊ VĂN TÙNG (ID: 7036, Nam, Đời 6); Bà LÊ THỊ HUỆ (ID: 7037, Nữ, Đời 6); Ông LÊ VĂN TRUNG (ID: 7038, Nam, Đời 6); Ông LÊ HVVD (ID: 7039, Không rõ, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7040, Nữ, Đời 6)
+  - Anh chị em ruột: Cụ bà LÊ THỊ SẼ (ID: 4026), Cụ bà LÊ THỊ SỎI (ID: 4027), Cụ bà LÊ THỊ SẠN (ID: 4029), Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ SẠN (ID: 4029)
@@ -2438,17 +2457,17 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1944 (Giáp Thân)
-- **Ngày mất**: 05/05 Âm lịch
-- **Ngày giỗ**: 04/05 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày mất**: 04/05 ��m lịch
+- **Ngày giỗ**: 03/05 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN ĐA (ID: 3032, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ SỎ (ID: 4025, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Cụ bà LÊ THỊ SẺ (ID: 4026), Cụ bà LÊ THỊ SỎI (ID: 4027), Cụ ông LÊ VĂN THĂNG (ID: 4028), Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030)
+  - Anh chị em ruột: Cụ bà LÊ THỊ SẼ (ID: 4026), Cụ bà LÊ THỊ SỎI (ID: 4027), Cụ ông LÊ VĂN THĂNG (ID: 4028), Cụ ông LÊ VĂN THẨM (Châu) (ID: 4030)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN THẨM (Châu) (ID: 4030)
@@ -2457,17 +2476,17 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1946 (Bính Tuất)
-- **Ngày mất**: 18/08 Âm lịch
-- **Ngày giỗ**: 17/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày mất**: 17/08 Âm lịch
+- **Ngày giỗ**: 16/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN ĐA (ID: 3032, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ SỎ (ID: 4025, Đời 4 Chi 2 - Đời 12 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Cụ bà LÊ THỊ SẺ (ID: 4026), Cụ bà LÊ THỊ SỎI (ID: 4027), Cụ ông LÊ VĂN THĂNG (ID: 4028), Cụ bà LÊ THỊ SẠN (ID: 4029)
+  - Anh chị em ruột: Cụ bà LÊ THỊ SẼ (ID: 4026), Cụ bà LÊ THỊ SỎI (ID: 4027), Cụ ông LÊ VĂN THĂNG (ID: 4028), Cụ bà LÊ THỊ SẠN (ID: 4029)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### TRƯƠNG THỊ QUY (ID: 4031)
@@ -2485,7 +2504,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN HẢI (ID: 3041, Chánh phối)
-  - Con cái: 13 người: Bà LÊ THỊ ĐĂNG (ID: 4032, Nữ, Đời 6); Bà LÊ THỊ LỰU (ID: 4033, Nữ, Đời 6); Bà LÊ THỊ ĐÀO (ID: 4034, Nữ, Đời 6); Ông LÊ VĂN NĂM (ID: 4035, Nam, Đời 6); Ông LÊ VĂN SAU (ID: 4036, Nam, Đời 6); Ông LÊ VĂN NHÂM (ID: 4037, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 4038, Nam, Đời 6); Bà LÊ THỊ HVVD (ID: 4039, Nữ, Đời 6); LÊ HVVD (ID: 4040, Không rõ, Đời 6); Ông LÊ VĂN NHÀN (ID: 4041, Nam, Đời 6); LÊ HVVD (ID: 4042, Không rõ, Đời 6); LÊ HVVD (ID: 4043, Không rõ, Đời 6); Ông LÊ VĂN NHÂN (ID: 4044, Nam, Đời 6)
+  - Con cái: 13 người: Bà LÊ THỊ ĐĂNG (ID: 4032, Nữ, Đời 6); Bà LÊ THỊ LỰU (ID: 4033, Nữ, Đời 6); Bà LÊ THỊ ĐÀO (ID: 4034, Nữ, Đời 6); Ông LÊ VĂN NĂM (ID: 4035, Nam, Đời 6); Ông LÊ VĂN SAU (ID: 4036, Nam, Đời 6); Ông LÊ VĂN NHÂM (ID: 4037, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 4038, Nam, Đời 6); Bà LÊ THỊ HVVD (ID: 4039, Nữ, Đời 6); Ông LÊ HVVD (ID: 4040, Không rõ, Đời 6); Ông LÊ VĂN NHÀN (ID: 4041, Nam, Đời 6); Ông LÊ HVVD (ID: 4042, Không rõ, Đời 6); Ông LÊ HVVD (ID: 4043, Không rõ, Đời 6); Ông LÊ VĂN NHÂN (ID: 4044, Nam, Đời 6)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Pháp danh Nguyên Hướng
 
@@ -2498,7 +2517,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 22/07 Âm lịch
 - **Ngày giỗ**: 21/07 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
+- **Nguyên quán**: Họ Hoàng, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Không rõ
@@ -2514,8 +2533,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1930 (Canh Ngọ)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 16/03 Âm lịch
+- **Ngày giỗ**: 15/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn Trung Yên, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
@@ -2523,7 +2542,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN NINH (ID: 3056, Chánh phối)
-  - Con cái: 11 người: Bà LÊ THỊ BỜ (ID: 6007, Nữ, Đời 6); Bà LÊ THỊ THÊ (ID: 6008, Nữ, Đời 6); Ông LÊ VĂN TÂM (ID: 6009, Nam, Đời 6); Bà LÊ THỊ PHU (ID: 6010, Nữ, Đời 6); Ông LÊ VĂN ĐẠO (ID: 6011, Nam, Đời 6); Bà LÊ THỊ ĐƯỜNG (ID: 6012, Nữ, Đời 6); Ông LÊ VĂN CÔNG (ID: 6013, Nam, Đời 6); Bà LÊ THỊ THÙY (ID: 6014, Nữ, Đời 6); Bà LÊ THỊ THÚY (ID: 6015, Nữ, Đời 6); LÊ HVVD (ID: 6016, Không rõ, Đời 6); Ông LÊ VĂN KHÂM (ID: 6017, Nam, Đời 6)
+  - Con cái: 11 người: Bà LÊ THỊ BỜ (ID: 6007, Nữ, Đời 6); Bà LÊ THỊ THÊ (ID: 6008, Nữ, Đời 6); Ông LÊ VĂN TÂM (ID: 6009, Nam, Đời 6); Bà LÊ THỊ PHU (ID: 6010, Nữ, Đời 6); Ông LÊ VĂN ĐẠO (ID: 6011, Nam, Đời 6); Bà LÊ THỊ ĐƯỜNG (ID: 6012, Nữ, Đời 6); Ông LÊ VĂN CÔNG (ID: 6013, Nam, Đời 6); Bà LÊ THỊ THÙY (ID: 6014, Nữ, Đời 6); Bà LÊ THỊ THÚY (ID: 6015, Nữ, Đời 6); Ông LÊ HVVD (ID: 6016, Không rõ, Đời 6); Ông LÊ VĂN KHÂM (ID: 6017, Nam, Đời 6)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -2536,13 +2555,13 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 13/06/1972 (Nhâm Tý)
 - **Ngày giỗ**: 12/06 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Họ Hoàng, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN BẠCH (ID: 4010, Chánh phối)
-  - Con cái: 11 người: LÊ HVVD (ID: 6019, Không rõ, Đời 6); Bà LÊ THỊ PHỤ (ID: 6020, Nữ, Đời 6); Ông LÊ VĂN TƯỢNG (ID: 6021, Nam, Đời 6); Ông LÊ VĂN NGƯU (ID: 6022, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6023, Nam, Đời 6); Ông LÊ THỊ DƠI (Dung) (ID: 6024, Nam, Đời 6); LÊ HVVD (ID: 6025, Không rõ, Đời 6); Bà LÊ THỊ BƯỚM (ID: 6026, Nữ, Đời 6); Ông LÊ VĂN QUỲNH (ID: 6027, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6028, Nam, Đời 6); Ông LÊ VĂN PHONG (ID: 6029, Nam, Đời 6)
+  - Con cái: 11 người: Ông LÊ HVVD (ID: 6019, Không rõ, Đời 6); Bà LÊ THỊ PHỤ (ID: 6020, Nữ, Đời 6); Ông LÊ VĂN TƯỢNG (ID: 6021, Nam, Đời 6); Ông LÊ VĂN NGƯU (ID: 6022, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6023, Nam, Đời 6); Ông LÊ THỊ DƠI (Dung) (ID: 6024, Nam, Đời 6); Ông LÊ HVVD (ID: 6025, Không rõ, Đời 6); Bà LÊ THỊ BƯỚM (ID: 6026, Nữ, Đời 6); Ông LÊ VĂN QUỲNH (ID: 6027, Nam, Đời 6); Ông LÊ VĂN HVVD (ID: 6028, Nam, Đời 6); Ông LÊ VĂN PHONG (ID: 6029, Nam, Đời 6)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -2619,10 +2638,10 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1933 (Quý Dậu)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 05/06 Âm lịch
+- **Ngày giỗ**: 04/06 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
+- **Nguyên quán**: Họ Phan, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Không rõ
@@ -2647,7 +2666,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Chánh phối)
-  - Con cái: 9 người: Ông LÊ VĂN TUẤN (ID: 7021, Nam, Đời 6); LÊ HVVD (ID: 7022, Không rõ, Đời 6); Ông LÊ VĂN KHANH (ID: 7023, Nam, Đời 6); Bà LÊ THỊ THU (ID: 7024, Nữ, Đời 6); LÊ HVVD (ID: 7025, Không rõ, Đời 6); Bà LÊ THỊ THỦY (ID: 7026, Nữ, Đời 6); LÊ HVVD (ID: 7027, Không rõ, Đời 6); Ông LÊ VĂN LỢI (ID: 7028, Nam, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7029, Nữ, Đời 6)
+  - Con cái: 9 người: Ông LÊ VĂN TUẤN (ID: 7021, Nam, Đời 6); Ông LÊ HVVD (ID: 7022, Không rõ, Đời 6); Ông LÊ VĂN KHANH (ID: 7023, Nam, Đời 6); Bà LÊ THỊ THU (ID: 7024, Nữ, Đời 6); Ông LÊ HVVD (ID: 7025, Không rõ, Đời 6); Bà LÊ THỊ THỦY (ID: 7026, Nữ, Đời 6); Ông LÊ HVVD (ID: 7027, Không rõ, Đời 6); Ông LÊ VĂN LỢI (ID: 7028, Nam, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7029, Nữ, Đời 6)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -2679,7 +2698,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Cụ ông LÊ VĂN THĂNG (ID: 4028, Chánh phối)
-  - Con cái: 7 người: LÊ HVVD (ID: 7034, Không rõ, Đời 6); Ông LÊ VĂN DIỆU (ID: 7035, Nam, Đời 6); Ông LÊ VĂN TÙNG (ID: 7036, Nam, Đời 6); Bà LÊ THỊ HUỆ (ID: 7037, Nữ, Đời 6); Ông LÊ VĂN TRUNG (ID: 7038, Nam, Đời 6); LÊ HVVD (ID: 7039, Không rõ, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7040, Nữ, Đời 6)
+  - Con cái: 7 người: Ông LÊ HVVD (ID: 7034, Không rõ, Đời 6); Ông LÊ VĂN DIỆU (ID: 7035, Nam, Đời 6); Ông LÊ VĂN TÙNG (ID: 7036, Nam, Đời 6); Bà LÊ THỊ HUỆ (ID: 7037, Nữ, Đời 6); Ông LÊ VĂN TRUNG (ID: 7038, Nam, Đời 6); Ông LÊ HVVD (ID: 7039, Không rõ, Đời 6); Bà LÊ THỊ HƯƠNG (ID: 7040, Nữ, Đời 6)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -2700,7 +2719,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Hoàng Hữu Phúc ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ THỊ LỰU (ID: 4033)
@@ -2709,8 +2728,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 02/06/1954 (Giáp Ngọ)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 01/09/2010 (Canh Dần)
+- **Ngày giỗ**: 29 hoặc 30/08 Âm lịch (ngày cuối tháng 8) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Tu hành
@@ -2719,7 +2738,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Xuất gia (Hiệu là Giới Quang) tại Chùa Quang Minh, TP. Đà Nẵng (cũ)
 
 ### LÊ THỊ ĐÀO (ID: 4034)
@@ -2735,7 +2754,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Lê Văn Vang ở Thôn Phú Tài, Xã Triệu Đại, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ VĂN NĂM (ID: 4035)
@@ -2750,8 +2769,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Cụ ông LÊ VĂN HẢI (ID: 3041, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà LÊ THỊ TÚ TRINH (ID: 8009, Thứ phối), Bà LÊ THỊ CHUYỂN (ID: 7041, Chánh phối)
-  - Con cái: 5 người: LÊ HVVD (ID: 7042, Không rõ, Đời 7); LÊ HVVD (ID: 8006, Không rõ, Đời 7); Anh LÊ VĂN LÂM (ID: 8007, Nam, Đời 7); Chị LÊ THỊ LƯƠNG (ID: 8008, Nữ, Đời 7); Chị LÊ NGỌC HÂN (ID: 11007, Nữ, Đời 7)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Con cái: 5 người: Anh LÊ HVVD (ID: 7042, Không rõ, Đời 7); Anh LÊ HVVD (ID: 8006, Không rõ, Đời 7); Anh LÊ VĂN LÂM (ID: 8007, Nam, Đời 7); Chị LÊ THỊ LƯƠNG (ID: 8008, Nữ, Đời 7); Chị LÊ NGỌC HÂN (ID: 11007, Nữ, Đời 7)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Nguyên Cán bộ Quản đốc Lâm trường Đường 9, Tỉnh Quảng Trị (cũ)
 
 ### LÊ VĂN SAU (ID: 4036)
@@ -2766,8 +2785,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Cụ ông LÊ VĂN HẢI (ID: 3041, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà NGUYỄN THỊ LIÊN (ID: 8010, Chánh phối)
-  - Con cái: 8 người: LÊ HVVD (ID: 8011, Không rõ, Đời 7); Chị LÊ THỊ NGỌC LINH (ID: 8012, Nữ, Đời 7); Chị LÊ THỊ HUYỀN ANH (ID: 8013, Nữ, Đời 7); Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014, Nữ, Đời 7); Chị LÊ THỊ LY NA (ID: 8015, Nữ, Đời 7); Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016, Nam, Đời 7); LÊ HVVD (ID: 8017, Không rõ, Đời 7); LÊ HVVD (ID: 8018, Không rõ, Đời 7)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Con cái: 8 người: Anh LÊ HVVD (ID: 8011, Không rõ, Đời 7); Chị LÊ THỊ NGỌC LINH (ID: 8012, Nữ, Đời 7); Chị LÊ THỊ HUYỀN ANH (ID: 8013, Nữ, Đời 7); Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014, Nữ, Đời 7); Chị LÊ THỊ LY NA (ID: 8015, Nữ, Đời 7); Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016, Nam, Đời 7); Anh LÊ HVVD (ID: 8017, Không rõ, Đời 7); Anh LÊ HVVD (ID: 8018, Không rõ, Đời 7)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Nguyên Chủ nhiệm Hợp tác xã Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 
 ### LÊ VĂN NHÂM (ID: 4037)
@@ -2782,8 +2801,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Cụ ông LÊ VĂN HẢI (ID: 3041, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà TRƯƠNG THỊ NHẠN (ID: 8019, Chánh phối)
-  - Con cái: 5 người: LÊ HVVD (ID: 8020, Không rõ, Đời 7); Anh LÊ VĂN TÂY (ID: 8021, Nam, Đời 7); Chị LÊ THỊ HỒNG NHUNG (ID: 8022, Nữ, Đời 7); LÊ HVVD (ID: 8023, Không rõ, Đời 7); LÊ HVVD (ID: 8024, Không rõ, Đời 7)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Con cái: 5 người: Anh LÊ HVVD (ID: 8020, Không rõ, Đời 7); Anh LÊ VĂN TÂY (ID: 8021, Nam, Đời 7); Chị LÊ THỊ HỒNG NHUNG (ID: 8022, Nữ, Đời 7); Anh LÊ HVVD (ID: 8023, Không rõ, Đời 7); Anh LÊ HVVD (ID: 8024, Không rõ, Đời 7)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Y sĩ cán bộ Y tế Bệnh viện Đa khoa Tỉnh Quảng Trị (cũ)
 
 ### LÊ VĂN HVVD (ID: 4038)
@@ -2802,7 +2821,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ HVVD (ID: 4039)
@@ -2821,11 +2840,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 4040)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -2840,7 +2859,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN NHÀN (ID: 4041)
@@ -2856,11 +2875,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà LÊ THỊ THU NGUYỆT (ID: 4045, Chánh phối)
   - Con cái: 4 người: Anh LÊ VĂN NHU (ID: 4046, Nam, Đời 7); Chị LÊ THỊ THU HIỀN (Chởng) (ID: 4047, Nữ, Đời 7); Chị LÊ THỊ HVVD (ID: 8025, Nữ, Đời 7); Anh LÊ GIA KHÁNH (ID: 8026, Nam, Đời 7)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Cử nhân Tổng hợp Sinh học
 
 ### LÊ HVVD (ID: 4042)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -2875,11 +2894,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4043), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 4043)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -2894,7 +2913,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), Ông LÊ VĂN NHÂN (ID: 4044)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ VĂN NHÂN (ID: 4044)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN NHÂN (ID: 4044)
@@ -2910,7 +2929,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ QUY (ID: 4031, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà BÙI THỊ THUÝ VÂN (ID: 8027, Chánh phối)
   - Con cái: 2 người: Anh LÊ NHÂN ĐỨC (ID: 8028, Nam, Đời 7); Cháu LÊ ĐỨC TRÍ (Bi) (ID: 8029, Nam, Đời 7)
-  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), LÊ HVVD (ID: 4042), LÊ HVVD (ID: 4043)
+  - Anh chị em ruột: Bà LÊ THỊ ĐĂNG (ID: 4032), Bà LÊ THỊ LỰU (ID: 4033), Bà LÊ THỊ ĐÀO (ID: 4034), Ông LÊ VĂN NĂM (ID: 4035), Ông LÊ VĂN SAU (ID: 4036), Ông LÊ VĂN NHÂM (ID: 4037), Ông LÊ VĂN HVVD (ID: 4038), Bà LÊ THỊ HVVD (ID: 4039), Ông LÊ HVVD (ID: 4040), Ông LÊ VĂN NHÀN (ID: 4041), Ông LÊ HVVD (ID: 4042), Ông LÊ HVVD (ID: 4043)
 - **Tiểu sử / Ghi chú**: Cử nhân Tổng hợp Vật lý, Cán bộ Đài Viễn thông Tỉnh Quảng Trị (cũ)
 
 ### LÊ THỊ THU NGUYỆT (ID: 4045)
@@ -2970,8 +2989,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 03/09/1954 (Giáp Ngọ)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
+- **Ngày mất**: 13/05 Âm lịch
+- **Ngày giỗ**: 12/05 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Nông dân
@@ -3049,7 +3068,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Cụ ông LÊ VĂN KỈNH (ID: 3053, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ ẨN (ID: 5006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà LÊ THỊ HƯƠNG (ID: 9011, Chánh phối)
-  - Con cái: 5 người: Anh LÊ VĂN HOÀI VŨ (ID: 9012, Nam, Đời 7); Chị LÊ THỊ HẰNG (ID: 9013, Nữ, Đời 7); LÊ HVVD (ID: 9014, Không rõ, Đời 7); Anh LÊ VĂN KHÁNH VŨ (ID: 9015, Nam, Đời 7); Anh LÊ VĂN ANH (ID: 9016, Nam, Đời 7)
+  - Con cái: 5 người: Anh LÊ VĂN HOÀI VŨ (ID: 9012, Nam, Đời 7); Chị LÊ THỊ HẰNG (ID: 9013, Nữ, Đời 7); Anh LÊ HVVD (ID: 9014, Không rõ, Đời 7); Anh LÊ VĂN KHÁNH VŨ (ID: 9015, Nam, Đời 7); Anh LÊ VĂN ANH (ID: 9016, Nam, Đời 7)
   - Anh chị em ruột: Bà LÊ THỊ LÀI (ID: 5007), Bà LÊ THỊ THIÊN (ID: 5008), Ông LÊ VĂN GIA (ID: 5009), Bà LÊ THỊ CA (ID: 5010), Ông LÊ VĂN THÁC (ID: 5011), Ông LÊ VĂN ĐÀ (ID: 5012), Ông LÊ VĂN THỤC (ID: 5014)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3085,7 +3104,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Tham gia Chiến sĩ Du kích, Hy sinh được Nhà nước suy tôn Liệt sĩ
 
 ### LÊ THỊ THÊ (ID: 6008)
@@ -3094,9 +3113,9 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Tháng 3/1957 (Đinh Dậu)
-- **Ngày mất**: Không rõ
-- **Ngày giỗ**: Không rõ
-- **Nơi an táng**: Không rõ
+- **Ngày mất**: 16/04 Âm lịch
+- **Ngày giỗ**: 15/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
@@ -3104,7 +3123,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN TÂM (ID: 6009)
@@ -3123,7 +3142,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ PHU (ID: 6010)
@@ -3139,7 +3158,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Phan Trinh ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ VĂN ĐẠO (ID: 6011)
@@ -3155,7 +3174,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà HOÀNG THỊ LUẬN (ID: 9017, Chánh phối)
   - Con cái: 6 người: Chị LÊ THỊ HUYỀN (ID: 9018, Nữ, Đời 7); Anh LÊ VĂN HOÀ (ID: 9019, Nam, Đời 7); Chị LÊ THỊ THUYỀN (ID: 9020, Nữ, Đời 7); Anh LÊ VĂN NHÃ (ID: 9021, Nam, Đời 7); Chị LÊ THỊ THU THẢO (ID: 9022, Nữ, Đời 7); Chị LÊ THỊ KHÁNH VY (ID: 9023, Nữ, Đời 7)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Nguyên Trung sĩ Hải quân Việt Nam
 
 ### LÊ THỊ ĐƯỜNG (ID: 6012)
@@ -3171,7 +3190,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Lê Văn Dung ở Thôn Dương Lệ Văn, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ VĂN CÔNG (ID: 6013)
@@ -3187,7 +3206,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà NGUYỄN THỊ PHƯỢNG (ID: 9024, Chánh phối)
   - Con cái: 3 người: Chị LÊ THỊ QUỲNH ANH (ID: 9025, Nữ, Đời 7); Chị LÊ THỊ THU HÀ (ID: 9026, Nữ, Đời 7); Chị LÊ THỊ HƯƠNG GIANG (ID: 9027, Nữ, Đời 7)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Đại học Hành chính, Cán bộ Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 
 ### LÊ THỊ THÙY (ID: 6014)
@@ -3203,7 +3222,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Lê Đạo ở Thôn Dương Lệ Văn, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ THỊ THÚY (ID: 6015)
@@ -3219,11 +3238,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Ông LÊ HVVD (ID: 6016), Ông LÊ VĂN KHÂM (ID: 6017)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Phan Việt ở Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ HVVD (ID: 6016)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -3257,11 +3276,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà TRƯƠNG THỊ CÚC (ID: 6006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), LÊ HVVD (ID: 6016)
+  - Anh chị em ruột: Bà LÊ THỊ BỜ (ID: 6007), Bà LÊ THỊ THÊ (ID: 6008), Ông LÊ VĂN TÂM (ID: 6009), Bà LÊ THỊ PHU (ID: 6010), Ông LÊ VĂN ĐẠO (ID: 6011), Bà LÊ THỊ ĐƯỜNG (ID: 6012), Ông LÊ VĂN CÔNG (ID: 6013), Bà LÊ THỊ THÙY (ID: 6014), Bà LÊ THỊ THÚY (ID: 6015), Ông LÊ HVVD (ID: 6016)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 6019)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -3276,7 +3295,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3293,7 +3312,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Nguyễn Thái Kình ở Thôn Chấp Bắc, Xã Vĩnh Chấp, Huyện Vĩnh Linh, Tỉnh Quảng Trị (cũ))
 
@@ -3301,8 +3320,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Nam
-- **Tình trạng**: Còn sống (Hiện tiền)
+- **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 20/08/1954 (Giáp Ngọ)
+- **Ngày mất**: 19/03 Âm lịch
+- **Ngày giỗ**: 18/03 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
@@ -3310,7 +3332,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Mất tích Năm 1975 (Ất Mão)
 
@@ -3327,7 +3349,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà NGUYỄN THỊ LOAN (ID: 9028, Chánh phối)
   - Con cái: 2 người: Anh LÊ VĂN TÂN (Lâu) (ID: 9029, Nam, Đời 7); Chị LÊ THỊ BẢO NGỌC (ID: 9030, Nữ, Đời 7)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Trung cấp Lý luận Chính trị, Nguyên Chủ tịch UBND Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ) từ 1998 đến 2011, Đã nghỉ hưu
 
@@ -3347,7 +3369,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3364,12 +3386,12 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 6025)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -3384,7 +3406,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3404,7 +3426,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3424,7 +3446,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3444,7 +3466,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN PHONG (ID: 6029)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3464,7 +3486,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ THẠCH (ID: 6018, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028)
   - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TRIỆU (ID: 6031), Bà LÊ THỊ HVVD (ID: 6032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3485,7 +3507,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Bà LÊ THỊ HVVD (ID: 6032)
-  - Anh chị em cùng cha khác mẹ: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em cùng cha khác mẹ: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ HVVD (ID: 6032)
@@ -3505,7 +3527,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Ông LÊ VĂN TRIỆU (ID: 6031)
-  - Anh chị em cùng cha khác mẹ: LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
+  - Anh chị em cùng cha khác mẹ: Ông LÊ HVVD (ID: 6019), Bà LÊ THỊ PHỤ (ID: 6020), Ông LÊ VĂN TƯỢNG (ID: 6021), Ông LÊ VĂN NGƯU (ID: 6022), Ông LÊ VĂN HVVD (ID: 6023), Ông LÊ THỊ DƠI (Dung) (ID: 6024), Ông LÊ HVVD (ID: 6025), Bà LÊ THỊ BƯỚM (ID: 6026), Ông LÊ VĂN QUỲNH (ID: 6027), Ông LÊ VĂN HVVD (ID: 6028), Ông LÊ VĂN PHONG (ID: 6029)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN TÂM (ID: 6034)
@@ -3514,10 +3536,10 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1965 (Ất Tỵ)
-- **Ngày mất**: 10/01 Âm lịch
-- **Ngày giỗ**: 09/01 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày mất**: 08/01 Âm lịch
+- **Ngày giỗ**: 07/01 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3534,10 +3556,10 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 01/08/1966 (Bính Ngọ)
-- **Ngày mất**: 17/08 Âm lịch
-- **Ngày giỗ**: 16/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày mất**: 08/08 Âm lịch
+- **Ngày giỗ**: 07/08 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Tỉnh Lâm Đồng (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3554,7 +3576,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1968 (Mậu Thân)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3571,7 +3593,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1971 (Tân Hợi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3588,7 +3610,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1972 (Nhâm Tý)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3605,7 +3627,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1976 (Bính Thìn)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3622,7 +3644,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1979 (Kỷ Mùi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3639,7 +3661,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 18/10/1982 (Nhâm Tuất)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3659,7 +3681,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 08/02/1984 (Giáp Tý)
 - **Ngày giỗ**: 07/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Tỉnh Lâm Đồng (cũ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3676,7 +3698,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 29/02/1985 (Ất Sửu)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3693,7 +3715,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 17/09/1986 (Bính Dần)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3710,7 +3732,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 18/03/1994 (Giáp Tuất)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN XÍCH (ID: 4016, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -3829,19 +3851,19 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1964 (Giáp Thìn)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà NGUYỄN THỊ HIỀN (ID: 9037, Chánh phối)
-  - Con cái: 5 người: Chị LÊ THỊ THUÝ VY (ID: 9038, Nữ, Đời 7); Chị LÊ THỊ THUỲ LINH (ID: 9039, Nữ, Đời 7); LÊ HVVD (ID: 9040, Không rõ, Đời 7); Anh LÊ VĂN MINH (ID: 9041, Nam, Đời 7); Chị LÊ THỊ MỸ DUYÊN (ID: 9042, Nữ, Đời 7)
-  - Anh chị em ruột: LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Con cái: 5 người: Chị LÊ THỊ THUÝ VY (ID: 9038, Nữ, Đời 7); Chị LÊ THỊ THUỲ LINH (ID: 9039, Nữ, Đời 7); Anh LÊ HVVD (ID: 9040, Không rõ, Đời 7); Anh LÊ VĂN MINH (ID: 9041, Nam, Đời 7); Chị LÊ THỊ MỸ DUYÊN (ID: 9042, Nữ, Đời 7)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Lập nghiệp tại Thị trấn Khe Sanh, Huyện Hướng Hoá, Tỉnh Quảng Trị (cũ)
 
 ### LÊ HVVD (ID: 7022)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -3849,14 +3871,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3866,14 +3888,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1969 (Kỷ Dậu)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Kỹ thuật In ấn
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà TRẦN THỊ NA (ID: 9043, Chánh phối)
   - Con cái: 2 người: Chị LÊ THỊ TRÀ MY (ID: 9044, Nữ, Đời 7); Chị LÊ THỊ XUÂN NI (ID: 9045, Nữ, Đời 7)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Lập nghiệp tại Huyện Đakrông, Tỉnh Quảng Trị (cũ)
 
@@ -3886,19 +3908,19 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 07/04/1972
 - **Ngày giỗ**: 06/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 7025)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -3906,14 +3928,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Tam sinh
 
@@ -3923,19 +3945,19 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1974 (Giáp Dần)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Nguyễn Văn Tuấn ở Thôn Vân Tường, Xã Triệu Trạch, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ HVVD (ID: 7027)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -3943,14 +3965,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3963,14 +3985,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 26/02/1984 (Giáp Tý)
 - **Ngày giỗ**: 25/02 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Bà LÊ THỊ HƯƠNG (ID: 7029)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3980,14 +4002,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1985 (Ất Sửu)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà NGUYỄN THỊ THẮM (ID: 7020, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028)
+  - Anh chị em ruột: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028)
   - Anh chị em cùng cha khác mẹ: Bà LÊ THỊ HOÀNG LAN (ID: 7031), Ông LÊ VĂN HOÀNG ANH (ID: 7032)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -3997,7 +4019,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 20/09/1990 (Canh Ngọ)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -4005,7 +4027,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Ông LÊ VĂN HOÀNG ANH (ID: 7032)
-  - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN HOÀNG ANH (ID: 7032)
@@ -4014,7 +4036,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 15/01/1994 (Giáp Tuất)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN TƯƠNG (ID: 4024, Đời 5 Chi 2 - Đời 13 Phái 4)
@@ -4022,11 +4044,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Bà LÊ THỊ HOÀNG LAN (ID: 7031)
-  - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TUẤN (ID: 7021), LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
+  - Anh chị em cùng cha khác mẹ: Ông LÊ VĂN TUẤN (ID: 7021), Ông LÊ HVVD (ID: 7022), Ông LÊ VĂN KHANH (ID: 7023), Bà LÊ THỊ THU (ID: 7024), Ông LÊ HVVD (ID: 7025), Bà LÊ THỊ THỦY (ID: 7026), Ông LÊ HVVD (ID: 7027), Ông LÊ VĂN LỢI (ID: 7028), Bà LÊ THỊ HƯƠNG (ID: 7029)
 - **Tiểu sử / Ghi chú**: Lập nghiệp tại Thị trấn Khe Sanh, Huyện Hướng Hoá, Tỉnh Quảng Trị (cũ)
 
 ### LÊ HVVD (ID: 7034)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4034,14 +4056,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THĂNG (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ TRAO (ID: 7033, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
+  - Anh chị em ruột: Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), Ông LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN DIỆU (ID: 7035)
@@ -4050,14 +4072,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 18/09/1964 (Giáp Thìn)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THĂNG (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ TRAO (ID: 7033, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà TRẦN THỊ TUYẾN (ID: 9046, Chánh phối)
   - Con cái: 4 người: Chị LÊ THỊ HVVD (ID: 9047, Nữ, Đời 7); Anh LÊ VĂN KHÁNH (ID: 9048, Nam, Đời 7); Chị LÊ THỊ HỒNG (ID: 9049, Nữ, Đời 7); Anh LÊ VĂN THÔNG (ID: 9050, Nam, Đời 7)
-  - Anh chị em ruột: LÊ HVVD (ID: 7034), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 7034), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), Ông LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN TÙNG (ID: 7036)
@@ -4066,14 +4088,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1967 (Đinh Mùi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THĂNG (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ TRAO (ID: 7033, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà PHAN THỊ BÍCH LIÊN (ID: 9051, Chánh phối)
   - Con cái: 4 người: Anh LÊ VĂN ĐỨC (ID: 9052, Nam, Đời 7); Chị LÊ THỊ ÁI NHI (ID: 9053, Nữ, Đời 7); Anh LÊ VĂN TÀI (ID: 9054, Nam, Đời 7); Anh LÊ THANH HIẾU (ID: 9055, Nam, Đời 7)
-  - Anh chị em ruột: LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), Ông LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
 - **Tiểu sử / Ghi chú**: Lập nghiệp tại Huyện Đạ Tẻh, Tỉnh Lâm Đồng (cũ)
 
 ### LÊ THỊ HUỆ (ID: 7037)
@@ -4082,14 +4104,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1970 (Canh Tuất)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THĂNG (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ TRAO (ID: 7033, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Ông LÊ VĂN TRUNG (ID: 7038), LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Ông LÊ VĂN TRUNG (ID: 7038), Ông LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Đỗ Nguyên ở Thôn An Mô, Xã Triệu Long, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ VĂN TRUNG (ID: 7038)
@@ -4098,18 +4120,18 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1971 (Tân Hợi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THĂNG (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ TRAO (ID: 7033, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà TRẦN THỊ THÀNH (ID: 9056, Chánh phối)
   - Con cái: 1 người: Anh LÊ VĂN NGHĨA (ID: 9057, Nam, Đời 7)
-  - Anh chị em ruột: LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ HVVD (ID: 7039), Bà LÊ THỊ HƯƠNG (ID: 7040)
 - **Tiểu sử / Ghi chú**: Lập nghiệp tại Thôn 1, Xã Triệu Hải, Huyện Đạ Tẻh, Tỉnh Lâm Đồng (cũ)
 
 ### LÊ HVVD (ID: 7039)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Ông
 - **Đời thứ**: Đời 6 Chi 2 (Đời 14 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4117,14 +4139,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: Không rõ
 - **Ngày giỗ**: Không rõ
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THĂNG (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ TRAO (ID: 7033, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), Bà LÊ THỊ HƯƠNG (ID: 7040)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), Bà LÊ THỊ HƯƠNG (ID: 7040)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ HƯƠNG (ID: 7040)
@@ -4133,14 +4155,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 1976 (Bính Thìn)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN THĂNG (ID: 4028, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà PHAN THỊ TRAO (ID: 7033, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), LÊ HVVD (ID: 7039)
+  - Anh chị em ruột: Ông LÊ HVVD (ID: 7034), Ông LÊ VĂN DIỆU (ID: 7035), Ông LÊ VĂN TÙNG (ID: 7036), Bà LÊ THỊ HUỆ (ID: 7037), Ông LÊ VĂN TRUNG (ID: 7038), Ông LÊ HVVD (ID: 7039)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Võ Dũng ở Thôn Trà Liên, Xã Triệu Giang, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ))
 
 ### LÊ THỊ CHUYỂN (ID: 7041)
@@ -4158,7 +4180,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Ông LÊ VĂN NĂM (ID: 4035, Chánh phối)
-  - Con cái: 4 người: LÊ HVVD (ID: 7042, Không rõ, Đời 7); LÊ HVVD (ID: 8006, Không rõ, Đời 7); Anh LÊ VĂN LÂM (ID: 8007, Nam, Đời 7); Chị LÊ THỊ LƯƠNG (ID: 8008, Nữ, Đời 7)
+  - Con cái: 4 người: Anh LÊ HVVD (ID: 7042, Không rõ, Đời 7); Anh LÊ HVVD (ID: 8006, Không rõ, Đời 7); Anh LÊ VĂN LÂM (ID: 8007, Nam, Đời 7); Chị LÊ THỊ LƯƠNG (ID: 8008, Nữ, Đời 7)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4171,7 +4193,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/06/2009 Âm lịch (Kỷ Sửu)
 - **Ngày giỗ**: 02/06 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Xã Phong Bình, Huyện Phong Điền, Tỉnh Thừa Thiên Huế (cũ)
+- **Nguyên quán**: Phường 5, TP. Đông Hà, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Nội trợ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Không rõ
@@ -4193,7 +4215,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Ông LÊ VĂN SAU (ID: 4036, Chánh phối)
-  - Con cái: 8 người: LÊ HVVD (ID: 8011, Không rõ, Đời 7); Chị LÊ THỊ NGỌC LINH (ID: 8012, Nữ, Đời 7); Chị LÊ THỊ HUYỀN ANH (ID: 8013, Nữ, Đời 7); Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014, Nữ, Đời 7); Chị LÊ THỊ LY NA (ID: 8015, Nữ, Đời 7); Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016, Nam, Đời 7); LÊ HVVD (ID: 8017, Không rõ, Đời 7); LÊ HVVD (ID: 8018, Không rõ, Đời 7)
+  - Con cái: 8 người: Anh LÊ HVVD (ID: 8011, Không rõ, Đời 7); Chị LÊ THỊ NGỌC LINH (ID: 8012, Nữ, Đời 7); Chị LÊ THỊ HUYỀN ANH (ID: 8013, Nữ, Đời 7); Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014, Nữ, Đời 7); Chị LÊ THỊ LY NA (ID: 8015, Nữ, Đời 7); Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016, Nam, Đời 7); Anh LÊ HVVD (ID: 8017, Không rõ, Đời 7); Anh LÊ HVVD (ID: 8018, Không rõ, Đời 7)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4209,7 +4231,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Ông LÊ VĂN NHÂM (ID: 4037, Chánh phối)
-  - Con cái: 5 người: LÊ HVVD (ID: 8020, Không rõ, Đời 7); Anh LÊ VĂN TÂY (ID: 8021, Nam, Đời 7); Chị LÊ THỊ HỒNG NHUNG (ID: 8022, Nữ, Đời 7); LÊ HVVD (ID: 8023, Không rõ, Đời 7); LÊ HVVD (ID: 8024, Không rõ, Đời 7)
+  - Con cái: 5 người: Anh LÊ HVVD (ID: 8020, Không rõ, Đời 7); Anh LÊ VĂN TÂY (ID: 8021, Nam, Đời 7); Chị LÊ THỊ HỒNG NHUNG (ID: 8022, Nữ, Đời 7); Anh LÊ HVVD (ID: 8023, Không rõ, Đời 7); Anh LÊ HVVD (ID: 8024, Không rõ, Đời 7)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4257,7 +4279,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Ông LÊ VĂN ĐẠT (ID: 5013, Chánh phối)
-  - Con cái: 5 người: Anh LÊ VĂN HOÀI VŨ (ID: 9012, Nam, Đời 7); Chị LÊ THỊ HẰNG (ID: 9013, Nữ, Đời 7); LÊ HVVD (ID: 9014, Không rõ, Đời 7); Anh LÊ VĂN KHÁNH VŨ (ID: 9015, Nam, Đời 7); Anh LÊ VĂN ANH (ID: 9016, Nam, Đời 7)
+  - Con cái: 5 người: Anh LÊ VĂN HOÀI VŨ (ID: 9012, Nam, Đời 7); Chị LÊ THỊ HẰNG (ID: 9013, Nữ, Đời 7); Anh LÊ HVVD (ID: 9014, Không rõ, Đời 7); Anh LÊ VĂN KHÁNH VŨ (ID: 9015, Nam, Đời 7); Anh LÊ VĂN ANH (ID: 9016, Nam, Đời 7)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4369,7 +4391,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Ông LÊ VĂN TUẤN (ID: 7021, Chánh phối)
-  - Con cái: 5 người: Chị LÊ THỊ THUÝ VY (ID: 9038, Nữ, Đời 7); Chị LÊ THỊ THUỲ LINH (ID: 9039, Nữ, Đời 7); LÊ HVVD (ID: 9040, Không rõ, Đời 7); Anh LÊ VĂN MINH (ID: 9041, Nam, Đời 7); Chị LÊ THỊ MỸ DUYÊN (ID: 9042, Nữ, Đời 7)
+  - Con cái: 5 người: Chị LÊ THỊ THUÝ VY (ID: 9038, Nữ, Đời 7); Chị LÊ THỊ THUỲ LINH (ID: 9039, Nữ, Đời 7); Anh LÊ HVVD (ID: 9040, Không rõ, Đời 7); Anh LÊ VĂN MINH (ID: 9041, Nam, Đời 7); Chị LÊ THỊ MỸ DUYÊN (ID: 9042, Nữ, Đời 7)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4453,7 +4475,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Ông LÊ VĂN NHÀN (ID: 4041, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Thân mẫu (Mẹ): Bà LÊ THỊ THU NGUYỆT (ID: 4045, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chị NGUYỄN THỊ XUÂN TIÊN (ID: 5015, Chánh phối)
-  - Con cái: 3 người: Cháu LÊ KHÔI NGUYÊN (Ben) (ID: 5016, Nam, Đời 8); LÊ HVVD (ID: 9058, Không rõ, Đời 8); Bé LÊ NGUYỄN TRÚC LAM (Mây) (ID: 9059, Nữ, Đời 8)
+  - Con cái: 3 người: Cháu LÊ KHÔI NGUYÊN (Ben) (ID: 5016, Nam, Đời 8); Anh LÊ HVVD (ID: 9058, Không rõ, Đời 8); Bé LÊ NGUYỄN TRÚC LAM (Mây) (ID: 9059, Nữ, Đời 8)
   - Anh chị em ruột: Chị LÊ THỊ THU HIỀN (Chởng) (ID: 4047), Chị LÊ THỊ HVVD (ID: 8025), Anh LÊ GIA KHÁNH (ID: 8026)
 - **Tiểu sử / Ghi chú**: Cử nhân Điện lực
 
@@ -4485,12 +4507,12 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Anh LÊ VĂN NHU (ID: 4046, Chánh phối)
-  - Con cái: 3 người: Cháu LÊ KHÔI NGUYÊN (Ben) (ID: 5016, Nam, Đời 8); LÊ HVVD (ID: 9058, Không rõ, Đời 8); Bé LÊ NGUYỄN TRÚC LAM (Mây) (ID: 9059, Nữ, Đời 8)
+  - Con cái: 3 người: Cháu LÊ KHÔI NGUYÊN (Ben) (ID: 5016, Nam, Đời 8); Anh LÊ HVVD (ID: 9058, Không rõ, Đời 8); Bé LÊ NGUYỄN TRÚC LAM (Mây) (ID: 9059, Nữ, Đời 8)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Cử nhân Tài chính Ngân hàng
 
 ### LÊ HVVD (ID: 7042)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4505,12 +4527,12 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ CHUYỂN (ID: 7041, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8006), Anh LÊ VĂN LÂM (ID: 8007), Chị LÊ THỊ LƯƠNG (ID: 8008)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8006), Anh LÊ VĂN LÂM (ID: 8007), Chị LÊ THỊ LƯƠNG (ID: 8008)
   - Anh chị em cùng cha khác mẹ: Chị LÊ NGỌC HÂN (ID: 11007)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 8006)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4525,7 +4547,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ CHUYỂN (ID: 7041, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 7042), Anh LÊ VĂN LÂM (ID: 8007), Chị LÊ THỊ LƯƠNG (ID: 8008)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 7042), Anh LÊ VĂN LÂM (ID: 8007), Chị LÊ THỊ LƯƠNG (ID: 8008)
   - Anh chị em cùng cha khác mẹ: Chị LÊ NGỌC HÂN (ID: 11007)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4542,7 +4564,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ CHUYỂN (ID: 7041, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chị NGUYỄN THỊ SANG (ID: 11008, Chánh phối)
   - Con cái: 2 người: Cháu LÊ SƠN (ID: 11009, Nam, Đời 8); Bé LÊ AN (ID: 11010, Nữ, Đời 8)
-  - Anh chị em ruột: LÊ HVVD (ID: 7042), LÊ HVVD (ID: 8006), Chị LÊ THỊ LƯƠNG (ID: 8008)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 7042), Anh LÊ HVVD (ID: 8006), Chị LÊ THỊ LƯƠNG (ID: 8008)
   - Anh chị em cùng cha khác mẹ: Chị LÊ NGỌC HÂN (ID: 11007)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4559,12 +4581,12 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ CHUYỂN (ID: 7041, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 7042), LÊ HVVD (ID: 8006), Anh LÊ VĂN LÂM (ID: 8007)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 7042), Anh LÊ HVVD (ID: 8006), Anh LÊ VĂN LÂM (ID: 8007)
   - Anh chị em cùng cha khác mẹ: Chị LÊ NGỌC HÂN (ID: 11007)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng
 
 ### LÊ HVVD (ID: 8011)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4579,7 +4601,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), LÊ HVVD (ID: 8017), LÊ HVVD (ID: 8018)
+  - Anh chị em ruột: Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), Anh LÊ HVVD (ID: 8017), Anh LÊ HVVD (ID: 8018)
 - **Tiểu sử / Ghi chú**: Song hồn
 
 ### LÊ THỊ NGỌC LINH (ID: 8012)
@@ -4595,7 +4617,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8011), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), LÊ HVVD (ID: 8017), LÊ HVVD (ID: 8018)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8011), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), Anh LÊ HVVD (ID: 8017), Anh LÊ HVVD (ID: 8018)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Anh Trần Tùng Nam ở Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị)
 
 ### LÊ THỊ HUYỀN ANH (ID: 8013)
@@ -4611,7 +4633,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), LÊ HVVD (ID: 8017), LÊ HVVD (ID: 8018)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), Anh LÊ HVVD (ID: 8017), Anh LÊ HVVD (ID: 8018)
 - **Tiểu sử / Ghi chú**: Xuất gia (Hiệu là Hoạ Nghiêm)
 
 ### LÊ THỊ HỒNG YẾN (Chút) (ID: 8014)
@@ -4627,7 +4649,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), LÊ HVVD (ID: 8017), LÊ HVVD (ID: 8018)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), Anh LÊ HVVD (ID: 8017), Anh LÊ HVVD (ID: 8018)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Anh Phạm Bằng ở Xã Thái Thuỵ, Tỉnh Hưng Yên)
 
 ### LÊ THỊ LY NA (ID: 8015)
@@ -4643,7 +4665,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), LÊ HVVD (ID: 8017), LÊ HVVD (ID: 8018)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), Anh LÊ HVVD (ID: 8017), Anh LÊ HVVD (ID: 8018)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Anh Võ Văn Hùng ở Thôn Võ Thuận, Xã Triệu Bình, Tỉnh Quảng Trị)
 
 ### LÊ CHÍ HIẾU (Bờm) (ID: 8016)
@@ -4659,11 +4681,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), LÊ HVVD (ID: 8017), LÊ HVVD (ID: 8018)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ HVVD (ID: 8017), Anh LÊ HVVD (ID: 8018)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 8017)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4678,11 +4700,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), LÊ HVVD (ID: 8018)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), Anh LÊ HVVD (ID: 8018)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 8018)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4697,17 +4719,17 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LIÊN (ID: 8010, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), LÊ HVVD (ID: 8017)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8011), Chị LÊ THỊ NGỌC LINH (ID: 8012), Chị LÊ THỊ HUYỀN ANH (ID: 8013), Chị LÊ THỊ HỒNG YẾN (Chút) (ID: 8014), Chị LÊ THỊ LY NA (ID: 8015), Anh LÊ CHÍ HIẾU (Bờm) (ID: 8016), Anh LÊ HVVD (ID: 8017)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 8020)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Không rõ
-- **Ngày mất**: 1991
-- **Ngày giỗ**: Chưa rõ ngày cụ thể (mất 1991) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày mất**: 1991 (Tân Mùi)
+- **Ngày giỗ**: Chưa rõ ngày cụ thể (mất 1991 (Tân Mùi)) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
@@ -4716,7 +4738,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRƯƠNG THỊ NHẠN (ID: 8019, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Anh LÊ VĂN TÂY (ID: 8021), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), LÊ HVVD (ID: 8023), LÊ HVVD (ID: 8024)
+  - Anh chị em ruột: Anh LÊ VĂN TÂY (ID: 8021), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), Anh LÊ HVVD (ID: 8023), Anh LÊ HVVD (ID: 8024)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN TÂY (ID: 8021)
@@ -4732,7 +4754,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRƯƠNG THỊ NHẠN (ID: 8019, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chị NGUYỄN HOÀNG SƠN TRANG (ID: 11006, Chánh phối)
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8020), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), LÊ HVVD (ID: 8023), LÊ HVVD (ID: 8024)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8020), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), Anh LÊ HVVD (ID: 8023), Anh LÊ HVVD (ID: 8024)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ HỒNG NHUNG (ID: 8022)
@@ -4748,11 +4770,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRƯƠNG THỊ NHẠN (ID: 8019, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8020), Anh LÊ VĂN TÂY (ID: 8021), LÊ HVVD (ID: 8023), LÊ HVVD (ID: 8024)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8020), Anh LÊ VĂN TÂY (ID: 8021), Anh LÊ HVVD (ID: 8023), Anh LÊ HVVD (ID: 8024)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng
 
 ### LÊ HVVD (ID: 8023)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4767,11 +4789,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRƯƠNG THỊ NHẠN (ID: 8019, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8020), Anh LÊ VĂN TÂY (ID: 8021), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), LÊ HVVD (ID: 8024)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8020), Anh LÊ VĂN TÂY (ID: 8021), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), Anh LÊ HVVD (ID: 8024)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 8024)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4786,7 +4808,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRƯƠNG THỊ NHẠN (ID: 8019, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 8020), Anh LÊ VĂN TÂY (ID: 8021), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), LÊ HVVD (ID: 8023)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 8020), Anh LÊ VĂN TÂY (ID: 8021), Chị LÊ THỊ HỒNG NHUNG (ID: 8022), Anh LÊ HVVD (ID: 8023)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ HVVD (ID: 8025)
@@ -4936,7 +4958,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ HƯƠNG (ID: 9011, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ HẰNG (ID: 9013), LÊ HVVD (ID: 9014), Anh LÊ VĂN KHÁNH VŨ (ID: 9015), Anh LÊ VĂN ANH (ID: 9016)
+  - Anh chị em ruột: Chị LÊ THỊ HẰNG (ID: 9013), Anh LÊ HVVD (ID: 9014), Anh LÊ VĂN KHÁNH VŨ (ID: 9015), Anh LÊ VĂN ANH (ID: 9016)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ HẰNG (ID: 9013)
@@ -4952,11 +4974,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ HƯƠNG (ID: 9011, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Anh LÊ VĂN HOÀI VŨ (ID: 9012), LÊ HVVD (ID: 9014), Anh LÊ VĂN KHÁNH VŨ (ID: 9015), Anh LÊ VĂN ANH (ID: 9016)
+  - Anh chị em ruột: Anh LÊ VĂN HOÀI VŨ (ID: 9012), Anh LÊ HVVD (ID: 9014), Anh LÊ VĂN KHÁNH VŨ (ID: 9015), Anh LÊ VĂN ANH (ID: 9016)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 9014)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -4987,7 +5009,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ HƯƠNG (ID: 9011, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Anh LÊ VĂN HOÀI VŨ (ID: 9012), Chị LÊ THỊ HẰNG (ID: 9013), LÊ HVVD (ID: 9014), Anh LÊ VĂN ANH (ID: 9016)
+  - Anh chị em ruột: Anh LÊ VĂN HOÀI VŨ (ID: 9012), Chị LÊ THỊ HẰNG (ID: 9013), Anh LÊ HVVD (ID: 9014), Anh LÊ VĂN ANH (ID: 9016)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ VĂN ANH (ID: 9016)
@@ -5003,7 +5025,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà LÊ THỊ HƯƠNG (ID: 9011, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Anh LÊ VĂN HOÀI VŨ (ID: 9012), Chị LÊ THỊ HẰNG (ID: 9013), LÊ HVVD (ID: 9014), Anh LÊ VĂN KHÁNH VŨ (ID: 9015)
+  - Anh chị em ruột: Anh LÊ VĂN HOÀI VŨ (ID: 9012), Chị LÊ THỊ HẰNG (ID: 9013), Anh LÊ HVVD (ID: 9014), Anh LÊ VĂN KHÁNH VŨ (ID: 9015)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ HUYỀN (ID: 9018)
@@ -5191,7 +5213,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 2007 (Đinh Hợi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ông LÊ VĂN HOÀNG (ID: 6036, Đời 6 Chi 2 - Đời 14 Phái 4)
@@ -5246,7 +5268,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ HIỀN (ID: 9037, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ THUỲ LINH (ID: 9039), LÊ HVVD (ID: 9040), Anh LÊ VĂN MINH (ID: 9041), Chị LÊ THỊ MỸ DUYÊN (ID: 9042)
+  - Anh chị em ruột: Chị LÊ THỊ THUỲ LINH (ID: 9039), Anh LÊ HVVD (ID: 9040), Anh LÊ VĂN MINH (ID: 9041), Chị LÊ THỊ MỸ DUYÊN (ID: 9042)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ THUỲ LINH (ID: 9039)
@@ -5262,11 +5284,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ HIỀN (ID: 9037, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ THUÝ VY (ID: 9038), LÊ HVVD (ID: 9040), Anh LÊ VĂN MINH (ID: 9041), Chị LÊ THỊ MỸ DUYÊN (ID: 9042)
+  - Anh chị em ruột: Chị LÊ THỊ THUÝ VY (ID: 9038), Anh LÊ HVVD (ID: 9040), Anh LÊ VĂN MINH (ID: 9041), Chị LÊ THỊ MỸ DUYÊN (ID: 9042)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 9040)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -5297,7 +5319,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ HIỀN (ID: 9037, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ THUÝ VY (ID: 9038), Chị LÊ THỊ THUỲ LINH (ID: 9039), LÊ HVVD (ID: 9040), Chị LÊ THỊ MỸ DUYÊN (ID: 9042)
+  - Anh chị em ruột: Chị LÊ THỊ THUÝ VY (ID: 9038), Chị LÊ THỊ THUỲ LINH (ID: 9039), Anh LÊ HVVD (ID: 9040), Chị LÊ THỊ MỸ DUYÊN (ID: 9042)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ MỸ DUYÊN (ID: 9042)
@@ -5313,7 +5335,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ HIỀN (ID: 9037, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ THUÝ VY (ID: 9038), Chị LÊ THỊ THUỲ LINH (ID: 9039), LÊ HVVD (ID: 9040), Anh LÊ VĂN MINH (ID: 9041)
+  - Anh chị em ruột: Chị LÊ THỊ THUÝ VY (ID: 9038), Chị LÊ THỊ THUỲ LINH (ID: 9039), Anh LÊ HVVD (ID: 9040), Anh LÊ VĂN MINH (ID: 9041)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ TRÀ MY (ID: 9044)
@@ -5357,7 +5379,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 14/11/1990 Âm lịch (Canh Ngọ)
 - **Ngày giỗ**: 13/11 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ông LÊ VĂN DIỆU (ID: 7035, Đời 6 Chi 2 - Đời 14 Phái 4)
@@ -5373,7 +5395,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 26/11/1991 (Tân Mùi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ông LÊ VĂN DIỆU (ID: 7035, Đời 6 Chi 2 - Đời 14 Phái 4)
@@ -5389,7 +5411,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 24/09/1995 (Ất Hợi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ông LÊ VĂN DIỆU (ID: 7035, Đời 6 Chi 2 - Đời 14 Phái 4)
@@ -5405,7 +5427,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nam
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 02/02/2003 (Quý Mùi)
-- **Nguyên quán**: Không rõ
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ông LÊ VĂN DIỆU (ID: 7035, Đời 6 Chi 2 - Đời 14 Phái 4)
@@ -5560,7 +5582,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Không có ghi nhận
-  - Anh chị em cùng cha khác mẹ: LÊ HVVD (ID: 7042), LÊ HVVD (ID: 8006), Anh LÊ VĂN LÂM (ID: 8007), Chị LÊ THỊ LƯƠNG (ID: 8008)
+  - Anh chị em cùng cha khác mẹ: Anh LÊ HVVD (ID: 7042), Anh LÊ HVVD (ID: 8006), Anh LÊ VĂN LÂM (ID: 8007), Chị LÊ THỊ LƯƠNG (ID: 8008)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### NGUYỄN THỊ SANG (ID: 11008)
@@ -5596,11 +5618,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Chị NGUYỄN THỊ XUÂN TIÊN (ID: 5015, Đời 7 Chi 2 - Đời 15 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: LÊ HVVD (ID: 9058), Bé LÊ NGUYỄN TRÚC LAM (Mây) (ID: 9059)
+  - Anh chị em ruột: Anh LÊ HVVD (ID: 9058), Bé LÊ NGUYỄN TRÚC LAM (Mây) (ID: 9059)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ HVVD (ID: 9058)
-- **Danh xưng chuẩn mực**: Không có (chỉ ghi họ tên do giới tính Không rõ)
+- **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 8 Chi 2 (Đời 16 Phái 4)
 - **Giới tính**: Không rõ
 - **Tình trạng**: Đã mất (Quy tiên)
@@ -5624,14 +5646,14 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 17/10/2025 (Ất Tỵ)
-- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, T���nh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Anh LÊ VĂN NHU (ID: 4046, Đời 7 Chi 2 - Đời 15 Phái 4)
   - Thân mẫu (Mẹ): Chị NGUYỄN THỊ XUÂN TIÊN (ID: 5015, Đời 7 Chi 2 - Đời 15 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Cháu LÊ KHÔI NGUYÊN (Ben) (ID: 5016), LÊ HVVD (ID: 9058)
+  - Anh chị em ruột: Cháu LÊ KHÔI NGUYÊN (Ben) (ID: 5016), Anh LÊ HVVD (ID: 9058)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ SƠN (ID: 11009)

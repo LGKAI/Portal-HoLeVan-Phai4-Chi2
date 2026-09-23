@@ -86,8 +86,7 @@ const MemorialCalendarPage: React.FC = () => {
         (m.burial_place && m.burial_place.toLowerCase().includes(q)) ||
         (m.generation_desc && m.generation_desc.toLowerCase().includes(q)) ||
         (m.gio_date && m.gio_date.toLowerCase().includes(q)) ||
-        (m.death_date && m.death_date.toLowerCase().includes(q)) ||
-        (m.notes && m.notes.toLowerCase().includes(q))
+        (m.death_date && m.death_date.toLowerCase().includes(q))
       );
     }
     return list;
