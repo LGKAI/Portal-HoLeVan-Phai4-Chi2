@@ -16,6 +16,12 @@
   body {
     @apply bg-cream text-dark;
   }
+
+  /* Ẩn con mắt mặc định chập chờn của trình duyệt Edge/Windows để dùng nút con mắt tùy chỉnh */
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none !important;
+  }
 }
 
 /* React Flow Controls Custom Styling (Phóng to, Thu nhỏ) */

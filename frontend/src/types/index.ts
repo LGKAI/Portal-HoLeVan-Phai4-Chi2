@@ -2,7 +2,7 @@ export interface User {
   id: number;
   phone: string;
   full_name: string;
-  role: 'admin' | 'member' | 'guest';
+  role: 'admin' | 'member' | 'guest' | 'elite';
   avatar_url?: string;
   member_id?: number;
 }
@@ -37,6 +37,8 @@ export interface NewsItem {
   thumbnail_url?: string;
   category: 'news' | 'event' | 'announcement';
   author_id: number;
+  author_name?: string;
+  author_role?: string;
   published_at: string;
   view_count: number;
   is_published?: boolean;

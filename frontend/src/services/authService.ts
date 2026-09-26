@@ -16,4 +16,9 @@ export const authService = {
     const response = await api.get('/auth/me');
     return response.data.data;
   },
+
+  upgradeRole: async (score: number): Promise<{ user: User; token: string }> => {
+    const response = await api.post('/auth/upgrade-role', { score });
+    return response.data.data;
+  },
 };

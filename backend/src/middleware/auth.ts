@@ -28,3 +28,14 @@ export const requireAdmin = (req: AuthRequest, res: Response, next: NextFunction
     }
     next();
 };
+
+export const requireAdminOrElite = (req: AuthRequest, res: Response, next: NextFunction) => {
+    if (!req.user || (req.user.role !== 'admin' && req.user.role !== 'elite')) {
+        return res.status(403).json({ 
+            success: false, 
+            message: 'Quyền truy cập bị từ chối. Chỉ Quản trị viên và Thành viên ưu tú mới có quyền thực hiện thao tác này.' 
+        });
+    }
+    next();
+};
+

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
+import { X, Send, User } from 'lucide-react';
 import { useChat } from '../../hooks/useChat';
 import { format } from 'date-fns';
 
@@ -39,9 +39,19 @@ const ChatbotPanel: React.FC = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-primary-dark hover:scale-105 transition-all z-50 flex items-center justify-center animate-bounce-slow"
+          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 z-50 flex items-center justify-center group p-0 border-2 border-amber-300 ring-4 ring-primary/20 bg-white animate-bounce-slow"
+          title="Trò chuyện cùng Trợ lý AI"
         >
-          <MessageCircle size={28} />
+          {/* Container ảnh được bo tròn và ẩn phần tràn */}
+          <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
+            <img 
+              src="/ai-robot.jpg?v=gold" 
+              alt="Trợ lý AI" 
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
+            />
+          </div>
+          {/* Chấm tròn báo hiệu sẵn sàng hoạt động - nằm nổi hoàn toàn không bị đè khuất */}
+          <span className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-white rounded-full shadow-md z-10 pointer-events-none"></span>
         </button>
       )}
 
@@ -53,11 +63,16 @@ const ChatbotPanel: React.FC = () => {
       >
         {/* Header */}
         <div className="bg-primary text-white px-4 py-3 flex items-center justify-between shadow-sm">
-          <div className="flex items-center gap-2">
-            <Bot size={24} />
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-full border border-amber-300/60 overflow-hidden shadow-sm flex-shrink-0 bg-white">
+              <img src="/ai-robot.jpg?v=gold" alt="Trợ lý AI" className="w-full h-full object-cover" />
+            </div>
             <div>
-              <h3 className="font-semibold text-lg leading-tight">Trợ lý AI Dòng họ</h3>
-              <p className="text-xs text-white/80">Sẵn sàng giải đáp thắc mắc</p>
+              <h3 className="font-semibold text-base leading-tight flex items-center gap-1.5">
+                Trợ lý AI Dòng họ
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              </h3>
+              <p className="text-xs text-white/80">Chi 2 - Phái 4 - Họ Lê Văn</p>
             </div>
           </div>
           <button 
@@ -77,11 +92,11 @@ const ChatbotPanel: React.FC = () => {
             >
               <div className="flex-shrink-0 mt-1">
                 {msg.role === 'assistant' ? (
-                  <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-white shadow-sm">
-                    <Bot size={18} />
+                  <div className="w-8 h-8 rounded-full overflow-hidden shadow-sm border border-amber-300/50 bg-white flex-shrink-0">
+                    <img src="/ai-robot.jpg?v=gold" alt="AI" className="w-full h-full object-cover" />
                   </div>
                 ) : (
-                  <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 shadow-sm">
+                  <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 shadow-sm flex-shrink-0">
                     <User size={18} />
                   </div>
                 )}
@@ -112,8 +127,8 @@ const ChatbotPanel: React.FC = () => {
           {isLoading && (
             <div className="flex gap-2 max-w-[85%]">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-white shadow-sm">
-                  <Bot size={18} />
+                <div className="w-8 h-8 rounded-full overflow-hidden shadow-sm border border-amber-300/50 bg-white flex-shrink-0">
+                  <img src="/ai-robot.jpg?v=gold" alt="AI" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="bg-white border border-gray-100 px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-1">

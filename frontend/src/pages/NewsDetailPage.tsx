@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { newsService } from '../services/newsService';
 import { NewsItem } from '../types';
 import LoadingSpinner from '../components/common/LoadingSpinner';
-import { Calendar, Eye, ArrowLeft } from 'lucide-react';
+import { Calendar, Eye, ArrowLeft, User } from 'lucide-react';
 import { format } from 'date-fns';
 import { vi } from 'date-fns/locale';
 
@@ -48,7 +48,7 @@ const NewsDetailPage: React.FC = () => {
       
       <h1 className="text-3xl md:text-4xl font-bold text-dark mb-4">{news.title}</h1>
       
-      <div className="flex items-center gap-4 text-sm text-gray-500 mb-8 pb-4 border-b">
+      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8 pb-4 border-b">
         <div className="flex items-center gap-1">
           <Calendar size={16} />
           <span>{format(new Date(news.published_at), 'dd/MM/yyyy HH:mm', { locale: vi })}</span>
@@ -56,6 +56,10 @@ const NewsDetailPage: React.FC = () => {
         <div className="flex items-center gap-1">
           <Eye size={16} />
           <span>{news.view_count} lượt xem</span>
+        </div>
+        <div className="flex items-center gap-1.5 text-primary font-medium bg-primary/5 px-2.5 py-1 rounded-md">
+          <User size={15} />
+          <span>Bài viết được đăng bởi {news.author_name || 'Quản trị viên'}</span>
         </div>
       </div>
 

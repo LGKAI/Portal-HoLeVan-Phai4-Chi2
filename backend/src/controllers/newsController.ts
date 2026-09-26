@@ -25,17 +25,26 @@ export const getNews = async (req: Request, res: Response) => {
     const limitNum = Math.max(1, parseInt(limit as string, 10) || 10);
     const offset = (pageNum - 1) * limitNum;
 
-    let query = 'SELECT id, title, slug, content, thumbnail_url, category, published_at, view_count, is_published FROM news WHERE 1=1';
+    let query = `
+        SELECT 
+            n.id, n.title, n.slug, n.content, n.thumbnail_url, n.category, n.published_at, n.view_count, n.is_published,
+            n.author_id,
+            COALESCE(u.full_name, 'Quản trị viên') AS author_name,
+            u.role AS author_role
+        FROM news n
+        LEFT JOIN users u ON n.author_id = u.id
+        WHERE 1=1
+    `;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const params: any[] = [];
     let paramIndex = 1;
 
     if (category) {
-        query += ` AND category = $${paramIndex++}`;
+        query += ` AND n.category = $${paramIndex++}`;
         params.push(category);
     }
 
-    query += ` ORDER BY published_at DESC LIMIT $${paramIndex++} OFFSET $${paramIndex++}`;
+    query += ` ORDER BY n.published_at DESC LIMIT $${paramIndex++} OFFSET $${paramIndex++}`;
     params.push(limitNum, offset);
 
     const result = await executeQuery(query, params);
@@ -49,10 +58,28 @@ export const getNewsBySlug = async (req: Request, res: Response) => {
     if (isNum) {
         const id = parseInt(slug, 10);
         await executeQuery('UPDATE news SET view_count = view_count + 1 WHERE id = $1', [id]);
-        result = await executeQuery('SELECT * FROM news WHERE id = $1', [id]);
+        result = await executeQuery(
+            `SELECT 
+                n.*,
+                COALESCE(u.full_name, 'Quản trị viên') AS author_name,
+                u.role AS author_role
+             FROM news n
+             LEFT JOIN users u ON n.author_id = u.id
+             WHERE n.id = $1`,
+            [id]
+        );
     } else {
         await executeQuery('UPDATE news SET view_count = view_count + 1 WHERE slug = $1', [slug]);
-        result = await executeQuery('SELECT * FROM news WHERE slug = $1', [slug]);
+        result = await executeQuery(
+            `SELECT 
+                n.*,
+                COALESCE(u.full_name, 'Quản trị viên') AS author_name,
+                u.role AS author_role
+             FROM news n
+             LEFT JOIN users u ON n.author_id = u.id
+             WHERE n.slug = $1`,
+            [slug]
+        );
     }
     if (result.rows.length === 0) {
         return res.status(404).json({ success: false, message: 'Not found' });

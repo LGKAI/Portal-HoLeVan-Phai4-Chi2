@@ -46,13 +46,16 @@ export const login = async (req: Request, res: Response) => {
     const result = await executeQuery('SELECT * FROM users WHERE phone = $1', [trimmedPhone]);
 
     if (result.rows.length === 0) {
-        return res.status(400).json({ success: false, message: 'Số điện thoại hoặc mật khẩu không chính xác' });
+        return res.status(400).json({ 
+            success: false, 
+            message: 'Tài khoản không tồn tại' 
+        });
     }
 
     const user = result.rows[0];
     const isMatch = await bcrypt.compare(password, user.password_hash);
     if (!isMatch) {
-        return res.status(400).json({ success: false, message: 'Số điện thoại hoặc mật khẩu không chính xác' });
+        return res.status(400).json({ success: false, message: 'Mật khẩu không chính xác. Vui lòng kiểm tra lại!' });
     }
 
     if (!user.full_name) {
@@ -92,3 +95,60 @@ export const updateMe = async (req: AuthRequest, res: Response) => {
     );
     res.json({ success: true, message: 'User updated' });
 };
+
+export const upgradeRole = async (req: AuthRequest, res: Response) => {
+    try {
+        const userId = req.user?.id;
+        if (!userId) {
+            return res.status(401).json({ success: false, message: 'Vui lòng đăng nhập để nâng cấp vai trò.' });
+        }
+
+        const { score } = req.body;
+        if (typeof score !== 'number' || score < 5) {
+            return res.status(400).json({ 
+                success: false, 
+                message: 'Chưa đủ điều kiện nâng cấp vai trò. Bạn cần đạt từ 5/10 câu trắc nghiệm trở lên.' 
+            });
+        }
+
+        const userRes = await executeQuery('SELECT id, phone, full_name, role FROM users WHERE id = $1', [userId]);
+        if (userRes.rows.length === 0) {
+            return res.status(404).json({ success: false, message: 'Tài khoản không tồn tại.' });
+        }
+
+        const currentUser = userRes.rows[0];
+        if (currentUser.role === 'admin') {
+            return res.json({ 
+                success: true, 
+                message: 'Tài khoản Quản trị viên (Trùm cuối) không cần nâng cấp!',
+                data: { user: currentUser } 
+            });
+        }
+
+        const updateRes = await executeQuery(
+            `UPDATE users SET role = 'elite' WHERE id = $1 
+             RETURNING id, phone, full_name, role, avatar_url, member_id, created_at`,
+            [userId]
+        );
+
+        const updatedUser = updateRes.rows[0];
+        const token = jwt.sign(
+            { id: updatedUser.id, phone: updatedUser.phone, full_name: updatedUser.full_name, role: updatedUser.role },
+            process.env.JWT_SECRET || 'portal_hlevan_jwt_secret_2024',
+            { expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as unknown as number }
+        );
+
+        res.json({
+            success: true,
+            message: 'Chúc mừng, bạn đã trở thành thành viên ưu tú!',
+            data: {
+                user: updatedUser,
+                token
+            }
+        });
+    } catch (err: any) {
+        console.error('Lỗi khi nâng cấp vai trò thành viên:', err);
+        res.status(500).json({ success: false, message: err.message || 'Lỗi hệ thống.' });
+    }
+};
+

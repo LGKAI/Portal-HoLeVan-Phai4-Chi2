@@ -14,6 +14,8 @@ const NewsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const { user } = useAuthStore();
   const isAdmin = user?.role === 'admin';
+  const isElite = user?.role === 'elite';
+  const canCreateNews = isAdmin || isElite;
 
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [editingId, setEditingId] = useState<number | null>(null);
@@ -193,15 +195,18 @@ const NewsPage: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <div className="flex justify-between items-end mb-8">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện Dòng họ</h1>
           <p className="text-gray-600">Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.</p>
+          <p className="text-sm text-primary/85 font-medium italic mt-1.5">
+            * Tài khoản Thành viên ưu tú có thể đăng bài viết Tư liệu - Sự kiện.
+          </p>
         </div>
-        {isAdmin && (
+        {canCreateNews && (
           <button
             onClick={openAdd}
-            className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium shadow transition-colors flex items-center gap-2"
+            className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium shadow transition-colors flex items-center gap-2 self-start sm:self-auto shrink-0"
           >
             + Đăng bài mới
           </button>
@@ -415,44 +420,40 @@ const NewsPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setAspectRatio(16 / 9)}
-                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
-                    aspectRatio === 16 / 9
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${aspectRatio === 16 / 9
                       ? 'bg-primary text-white shadow-sm'
                       : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   16:9 (Chuẩn bìa)
                 </button>
                 <button
                   type="button"
                   onClick={() => setAspectRatio(4 / 3)}
-                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
-                    aspectRatio === 4 / 3
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${aspectRatio === 4 / 3
                       ? 'bg-primary text-white shadow-sm'
                       : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   4:3
                 </button>
                 <button
                   type="button"
                   onClick={() => setAspectRatio(1)}
-                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
-                    aspectRatio === 1
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${aspectRatio === 1
                       ? 'bg-primary text-white shadow-sm'
                       : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   1:1 (Vuông)
                 </button>
                 <button
                   type="button"
                   onClick={() => setAspectRatio(undefined)}
-                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
-                    aspectRatio === undefined
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${aspectRatio === undefined
                       ? 'bg-primary text-white shadow-sm'
                       : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   Tự do
                 </button>

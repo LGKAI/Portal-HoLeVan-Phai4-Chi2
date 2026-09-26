@@ -114,7 +114,7 @@ const MemorialCalendarPage: React.FC = () => {
         {/* Bộ lọc tháng & Tìm kiếm */}
         <div className="bg-white rounded-xl shadow-sm border border-amber-200/80 p-5 mb-8">
           <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-6">
-            <div className="relative w-full md:w-96">
+            <div className="relative w-full sm:w-[450px] md:w-[490px] max-w-full">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
               <input
                 type="text"

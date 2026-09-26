@@ -91,11 +91,22 @@ flowchart TB
 
 ### 3. Tư Liệu - Sự Kiện Dòng Họ (`NewsPage.tsx`)
 - Đăng bài, chỉnh sửa, xóa bài viết với trình soạn thảo phong phú (`RichDocEditor`) hỗ trợ paste ảnh trực tiếp (`Ctrl+V`).
-- Upload ảnh bìa với crop 16:9 tùy chỉnh.
-- Ảnh bài viết lưu vĩnh viễn trên Supabase Storage CDN.
+- Upload ảnh bìa với công cụ cắt ảnh (`react-easy-crop`) hỗ trợ nhiều tỉ lệ: 16:9 (Chuẩn bìa), 4:3, 1:1 (Vuông) hoặc Tự do.
+- Hiển thị tên tác giả đăng bài rõ ràng và chuẩn xác.
+- Tự động phục vụ ảnh qua CDN Supabase Storage và fallback tĩnh Nginx trên môi trường Docker cục bộ.
 - Tất cả bài viết và tư liệu đều dùng chung bảng `news`, phân loại qua `category`.
 
-### 4. Trợ Lý AI Gia Phả (RAG Engine)
+### 4. Hệ Thống Phân Quyền & Bài Test Nâng Hạng (`UserProfileModal.tsx`)
+- **Phân cấp vai trò rõ ràng**:
+  - 👑 **Quản trị viên (`admin`)**: Toàn quyền quản trị hệ thống, quản lý phả hệ, thêm/sửa/xóa bài viết.
+  - ⭐ **Thành viên ưu tú (`elite`)**: Được cấp quyền đăng bài viết mới trong mục Tư liệu - Sự kiện.
+  - 👤 **Thành viên tiêu chuẩn (`member`)**: Xem thông tin, lịch kỵ nhật, tra cứu gia phả và chat cùng AI.
+- **Bài kiểm tra kiến thức dòng họ**:
+  - Tích hợp ngay trong cửa sổ thông tin tài khoản (click vào tên góc phải trên thanh điều hướng).
+  - Gồm bộ 10 câu hỏi trắc nghiệm tìm hiểu về nguồn cội, tiền nhân và truyền thống dòng họ Lê Văn Phái 4 - Chi 2.
+  - Làm đúng từ **5/10 câu trở lên** sẽ được tự động nâng cấp vai trò lên **Thành viên ưu tú**.
+
+### 5. Trợ Lý AI Gia Phả (RAG Engine)
 - **In-Backend RAG** (`ragService.ts`): Không cần container Python riêng, hoạt động hoàn toàn trong Backend Node.js.
 - **Kho tri thức** (`backend/src/data/knowledge/`): 3 file Markdown chuẩn hóa về lịch sử dòng họ, kỵ nhật, và hồ sơ thành viên.
 - **Hybrid retrieval**: Phân tích tên thành viên → mở rộng quan hệ (cha, mẹ, vợ/chồng, con) → trích lọc ngữ cảnh kỵ nhật → gửi Gemini Flash.
@@ -119,7 +130,7 @@ erDiagram
         string phone "Unique - dùng đăng nhập"
         string password_hash "Bcrypt hash"
         string full_name
-        string role "admin | member | guest"
+        string role "admin | elite | member | guest"
         string avatar_url "Supabase CDN URL"
         boolean is_active
         timestamp created_at

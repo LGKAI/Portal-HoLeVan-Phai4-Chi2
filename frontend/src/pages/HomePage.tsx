@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Calendar, Bot, ChevronRight, BookOpen } from 'lucide-react';
+import { Calendar, Bot, ChevronRight, BookOpen, Newspaper, Landmark, Users, Clock } from 'lucide-react';
 import NewsCard from '../components/News/NewsCard';
 import { newsService } from '../services/newsService';
 import { NewsItem } from '../types';
@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
             </Link>
             <Link to="/memorials" className="bg-secondary/80 hover:bg-secondary border-2 border-yellow-300 text-yellow-900 min-w-[150px] sm:min-w-[180px] flex justify-center items-center gap-2 px-6 sm:px-8 py-2.5 rounded-lg font-bold text-sm sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105">
               <Calendar size={18} />
-              Lịch Giỗ Kỵ
+              Xem Lịch Giỗ
             </Link>
           </div>
         </div>
@@ -96,7 +96,7 @@ const HomePage: React.FC = () => {
             <div className="rounded-xl p-6 text-center hover:shadow-lg transition-all border-2 border-red-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #fff5f5 0%, #ffe4e4 100%)'}}>
               <div>
                 <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-5">
-                  <Users size={28} className="text-red-700" />
+                  <BookOpen size={28} className="text-red-700" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-red-800">Gia Phả Số</h3>
                 <p className="text-red-900/70 text-sm mb-4 line-clamp-3">
@@ -126,7 +126,7 @@ const HomePage: React.FC = () => {
             <div className="rounded-xl p-6 text-center hover:shadow-lg transition-all border-2 border-green-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)'}}>
               <div>
                 <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
-                  <Calendar size={28} className="text-green-700" />
+                  <Newspaper size={28} className="text-green-700" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-green-800">Tư Liệu - Sự Kiện</h3>
                 <p className="text-green-900/70 text-sm mb-4 line-clamp-3">
@@ -163,17 +163,26 @@ const HomePage: React.FC = () => {
       <section className="py-12 bg-primary-dark text-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2 text-secondary">8+</div>
-              <div className="text-sm uppercase tracking-wider text-secondary">Đời</div>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center gap-2.5 mb-2 text-secondary">
+                <Landmark size={36} className="text-secondary flex-shrink-0" />
+                <span className="text-4xl font-bold">8+</span>
+              </div>
+              <div className="text-sm uppercase tracking-wider text-secondary font-medium">Đời</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold mb-2 text-secondary">300+</div>
-              <div className="text-sm uppercase tracking-wider text-secondary">Thành viên</div>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center gap-2.5 mb-2 text-secondary">
+                <Users size={36} className="text-secondary flex-shrink-0" />
+                <span className="text-4xl font-bold">300+</span>
+              </div>
+              <div className="text-sm uppercase tracking-wider text-secondary font-medium">Thành viên</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold mb-2 text-secondary">250+</div>
-              <div className="text-sm uppercase tracking-wider text-secondary">Năm lịch sử</div>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center gap-2.5 mb-2 text-secondary">
+                <Clock size={36} className="text-secondary flex-shrink-0" />
+                <span className="text-4xl font-bold">250+</span>
+              </div>
+              <div className="text-sm uppercase tracking-wider text-secondary font-medium">Năm lịch sử</div>
             </div>
           </div>
         </div>

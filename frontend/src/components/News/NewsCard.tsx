@@ -58,15 +58,20 @@ const NewsCard: React.FC<NewsCardProps> = ({ news, isAdmin, onEdit, onDelete }) 
           {news.title}
         </h3>
         
-        {/* Placeholder for content excerpt if needed, skipping for brevity */}
-        <div className="mt-auto pt-4 flex items-center justify-between text-xs text-gray-500">
-          <div className="flex items-center gap-1">
-            <Calendar size={14} />
-            <span>{format(new Date(news.published_at), 'dd/MM/yyyy', { locale: vi })}</span>
+        {/* Footer with Date, Views, and Author */}
+        <div className="mt-auto pt-3 border-t border-gray-100 flex flex-col gap-1 text-xs text-gray-500">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-1">
+              <Calendar size={13} />
+              <span>{format(new Date(news.published_at), 'dd/MM/yyyy', { locale: vi })}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Eye size={13} />
+              <span>{news.view_count} lượt xem</span>
+            </div>
           </div>
-          <div className="flex items-center gap-1">
-            <Eye size={14} />
-            <span>{news.view_count}</span>
+          <div className="text-[11px] text-gray-600 truncate mt-0.5">
+            Bài viết được đăng bởi <span className="font-semibold text-primary">{news.author_name || 'Quản trị viên'}</span>
           </div>
         </div>
       </div>

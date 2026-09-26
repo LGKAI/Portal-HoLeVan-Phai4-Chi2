@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS users (
     phone VARCHAR(20) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     full_name VARCHAR(100) NOT NULL,
-    role VARCHAR(20) DEFAULT 'member' CHECK (role IN ('admin', 'member', 'guest')),
+    role VARCHAR(20) DEFAULT 'member' CHECK (role IN ('admin', 'member', 'guest', 'elite')),
     avatar_url VARCHAR(500),
     member_id INT,
     is_active BOOLEAN DEFAULT TRUE,

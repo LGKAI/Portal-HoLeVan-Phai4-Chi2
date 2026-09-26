@@ -122,6 +122,16 @@ export const initDb = async () => {
         await p.query(initScript);
         console.log('Khởi tạo bảng PostgreSQL hoàn tất.');
 
+        // Đảm bảo ràng buộc vai trò users hỗ trợ vai trò 'elite'
+        try {
+            await p.query(`
+                ALTER TABLE users DROP CONSTRAINT IF EXISTS users_role_check;
+                ALTER TABLE users ADD CONSTRAINT users_role_check CHECK (role IN ('admin', 'member', 'guest', 'elite'));
+            `);
+        } catch (constraintErr) {
+            console.warn('Lưu ý khi cập nhật ràng buộc users_role_check:', constraintErr);
+        }
+
         // Tự động nạp dữ liệu gia phả ban đầu nếu bảng members đang trống
         await seedMembersIfEmpty(p);
 

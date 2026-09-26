@@ -6,7 +6,7 @@ export const useChat = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'assistant',
-      content: 'Xin chào! Tôi là trợ lý AI của dòng họ Lê Văn - Phái 4 - Chi 2. Tôi có thể giải đáp những thắc mắc của bạn.',
+      content: 'Xin chào! Tôi là trợ lý AI của trang Portal Chi 2 - Phái 4 - Họ Lê Văn. Tôi có thể giải đáp những thắc mắc của bạn về gia phả và các thành viên.',
       timestamp: new Date()
     }
   ]);
@@ -37,7 +37,7 @@ export const useChat = () => {
 
       // Handle simple JSON response for now, can be updated for SSE
       const data = await response.json();
-      
+
       setMessages((prev) => [...prev, {
         role: 'assistant',
         content: data.reply || 'Xin lỗi, tôi không thể trả lời lúc này.',
