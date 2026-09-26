@@ -2,7 +2,7 @@
 
 ## 1. Nguồn gốc & Địa bàn cư trú
 - **Tên Dòng Họ**: Họ Lê Văn - Phái 4 - Chi 2
-- **Địa danh gốc**: Thôn An Lợi, xã Triệu Bình (trước đây là xã Triệu Độ), huyện Triệu Phong, tỉnh Quảng Trị.
+- **Địa danh gốc**: Thôn An Lợi, xã Triệu Bình (trước đây là xã Triệu Độ, huyện Triệu Phong), tỉnh Quảng Trị.
 - **Thủy tổ Chi 2**: Ngài **Lê Văn Khôi** (Đời thứ 1 của Chi 2, tương đương Đời thứ 9 của toàn Phái 4 họ Lê Văn).
 - **Chánh phối của Thủy tổ**: Cụ bà **Phan Thị Mưu**.
 - **Quy ước tính đời**: Đời trong Chi 2 = $N$ thì Đời trong toàn Phái 4 = $N + 8$ (Ví dụ: Đời 1 Chi 2 là Đời 9 Phái 4; Đời 8 Chi 2 là Đời 16 Phái 4).
