@@ -8,15 +8,15 @@
 - **Quy ước tính đời**: Đời trong Chi 2 = $N$ thì Đời trong toàn Phái 4 = $N + 8$ (Ví dụ: Đời 1 Chi 2 là Đời 9 Phái 4; Đời 8 Chi 2 là Đời 16 Phái 4).
 
 ## 2. Thống kê số liệu dòng họ
-- **Tổng số thành viên ghi nhận trong gia phả**: 314 người
+- **Tổng số thành viên ghi nhận trong gia phả**: 321 người
 - **Số thế hệ (đời)**: 8 thế hệ (từ Đời 1 đến Đời 8)
 - **Cơ cấu giới tính**:
-  - Nam: 114 người (36.3%)
-  - Nữ: 178 người (56.7%)
+  - Nam: 117 người (36.4%)
+  - Nữ: 182 người (56.7%)
   - Chưa rõ: 22 người
 - **Tình trạng sinh tử**:
-  - Đã quy tiên (đã mất): 188 người
-  - Hiện tiền (còn sống): 126 người
+  - Đã quy tiên (đã mất): 189 người
+  - Hiện tiền (còn sống): 132 người
 
 ## 3. Thống kê số lượng thành viên qua các thế hệ
 | Thế hệ (Chi 2) | Thế hệ (Phái 4) | Số lượng thành viên | Ghi chú đại diện tiêu biểu |
@@ -27,13 +27,13 @@
 | Đời thứ 4 | Đời thứ 12 | 37 người |  |
 | Đời thứ 5 | Đời thứ 13 | 57 người |  |
 | Đời thứ 6 | Đời thứ 14 | 100 người |  |
-| Đời thứ 7 | Đời thứ 15 | 68 người |  |
-| Đời thứ 8 | Đời thứ 16 | 5 người |  |
+| Đời thứ 7 | Đời thứ 15 | 70 người |  |
+| Đời thứ 8 | Đời thứ 16 | 10 người |  |
 
 
 ## 4. Các khu nghĩa trang & nơi an táng tập trung
 - **Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)**: 88 vị tiền nhân/thành viên
-- **Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị**: 11 vị tiền nhân/thành viên
+- **Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị**: 12 vị tiền nhân/thành viên
 - **Tỉnh Lâm Đồng (cũ)**: 2 vị tiền nhân/thành viên
 - **Lấp Lổ, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)**: 1 vị tiền nhân/thành viên
 - **Thôn Đồng Giám, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)**: 1 vị tiền nhân/thành viên

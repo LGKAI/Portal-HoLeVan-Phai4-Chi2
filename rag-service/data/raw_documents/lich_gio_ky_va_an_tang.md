@@ -61,7 +61,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 ## Tháng 5
 
 - **Ngày giỗ: 02/05 Âm lịch** (Ngày mất: 03/05 Âm lịch): **LÊ VĂN NGHỊ** (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4, thân phụ: LÊ VĂN KHÔI, thân mẫu: PHAN THỊ MƯU). Giới tính: Nam. Nơi an táng: Lấp Lổ, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
-- **Ngày giỗ: 03/05 Âm lịch** (Ngày mất: 04/05 ��m lịch): **LÊ THỊ SẠN** (ID: 4029, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nữ. Nơi an táng: Không rõ.
+- **Ngày giỗ: 03/05 Âm lịch** (Ngày mất: 04/05 Âm lịch): **LÊ THỊ SẠN** (ID: 4029, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN ĐA, thân mẫu: PHAN THỊ SỎ). Giới tính: Nữ. Nơi an táng: Không rõ.
 - **Ngày giỗ: 12/05 Âm lịch** (Ngày mất: 13/05 Âm lịch): **LÊ VĂN GIA** (ID: 5009, Đời 6 Chi 2 - Đời 14 Phái 4, thân phụ: LÊ VĂN KỈNH, thân mẫu: HOÀNG THỊ ẨN). Giới tính: Nam. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 14/05 Âm lịch** (Ngày mất: 15/05 Âm lịch): **LÊ THỊ ĐỐC** (ID: 3038, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: HOÀNG THỊ NGỮ). Giới tính: Nữ. Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ).
 - **Ngày giỗ: 22/05 Âm lịch** (Ngày mất: 23/05 Âm lịch): **LÊ THỊ THỈ** (ID: 3046, Đời 5 Chi 2 - Đời 13 Phái 4, thân phụ: LÊ VĂN PHỔ, thân mẫu: LÊ THỊ HOÀNH). Giới tính: Nữ. Nơi an táng: Không rõ. (Đã lấy Chồng (Ông Nguyễn Tụ ở Thôn Dương Lệ Đông, Xã Triệu Thuận, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)))
@@ -264,7 +264,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **LÊ VĂN HVVD** (ID: 7019, Đời 6) - Ngày mất: Không rõ
 - **LÊ THỊ CHUYỂN** (ID: 7041, Đời 6) - Ngày mất: 17/11/2004 (Giáp Thân) | Ngày giỗ: 16/11 Âm lịch
 
-### Khu vực: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị (11 vị)
+### Khu vực: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị (12 vị)
 - **LÊ HVVD** (ID: 7042, Đời 7) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 8006, Đời 7) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 8011, Đời 7) - Ngày mất: Không rõ
@@ -275,6 +275,7 @@ Tài liệu tổng hợp ngày giỗ kỵ (theo Âm lịch) và vị trí mộ p
 - **LÊ HVVD** (ID: 8024, Đời 7) - Ngày mất: Không rõ
 - **LÊ THỊ HVVD** (ID: 8025, Đời 7) - Ngày mất: 27/11/1994 Âm lịch (Giáp Tuất) | Ngày giỗ: 26/11 Âm lịch
 - **LÊ VĂN VÂN** (ID: 9008, Đời 7) - Ngày mất: 23/07/2002 (Nhâm Ngọ) | Ngày giỗ: 22/07 Âm lịch
+- **LÊ VĂN NHÃ** (ID: 9021, Đời 7) - Ngày mất: Không rõ
 - **LÊ HVVD** (ID: 9058, Đời 8) - Ngày mất: 2023 (Quý Mão) | Ngày giỗ: Chưa rõ ngày cụ thể (mất 2023 (Quý Mão))
 
 ### Khu vực: Tỉnh Lâm Đồng (cũ) (2 vị)

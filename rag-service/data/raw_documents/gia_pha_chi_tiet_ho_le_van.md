@@ -386,7 +386,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 03/10 Âm lịch
 - **Ngày giỗ**: 02/10 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
-- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Tri��u Phong, Tỉnh Quảng Trị (cũ)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN NGHỊ (ID: 1015, Đời 2 Chi 2 - Đời 10 Phái 4)
@@ -1169,7 +1169,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Ngày mất**: 25/04 Âm lịch
 - **Ngày giỗ**: 24/04 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
-- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, T��nh Quảng Trị (cũ)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Cụ ông LÊ VĂN DỤ (ID: 2014, Đời 3 Chi 2 - Đời 11 Phái 4)
@@ -2457,7 +2457,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 1944 (Giáp Thân)
-- **Ngày mất**: 04/05 ��m lịch
+- **Ngày mất**: 04/05 Âm lịch
 - **Ngày giỗ**: 03/05 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
@@ -2998,7 +2998,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Cụ ông LÊ VĂN KỈNH (ID: 3053, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Thân mẫu (Mẹ): Cụ bà HOÀNG THỊ ẨN (ID: 5006, Đời 5 Chi 2 - Đời 13 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Bà TRẦN THỊ HUÊ (ID: 9006, Chánh phối)
-  - Con cái: 4 người: Chị LÊ THỊ BÊ (ID: 9007, Nữ, Đời 7); Anh LÊ VĂN VÂN (ID: 9008, Nam, Đời 7); Chị LÊ THỊ THUỶ (ID: 9009, Nữ, Đời 7); Anh LÊ VĂN CHUNG (ID: 9010, Nam, Đời 7)
+  - Con cái: 4 người: Chị LÊ THỊ BÊ (ID: 9007, Nữ, Đời 7); Anh LÊ VĂN VÂN (ID: 9008, Nam, Đời 7); Chị LÊ THỊ THUỶ (ID: 9009, Nữ, Đời 7); Anh LÊ VĂN CHUNG (Vầm) (ID: 9010, Nam, Đời 7)
   - Anh chị em ruột: Bà LÊ THỊ LÀI (ID: 5007), Bà LÊ THỊ THIÊN (ID: 5008), Bà LÊ THỊ CA (ID: 5010), Ông LÊ VĂN THÁC (ID: 5011), Ông LÊ VĂN ĐÀ (ID: 5012), Ông LÊ VĂN ĐẠT (ID: 5013), Ông LÊ VĂN THỤC (ID: 5014)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4263,7 +4263,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân phụ (Cha): Không rõ
   - Thân mẫu (Mẹ): Không rõ
   - Phối ngẫu (Vợ/Chồng): Ông LÊ VĂN GIA (ID: 5009, Chánh phối)
-  - Con cái: 4 người: Chị LÊ THỊ BÊ (ID: 9007, Nữ, Đời 7); Anh LÊ VĂN VÂN (ID: 9008, Nam, Đời 7); Chị LÊ THỊ THUỶ (ID: 9009, Nữ, Đời 7); Anh LÊ VĂN CHUNG (ID: 9010, Nam, Đời 7)
+  - Con cái: 4 người: Chị LÊ THỊ BÊ (ID: 9007, Nữ, Đời 7); Anh LÊ VĂN VÂN (ID: 9008, Nam, Đời 7); Chị LÊ THỊ THUỶ (ID: 9009, Nữ, Đời 7); Anh LÊ VĂN CHUNG (Vầm) (ID: 9010, Nam, Đời 7)
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -4891,7 +4891,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRẦN THỊ HUÊ (ID: 9006, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Anh LÊ VĂN VÂN (ID: 9008), Chị LÊ THỊ THUỶ (ID: 9009), Anh LÊ VĂN CHUNG (ID: 9010)
+  - Anh chị em ruột: Anh LÊ VĂN VÂN (ID: 9008), Chị LÊ THỊ THUỶ (ID: 9009), Anh LÊ VĂN CHUNG (Vầm) (ID: 9010)
 - **Tiểu sử / Ghi chú**: Đã lấy Chồng (Ông Nguyễn Lộc ở Thôn Thanh Liêm, Xã Triệu Bình, Tỉnh Quảng Trị)
 
 ### LÊ VĂN VÂN (ID: 9008)
@@ -4910,7 +4910,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRẦN THỊ HUÊ (ID: 9006, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ BÊ (ID: 9007), Chị LÊ THỊ THUỶ (ID: 9009), Anh LÊ VĂN CHUNG (ID: 9010)
+  - Anh chị em ruột: Chị LÊ THỊ BÊ (ID: 9007), Chị LÊ THỊ THUỶ (ID: 9009), Anh LÊ VĂN CHUNG (Vầm) (ID: 9010)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
 ### LÊ THỊ THUỶ (ID: 9009)
@@ -4926,10 +4926,10 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Thân mẫu (Mẹ): Bà TRẦN THỊ HUÊ (ID: 9006, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
-  - Anh chị em ruột: Chị LÊ THỊ BÊ (ID: 9007), Anh LÊ VĂN VÂN (ID: 9008), Anh LÊ VĂN CHUNG (ID: 9010)
+  - Anh chị em ruột: Chị LÊ THỊ BÊ (ID: 9007), Anh LÊ VĂN VÂN (ID: 9008), Anh LÊ VĂN CHUNG (Vầm) (ID: 9010)
 - **Tiểu sử / Ghi chú**: Xuất gia (Hiệu là Phương Ngọc) tại Chùa Huyền Trang, TP. Huế
 
-### LÊ VĂN CHUNG (ID: 9010)
+### LÊ VĂN CHUNG (Vầm) (ID: 9010)
 - **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Nam
@@ -4940,8 +4940,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ông LÊ VĂN GIA (ID: 5009, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Thân mẫu (Mẹ): Bà TRẦN THỊ HUÊ (ID: 9006, Đời 6 Chi 2 - Đời 14 Phái 4)
-  - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
-  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Phối ngẫu (Vợ/Chồng): Chị NGUYỄN THỊ THU THUỶ (ID: 11012, Chánh phối)
+  - Con cái: 4 người: Bé LÊ NGUYỄN BẢO NGỌC (ID: 11013, Nữ, Đời 8); Bé LÊ NGUYỄN BẢO AN (ID: 11014, Nữ, Đời 8); Cháu LÊ NGUYỄN MINH QUÂN (ID: 11015, Nam, Đời 8); Cháu LÊ VĂN TUẤN KIỆT (ID: 11016, Nam, Đời 8)
   - Anh chị em ruột: Chị LÊ THỊ BÊ (ID: 9007), Anh LÊ VĂN VÂN (ID: 9008), Chị LÊ THỊ THUỶ (ID: 9009)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -5083,8 +5083,11 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Danh xưng chuẩn mực**: Anh
 - **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
 - **Giới tính**: Nam
-- **Tình trạng**: Còn sống (Hiện tiền)
+- **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Không rõ
+- **Ngày mất**: Không rõ
+- **Ngày giỗ**: Không rõ
+- **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
@@ -5186,8 +5189,8 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Ông LÊ VĂN NGƯU (ID: 6022, Đời 6 Chi 2 - Đời 14 Phái 4)
   - Thân mẫu (Mẹ): Bà NGUYỄN THỊ LOAN (ID: 9028, Đời 6 Chi 2 - Đời 14 Phái 4)
-  - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
-  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Phối ngẫu (Vợ/Chồng): Chị NGUYỄN THỊ THẢO (ID: 11017, Chánh phối)
+  - Con cái: 1 người: Cháu LÊ KHÔI NGUYÊN (Gấu) (ID: 11018, Nam, Đời 8)
   - Anh chị em ruột: Chị LÊ THỊ BẢO NGỌC (ID: 9030)
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
@@ -5601,6 +5604,38 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
 
+### NGUYỄN THỊ THU THUỶ (ID: 11012)
+- **Danh xưng chuẩn mực**: Chị
+- **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
+- **Giới tính**: Nữ
+- **Tình trạng**: Còn sống (Hiện tiền)
+- **Năm sinh**: 20/08/1984 (Giáp Tý)
+- **Nguyên quán**: Không rõ
+- **Nghề nghiệp**: Không rõ
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Không rõ
+  - Thân mẫu (Mẹ): Không rõ
+  - Phối ngẫu (Vợ/Chồng): Anh LÊ VĂN CHUNG (Vầm) (ID: 9010, Chánh phối)
+  - Con cái: 4 người: Bé LÊ NGUYỄN BẢO NGỌC (ID: 11013, Nữ, Đời 8); Bé LÊ NGUYỄN BẢO AN (ID: 11014, Nữ, Đời 8); Cháu LÊ NGUYỄN MINH QUÂN (ID: 11015, Nam, Đời 8); Cháu LÊ VĂN TUẤN KIỆT (ID: 11016, Nam, Đời 8)
+  - Anh chị em ruột: Không có ghi nhận
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
+### NGUYỄN THỊ THẢO (ID: 11017)
+- **Danh xưng chuẩn mực**: Chị
+- **Đời thứ**: Đời 7 Chi 2 (Đời 15 Phái 4)
+- **Giới tính**: Nữ
+- **Tình trạng**: Còn sống (Hiện tiền)
+- **Năm sinh**: 1996 (Bính Tý)
+- **Nguyên quán**: Thôn Quảng Lượng, Xã Triệu Bình, Tỉnh Quảng Trị
+- **Nghề nghiệp**: Bác sĩ Đa khoa
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Không rõ
+  - Thân mẫu (Mẹ): Không rõ
+  - Phối ngẫu (Vợ/Chồng): Anh LÊ VĂN TÂN (Lâu) (ID: 9029, Chánh phối)
+  - Con cái: 1 người: Cháu LÊ KHÔI NGUYÊN (Gấu) (ID: 11018, Nam, Đời 8)
+  - Anh chị em ruột: Không có ghi nhận
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
 
 ---
 # THẾ HỆ THỨ 8 (CHI 2) - TƯƠNG ỨNG ĐỜI THỨ 16 (PHÁI 4 HỌ LÊ VĂN)
@@ -5646,7 +5681,7 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
 - **Giới tính**: Nữ
 - **Tình trạng**: Còn sống (Hiện tiền)
 - **Năm sinh**: 17/10/2025 (Ất Tỵ)
-- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, T���nh Quảng Trị
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
 - **Quan hệ thân tộc**:
   - Thân phụ (Cha): Anh LÊ VĂN NHU (ID: 4046, Đời 7 Chi 2 - Đời 15 Phái 4)
@@ -5686,4 +5721,84 @@ Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy
   - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
   - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
   - Anh chị em ruột: Cháu LÊ SƠN (ID: 11009)
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
+### LÊ NGUYỄN BẢO NGỌC (ID: 11013)
+- **Danh xưng chuẩn mực**: Bé
+- **Đời thứ**: Đời 8 Chi 2 (Đời 16 Phái 4)
+- **Giới tính**: Nữ
+- **Tình trạng**: Còn sống (Hiện tiền)
+- **Năm sinh**: 25/02/2011 (Tân Mão)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
+- **Nghề nghiệp**: Học sinh THPT
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Anh LÊ VĂN CHUNG (Vầm) (ID: 9010, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Thân mẫu (Mẹ): Chị NGUYỄN THỊ THU THUỶ (ID: 11012, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
+  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Anh chị em ruột: Bé LÊ NGUYỄN BẢO AN (ID: 11014), Cháu LÊ NGUYỄN MINH QUÂN (ID: 11015), Cháu LÊ VĂN TUẤN KIỆT (ID: 11016)
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
+### LÊ NGUYỄN BẢO AN (ID: 11014)
+- **Danh xưng chuẩn mực**: Bé
+- **Đời thứ**: Đời 8 Chi 2 (Đời 16 Phái 4)
+- **Giới tính**: Nữ
+- **Tình trạng**: Còn sống (Hiện tiền)
+- **Năm sinh**: 29/09/2015 (Ất Mùi)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
+- **Nghề nghiệp**: Học sinh THCS
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Anh LÊ VĂN CHUNG (Vầm) (ID: 9010, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Thân mẫu (Mẹ): Chị NGUYỄN THỊ THU THUỶ (ID: 11012, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
+  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Anh chị em ruột: Bé LÊ NGUYỄN BẢO NGỌC (ID: 11013), Cháu LÊ NGUYỄN MINH QUÂN (ID: 11015), Cháu LÊ VĂN TUẤN KIỆT (ID: 11016)
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
+### LÊ NGUYỄN MINH QUÂN (ID: 11015)
+- **Danh xưng chuẩn mực**: Cháu
+- **Đời thứ**: Đời 8 Chi 2 (Đời 16 Phái 4)
+- **Giới tính**: Nam
+- **Tình trạng**: Còn sống (Hiện tiền)
+- **Năm sinh**: 12/11/2019 (Kỷ Hợi)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
+- **Nghề nghiệp**: Học sinh Tiểu học
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Anh LÊ VĂN CHUNG (Vầm) (ID: 9010, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Thân mẫu (Mẹ): Chị NGUYỄN THỊ THU THUỶ (ID: 11012, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
+  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Anh chị em ruột: Bé LÊ NGUYỄN BẢO NGỌC (ID: 11013), Bé LÊ NGUYỄN BẢO AN (ID: 11014), Cháu LÊ VĂN TUẤN KIỆT (ID: 11016)
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
+### LÊ VĂN TUẤN KIỆT (ID: 11016)
+- **Danh xưng chuẩn mực**: Cháu
+- **Đời thứ**: Đời 8 Chi 2 (Đời 16 Phái 4)
+- **Giới tính**: Nam
+- **Tình trạng**: Còn sống (Hiện tiền)
+- **Năm sinh**: 28/07/2026 (Bính Ngọ)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
+- **Nghề nghiệp**: Không rõ
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Anh LÊ VĂN CHUNG (Vầm) (ID: 9010, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Thân mẫu (Mẹ): Chị NGUYỄN THỊ THU THUỶ (ID: 11012, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
+  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Anh chị em ruột: Bé LÊ NGUYỄN BẢO NGỌC (ID: 11013), Bé LÊ NGUYỄN BẢO AN (ID: 11014), Cháu LÊ NGUYỄN MINH QUÂN (ID: 11015)
+- **Tiểu sử / Ghi chú**: Không có ghi chú thêm
+
+### LÊ KHÔI NGUYÊN (Gấu) (ID: 11018)
+- **Danh xưng chuẩn mực**: Cháu
+- **Đời thứ**: Đời 8 Chi 2 (Đời 16 Phái 4)
+- **Giới tính**: Nam
+- **Tình trạng**: Còn sống (Hiện tiền)
+- **Năm sinh**: 2024 (Giáp Thìn)
+- **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
+- **Nghề nghiệp**: Không rõ
+- **Quan hệ thân tộc**:
+  - Thân phụ (Cha): Anh LÊ VĂN TÂN (Lâu) (ID: 9029, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Thân mẫu (Mẹ): Chị NGUYỄN THỊ THẢO (ID: 11017, Đời 7 Chi 2 - Đời 15 Phái 4)
+  - Phối ngẫu (Vợ/Chồng): Chưa ghi nhận hoặc chưa có
+  - Con cái: Không có ghi nhận con cái (hoặc Vô tự)
+  - Anh chị em ruột: Không có ghi nhận
 - **Tiểu sử / Ghi chú**: Không có ghi chú thêm
