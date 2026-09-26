@@ -439,7 +439,7 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({ isOpen, onClose }) 
                       ĐẠT YÊU CẦU: {score}/10 CÂU ĐÚNG
                     </span>
                     <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight">
-                      Chúc mừng, bạn đã trở thành thành viên ưu tú!
+                      Xin chúc mừng, bạn đã trở thành Thành viên ưu tú!
                     </h3>
                     <p className="text-sm text-gray-600 mt-2 max-w-md mx-auto leading-relaxed">
                       Bạn đã hoàn thành xuất sắc bài trắc nghiệm kiến thức dòng họ với kết quả <strong>{score}/10 câu đúng</strong>. Vai trò của bạn đã được nâng cấp thành <strong>Thành viên ưu tú</strong>.
@@ -452,9 +452,8 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({ isOpen, onClose }) 
                       Quyền lợi đặc quyền mới:
                     </div>
                     <ul className="list-disc pl-5 space-y-1 text-purple-800/90 text-xs">
-                      <li>Được cấp quyền viết và đăng tải bài viết trong mục <strong>Tư liệu - Sự kiện</strong>.</li>
+                      <li>Được cấp quyền viết và đăng bài trong mục <strong>Tư liệu - Sự kiện</strong>.</li>
                       <li>Hiển thị danh hiệu <strong>⭐ Thành viên ưu tú</strong> trên toàn cổng thông tin.</li>
-                      <li>Cùng gìn giữ và lan tỏa truyền thống tốt đẹp của Chi 2 - Phái 4 - Họ Lê Văn.</li>
                     </ul>
                   </div>
 
@@ -484,10 +483,10 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({ isOpen, onClose }) 
                       KẾT QUẢ: {score}/10 CÂU ĐÚNG
                     </span>
                     <h3 className="text-xl font-bold text-gray-900">
-                      Chia buồn, lần sau làm lại cố gắng hơn!
+                      Xin chia buồn, lần sau cố gắng hơn nhé!
                     </h3>
                     <p className="text-sm text-gray-600 mt-2 max-w-md mx-auto leading-relaxed">
-                      Bạn đã trả lời đúng <strong>{score}/10</strong> câu. Để đạt danh hiệu Thành viên ưu tú, bạn cần trả lời đúng tối thiểu <strong>5/10</strong> câu. Hãy đọc thêm tại mục Gia phả và Lịch giỗ kỵ rồi thử lại nhé!
+                      Bạn đã trả lời đúng <strong>{score}/10</strong> câu. Để đạt danh hiệu Thành viên ưu tú, bạn cần trả lời đúng tối thiểu <strong>5/10</strong> câu. Hãy tìm hiểu thêm kiến thức trong mục Gia phả số và Lịch giỗ kỵ rồi thử lại nhé!
                     </p>
                   </div>
 
