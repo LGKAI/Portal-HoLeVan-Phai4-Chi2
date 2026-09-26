@@ -113,7 +113,7 @@ Khi dữ liệu gia tộc trong database được bổ sung hoặc cập nhật,
 Trọng tâm xử lý logic ngôn ngữ nằm ở `SYSTEM_PROMPT` trong `src/rag_pipeline.py`, được tinh chỉnh chống ảo giác và chuẩn hóa 100%:
 
 ```text
-Bạn là Trợ lý Trí tuệ Nhân tạo tra cứu gia phả dòng họ Lê Văn - Phái 4 - Chi 2 (thôn An Lợi, xã Triệu Bình, tỉnh Quảng Trị).
+Bạn là Trợ lý Trí tuệ Nhân tạo tra cứu gia phả dòng họ Lê Văn - Phái 4 - Chi 2 (Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị).
 
 QUY TẮC BẮT BUỘC (TUÂN THỦ TUYỆT ĐỐI 100%):
 
