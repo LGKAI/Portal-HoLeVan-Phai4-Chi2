@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Award, ShieldCheck, Phone, User as UserIcon, CheckCircle2, AlertCircle, ArrowRight, RotateCcw, Sparkles, BookOpen } from 'lucide-react';
+import { X, Award, ShieldCheck, Phone, CheckCircle2, AlertCircle, ArrowRight, RotateCcw, Sparkles, BookOpen } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
 import { authService } from '../../services/authService';
 
@@ -134,7 +134,6 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({ isOpen, onClose }) 
     if (isAdmin) {
       return (
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-red-600 via-amber-600 to-red-700 text-white shadow-sm border border-amber-300/40">
-          <Award size={14} className="text-yellow-300" />
           👑 Trùm cuối
         </span>
       );
@@ -142,15 +141,13 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({ isOpen, onClose }) 
     if (isElite) {
       return (
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-sm border border-purple-300/40">
-          <Sparkles size={14} className="text-yellow-300" />
           ⭐ Thành viên ưu tú
         </span>
       );
     }
     return (
       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 border border-gray-200">
-        <UserIcon size={14} className="text-gray-500" />
-        Thành viên tiêu chuẩn
+        👤 Thành viên tiêu chuẩn
       </span>
     );
   };

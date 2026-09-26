@@ -7,10 +7,10 @@
 
 **RAG Service** là microservice AI chuyên sâu thuộc hệ thống Cổng thông tin Gia phả Họ Lê Văn - Phái 4 - Chi 2. Module này ứng dụng kiến trúc **RAG (Retrieval-Augmented Generation - Tạo sinh tăng cường bằng truy xuất dữ liệu)**, cho phép con cháu dòng họ trò chuyện, hỏi đáp bằng ngôn ngữ tự nhiên và tra cứu chính xác, tức thì về:
 
-- **Phả hệ & Thế thứ:** Tra cứu các đời từ Đời 1 Chi 2 (tương đương Đời 9 Phái 4) đến các thế hệ con cháu Đời 8 hiện nay.
+- **Phả hệ & Thế thứ:** Tra cứu các đời từ Đời 1 Chi 2 (tương đương Đời 9 Phái 4) đến các thế hệ con cháu Đời 8 hiện nay (hơn 321 thành viên).
 - **Ngày kỵ nhật (Lịch giỗ kỵ):** Tra cứu ngày giỗ của các bậc tiền nhân theo chuẩn Âm lịch (từ Tháng Giêng đến Tháng Chạp).
-- **Mộ phần & Nơi an táng:** Tra cứu vị trí các khu nghĩa trang mồ mả tổ tiên.
-- **Quan hệ thân tộc:** Thân phụ mẫu, chánh phối/kế thất, con cái, anh chị em ruột, cành nhánh phụng tự.
+- **Mộ phần & Nơi an táng:** Tra cứu vị trí các khu nghĩa trang mồ mả tổ tiên (Cồn Giữa, Cồn Cát, Ba Lăng, Cửa Bụt...).
+- **Quan hệ thân tộc:** Thân phụ mẫu, chánh phối/kế thất/thứ phối, con cái, anh chị em ruột, cành nhánh phụng tự.
 - **Lịch sử & Sự nghiệp:** Danh xưng, tên húy/tên tự, chức sắc, nghề nghiệp, công đức và hành trạng cuộc đời.
 
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ Phân hệ RAG được xây dựng theo mô hình dịch vụ độc lập (Mic
 ```mermaid
 flowchart TD
     subgraph Data_Pipeline ["1. Quy Trình Chuẩn Bị Tri Thức (Knowledge Pipeline)"]
-        RawDB[("backend/src/data/members.json<br/>(313 thành viên)")] --> Script["scripts/generate_rag_documents.py"]
+        RawDB[("backend/src/data/members.json<br/>(321 thành viên)")] --> Script["scripts/generate_rag_documents.py"]
         Script --> MD1["tong_quan_va_thong_ke_dong_ho.md"]
         Script --> MD2["lich_gio_ky_va_an_tang.md"]
         Script --> MD3["gia_pha_chi_tiet_ho_le_van.md"]
@@ -71,7 +71,7 @@ rag-service/
 ├── requirements.txt             # Danh sách thư viện phụ thuộc Python
 ├── data/
 │   ├── raw_documents/           # Thư mục chứa các tài liệu tri thức markdown gốc
-│   │   ├── gia_pha_chi_tiet_ho_le_van.md      # Chi tiết 313 thành viên theo từng đời
+│   │   ├── gia_pha_chi_tiet_ho_le_van.md      # Chi tiết 321 thành viên theo từng đời
 │   │   ├── lich_gio_ky_va_an_tang.md          # Lịch giỗ kỵ Âm lịch & nơi an táng
 │   │   └── tong_quan_va_thong_ke_dong_ho.md   # Lịch sử, nguồn gốc An Lợi, quy ước tính đời
 │   └── vector_store/            # Thư mục dữ liệu Vector ChromaDB lưu trên đĩa (persist)
@@ -89,7 +89,7 @@ rag-service/
 
 ## 🧠 4. Cơ Chế Tri Thức & Nạp Dữ Liệu (Ingestion Engine)
 
-Hệ thống RAG sử dụng dữ liệu 313 nhân sự từ cơ sở dữ liệu gia tộc (`members.json`), sau đó chuẩn hóa thành tài liệu cấu trúc Markdown trước khi nhúng vector:
+Hệ thống RAG sử dụng dữ liệu hơn 321 nhân sự từ cơ sở dữ liệu gia tộc (`members.json`), sau đó chuẩn hóa thành tài liệu cấu trúc Markdown trước khi nhúng vector:
 
 ### 4.1. Sinh tài liệu tri thức (`generate_rag_documents.py`)
 Khi dữ liệu gia tộc trong database được bổ sung hoặc cập nhật, script `scripts/generate_rag_documents.py` sẽ thực hiện phân tích cấu trúc cây phả hệ:
@@ -108,7 +108,7 @@ Khi dữ liệu gia tộc trong database được bổ sung hoặc cập nhật,
 
 ---
 
-## 🎯 5. Prompt Engineering & Bộ Quy Tắc Ứng Xử Chuẩn Mực (Prompt Engineering & Set of Strict Response Rules)
+## 🎯 5. Prompt Engineering & Bộ Quy Tắc Ứng Xử Chuẩn Mực
 
 Trọng tâm xử lý logic ngôn ngữ nằm ở `SYSTEM_PROMPT` trong `src/rag_pipeline.py`, được tinh chỉnh chống ảo giác và chuẩn hóa 100%:
 
@@ -344,8 +344,6 @@ curl -X POST http://localhost:8000/ingest/raw-documents
 
 ## 💡 9. Danh Sách Câu Hỏi Mẫu Dành Cho Người Dùng (Example Questions)
 
-Để trải nghiệm năng lực tra cứu của chatbot, bạn có thể đặt các câu hỏi thuộc nhiều chủ đề:
-
 ### 🌟 Về Nguồn gốc & Thế thứ:
 - *"Dòng họ Lê Văn Phái 4 Chi 2 có nguồn gốc ở đâu?"*
 - *"Quy ước tính đời giữa Chi 2 và Phái 4 như thế nào?"*
@@ -368,29 +366,7 @@ curl -X POST http://localhost:8000/ingest/raw-documents
 
 ---
 
-## 🛠️ 10. Xử Lý Sự Cố Thường Gặp (Troubleshooting)
-
-### 1. Lỗi `503 RAG Pipeline chưa sẵn sàng` khi gọi `/chat`:
-- **Nguyên nhân:** Khóa `GEMINI_API_KEY` bị thiếu hoặc không chính xác; hoặc Ollama cục bộ chưa được bật.
-- **Khắc phục:** Kiểm tra file `.env`. Nếu dùng Gemini, hãy xác nhận API Key hoạt động tại [Google AI Studio](https://aistudio.google.com/).
-
-### 2. Cần cập nhật dữ liệu gia phả mới sau khi thêm người trên Portal:
-- **Bước 1:** Chạy script sinh lại tài liệu:
-  ```bash
-  python scripts/generate_rag_documents.py
-  ```
-- **Bước 2:** Gọi API nạp lại vào ChromaDB:
-  ```bash
-  curl -X POST http://localhost:8000/ingest/raw-documents
-  ```
-  *(Hoặc xóa thư mục `data/vector_store` và khởi động lại dịch vụ để hệ thống tự động index lại từ đầu).*
-
-### 3. Lỗi kết nối Ollama khi chạy trong Docker:
-- Đảm bảo trong cấu hình Ollama trên máy tính host có biến môi trường `OLLAMA_HOST=0.0.0.0` để cho phép kết nối từ bên ngoài mạng localhost.
-
----
-
-## 🏛️ 11. Đạo Đức AI & Bản Quyền Dữ Liệu (AI Ethics & Data Copyright)
+## 🏛️ 10. Đạo Đức AI & Bản Quyền Dữ Liệu (AI Ethics & Data Copyright)
 
 1. **Bảo mật & Tôn kính:** Dữ liệu gia phả họ Lê Văn là tài sản tinh thần vô giá của con cháu dòng tộc. Hệ thống RAG được thiết kế để giữ kín các thông tin nhạy cảm và luôn thể hiện sự trang trọng, thành kính đối với tổ tiên.
 2. **Mã nguồn mở & Tích hợp:** Mã nguồn module tuân thủ nguyên tắc mô-đun hóa, dễ dàng mở rộng sang các chi phái khác hoặc tích hợp các mô hình LLM tiên tiến nhất trong tương lai.
