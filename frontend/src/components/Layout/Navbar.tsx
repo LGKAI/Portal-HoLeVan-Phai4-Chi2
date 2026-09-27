@@ -125,32 +125,47 @@ const Navbar: React.FC = () => {
 
         </div>
 
-        {/* Ô thông báo vai trò nho nhỏ ở góc trên phải trang chủ, sát mép phải màn hình (ẩn khi mở menu mobile) */}
-        {isAuthenticated && user && location.pathname === '/' && !isMenuOpen && (
-          <div
-            onClick={() => setIsProfileModalOpen(true)}
-            className="fixed right-2 sm:right-3 top-[4.25rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
-            title="Nhấn để xem thông tin tài khoản & làm bài test"
-          >
-            {user.role === 'admin' ? (
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-red-800 via-amber-700 to-red-800 text-white shadow-lg border border-amber-300/40 text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
-                <span className="text-sm">👑</span>
-                <span>Bạn đang là Trùm cuối!</span>
-              </div>
-            ) : user.role === 'elite' ? (
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-800 text-white shadow-lg border border-purple-300/40 text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
-                <span className="text-sm">⭐</span>
-                <span>Bạn đang là Thành viên ưu tú!</span>
-              </div>
-            ) : (
+        {/* Ô thông báo ở góc trên phải trang chủ, sát mép phải màn hình (ẩn khi mở menu mobile) */}
+        {location.pathname === '/' && !isMenuOpen && (
+          isAuthenticated && user ? (
+            <div
+              onClick={() => setIsProfileModalOpen(true)}
+              className="fixed right-2 sm:right-3 top-[4.25rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
+              title="Nhấn để xem thông tin tài khoản & làm bài test"
+            >
+              {user.role === 'admin' ? (
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-red-800 via-amber-700 to-red-800 text-white shadow-lg border border-amber-300/40 text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
+                  <span className="text-sm">👑</span>
+                  <span>Bạn đang là Trùm cuối!</span>
+                </div>
+              ) : user.role === 'elite' ? (
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-800 text-white shadow-lg border border-purple-300/40 text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
+                  <span className="text-sm">⭐</span>
+                  <span>Bạn đang là Thành viên ưu tú!</span>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
+                  <span className="text-sm flex-shrink-0">💡</span>
+                  <span className="text-gray-700">
+                    Bạn đang là <strong className="text-gray-900 font-bold">Thành viên tiêu chuẩn</strong>, hãy <strong className="text-primary font-bold underline underline-offset-2">làm bài Test</strong> để nâng cấp vai trò!
+                  </span>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div
+              onClick={() => setIsLoginModalOpen(true)}
+              className="fixed right-2 sm:right-3 top-[4.25rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
+              title="Nhấn để đăng nhập vào hệ thống"
+            >
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
-                <span className="text-sm flex-shrink-0">💡</span>
+                <span className="text-sm flex-shrink-0">✨</span>
                 <span className="text-gray-700">
-                  Bạn đang là <strong className="text-gray-900 font-bold">Thành viên tiêu chuẩn</strong>, hãy <strong className="text-primary font-bold underline underline-offset-2">làm bài Test</strong> để nâng cấp vai trò!
+                  Hãy <strong className="text-primary font-bold underline underline-offset-2">đăng nhập</strong> để có thêm những trải nghiệm thú vị!
                 </span>
               </div>
-            )}
-          </div>
+            </div>
+          )
         )}
 
         {/* Mobile Menu */}
