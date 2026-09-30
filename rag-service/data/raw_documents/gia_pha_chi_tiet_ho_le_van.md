@@ -1,8 +1,8 @@
 # GIA PHẢ TOÀN TẬP: DÒNG HỌ LÊ VĂN - PHÁI 4 - CHI 2
 
-Địa chỉ: Thôn An Lợi, xã Triệu Bình (xã Triệu Độ cũ), huyện Triệu Phong, tỉnh Quảng Trị.
+Địa chỉ: Thôn An Lợi, xã Triệu Bình (trước đây là xã Triệu Độ, huyện Triệu Phong), tỉnh Quảng Trị.
 
-Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy tổ Lê Văn Khôi) đến Đời 8, bao gồm thông tin thế thứ, thân phụ mẫu, phối ngẫu, con cái, ngày kỵ và nơi an táng.
+Gia phả ghi chép chi tiết toàn bộ 321 thành viên từ Đời 1 (Thủy tổ Lê Văn Khôi) đến Đời 8, bao gồm thông tin thế thứ, thân phụ mẫu, phối ngẫu, con cái, ngày kỵ và nơi an táng.
 
 
 ---
