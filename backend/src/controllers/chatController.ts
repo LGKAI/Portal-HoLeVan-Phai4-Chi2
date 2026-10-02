@@ -60,6 +60,6 @@ export const handleChat = async (req: Request, res: Response) => {
     // 3. Nếu chưa cấu hình cả GEMINI_API_KEY lẫn RAG_SERVICE_URL
     return res.json({
         success: true,
-        reply: 'Xin chào! Hệ thống Trợ lý AI đang chờ cấu hình biến môi trường GEMINI_API_KEY (hoặc khởi động dịch vụ Ollama cục bộ). Bạn chỉ cần lấy API key miễn phí tại Google AI Studio (https://aistudio.google.com/) và thêm vào file .env (hoặc cấu hình biến môi trường máy chủ) là có thể bắt đầu trò chuyện ngay.'
+        reply: 'Xin chào! Hệ thống Trợ lý AI đang chờ cấu hình biến môi trường GEMINI_API_KEY trên Render. Bạn chỉ cần lấy API key miễn phí tại Google AI Studio (https://aistudio.google.com/) và thêm vào mục Environment trên Render là có thể bắt đầu trò chuyện.'
     });
 };

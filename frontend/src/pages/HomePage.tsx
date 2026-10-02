@@ -58,7 +58,7 @@ const HomePage: React.FC = () => {
             </span>
             <div className="h-1"></div>
             <span
-              className="text-secondary block font-calligraphy text-[1.9rem] sm:text-[2.7rem] md:text-[3.3rem] font-normal tracking-wide mt-1 animate-gold-glow leading-snug"
+              className="text-secondary block text-[1.5rem] sm:text-[2.1rem] md:text-[2.65rem] font-black tracking-wider mt-0.5 animate-gold-glow"
             >
               LÊ VĂN - PHÁI 4 - CHI 2
             </span>
