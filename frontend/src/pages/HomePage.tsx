@@ -41,10 +41,10 @@ const HomePage: React.FC = () => {
             backgroundImage: 'url("/background.jpg?v=panoramic5")'
           }}
         />
-        {/* Lớp tối đều toàn ảnh */}
-        <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />
-        {/* Gradient overlay: tối mạnh hơn phía dưới để tôn chữ */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 via-40% to-black/80 z-10 pointer-events-none" />
+        {/* Lớp tối đều toàn ảnh: cân chỉnh vừa phải (38%) để nền sáng hơn một chút nhưng vẫn tôn rõ chữ */}
+        <div className="absolute inset-0 bg-black/[0.38] z-10 pointer-events-none" />
+        {/* Gradient overlay: tối dần xuống phía dưới để làm nổi bật các dòng chữ và nút bấm */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 via-40% to-black/80 z-10 pointer-events-none" />
 
         {/* Khối chữ và nút bấm - nhích lên cao hơn trên mobile để cân đối giao diện */}
         <div className="relative z-20 text-center text-white px-3 sm:px-4 max-w-4xl mx-auto pb-40 sm:pb-16 md:pb-20">
@@ -58,7 +58,7 @@ const HomePage: React.FC = () => {
             </span>
             <div className="h-1"></div>
             <span
-              className="text-secondary block text-[1.5rem] sm:text-[2.1rem] md:text-[2.65rem] font-black tracking-wider mt-0.5 animate-gold-glow"
+              className="font-artistic text-secondary block text-[clamp(1.3rem,6vw,3.2rem)] font-extrabold whitespace-nowrap tracking-tight sm:tracking-wide mt-0.5 animate-gold-glow"
             >
               LÊ VĂN - PHÁI 4 - CHI 2
             </span>

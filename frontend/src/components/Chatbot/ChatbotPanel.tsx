@@ -105,10 +105,10 @@ const ChatbotPanel: React.FC = () => {
               
               <div className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                 <div 
-                  className={`px-4 py-2 rounded-2xl shadow-sm text-sm ${
+                  className={`px-4 py-2.5 rounded-2xl shadow-sm text-sm leading-relaxed ${
                     msg.role === 'user' 
                       ? 'bg-primary text-white rounded-tr-sm' 
-                      : 'bg-white border border-gray-100 text-dark rounded-tl-sm'
+                      : 'bg-[#FEF9C3] border border-[#FDE047]/80 text-[#2C3E50] rounded-tl-sm shadow-sm'
                   }`}
                 >
                   {msg.content.split('\n').map((line, i) => (
@@ -132,10 +132,10 @@ const ChatbotPanel: React.FC = () => {
                   <img src="/ai-robot.jpg?v=gold" alt="AI" className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="bg-white border border-gray-100 px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-1">
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+              <div className="bg-[#FEF9C3] border border-[#FDE047]/80 px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-1">
+                <div className="w-2 h-2 bg-amber-600/60 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                <div className="w-2 h-2 bg-amber-600/60 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                <div className="w-2 h-2 bg-amber-600/60 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
               </div>
             </div>
           )}

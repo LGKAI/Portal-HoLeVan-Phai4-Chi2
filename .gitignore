@@ -27,3 +27,10 @@ rag-service/data/vector_store/
 *.user
 admin.txt
 
+# Scripts
+scripts/
+/scripts/
+
+# Scratch & temporary files
+scratch/
+/scratch/

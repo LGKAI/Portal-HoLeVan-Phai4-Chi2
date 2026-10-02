@@ -31,6 +31,7 @@ export default {
         sans: ['"Be Vietnam Pro"', 'sans-serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         cursive: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
+        artistic: ['"Merienda"', 'cursive', 'serif'],
       }
     },
   },

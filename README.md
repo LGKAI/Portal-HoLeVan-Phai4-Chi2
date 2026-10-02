@@ -123,6 +123,9 @@ flowchart TB
   - Bộ tri thức chuẩn hóa 3 tài liệu Markdown: lịch sử dòng họ, kỵ nhật tiền nhân và hồ sơ thành viên.
   - Thuật toán mở rộng ngữ cảnh phả hệ đa quan hệ (thân phụ, thân mẫu, phối ngẫu, con cái).
   - Cơ chế **Exponential Backoff** tự động thử lại khi gặp giới hạn tốc độ API (Rate Limit 429).
+- **Trải nghiệm trò chuyện thân thiện**:
+  - Bong bóng phản hồi của Trợ lý AI mang sắc vàng nhạt trang nhã (`#FEF9C3`), viền vàng dịu (`#FDE047`), phân biệt rõ với tin nhắn người gửi màu đỏ trầm.
+  - Hỗ trợ gõ phím `Enter` gửi tin nhắn, tự động cuộn xuống cuối và hiển thị hiệu ứng ba chấm động sinh động.
 - **Python RAG Service** (Tùy chọn Local Docker): FastAPI + ChromaDB + Ollama (`qwen2.5:7b`).
 
 ### 6. Giao Diện Người Dùng Đồng Bộ & Thẩm Mỹ (UI/UX)
@@ -131,7 +134,11 @@ flowchart TB
   - 📖 **Gia phả số**
   - 📅 **Lịch giỗ kỵ**
   - 📰 **Tư liệu - Sự kiện**
-- **Banner chính**: Nút bấm đôi trang nhã **"Xem Gia Phả"** và **"Xem Lịch Giỗ"**.
+- **Banner chính & Nghệ thuật chữ truyền thống**:
+  - Tiêu đề **LÊ VĂN - PHÁI 4 - CHI 2** áp dụng font viết tay nghệ thuật sắc sảo **Merienda** (Google Fonts).
+  - Tối ưu hóa phản hồi đa màn hình: sử dụng `clamp(1.3rem, 6vw, 3.2rem)` cùng `whitespace-nowrap` đảm bảo tiêu đề luôn nằm trọn vẹn trên 1 dòng duy nhất trên tất cả màn hình điện thoại di động và máy tính bảng.
+  - Lớp phủ nền toàn cảnh được tinh chỉnh độ sáng cân đối (`bg-black/[0.38]` và gradient êm dịu), giúp làm nổi bật các khối chữ vàng kim và câu đối thư pháp.
+  - Nút bấm đôi trang nhã **"Xem Gia Phả"** và **"Xem Lịch Giỗ"**.
 - **Chỉ số dòng họ**: Tích hợp icon màu vàng kim sắc nét:
   - 🏛️ **8+ Đời** (Biểu tượng Nhà thờ họ - `Landmark`)
   - 👥 **300+ Thành viên** (Biểu tượng Hội đồng thân tộc - `Users`)
@@ -208,9 +215,10 @@ erDiagram
 ```
 Portal-HoLeVan-Phai4-Chi2/
 ├── .env.example                    # Mẫu khai báo biến môi trường
-├── .gitignore
+├── .gitignore                      # Cấu hình bỏ qua tệp (node_modules, uploads, scripts, .env...)
 ├── docker-compose.yml              # Khởi chạy toàn bộ hệ thống cục bộ
 ├── README.md                       # Tài liệu tổng thể dự án
+├── scripts/                        # Tiện ích nội bộ đồng bộ dữ liệu (được bảo vệ trong .gitignore)
 │
 ├── backend/                        # Backend API (Node.js 22 / Express / TypeScript)
 │   ├── src/
