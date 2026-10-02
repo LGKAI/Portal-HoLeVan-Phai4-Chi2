@@ -29,6 +29,9 @@ export default {
       },
       fontFamily: {
         sans: ['"Be Vietnam Pro"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        cursive: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
+        calligraphy: ['"Fz Thư Pháp Tiểu Tự"', '"UTM Thư Pháp Thiên An"', 'cursive'],
       }
     },
   },

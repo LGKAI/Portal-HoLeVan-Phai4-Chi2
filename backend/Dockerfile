@@ -21,6 +21,9 @@ FROM node:22-alpine AS production
 
 WORKDIR /app
 
+# Cài đặt su-exec để chuyển đổi quyền hạn an toàn từ root sang nodejs
+RUN apk add --no-cache su-exec
+
 # Cài chỉ production dependencies
 COPY package*.json ./
 RUN npm ci --only=production && npm cache clean --force
@@ -32,13 +35,16 @@ COPY --from=builder /app/src/config/init_postgres.sql ./dist/config/init_postgre
 COPY --from=builder /app/src/data/members.json ./dist/data/members.json
 COPY --from=builder /app/src/data/knowledge ./dist/data/knowledge
 
-# Thư mục uploads cho avatars và thumbnails
-RUN mkdir -p /app/uploads/avatars /app/uploads/thumbnails
+# Thư mục uploads cho avatars, thumbnails và general
+RUN mkdir -p /app/uploads/avatars /app/uploads/thumbnails /app/uploads/general
 
 # Non-root user để bảo mật
 RUN addgroup -g 1001 -S nodejs && adduser -S nodejs -u 1001
 RUN chown -R nodejs:nodejs /app
-USER nodejs
+
+# Copy entrypoint script để phân quyền volume động khi khởi chạy
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 EXPOSE 5000
 
@@ -46,4 +52,6 @@ EXPOSE 5000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://localhost:5000/health || exit 1
 
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["node", "dist/server.js"]
+

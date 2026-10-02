@@ -39,9 +39,10 @@ const ChatbotPanel: React.FC = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 z-50 flex items-center justify-center group p-0 border-2 border-amber-300 ring-4 ring-primary/20 bg-white animate-bounce-slow"
+          className="chatbot-floating-btn fixed rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 z-50 flex items-center justify-center group p-0 border-2 border-amber-300 ring-4 ring-primary/20 bg-white animate-bounce-slow"
           title="Trò chuyện cùng Trợ lý AI"
         >
+
           {/* Container ảnh được bo tròn và ẩn phần tràn */}
           <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
             <img 
@@ -104,10 +105,10 @@ const ChatbotPanel: React.FC = () => {
               
               <div className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                 <div 
-                  className={`px-4 py-2 rounded-2xl shadow-sm text-sm ${
+                  className={`px-4 py-2.5 rounded-2xl shadow-sm text-sm leading-relaxed ${
                     msg.role === 'user' 
                       ? 'bg-primary text-white rounded-tr-sm' 
-                      : 'bg-white border border-gray-100 text-dark rounded-tl-sm'
+                      : 'bg-[#FFF9E6] border border-[#F3E3B5] text-amber-950 rounded-tl-sm'
                   }`}
                 >
                   {msg.content.split('\n').map((line, i) => (
@@ -131,10 +132,10 @@ const ChatbotPanel: React.FC = () => {
                   <img src="/ai-robot.jpg?v=gold" alt="AI" className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="bg-white border border-gray-100 px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-1">
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+              <div className="bg-[#FFF9E6] border border-[#F3E3B5] px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-1.5">
+                <div className="w-2 h-2 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                <div className="w-2 h-2 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                <div className="w-2 h-2 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
               </div>
             </div>
           )}

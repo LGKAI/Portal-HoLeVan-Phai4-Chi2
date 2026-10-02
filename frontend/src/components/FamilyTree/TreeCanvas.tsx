@@ -484,9 +484,11 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollbarRef = useRef<HTMLDivElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
+  const verticalScrollbarRef = useRef<HTMLDivElement>(null);
+  const verticalSpacerRef = useRef<HTMLDivElement>(null);
 
   const currentViewportRef = useRef<Viewport>({ x: 0, y: 220, zoom: 0.045 });
-  const syncSourceRef = useRef<'flow' | 'scrollbar' | null>(null);
+  const syncSourceRef = useRef<'flow' | 'scrollbar' | 'v-scrollbar' | null>(null);
   const syncTimerRef = useRef<any>(null);
 
   const canonicalXMap = useMemo(() => {
@@ -551,6 +553,7 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
   }, [nodes]);
 
   const worldWidth = maxX - minX;
+  const worldHeight = maxY - minY;
 
   const translateExtent: [[number, number], [number, number]] = useMemo(() => {
     return [
@@ -596,17 +599,27 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         const targetScroll = -(minX * initialZoom + initialX);
         scrollbarRef.current.scrollLeft = Math.max(0, targetScroll);
       }
+
+      // Đồng bộ thanh cuộn dọc
+      if (verticalSpacerRef.current) {
+        const virtualH = Math.max(worldHeight * initialZoom, height);
+        verticalSpacerRef.current.style.height = `${virtualH}px`;
+      }
+      if (verticalScrollbarRef.current) {
+        const targetScrollY = -(minY * initialZoom + initialY);
+        verticalScrollbarRef.current.scrollTop = Math.max(0, targetScrollY);
+      }
     }, 60);
 
     return () => clearTimeout(timer);
-  }, [members, minX, minY, maxY, worldWidth, setViewport, fitView]);
+  }, [members, minX, minY, maxY, worldWidth, worldHeight, setViewport, fitView]);
 
-  // Đồng bộ từ thao tác kéo/zoom trên canvas sang thanh cuộn ngang
+  // Đồng bộ từ thao tác kéo/zoom trên canvas sang thanh cuộn ngang và dọc
   const handleMove = useCallback(
     (_event: any, viewport: Viewport) => {
       currentViewportRef.current = viewport;
 
-      if (syncSourceRef.current === 'scrollbar') return;
+      if (syncSourceRef.current === 'scrollbar' || syncSourceRef.current === 'v-scrollbar') return;
 
       syncSourceRef.current = 'flow';
 
@@ -621,12 +634,23 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         scrollbarRef.current.scrollLeft = Math.max(0, targetScroll);
       }
 
+      if (verticalSpacerRef.current && containerRef.current) {
+        const containerH = containerRef.current.clientHeight || window.innerHeight;
+        const virtualH = Math.max(worldHeight * viewport.zoom, containerH);
+        verticalSpacerRef.current.style.height = `${virtualH}px`;
+      }
+
+      if (verticalScrollbarRef.current) {
+        const targetScrollY = -(minY * viewport.zoom + viewport.y);
+        verticalScrollbarRef.current.scrollTop = Math.max(0, targetScrollY);
+      }
+
       clearTimeout(syncTimerRef.current);
       syncTimerRef.current = setTimeout(() => {
         syncSourceRef.current = null;
       }, 50);
     },
-    [minX, worldWidth]
+    [minX, minY, worldWidth, worldHeight]
   );
 
   // Đồng bộ từ thanh cuộn ngang sang toạ độ canvas
@@ -647,6 +671,25 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
       syncSourceRef.current = null;
     }, 50);
   }, [minX, setViewport]);
+
+  // Đồng bộ từ thanh cuộn dọc sang toạ độ canvas
+  const handleVerticalScrollbarScroll = useCallback(() => {
+    if (syncSourceRef.current === 'flow') return;
+    if (!verticalScrollbarRef.current) return;
+
+    syncSourceRef.current = 'v-scrollbar';
+    const scrollTop = verticalScrollbarRef.current.scrollTop;
+    const current = currentViewportRef.current;
+
+    // scrollTop = -(minY * zoom + flowY) => flowY = -minY * zoom - scrollTop
+    const newY = -minY * current.zoom - scrollTop;
+    setViewport({ x: current.x, y: newY, zoom: current.zoom });
+
+    clearTimeout(syncTimerRef.current);
+    syncTimerRef.current = setTimeout(() => {
+      syncSourceRef.current = null;
+    }, 50);
+  }, [minY, setViewport]);
 
   return (
     <div
@@ -682,12 +725,12 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         onlyRenderVisibleElements={true}
         proOptions={{ hideAttribution: true }}
       >
-        {/* Nút điều khiển: Chỉ 2 nút Phóng to (+) và Thu nhỏ (-), phóng lớn, nhích lên trên thanh cuộn */}
+        {/* Nút điều khiển: Chỉ 2 nút Phóng to (+) và Thu nhỏ (-), được căn chỉnh cân xứng hoàn hảo với Trợ lý AI */}
         <Controls
           showInteractive={false}
           showFitView={false}
-          style={{ bottom: 36, left: 16 }}
         />
+
         <Background gap={16} size={1.5} color="#E2D4B7" />
       </ReactFlow>
 
@@ -706,6 +749,25 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
           }}
         />
       </div>
+
+      {/* Thanh cuộn dọc bên phải màn hình */}
+      <div
+        ref={verticalScrollbarRef}
+        className="tree-vertical-scrollbar"
+        onScroll={handleVerticalScrollbarScroll}
+        title="Kéo thanh cuộn dọc để di chuyển cây gia phả"
+      >
+        <div
+          ref={verticalSpacerRef}
+          style={{
+            height: `${Math.max(worldHeight * 0.045, 1500)}px`,
+            width: '1px',
+          }}
+        />
+      </div>
+
+      {/* Góc giao nhau giữa 2 thanh cuộn */}
+      <div className="tree-scrollbar-corner" />
     </div>
   );
 };

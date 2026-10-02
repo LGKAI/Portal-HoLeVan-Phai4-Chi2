@@ -36,6 +36,21 @@ export const requireAdminOrElite = (req: AuthRequest, res: Response, next: NextF
             message: 'Quyền truy cập bị từ chối. Chỉ Quản trị viên và Thành viên ưu tú mới có quyền thực hiện thao tác này.' 
         });
     }
+
+    next();
+};
+
+export const optionalVerifyToken = (req: AuthRequest, res: Response, next: NextFunction) => {
+    const authHeader = req.headers.authorization;
+    if (authHeader && authHeader.startsWith('Bearer ')) {
+        const token = authHeader.split(' ')[1];
+        try {
+            const decoded = jwt.verify(token, process.env.JWT_SECRET || 'portal_hlevan_jwt_secret_2024') as any;
+            req.user = decoded;
+        } catch (ex) {
+            // Token is optional, ignore invalid token
+        }
+    }
     next();
 };
 

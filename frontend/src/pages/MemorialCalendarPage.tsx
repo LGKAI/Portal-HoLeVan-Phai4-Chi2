@@ -110,10 +110,10 @@ const MemorialCalendarPage: React.FC = () => {
 
   return (
     <div className="bg-cream min-h-screen pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-4 sm:mt-8">
         {/* Bộ lọc tháng & Tìm kiếm */}
-        <div className="bg-white rounded-xl shadow-sm border border-amber-200/80 p-5 mb-8">
-          <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-6">
+        <div className="bg-white rounded-xl shadow-sm border border-amber-200/80 p-3.5 sm:p-5 mb-6 sm:mb-8">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-between items-center mb-4 sm:mb-6">
             <div className="relative w-full sm:w-[450px] md:w-[490px] max-w-full">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
               <input
@@ -121,7 +121,7 @@ const MemorialCalendarPage: React.FC = () => {
                 placeholder="Tìm theo họ tên, thân phụ, thân mẫu, nơi an táng..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                className="w-full pl-10 pr-4 py-2 sm:py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-xs sm:text-sm"
               />
               {searchTerm && (
                 <button
@@ -133,8 +133,8 @@ const MemorialCalendarPage: React.FC = () => {
               )}
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-gray-600 self-end md:self-center">
-              <Calendar size={16} className="text-primary" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600 self-start md:self-center">
+              <Calendar size={16} className="text-primary flex-shrink-0" />
               <span>
                 Hiển thị: <strong>{filteredRecords.length}</strong> ngày giỗ
                 {selectedMonth !== 0 && ` (${MONTH_OPTIONS.find((m) => m.id === selectedMonth)?.label})`}
@@ -144,10 +144,10 @@ const MemorialCalendarPage: React.FC = () => {
 
           {/* Nút bấm chọn Tháng 1 -> Tháng 12 & Chưa rõ */}
           <div>
-            <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+            <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 sm:mb-2.5 flex items-center gap-1.5">
               <Filter size={14} className="text-primary" /> CHỌN THÁNG ÂM LỊCH:
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14 gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14 gap-1.5 sm:gap-2">
               {MONTH_OPTIONS.map((m) => {
                 const isSelected = selectedMonth === m.id;
                 const count = m.id === 0 ? memorials.length : monthCounts[m.id] || 0;
@@ -155,7 +155,7 @@ const MemorialCalendarPage: React.FC = () => {
                   <button
                     key={m.id}
                     onClick={() => setSelectedMonth(m.id)}
-                    className={`px-2 py-2 rounded-lg text-xs font-bold transition-all text-center flex flex-col items-center justify-center gap-0.5 border ${
+                    className={`px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-lg text-[11px] sm:text-xs font-bold transition-all text-center flex flex-col items-center justify-center gap-0.5 border ${
                       isSelected
                         ? 'bg-primary text-white border-primary shadow-md scale-105'
                         : 'bg-cream-light hover:bg-amber-100 text-gray-800 border-amber-200'
@@ -163,7 +163,7 @@ const MemorialCalendarPage: React.FC = () => {
                   >
                     <span>{m.shortLabel}</span>
                     <span
-                      className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                      className={`text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full font-bold ${
                         isSelected ? 'bg-secondary text-primary-dark' : 'bg-white/80 text-gray-600'
                       }`}
                     >
@@ -177,7 +177,7 @@ const MemorialCalendarPage: React.FC = () => {
         </div>
 
         {/* Danh sách các tháng và bảng dữ liệu */}
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-10">
           {displayMonths.map((mNum) => {
             const recordsInMonth = filteredRecords.filter((r) => r.month === mNum);
             const monthInfo =
@@ -197,23 +197,23 @@ const MemorialCalendarPage: React.FC = () => {
                 className="bg-white rounded-2xl shadow-sm border border-amber-200 overflow-hidden"
               >
                 {/* Tiêu đề Tháng */}
-                <div className="bg-gradient-to-r from-cream-dark via-amber-100 to-cream-light px-6 py-4 border-b border-amber-200 flex flex-wrap justify-between items-center gap-2">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-primary text-secondary flex items-center justify-center font-bold text-sm shadow-sm">
+                <div className="bg-gradient-to-r from-cream-dark via-amber-100 to-cream-light px-4 sm:px-6 py-3 sm:py-4 border-b border-amber-200 flex flex-wrap justify-between items-center gap-2">
+                  <div className="flex items-center gap-2.5 sm:gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary text-secondary flex items-center justify-center font-bold text-xs sm:text-sm shadow-sm flex-shrink-0">
                       {mNum === 0 ? '?' : mNum}
                     </div>
                     <div>
-                      <h2 className="text-lg sm:text-xl font-bold text-primary-dark">
+                      <h2 className="text-base sm:text-xl font-bold text-primary-dark">
                         {monthInfo?.label}
                       </h2>
-                      <p className="text-xs text-gray-600">
+                      <p className="text-[11px] sm:text-xs text-gray-600">
                         {mNum === 0
                           ? 'Các vị tiền nhân, con cháu có năm mất nhưng chưa ghi nhận ngày tháng Âm lịch cụ thể'
                           : `Tháng ${mNum} Âm lịch hằng năm`}
                       </p>
                     </div>
                   </div>
-                  <div className="bg-primary/10 text-primary-dark px-3 py-1 rounded-full text-xs font-bold border border-primary/20">
+                  <div className="bg-primary/10 text-primary-dark px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold border border-primary/20">
                     {recordsInMonth.length} vị tiền nhân / con cháu
                   </div>
                 </div>
@@ -226,8 +226,14 @@ const MemorialCalendarPage: React.FC = () => {
                       : `Gia phả hiện tại chưa ghi nhận ngày giỗ cụ thể trong ${monthInfo?.label}.`}
                   </div>
                 ) : (
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left text-sm">
+                  <div>
+                    <div className="text-[11px] text-gray-500 italic px-3 py-1.5 bg-amber-50/70 border-b border-amber-100 sm:hidden flex items-center justify-between">
+                      <span>← Vuốt ngang để xem đủ thông tin</span>
+                      <span>→</span>
+                    </div>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left text-sm">
+
                       <thead className="bg-primary text-white text-xs uppercase tracking-wider font-semibold">
                         <tr>
                           <th className="py-3.5 px-4 w-60 min-w-[225px]">Ngày giỗ</th>
@@ -336,8 +342,10 @@ const MemorialCalendarPage: React.FC = () => {
                       </tbody>
                     </table>
                   </div>
-                )}
-              </div>
+                </div>
+              )}
+            </div>
+
             );
           })}
         </div>

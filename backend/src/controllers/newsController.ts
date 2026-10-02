@@ -19,7 +19,7 @@ const removeUploadFile = (fileUrl?: string | null) => {
     }
 };
 
-export const getNews = async (req: Request, res: Response) => {
+export const getNews = async (req: AuthRequest, res: Response) => {
     const { category, page = 1, limit = 10 } = req.query;
     const pageNum = Math.max(1, parseInt(page as string, 10) || 1);
     const limitNum = Math.max(1, parseInt(limit as string, 10) || 10);
@@ -39,19 +39,25 @@ export const getNews = async (req: Request, res: Response) => {
     const params: any[] = [];
     let paramIndex = 1;
 
+    // Chỉ Quản trị viên mới được nhìn thấy bài viết chưa duyệt (is_published = false)
+    if (req.user?.role !== 'admin') {
+        query += ` AND n.is_published = true`;
+    }
+
     if (category) {
         query += ` AND n.category = $${paramIndex++}`;
         params.push(category);
     }
 
-    query += ` ORDER BY n.published_at DESC LIMIT $${paramIndex++} OFFSET $${paramIndex++}`;
+    // Với admin: đưa bài chưa duyệt (is_published = false) lên đầu để duyệt ngay
+    query += ` ORDER BY n.is_published ASC, n.published_at DESC LIMIT $${paramIndex++} OFFSET $${paramIndex++}`;
     params.push(limitNum, offset);
 
     const result = await executeQuery(query, params);
     res.json({ success: true, data: result.rows });
 };
 
-export const getNewsBySlug = async (req: Request, res: Response) => {
+export const getNewsBySlug = async (req: AuthRequest, res: Response) => {
     const { slug } = req.params;
     const isNum = /^\d+$/.test(slug);
     let result;
@@ -82,8 +88,14 @@ export const getNewsBySlug = async (req: Request, res: Response) => {
         );
     }
     if (result.rows.length === 0) {
-        return res.status(404).json({ success: false, message: 'Not found' });
+        return res.status(404).json({ success: false, message: 'Không tìm thấy bài viết' });
     }
+
+    // Nếu bài viết chưa duyệt và người xem không phải admin thì từ chối truy cập
+    if (!result.rows[0].is_published && req.user?.role !== 'admin') {
+        return res.status(404).json({ success: false, message: 'Bài viết đang chờ Quản trị viên phê duyệt.' });
+    }
+
     res.json({ success: true, data: result.rows[0] });
 };
 
@@ -95,7 +107,11 @@ export const createNews = async (req: AuthRequest, res: Response) => {
             thumbnail_url = await processUploadedFile(req.file, 'thumbnails');
         }
 
-        const isPub = (is_published === 'true' || is_published === true || is_published === 1);
+        // Nếu admin đăng: mặc định is_published = true
+        // Nếu thành viên ưu tú đăng: bắt buộc is_published = false (chờ admin duyệt)
+        const isPub = req.user?.role === 'admin'
+            ? (is_published === undefined ? true : (is_published === 'true' || is_published === true || is_published === 1))
+            : false;
 
         const result = await executeQuery(
             `INSERT INTO news (title, slug, content, thumbnail_url, category, author_id, is_published) 
@@ -111,12 +127,17 @@ export const createNews = async (req: AuthRequest, res: Response) => {
                 isPub
             ]
         );
-        res.json({ success: true, data: { id: result.rows[0].id }, message: 'News created' });
+        res.json({ 
+            success: true, 
+            data: { id: result.rows[0].id, is_published: isPub }, 
+            message: isPub ? 'Đăng bài viết thành công' : 'Bài viết đã được gửi và đang chờ Quản trị viên phê duyệt' 
+        });
     } catch (err: any) {
         console.error("Create News Error: ", err);
         res.status(500).json({ success: false, message: err.message });
     }
 };
+
 
 export const updateNews = async (req: Request, res: Response) => {
     try {
@@ -184,12 +205,38 @@ export const updateNews = async (req: Request, res: Response) => {
                 newsId
             ]
         );
+
+        if (req.body.is_published !== undefined) {
+            const isPub = (req.body.is_published === 'true' || req.body.is_published === true || req.body.is_published === 1);
+            await executeQuery('UPDATE news SET is_published = $1 WHERE id = $2', [isPub, newsId]);
+        }
+
         res.json({ success: true, message: 'Cập nhật bài viết thành công', data: updateResult.rows[0] });
     } catch (err: any) {
         console.error("Update News Error: ", err);
         res.status(500).json({ success: false, message: err.message });
     }
 };
+
+export const approveNews = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const newsId = parseInt(id, 10);
+        if (isNaN(newsId)) {
+            return res.status(400).json({ success: false, message: 'ID không hợp lệ' });
+        }
+
+        await executeQuery(
+            'UPDATE news SET is_published = true, published_at = CURRENT_TIMESTAMP WHERE id = $1',
+            [newsId]
+        );
+        res.json({ success: true, message: 'Đã phê duyệt bài viết thành công' });
+    } catch (err: any) {
+        console.error("Approve News Error: ", err);
+        res.status(500).json({ success: false, message: err.message });
+    }
+};
+
 
 export const deleteNews = async (req: Request, res: Response) => {
     const { id } = req.params;

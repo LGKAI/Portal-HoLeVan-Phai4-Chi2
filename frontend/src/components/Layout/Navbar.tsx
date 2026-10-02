@@ -48,12 +48,12 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav className="bg-primary text-white shadow-md fixed w-full z-40 top-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="w-full px-4 sm:px-6 lg:px-6 xl:px-8 relative">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0 flex items-center gap-2">
                 <img src="/favicon.ico" alt="Logo" className="w-8 h-8 object-contain" />
-                <span className="font-bold text-sm sm:text-lg tracking-tight whitespace-nowrap">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</span>
+                <span className="font-bold text-sm sm:text-lg tracking-tight whitespace-nowrap text-secondary">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</span>
               </Link>
             </div>
 
@@ -94,12 +94,14 @@ const Navbar: React.FC = () => {
                     {/* Logout button */}
                     <button 
                       onClick={handleLogout}
-                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors tooltip"
+                      className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-white/10 text-white/90 hover:text-white transition-colors text-xs font-semibold border border-white/15"
                       title="Đăng xuất"
                     >
-                      <LogOut size={18} />
+                      <LogOut size={15} />
+                      <span>Đăng xuất</span>
                     </button>
                   </div>
+
                 ) : (
                   <button
                     onClick={() => setIsLoginModalOpen(true)}
@@ -134,18 +136,18 @@ const Navbar: React.FC = () => {
               title="Nhấn để xem thông tin tài khoản & làm bài test"
             >
               {user.role === 'admin' ? (
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-red-800 via-amber-700 to-red-800 text-white shadow-lg border border-amber-300/40 text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
-                  <span className="text-sm">👑</span>
+                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-gradient-to-r from-red-800 via-amber-700 to-red-800 text-white shadow-lg border border-amber-300/40 text-[11px] sm:text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
+                  <span className="text-xs sm:text-sm">👑</span>
                   <span>Bạn đang là Trùm cuối!</span>
                 </div>
               ) : user.role === 'elite' ? (
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-800 text-white shadow-lg border border-purple-300/40 text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
-                  <span className="text-sm">⭐</span>
+                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-800 text-white shadow-lg border border-purple-300/40 text-[11px] sm:text-xs font-semibold backdrop-blur-md hover:brightness-110 transition-all">
+                  <span className="text-xs sm:text-sm">⭐</span>
                   <span>Bạn đang là Thành viên ưu tú!</span>
                 </div>
               ) : (
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
-                  <span className="text-sm flex-shrink-0">💡</span>
+                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-[11px] sm:text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
+                  <span className="text-xs sm:text-sm flex-shrink-0">💡</span>
                   <span className="text-gray-700">
                     Bạn đang là <strong className="text-gray-900 font-bold">Thành viên tiêu chuẩn</strong>, hãy <strong className="text-primary font-bold underline underline-offset-2">làm bài Test</strong> để nâng cấp vai trò!
                   </span>
@@ -158,8 +160,8 @@ const Navbar: React.FC = () => {
               className="fixed right-2 sm:right-3 top-[4.25rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
               title="Nhấn để đăng nhập vào hệ thống"
             >
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
-                <span className="text-sm flex-shrink-0">✨</span>
+              <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-[11px] sm:text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
+                <span className="text-xs sm:text-sm flex-shrink-0">✨</span>
                 <span className="text-gray-700">
                   Hãy <strong className="text-primary font-bold underline underline-offset-2">đăng nhập</strong> để có thêm những trải nghiệm thú vị!
                 </span>
@@ -167,6 +169,7 @@ const Navbar: React.FC = () => {
             </div>
           )
         )}
+
 
         {/* Mobile Menu */}
         {isMenuOpen && (
@@ -215,11 +218,13 @@ const Navbar: React.FC = () => {
                     </div>
                     <button 
                       onClick={handleLogout} 
-                      className="p-2 hover:bg-white/10 rounded-full text-white/80 hover:text-white transition-colors"
+                      className="flex items-center gap-1.5 px-3 py-1.5 hover:bg-white/15 rounded-lg text-white/90 hover:text-white transition-colors text-xs font-semibold border border-white/20 shrink-0"
                       title="Đăng xuất"
                     >
-                      <LogOut size={20} />
+                      <LogOut size={16} />
+                      <span>Đăng xuất</span>
                     </button>
+
                   </div>
                 ) : (
                   <button

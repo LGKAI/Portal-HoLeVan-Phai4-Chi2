@@ -49,6 +49,10 @@ export const newsService = {
     await api.put(`/news/${id}`, data);
   },
 
+  approveNews: async (id: number): Promise<void> => {
+    await api.put(`/news/${id}/approve`);
+  },
+
   deleteNews: async (id: number): Promise<void> => {
     await api.delete(`/news/${id}`);
   },

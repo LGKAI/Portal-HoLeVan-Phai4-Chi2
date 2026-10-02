@@ -6,7 +6,7 @@ import LoadingSpinner from '../components/common/LoadingSpinner';
 import { useAuthStore } from '../store/authStore';
 import Cropper from 'react-easy-crop';
 import { getCroppedImg } from '../utils/cropImage';
-import { Crop as CropIcon, X, Upload, Trash2 } from 'lucide-react';
+import { Crop as CropIcon, X, Upload, Trash2, CheckCircle2 } from 'lucide-react';
 import RichDocEditor, { toHtmlFormat } from '../components/News/RichDocEditor';
 
 const NewsPage: React.FC = () => {
@@ -19,6 +19,7 @@ const NewsPage: React.FC = () => {
 
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [editingId, setEditingId] = useState<number | null>(null);
+  const [editingNewsItem, setEditingNewsItem] = useState<NewsItem | null>(null);
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
   const [newThumb, setNewThumb] = useState('');
@@ -60,6 +61,7 @@ const NewsPage: React.FC = () => {
 
   const openAdd = () => {
     setEditingId(null);
+    setEditingNewsItem(null);
     setNewTitle('');
     setNewContent('');
     setNewThumb('');
@@ -74,6 +76,7 @@ const NewsPage: React.FC = () => {
 
   const openEdit = (item: NewsItem) => {
     setEditingId(item.id);
+    setEditingNewsItem(item);
     setNewTitle(item.title);
     setNewContent(toHtmlFormat(item.content));
     setNewThumb(item.thumbnail_url || '');
@@ -86,8 +89,18 @@ const NewsPage: React.FC = () => {
     setIsAddOpen(true);
   };
 
+  const handleApprove = async (id: number) => {
+    try {
+      await newsService.approveNews(id);
+      alert("Đã phê duyệt bài viết thành công! Bài viết hiện đã hiển thị công khai.");
+      fetchNews();
+    } catch (error: any) {
+      alert("Lỗi khi phê duyệt bài viết: " + (error?.response?.data?.message || error.message));
+    }
+  };
+
   const handleDelete = async (id: number) => {
-    if (window.confirm("Bạn có chắc chắn muốn xóa bài viết này?")) {
+    if (window.confirm("Bạn có chắc chắn muốn xóa / loại bỏ bài viết này?")) {
       try {
         await newsService.deleteNews(id);
         fetchNews();
@@ -147,8 +160,8 @@ const NewsPage: React.FC = () => {
     setNewThumb('');
   };
 
-  const handleAdd = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleAdd = async (e?: React.FormEvent, approveImmediately: boolean = false) => {
+    if (e) e.preventDefault();
     if (!newTitle.trim()) {
       alert("Vui lòng nhập tiêu đề bài viết.");
       return;
@@ -169,17 +182,27 @@ const NewsPage: React.FC = () => {
       }
 
       if (editingId) {
+        if (approveImmediately) {
+          formData.append('is_published', 'true');
+        }
         await newsService.updateNews(editingId, formData);
-        alert("Cập nhật thành công!");
+        alert(approveImmediately ? "Đã cập nhật và phê duyệt bài viết thành công!" : "Cập nhật bài viết thành công!");
       } else {
         formData.append('slug', createSlug(newTitle));
         formData.append('category', 'event');
-        formData.append('is_published', 'true');
+        // Admin đăng: duyệt luôn; Thành viên ưu tú đăng: chờ duyệt
+        const isPub = isAdmin ? 'true' : 'false';
+        formData.append('is_published', isPub);
         await newsService.createNews(formData);
-        alert("Đăng bài thành công!");
+        if (isAdmin) {
+          alert("Đăng bài viết thành công!");
+        } else {
+          alert("Bài viết đã được gửi thành công và đang chờ Quản trị viên phê duyệt!");
+        }
       }
       setIsAddOpen(false);
       setEditingId(null);
+      setEditingNewsItem(null);
       setNewTitle('');
       setNewContent('');
       setNewThumb('');
@@ -194,19 +217,19 @@ const NewsPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-6 sm:mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-dark mb-2">Tư liệu - Sự kiện Dòng họ</h1>
-          <p className="text-gray-600">Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.</p>
-          <p className="text-sm text-primary/85 font-medium italic mt-1.5">
-            * Tài khoản Thành viên ưu tú có thể đăng bài viết Tư liệu - Sự kiện.
+          <h1 className="text-2xl sm:text-3xl font-bold text-dark mb-1.5 sm:mb-2">Tư liệu - Sự kiện Dòng họ</h1>
+          <p className="text-sm sm:text-base text-gray-600">Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.</p>
+          <p className="text-xs sm:text-sm text-primary/85 font-medium italic mt-1.5">
+            * Thành viên ưu tú có quyền đóng góp bài viết mới (bài viết sẽ được Quản trị viên duyệt trước khi hiển thị công khai).
           </p>
         </div>
         {canCreateNews && (
           <button
             onClick={openAdd}
-            className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium shadow transition-colors flex items-center gap-2 self-start sm:self-auto shrink-0"
+            className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-semibold text-sm shadow transition-all flex items-center gap-2 self-start sm:self-auto shrink-0 active:scale-95"
           >
             + Đăng bài mới
           </button>
@@ -216,7 +239,7 @@ const NewsPage: React.FC = () => {
       {loading ? (
         <LoadingSpinner />
       ) : news.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {news.map((item) => (
             <NewsCard
               key={item.id}
@@ -224,6 +247,7 @@ const NewsPage: React.FC = () => {
               isAdmin={isAdmin}
               onEdit={openEdit}
               onDelete={handleDelete}
+              onApprove={handleApprove}
             />
           ))}
         </div>
@@ -238,17 +262,25 @@ const NewsPage: React.FC = () => {
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 animate-fadeIn">
           <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-4xl max-h-[92vh] overflow-y-auto flex flex-col">
             <div className="flex justify-between items-center mb-5 pb-3 border-b">
-              <h2 className="text-2xl font-bold text-dark">
-                {editingId ? 'Sửa bài viết' : 'Đăng tư liệu / sự kiện mới'}
-              </h2>
+              <div>
+                <h2 className="text-xl sm:text-2xl font-bold text-dark">
+                  {editingId ? (editingNewsItem && !editingNewsItem.is_published ? 'Xem & Chỉnh sửa bài viết chờ duyệt' : 'Sửa bài viết') : 'Đăng tư liệu / sự kiện mới'}
+                </h2>
+                {editingNewsItem && (
+                  <p className="text-xs text-gray-500 mt-1">
+                    Người đăng bài: <span className="font-semibold text-primary">{editingNewsItem.author_name || 'Thành viên ưu tú'}</span>
+                  </p>
+                )}
+              </div>
               <button
                 type="button"
                 onClick={() => setIsAddOpen(false)}
-                className="text-gray-400 hover:text-gray-600 p-1 rounded-full hover:bg-gray-100"
+                className="text-gray-400 hover:text-gray-600 p-1.5 rounded-full hover:bg-gray-100 transition-colors"
               >
-                <X size={24} />
+                <X size={22} />
               </button>
             </div>
+
 
             <form onSubmit={handleAdd} className="space-y-5">
               {/* Tiêu đề */}
@@ -375,21 +407,32 @@ const NewsPage: React.FC = () => {
               </div>
 
               {/* Nút hành động */}
-              <div className="flex justify-end gap-3 pt-4 border-t">
+              <div className="flex flex-wrap justify-end gap-3 pt-4 border-t">
                 <button
                   type="button"
                   onClick={() => setIsAddOpen(false)}
-                  className="px-5 py-2.5 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors"
+                  className="px-4 py-2 sm:px-5 sm:py-2.5 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium text-sm transition-colors"
                 >
                   Hủy
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary-dark font-medium shadow-md transition-colors"
+                  className="px-5 py-2 sm:px-6 sm:py-2.5 bg-primary text-white rounded-lg hover:bg-primary-dark font-semibold text-sm shadow-md transition-colors"
                 >
-                  {editingId ? 'Cập nhật bài viết' : 'Đăng bài viết'}
+                  {editingId ? 'Lưu thay đổi' : 'Đăng bài viết'}
                 </button>
+                {isAdmin && editingNewsItem && !editingNewsItem.is_published && (
+                  <button
+                    type="button"
+                    onClick={(e) => handleAdd(e, true)}
+                    className="px-5 py-2 sm:px-6 sm:py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold text-sm shadow-md transition-colors flex items-center gap-1.5"
+                  >
+                    <CheckCircle2 size={16} />
+                    <span>Lưu & Phê duyệt ngay</span>
+                  </button>
+                )}
               </div>
+
             </form>
           </div>
         </div>
