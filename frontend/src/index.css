@@ -227,11 +227,11 @@
   button.chatbot-floating-btn,
   button.fixed.bottom-6.right-6,
   button.fixed.bottom-5.right-5 {
-    bottom: 33px !important;
-    right: 32px !important;
+    bottom: 30px !important;
+    right: 28px !important;
     padding: 0 !important;
-    width: 46px !important;
-    height: 46px !important;
+    width: 54px !important;
+    height: 54px !important;
   }
 }
 
@@ -255,11 +255,11 @@
   button.chatbot-floating-btn,
   button.fixed.bottom-6.right-6,
   button.fixed.bottom-5.right-5 {
-    bottom: 33px !important;
-    right: 32px !important;
+    bottom: 30px !important;
+    right: 28px !important;
     padding: 0 !important;
-    width: 46px !important;
-    height: 46px !important;
+    width: 54px !important;
+    height: 54px !important;
   }
 }
 

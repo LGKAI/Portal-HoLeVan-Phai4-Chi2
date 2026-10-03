@@ -52,7 +52,7 @@ const ChatbotPanel: React.FC = () => {
             />
           </div>
           {/* Chấm tròn báo hiệu sẵn sàng hoạt động - nằm nổi hoàn toàn không bị đè khuất */}
-          <span className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-white rounded-full shadow-md z-10 pointer-events-none"></span>
+          <span className="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-green-500 border-2 border-white rounded-full shadow-md z-10 pointer-events-none"></span>
         </button>
       )}
 

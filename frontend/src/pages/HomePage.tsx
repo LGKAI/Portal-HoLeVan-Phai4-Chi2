@@ -51,19 +51,19 @@ const HomePage: React.FC = () => {
 
           <h1 className="mb-2 tracking-wide leading-tight">
             <span
-              className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] block text-base sm:text-2xl md:text-[26px] font-bold tracking-wider"
+              className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] block text-lg sm:text-2xl md:text-[26px] font-bold tracking-wider whitespace-nowrap"
               style={{ textShadow: '0 0 20px rgba(255,200,50,0.35), 0 4px 14px rgba(0,0,0,0.98)' }}
             >
               Cổng Thông Tin Dòng Họ
             </span>
             <div className="h-1"></div>
             <span
-              className="font-artistic text-secondary block text-[clamp(1.3rem,6vw,3.2rem)] font-extrabold whitespace-nowrap tracking-tight sm:tracking-wide mt-0.5 animate-gold-glow"
+              className="font-artistic text-secondary block text-[clamp(1.42rem,6.6vw,3.2rem)] font-extrabold whitespace-nowrap tracking-tight sm:tracking-wide mt-0.5 animate-gold-glow"
             >
               LÊ VĂN - PHÁI 4 - CHI 2
             </span>
           </h1>
-          <p className="text-[15px] sm:text-[20px] md:text-[22.5px] mb-2 sm:mb-3 font-extrabold tracking-wide"
+          <p className="text-[clamp(0.92rem,4.1vw,1.4rem)] mb-2.5 sm:mb-3 font-extrabold whitespace-nowrap tracking-wide"
             style={{
               color: '#ff5252',
               textShadow: '0 2px 6px rgba(0,0,0,1), 0 4px 20px rgba(0,0,0,0.95), 0 0 30px rgba(0,0,0,0.85)'
@@ -74,26 +74,26 @@ const HomePage: React.FC = () => {
 
           {/* 2 câu đối thơ nghệ thuật thư pháp */}
           <div
-            className="font-cursive text-white text-lg sm:text-2xl md:text-3xl tracking-wide mb-3 sm:mb-5 space-y-0.5 sm:space-y-1"
+            className="font-cursive text-white text-xl sm:text-2xl md:text-3xl tracking-wide mb-3.5 sm:mb-5 space-y-0.5 sm:space-y-1"
             style={{
               textShadow: '0 2px 4px rgba(0,0,0,1), 0 4px 14px rgba(0,0,0,0.95), 0 0 25px rgba(0,0,0,0.9)'
             }}
           >
-            <p className="leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.98)]">
+            <p className="leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.98)] whitespace-nowrap">
               Mai Sơn cao ngút ơn dưỡng dục
             </p>
-            <p className="leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.98)]">
+            <p className="leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.98)] whitespace-nowrap">
               Hãn Giang tuôn chảy nghĩa sinh thành
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
-            <Link to="/tree" className="bg-primary/85 hover:bg-primary border-2 border-red-400 text-red-200 min-w-[135px] sm:min-w-[180px] flex justify-center items-center gap-2 px-5 sm:px-8 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105 active:scale-95">
-              <BookOpen size={17} />
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <Link to="/tree" className="bg-primary/90 hover:bg-primary border-2 border-red-400 text-white min-w-[145px] sm:min-w-[185px] flex justify-center items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base whitespace-nowrap transition-all backdrop-blur-md shadow-xl hover:scale-105 active:scale-95">
+              <BookOpen size={19} />
               Xem Gia Phả
             </Link>
-            <Link to="/memorials" className="bg-secondary/85 hover:bg-secondary border-2 border-yellow-300 text-yellow-950 min-w-[135px] sm:min-w-[180px] flex justify-center items-center gap-2 px-5 sm:px-8 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-base transition-all backdrop-blur-md shadow-xl hover:scale-105 active:scale-95">
-              <Calendar size={17} />
+            <Link to="/memorials" className="bg-secondary/90 hover:bg-secondary border-2 border-yellow-300 text-yellow-950 min-w-[145px] sm:min-w-[185px] flex justify-center items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base whitespace-nowrap transition-all backdrop-blur-md shadow-xl hover:scale-105 active:scale-95">
+              <Calendar size={19} />
               Xem Lịch Giỗ
             </Link>
           </div>
@@ -115,13 +115,13 @@ const HomePage: React.FC = () => {
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
                   <BookOpen size={24} className="text-red-700" />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2 text-red-800">Gia Phả Số</h3>
-                <p className="text-red-900/70 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
+                <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-red-800">Gia Phả Số</h3>
+                <p className="text-red-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
                   Hệ thống phả hệ trực quan giúp con cháu dễ dàng tra cứu nguồn cội, thế thứ và quan hệ thân tộc.
                 </p>
               </div>
-              <Link to="/tree" className="text-red-700 font-bold text-xs sm:text-sm flex items-center justify-center gap-1 hover:underline mt-2">
-                Khám phá ngay <ChevronRight size={16} />
+              <Link to="/tree" className="text-red-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
+                Khám phá ngay <ChevronRight size={17} />
               </Link>
             </div>
 
@@ -130,13 +130,13 @@ const HomePage: React.FC = () => {
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/30 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
                   <Calendar size={24} className="text-yellow-700" />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2 text-yellow-800">Lịch Giỗ Kỵ</h3>
-                <p className="text-yellow-900/70 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
+                <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-yellow-800">Lịch Giỗ Kỵ</h3>
+                <p className="text-yellow-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
                   Tra cứu ngày cúng giỗ, nơi an táng các bậc tiền nhân trong 12 tháng Âm lịch để phụng sự hương khói.
                 </p>
               </div>
-              <Link to="/memorials" className="text-yellow-700 font-bold text-xs sm:text-sm flex items-center justify-center gap-1 hover:underline mt-2">
-                Xem lịch kỵ nhật <ChevronRight size={16} />
+              <Link to="/memorials" className="text-yellow-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
+                Xem lịch kỵ nhật <ChevronRight size={17} />
               </Link>
             </div>
 
@@ -145,13 +145,13 @@ const HomePage: React.FC = () => {
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
                   <Newspaper size={24} className="text-green-700" />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2 text-green-800">Tư Liệu - Sự Kiện</h3>
-                <p className="text-green-900/70 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
+                <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-green-800">Tư Liệu - Sự Kiện</h3>
+                <p className="text-green-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
                   Nơi cập nhật thông báo, hình ảnh tư liệu và các sinh hoạt truyền thống quan trọng của dòng họ.
                 </p>
               </div>
-              <Link to="/news" className="text-green-700 font-bold text-xs sm:text-sm flex items-center justify-center gap-1 hover:underline mt-2">
-                Xem sự kiện <ChevronRight size={16} />
+              <Link to="/news" className="text-green-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
+                Xem sự kiện <ChevronRight size={17} />
               </Link>
             </div>
 
@@ -160,16 +160,16 @@ const HomePage: React.FC = () => {
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
                   <Bot size={24} className="text-blue-700" />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2 text-blue-800">Trợ Lý AI Dòng Họ</h3>
-                <p className="text-blue-900/70 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
+                <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-blue-800">Trợ Lý AI Dòng Họ</h3>
+                <p className="text-blue-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
                   Trí tuệ nhân tạo học sâu từ gia phả, sẵn sàng giải đáp thắc mắc của con cháu về dòng họ 24/7.
                 </p>
               </div>
               <button
                 onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                className="text-blue-700 font-bold text-xs sm:text-sm flex items-center justify-center gap-1 hover:underline mx-auto mt-2"
+                className="text-blue-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mx-auto mt-2"
               >
-                Bắt đầu hỏi đáp <ChevronRight size={16} />
+                Bắt đầu hỏi đáp <ChevronRight size={17} />
               </button>
             </div>
           </div>
@@ -182,24 +182,24 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-3 gap-2 sm:gap-8 text-center">
             <div className="flex flex-col items-center animate-gold-glow">
               <div className="flex items-center justify-center gap-1.5 sm:gap-2.5 mb-1 sm:mb-2 text-secondary">
-                <Landmark size={24} className="text-secondary flex-shrink-0 sm:w-9 sm:h-9" />
+                <Landmark size={26} className="text-secondary flex-shrink-0 sm:w-9 sm:h-9" />
                 <span className="text-2xl sm:text-4xl font-bold">8+</span>
               </div>
-              <div className="text-[11px] sm:text-sm uppercase tracking-wider text-secondary font-medium">Đời</div>
+              <div className="text-xs sm:text-sm uppercase tracking-wider text-secondary font-semibold whitespace-nowrap">Đời</div>
             </div>
             <div className="flex flex-col items-center animate-gold-glow">
               <div className="flex items-center justify-center gap-1.5 sm:gap-2.5 mb-1 sm:mb-2 text-secondary">
-                <Users size={24} className="text-secondary flex-shrink-0 sm:w-9 sm:h-9" />
+                <Users size={26} className="text-secondary flex-shrink-0 sm:w-9 sm:h-9" />
                 <span className="text-2xl sm:text-4xl font-bold">300+</span>
               </div>
-              <div className="text-[11px] sm:text-sm uppercase tracking-wider text-secondary font-medium">Thành viên</div>
+              <div className="text-xs sm:text-sm uppercase tracking-wider text-secondary font-semibold whitespace-nowrap">Thành viên</div>
             </div>
             <div className="flex flex-col items-center animate-gold-glow">
               <div className="flex items-center justify-center gap-1.5 sm:gap-2.5 mb-1 sm:mb-2 text-secondary">
-                <Clock size={24} className="text-secondary flex-shrink-0 sm:w-9 sm:h-9" />
+                <Clock size={26} className="text-secondary flex-shrink-0 sm:w-9 sm:h-9" />
                 <span className="text-2xl sm:text-4xl font-bold">250+</span>
               </div>
-              <div className="text-[11px] sm:text-sm uppercase tracking-wider text-secondary font-medium">Năm lịch sử</div>
+              <div className="text-xs sm:text-sm uppercase tracking-wider text-secondary font-semibold whitespace-nowrap">Năm lịch sử</div>
             </div>
           </div>
         </div>
