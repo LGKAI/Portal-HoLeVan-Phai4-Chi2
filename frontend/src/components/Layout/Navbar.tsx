@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0 flex items-center gap-2">
                 <img src="/favicon.ico" alt="Logo" className="w-8 h-8 object-contain" />
-                <span className="font-bold text-sm sm:text-lg tracking-tight whitespace-nowrap text-secondary">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</span>
+                <span className="font-artistic font-bold text-sm sm:text-lg tracking-tight whitespace-nowrap text-secondary">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</span>
               </Link>
             </div>
 

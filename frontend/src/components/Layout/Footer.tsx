@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 mb-1.5">
               <img src="/favicon.ico" alt="Logo" className="w-8 h-8 object-contain flex-shrink-0" />
-              <h3 className="font-bold text-sm sm:text-lg text-secondary tracking-tight">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</h3>
+              <h3 className="font-artistic font-bold text-sm sm:text-lg text-secondary tracking-tight">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</h3>
             </div>
             <p className="text-gray-300 text-xs md:text-sm leading-normal">
               Cổng thông tin lưu trữ gia phả, tư liệu và kết nối con cháu dòng họ Lê Văn - Phái 4 - Chi 2.
