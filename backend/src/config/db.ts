@@ -141,6 +141,29 @@ export const initDb = async () => {
             console.warn('Lưu ý khi thêm cột custom_gio_date:', colErr);
         }
 
+        // Chuẩn hóa cột burial_place nếu trống hoặc 'Chưa ghi nhận' thành 'Không rõ' (đồng bộ local & Supabase)
+        try {
+            await p.query(`
+                UPDATE members 
+                SET burial_place = 'Không rõ' 
+                WHERE burial_place IS NULL OR TRIM(burial_place) = '' OR burial_place = 'Chưa ghi nhận';
+            `);
+        } catch (burialErr) {
+            console.warn('Lưu ý khi cập nhật burial_place:', burialErr);
+        }
+
+        // Chuẩn hóa custom_gio_date cũ nếu còn tồn tại định dạng dài dòng
+        try {
+            await p.query(`
+                UPDATE members 
+                SET custom_gio_date = NULL 
+                WHERE custom_gio_date ILIKE '%29 hoặc 30%' 
+                   OR custom_gio_date ILIKE '%chưa rõ ngày cụ thể%';
+            `);
+        } catch (customErr) {
+            console.warn('Lưu ý khi chuẩn hóa custom_gio_date:', customErr);
+        }
+
         // Tự động nạp dữ liệu gia phả ban đầu nếu bảng members đang trống
         await seedMembersIfEmpty(p);
 

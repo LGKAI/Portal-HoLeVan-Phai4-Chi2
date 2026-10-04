@@ -345,21 +345,12 @@ const MemorialCalendarPage: React.FC = () => {
                                       {item.gio_date}
                                     </span>
 
-                                    {item.is_custom && (
-                                      <span
-                                        className="inline-flex items-center text-[9.5px] bg-amber-100 text-amber-900 font-semibold px-1 py-0.2 rounded border border-amber-300"
-                                        title="Ngày giỗ ngoại lệ (do Quản trị viên tùy chỉnh)"
-                                      >
-                                        Ngoại lệ
-                                      </span>
-                                    )}
-
                                     {isAdmin && item.id && (
                                       <button
                                         type="button"
                                         onClick={() => handleOpenEdit(item)}
                                         className="inline-flex items-center justify-center p-1 text-primary-dark/70 hover:text-primary hover:bg-amber-100/90 rounded transition-colors group cursor-pointer"
-                                        title="Chỉnh sửa ngày giỗ ngoại lệ (Quyền Quản trị viên)"
+                                        title="Chỉnh sửa ngày giỗ (Quyền Quản trị viên)"
                                       >
                                         <Pencil size={12} className="group-hover:scale-110 transition-transform" />
                                       </button>
@@ -426,10 +417,10 @@ const MemorialCalendarPage: React.FC = () => {
 
                                 {/* Nơi an táng */}
                                 <td className="py-2.5 px-3.5 align-top text-gray-700 text-[11.5px] leading-relaxed break-words">
-                                  {item.burial_place && item.burial_place !== 'Không rõ' ? (
+                                  {item.burial_place && item.burial_place !== 'Không rõ' && item.burial_place !== 'Chưa ghi nhận' ? (
                                     <span>{item.burial_place}</span>
                                   ) : (
-                                    <span className="text-gray-400 italic">Chưa ghi nhận</span>
+                                    <span className="text-gray-400 italic">Không rõ</span>
                                   )}
                                 </td>
                               </tr>
@@ -457,7 +448,7 @@ const MemorialCalendarPage: React.FC = () => {
                   <Pencil size={16} />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold">Chỉnh sửa ngày giỗ ngoại lệ</h3>
+                  <h3 className="text-base font-bold">Chỉnh sửa ngày giỗ</h3>
                   <p className="text-[11px] text-amber-200/90 font-medium">Quyền Quản trị viên</p>
                 </div>
               </div>
@@ -493,7 +484,7 @@ const MemorialCalendarPage: React.FC = () => {
                   Ngày mất:
                 </label>
                 <div className="px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg text-xs sm:text-sm font-semibold text-gray-700 flex items-center justify-between">
-                  <span>{editingRecord.death_date || 'Chưa ghi nhận'}</span>
+                  <span>{editingRecord.death_date || 'Không rõ'}</span>
                   <span className="text-[10px] text-gray-500 italic bg-gray-200/80 px-2 py-0.5 rounded">
                     Dữ liệu gia phả gốc (không thể sửa)
                   </span>

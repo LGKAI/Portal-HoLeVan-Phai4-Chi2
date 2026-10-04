@@ -7,7 +7,7 @@ function computeMemorial(death_date: string | null): { gio_date: string; month: 
     const match = death_date.match(/(\d{1,2})\/(\d{1,2})/);
     if (!match) {
         return {
-            gio_date: `Chưa rõ ngày cụ thể (mất ${death_date})`,
+            gio_date: 'Chưa rõ ngày tháng cụ thể',
             month: 0,
         };
     }
@@ -15,14 +15,14 @@ function computeMemorial(death_date: string | null): { gio_date: string; month: 
     const month = parseInt(match[2], 10);
     if (isNaN(day) || isNaN(month)) {
         return {
-            gio_date: `Chưa rõ ngày cụ thể (mất ${death_date})`,
+            gio_date: 'Chưa rõ ngày tháng cụ thể',
             month: 0,
         };
     }
     if (day === 1) {
         const prevMonth = month - 1 <= 0 ? 12 : month - 1;
         return {
-            gio_date: `29 hoặc 30/${String(prevMonth).padStart(2, '0')} Âm lịch (ngày cuối tháng ${prevMonth})`,
+            gio_date: `Ngày cuối Tháng ${prevMonth} Âm lịch`,
             month: prevMonth,
         };
     }
@@ -70,6 +70,7 @@ function formatGioDate(input: string): string {
 }
 
 function extractDay(gio_date: string): number {
+    if (gio_date.toLowerCase().includes('ngày cuối')) return 30;
     const m = gio_date.match(/^(\d{1,2})\//);
     return m ? parseInt(m[1], 10) : 999;
 }
@@ -138,7 +139,7 @@ export const getMemorials = async (req: Request, res: Response) => {
                 father_name: row.father_name || '-',
                 mother_name: row.mother_name || '-',
                 gender: genderDesc,
-                burial_place: row.burial_place || 'Chưa ghi nhận',
+                burial_place: (row.burial_place && row.burial_place.trim() !== '' && row.burial_place !== 'Chưa ghi nhận') ? row.burial_place : 'Không rõ',
                 notes: row.notes || '',
             };
         });

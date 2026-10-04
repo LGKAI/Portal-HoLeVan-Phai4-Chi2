@@ -1,8 +1,8 @@
 # GIA PHẢ TOÀN TẬP: DÒNG HỌ LÊ VĂN - PHÁI 4 - CHI 2
 
-Địa chỉ: Thôn An Lợi, xã Triệu Bình, tỉnh Quảng Trị.
+Địa chỉ: Thôn An Lợi, xã Triệu Bình (xã Triệu Độ cũ), huyện Triệu Phong, tỉnh Quảng Trị.
 
-Gia phả ghi chép chi tiết toàn bộ 321 thành viên từ Đời 1 (Thủy tổ Lê Văn Khôi) đến Đời 8, bao gồm thông tin thế thứ, thân phụ mẫu, phối ngẫu, con cái, ngày kỵ và nơi an táng.
+Gia phả ghi chép chi tiết toàn bộ 313 thành viên từ Đời 1 (Thủy tổ Lê Văn Khôi) đến Đời 8, bao gồm thông tin thế thứ, thân phụ mẫu, phối ngẫu, con cái, ngày kỵ và nơi an táng.
 
 
 ---
@@ -2729,7 +2729,7 @@ Gia phả ghi chép chi tiết toàn bộ 321 thành viên từ Đời 1 (Thủy
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: 02/06/1954 (Giáp Ngọ)
 - **Ngày mất**: 01/09/2010 (Canh Dần)
-- **Ngày giỗ**: 29 hoặc 30/08 Âm lịch (ngày cuối tháng 8) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày giỗ**: Ngày cuối Tháng 8 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Không rõ
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Tu hành
@@ -3750,7 +3750,7 @@ Gia phả ghi chép chi tiết toàn bộ 321 thành viên từ Đời 1 (Thủy
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Không rõ
 - **Ngày mất**: 01/12 Âm lịch
-- **Ngày giỗ**: 29 hoặc 30/11 Âm lịch (ngày cuối tháng 11) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày giỗ**: Ngày cuối Tháng 11 Âm lịch (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Độ, Huyện Triệu Phong, Tỉnh Quảng Trị (cũ)
 - **Nghề nghiệp**: Không rõ
@@ -4729,7 +4729,7 @@ Gia phả ghi chép chi tiết toàn bộ 321 thành viên từ Đời 1 (Thủy
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Không rõ
 - **Ngày mất**: 1991 (Tân Mùi)
-- **Ngày giỗ**: Chưa rõ ngày cụ thể (mất 1991 (Tân Mùi)) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày giỗ**: Chưa rõ ngày tháng cụ thể (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
@@ -5663,7 +5663,7 @@ Gia phả ghi chép chi tiết toàn bộ 321 thành viên từ Đời 1 (Thủy
 - **Tình trạng**: Đã mất (Quy tiên)
 - **Năm sinh**: Không rõ
 - **Ngày mất**: 2023 (Quý Mão)
-- **Ngày giỗ**: Chưa rõ ngày cụ thể (mất 2023 (Quý Mão)) (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
+- **Ngày giỗ**: Chưa rõ ngày tháng cụ thể (theo phong tục, cúng giỗ vào ngày ngay trước ngày mất)
 - **Nơi an táng**: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nguyên quán**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị
 - **Nghề nghiệp**: Không rõ
