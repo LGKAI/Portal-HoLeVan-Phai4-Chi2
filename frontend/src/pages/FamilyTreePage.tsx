@@ -273,7 +273,6 @@ const FamilyTreePage: React.FC = () => {
             onClick={() => setShowMobileStats(!showMobileStats)}
             className="lg:hidden flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 font-medium text-gray-800"
           >
-            <span className="text-blue-500 font-bold">•</span>
             <span>Tổng: <strong className="font-bold text-blue-600">{memberStats.total}</strong></span>
             <span className="text-gray-300">|</span>
             <span className="text-gray-700">Mất: <strong className="font-bold text-red-600">{memberStats.deceased}</strong></span>

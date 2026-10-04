@@ -24,22 +24,29 @@
   }
 }
 
-/* React Flow Controls Custom Styling (Phóng to, Thu nhỏ) & Cân xứng với Trợ lý AI */
+/* React Flow Controls Custom Styling (Phóng to, Thu nhỏ) - Góc trên tay phải và nằm ngang ngang hàng với thanh thống kê bên trái */
 .react-flow__controls {
-  box-shadow: 0 4px 14px rgba(74, 18, 18, 0.15) !important;
-  border-radius: 10px !important;
+  box-shadow: 0 1px 6px rgba(74, 18, 18, 0.12) !important;
+  border-radius: 6px !important;
   overflow: hidden !important;
-  border: 1.5px solid #d9c4a6 !important;
+  border: 1px solid #d9c4a6 !important;
   background: #ffffff !important;
-  bottom: 28px !important;
-  left: 20px !important;
+  top: 12px !important;
+  right: 20px !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  z-index: 25 !important;
 }
 
 .react-flow__controls-button {
-  width: 40px !important;
-  height: 40px !important;
+  width: 30px !important;
+  height: 30px !important;
   background-color: #ffffff !important;
-  border-bottom: 1.5px solid #ede3d4 !important;
+  border-right: 1px solid #ede3d4 !important;
+  border-bottom: none !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -48,6 +55,7 @@
 }
 
 .react-flow__controls-button:last-child {
+  border-right: none !important;
   border-bottom: none !important;
 }
 
@@ -56,10 +64,10 @@
 }
 
 .react-flow__controls-button svg {
-  width: 20px !important;
-  height: 20px !important;
-  max-width: 20px !important;
-  max-height: 20px !important;
+  width: 15px !important;
+  height: 15px !important;
+  max-width: 15px !important;
+  max-height: 15px !important;
   fill: #4a1212 !important;
 }
 
@@ -207,19 +215,30 @@
     display: none !important;
   }
 
-  /* 4. Tinh gọn nút Phóng to / Thu nhỏ cân xứng */
+  /* 4. Tinh gọn nút Phóng to / Thu nhỏ nằm ngang thẳng hàng với thanh thống kê bên trái */
   .react-flow__controls {
-    bottom: 22px !important;
-    left: 14px !important;
-    border-radius: 8px !important;
+    top: 8px !important;
+    right: 20px !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    border-radius: 6px !important;
+    border: 1px solid #d9c4a6 !important;
+    display: flex !important;
+    flex-direction: row !important;
   }
   .react-flow__controls-button {
-    width: 34px !important;
-    height: 34px !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-right: 1px solid #ede3d4 !important;
+    border-bottom: none !important;
+  }
+  .react-flow__controls-button:last-child {
+    border-right: none !important;
   }
   .react-flow__controls-button svg {
-    width: 16px !important;
-    height: 16px !important;
+    width: 14px !important;
+    height: 14px !important;
   }
 
   /* 5. Nút Chatbot AI cân xứng và cách thanh cuộn dọc bên phải một khoảng thoáng đãng */
@@ -238,17 +257,28 @@
 /* Áp dụng cân xứng cả trên điện thoại dọc (Mobile Portrait dưới 768px) */
 @media (max-width: 768px) {
   .react-flow__controls {
-    bottom: 22px !important;
-    left: 14px !important;
-    border-radius: 8px !important;
+    top: 8px !important;
+    right: 20px !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    border-radius: 6px !important;
+    border: 1px solid #d9c4a6 !important;
+    display: flex !important;
+    flex-direction: row !important;
   }
   .react-flow__controls-button {
-    width: 34px !important;
-    height: 34px !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-right: 1px solid #ede3d4 !important;
+    border-bottom: none !important;
+  }
+  .react-flow__controls-button:last-child {
+    border-right: none !important;
   }
   .react-flow__controls-button svg {
-    width: 16px !important;
-    height: 16px !important;
+    width: 14px !important;
+    height: 14px !important;
   }
 
   .chatbot-floating-btn,

@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Calendar, Search, MapPin, Filter } from 'lucide-react';
+import { Calendar, Search, Filter, Pencil, X, Check, RotateCcw, Lock, AlertCircle } from 'lucide-react';
 import { MemorialRecord } from '../types';
 import defaultMemorials from '../data/memorials.json';
-
 import api from '../services/api';
+import { useAuthStore } from '../store/authStore';
 
 const MONTH_OPTIONS = [
   { id: 0, label: 'Tất cả 12 tháng', shortLabel: 'Tất cả' },
@@ -36,13 +36,23 @@ function getPhaiGeneration(desc?: string): string {
 }
 
 const MemorialCalendarPage: React.FC = () => {
-  // Khởi tạo sẵn từ dữ liệu hiện có để luôn có đầy đủ 109 ngày giỗ ngay lập tức
+  const { user } = useAuthStore();
+  const isAdmin = user?.role === 'admin';
+
+  // Khởi tạo sẵn từ dữ liệu hiện có để luôn có đầy đủ ngày giỗ ngay lập tức
   const [memorials, setMemorials] = useState<MemorialRecord[]>(defaultMemorials as MemorialRecord[]);
   const [selectedMonth, setSelectedMonth] = useState<number>(0);
   const [searchTerm, setSearchTerm] = useState<string>('');
 
+  // Trạng thái modal chỉnh sửa ngày giỗ ngoại lệ cho quản trị viên
+  const [editingRecord, setEditingRecord] = useState<MemorialRecord | null>(null);
+  const [editGioDateInput, setEditGioDateInput] = useState<string>('');
+  const [isSaving, setIsSaving] = useState<boolean>(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+
   // Tự động đồng bộ với CSDL qua API để khi admin cập nhật/thêm người mất mới sẽ tự động nạp vào
-  useEffect(() => {
+  const fetchMemorials = () => {
     api.get('/memorials')
       .then((res) => {
         if (res.data?.success && Array.isArray(res.data.data) && res.data.data.length > 0) {
@@ -52,7 +62,63 @@ const MemorialCalendarPage: React.FC = () => {
       .catch((err) => {
         console.warn('API /memorials fetch error, sử dụng dữ liệu mặc định:', err);
       });
+  };
+
+  useEffect(() => {
+    fetchMemorials();
   }, []);
+
+  const handleOpenEdit = (record: MemorialRecord) => {
+    setEditingRecord(record);
+    setEditGioDateInput(record.gio_date || '');
+    setSaveError(null);
+  };
+
+  const handleCloseEdit = () => {
+    if (isSaving) return;
+    setEditingRecord(null);
+    setEditGioDateInput('');
+    setSaveError(null);
+  };
+
+  const handleSaveCustomDate = async (targetDate: string | null) => {
+    if (!editingRecord || !editingRecord.id) return;
+    setIsSaving(true);
+    setSaveError(null);
+    try {
+      const res = await api.put(`/memorials/${editingRecord.id}`, {
+        gio_date: targetDate,
+      });
+
+      if (res.data?.success && res.data?.data) {
+        const updated = res.data.data;
+        setMemorials((prev) =>
+          prev.map((item) =>
+            item.id === editingRecord.id
+              ? {
+                ...item,
+                gio_date: updated.gio_date,
+                month: updated.month,
+                is_custom: updated.is_custom,
+                custom_gio_date: updated.custom_gio_date,
+              }
+              : item
+          )
+        );
+        setToastMessage(res.data.message || 'Cập nhật ngày giỗ thành công!');
+        setTimeout(() => setToastMessage(null), 3500);
+        handleCloseEdit();
+      } else {
+        setSaveError(res.data?.message || 'Có lỗi xảy ra khi lưu ngày giỗ.');
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (err: any) {
+      console.error('Error saving custom memorial date:', err);
+      setSaveError(err.response?.data?.message || 'Lỗi khi kết nối đến máy chủ.');
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   // Đếm số lượng theo từng tháng
   const monthCounts = useMemo(() => {
@@ -109,8 +175,16 @@ const MemorialCalendarPage: React.FC = () => {
   }, [selectedMonth, memorials]);
 
   return (
-    <div className="bg-cream min-h-screen pb-20">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-4 sm:mt-8">
+    <div className="bg-cream min-h-screen pb-20 relative">
+      {/* Toast thông báo thành công */}
+      {toastMessage && (
+        <div className="fixed top-20 right-4 z-50 bg-emerald-700 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 text-sm font-medium border border-emerald-500 animate-fade-in">
+          <Check size={18} className="text-emerald-200 flex-shrink-0" />
+          <span>{toastMessage}</span>
+        </div>
+      )}
+
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 mt-4 sm:mt-8">
         {/* Bộ lọc tháng & Tìm kiếm */}
         <div className="bg-white rounded-xl shadow-sm border border-amber-200/80 p-3.5 sm:p-5 mb-6 sm:mb-8">
           <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-between items-center mb-4 sm:mb-6">
@@ -155,17 +229,15 @@ const MemorialCalendarPage: React.FC = () => {
                   <button
                     key={m.id}
                     onClick={() => setSelectedMonth(m.id)}
-                    className={`px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-lg text-[11px] sm:text-xs font-bold transition-all text-center flex flex-col items-center justify-center gap-0.5 border ${
-                      isSelected
+                    className={`px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-lg text-[11px] sm:text-xs font-bold transition-all text-center flex flex-col items-center justify-center gap-0.5 border ${isSelected
                         ? 'bg-primary text-white border-primary shadow-md scale-105'
                         : 'bg-cream-light hover:bg-amber-100 text-gray-800 border-amber-200'
-                    }`}
+                      }`}
                   >
                     <span>{m.shortLabel}</span>
                     <span
-                      className={`text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full font-bold ${
-                        isSelected ? 'bg-secondary text-primary-dark' : 'bg-white/80 text-gray-600'
-                      }`}
+                      className={`text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full font-bold ${isSelected ? 'bg-secondary text-primary-dark' : 'bg-white/80 text-gray-600'
+                        }`}
                     >
                       {count}
                     </span>
@@ -232,124 +304,267 @@ const MemorialCalendarPage: React.FC = () => {
                       <span>→</span>
                     </div>
                     <div className="overflow-x-auto">
-                      <table className="w-full text-left text-sm">
+                      <table className="w-full text-left text-[13px] table-fixed min-w-[980px]">
+                        <colgroup>
+                          <col style={{ width: '210px' }} />
+                          <col style={{ width: '180px' }} />
+                          <col style={{ width: '82px' }} />
+                          <col style={{ width: '170px' }} />
+                          <col style={{ width: '170px' }} />
+                          <col />
+                        </colgroup>
+                        <thead className="bg-primary text-white text-[11px] sm:text-xs uppercase tracking-wider font-semibold">
+                          <tr>
+                            <th className="py-2.5 px-3.5 w-[210px]">Ngày giỗ</th>
+                            <th className="py-2.5 px-3.5 w-[180px]">Họ và tên</th>
+                            <th className="py-2.5 px-2 w-[82px] text-center whitespace-nowrap">Đời thứ</th>
+                            <th className="py-2.5 px-3.5 w-[170px]">Thân phụ</th>
+                            <th className="py-2.5 px-3.5 w-[170px]">Thân mẫu</th>
+                            <th className="py-2.5 px-3.5">Nơi an táng</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                          {recordsInMonth.map((item, idx) => {
+                            const isThuyTo =
+                              item.notes?.includes('Thuỷ tổ') ||
+                              item.notes?.includes('Thủy tổ') ||
+                              item.id === 1005 ||
+                              item.id === 1006;
+                            const isLietSi = item.notes?.includes('Liệt sĩ');
 
-                      <thead className="bg-primary text-white text-xs uppercase tracking-wider font-semibold">
-                        <tr>
-                          <th className="py-3.5 px-4 w-60 min-w-[225px]">Ngày giỗ</th>
-                          <th className="py-3.5 px-4 min-w-[215px]">Họ và tên</th>
-                          <th className="py-3.5 px-3 w-24 min-w-[96px] text-center">Đời thứ</th>
-                          <th className="py-3.5 px-4 min-w-[185px]">Thân phụ (Cha)</th>
-                          <th className="py-3.5 px-4 min-w-[185px]">Thân mẫu (Mẹ)</th>
-                          <th className="py-3.5 px-4 min-w-[185px]">Nơi an táng</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-gray-100">
-                        {recordsInMonth.map((item, idx) => {
-                          const isThuyTo =
-                            item.notes?.includes('Thuỷ tổ') ||
-                            item.notes?.includes('Thủy tổ') ||
-                            item.id === 1005 ||
-                            item.id === 1006;
-                          const isLietSi = item.notes?.includes('Liệt sĩ');
+                            return (
+                              <tr
+                                key={item.id || idx}
+                                className={`transition-colors hover:bg-amber-50/70 ${idx % 2 === 0 ? 'bg-white' : 'bg-cream-light/40'
+                                  } ${isThuyTo ? 'bg-yellow-50/50' : ''}`}
+                              >
+                                {/* Ngày giỗ (chữ đỏ) kèm icon ngòi bút cho Quản trị viên */}
+                                <td className="py-2.5 px-3.5 align-top break-words">
+                                  <div className="flex items-center gap-1.5 flex-wrap">
+                                    <span className="font-extrabold text-primary-dark text-[13px]">
+                                      {item.gio_date}
+                                    </span>
 
-                          return (
-                            <tr
-                              key={item.id || idx}
-                              className={`transition-colors hover:bg-amber-50/70 ${
-                                idx % 2 === 0 ? 'bg-white' : 'bg-cream-light/40'
-                              } ${isThuyTo ? 'bg-yellow-50/50' : ''}`}
-                            >
-                              {/* Ngày giỗ */}
-                              <td className="py-3.5 px-4 align-top">
-                                <div className="font-extrabold text-primary-dark text-sm flex items-center gap-1.5">
-                                  <Calendar size={14} className="text-primary flex-shrink-0" />
-                                  <span>{item.gio_date}</span>
-                                </div>
-                                {item.death_date && (
-                                  <div className="text-[11px] text-gray-500 mt-1 pl-5">
-                                    Mất: {item.death_date}
+                                    {item.is_custom && (
+                                      <span
+                                        className="inline-flex items-center text-[9.5px] bg-amber-100 text-amber-900 font-semibold px-1 py-0.2 rounded border border-amber-300"
+                                        title="Ngày giỗ ngoại lệ (do Quản trị viên tùy chỉnh)"
+                                      >
+                                        Ngoại lệ
+                                      </span>
+                                    )}
+
+                                    {isAdmin && item.id && (
+                                      <button
+                                        type="button"
+                                        onClick={() => handleOpenEdit(item)}
+                                        className="inline-flex items-center justify-center p-1 text-primary-dark/70 hover:text-primary hover:bg-amber-100/90 rounded transition-colors group cursor-pointer"
+                                        title="Chỉnh sửa ngày giỗ ngoại lệ (Quyền Quản trị viên)"
+                                      >
+                                        <Pencil size={12} className="group-hover:scale-110 transition-transform" />
+                                      </button>
+                                    )}
                                   </div>
-                                )}
-                              </td>
+                                  {item.death_date && (
+                                    <div className="text-[10.5px] text-gray-500 mt-0.5">
+                                      Mất: {item.death_date}
+                                    </div>
+                                  )}
+                                </td>
 
-                              {/* Họ và tên */}
-                              <td className="py-3.5 px-4 align-top">
-                                <div className="font-bold text-dark text-sm uppercase flex items-center gap-1.5">
-                                  <span>{item.full_name}</span>
-                                  {isThuyTo && (
-                                    <span className="bg-secondary text-primary-dark text-[10px] font-extrabold px-1.5 py-0.5 rounded shadow-xs">
-                                      Thủy tổ
-                                    </span>
-                                  )}
-                                  {isLietSi && (
-                                    <span className="bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded">
-                                      Liệt sĩ
-                                    </span>
-                                  )}
-                                </div>
-                                {item.gender && (
-                                  <div className="text-[11px] text-gray-500 mt-0.5">
-                                    <span className={item.gender === 'Nữ' ? 'text-pink-600' : 'text-blue-600'}>
-                                      {item.gender}
-                                    </span>
+                                {/* Họ và tên */}
+                                <td className="py-2.5 px-3.5 align-top whitespace-nowrap">
+                                  <div className="font-bold text-dark text-[13px] uppercase flex items-center gap-1.5 flex-nowrap">
+                                    <span className="whitespace-nowrap">{item.full_name}</span>
+                                    {isThuyTo && (
+                                      <span className="bg-secondary text-primary-dark text-[9.5px] font-extrabold px-1.5 py-0.5 rounded shadow-xs whitespace-nowrap">
+                                        Thủy tổ
+                                      </span>
+                                    )}
+                                    {isLietSi && (
+                                      <span className="bg-red-100 text-red-700 text-[9.5px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap">
+                                        Liệt sĩ
+                                      </span>
+                                    )}
                                   </div>
-                                )}
-                              </td>
+                                  {item.gender && (
+                                    <div className="text-[10.5px] text-gray-500 mt-0.5 whitespace-nowrap">
+                                      <span className={item.gender === 'Nữ' ? 'text-pink-600 font-medium' : 'text-blue-600 font-medium'}>
+                                        {item.gender}
+                                      </span>
+                                    </div>
+                                  )}
+                                </td>
 
-                              {/* Đời thứ */}
-                              <td className="py-3.5 px-3 text-center align-top">
-                                <span
-                                  className="inline-flex items-center justify-center min-w-[32px] px-2 py-0.5 bg-primary/10 text-primary-dark rounded-full text-sm font-bold border border-primary/20"
-                                  title={item.generation_desc}
-                                >
-                                  {getPhaiGeneration(item.generation_desc)}
-                                </span>
-                              </td>
+                                {/* Đời thứ */}
+                                <td className="py-2.5 px-2 text-center align-top whitespace-nowrap">
+                                  <span
+                                    className="font-semibold text-gray-700 text-[13px]"
+                                    title={item.generation_desc}
+                                  >
+                                    {getPhaiGeneration(item.generation_desc)}
+                                  </span>
+                                </td>
 
-                              {/* Thân phụ */}
-                              <td className="py-3.5 px-4 align-top text-gray-800">
-                                {item.father_name && item.father_name !== '-' ? (
-                                  <span className="font-medium text-gray-900">{item.father_name}</span>
-                                ) : (
-                                  <span className="text-gray-400 italic">Không rõ</span>
-                                )}
-                              </td>
+                                {/* Thân phụ */}
+                                <td className="py-2.5 px-3.5 align-top text-gray-800 text-[13px] whitespace-nowrap">
+                                  {item.father_name && item.father_name !== '-' ? (
+                                    <span className="font-medium text-gray-900">{item.father_name}</span>
+                                  ) : (
+                                    <span className="text-gray-400 italic">Không rõ</span>
+                                  )}
+                                </td>
 
-                              {/* Thân mẫu */}
-                              <td className="py-3.5 px-4 align-top text-gray-800">
-                                {item.mother_name && item.mother_name !== '-' ? (
-                                  <span className="font-medium text-gray-900">{item.mother_name}</span>
-                                ) : (
-                                  <span className="text-gray-400 italic">Không rõ</span>
-                                )}
-                              </td>
+                                {/* Thân mẫu */}
+                                <td className="py-2.5 px-3.5 align-top text-gray-800 text-[13px] whitespace-nowrap">
+                                  {item.mother_name && item.mother_name !== '-' ? (
+                                    <span className="font-medium text-gray-900">{item.mother_name}</span>
+                                  ) : (
+                                    <span className="text-gray-400 italic">Không rõ</span>
+                                  )}
+                                </td>
 
-                              {/* Nơi an táng */}
-                              <td className="py-3.5 px-4 align-top text-gray-700 text-xs leading-relaxed">
-                                {item.burial_place && item.burial_place !== 'Không rõ' ? (
-                                  <div className="flex items-start gap-1">
-                                    <MapPin size={13} className="text-primary flex-shrink-0 mt-0.5" />
+                                {/* Nơi an táng */}
+                                <td className="py-2.5 px-3.5 align-top text-gray-700 text-[11.5px] leading-relaxed break-words">
+                                  {item.burial_place && item.burial_place !== 'Không rõ' ? (
                                     <span>{item.burial_place}</span>
-                                  </div>
-                                ) : (
-                                  <span className="text-gray-400 italic">Chưa ghi nhận</span>
-                                )}
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
+                                  ) : (
+                                    <span className="text-gray-400 italic">Chưa ghi nhận</span>
+                                  )}
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-
+                )}
+              </div>
             );
           })}
         </div>
       </div>
+
+      {/* MODAL CHỈNH SỬA NGÀY GIỖ NGOẠI LỆ (Dành riêng cho Quản trị viên) */}
+      {editingRecord && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl border border-amber-200 max-w-lg w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            {/* Header Modal */}
+            <div className="bg-gradient-to-r from-amber-800 via-primary to-primary-dark text-white px-5 py-4 flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-amber-600/40 border border-amber-300/30 flex items-center justify-center text-amber-200">
+                  <Pencil size={16} />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold">Chỉnh sửa ngày giỗ ngoại lệ</h3>
+                  <p className="text-[11px] text-amber-200/90 font-medium">Quyền Quản trị viên</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={handleCloseEdit}
+                disabled={isSaving}
+                className="text-white/70 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Body Modal */}
+            <div className="p-5 space-y-4">
+              {/* Thông tin nhân vật */}
+              <div className="bg-amber-50/70 border border-amber-200/80 rounded-xl p-3.5">
+                <div className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-1">
+                  Thông tin tiền nhân / con cháu
+                </div>
+                <div className="text-base font-bold text-dark uppercase">
+                  {editingRecord.full_name}
+                </div>
+                <div className="text-xs text-gray-600 mt-0.5">
+                  {editingRecord.generation_desc}
+                </div>
+              </div>
+
+              {/* DÒNG NGÀY MẤT: CỐ ĐỊNH, KHÔNG ĐƯỢC PHÉP SỬA */}
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold text-gray-600 uppercase tracking-wider flex items-center gap-1.5">
+                  <Lock size={13} className="text-amber-700" />
+                  Ngày mất:
+                </label>
+                <div className="px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg text-xs sm:text-sm font-semibold text-gray-700 flex items-center justify-between">
+                  <span>{editingRecord.death_date || 'Chưa ghi nhận'}</span>
+                  <span className="text-[10px] text-gray-500 italic bg-gray-200/80 px-2 py-0.5 rounded">
+                    Dữ liệu gia phả gốc (không thể sửa)
+                  </span>
+                </div>
+              </div>
+
+              {/* DÒNG NGÀY GIỖ: CHO PHÉP QUẢN TRỊ VIÊN SỬA */}
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold text-primary-dark uppercase tracking-wider flex items-center gap-1.5">
+                  <Pencil size={13} className="text-primary" />
+                  Ngày giỗ Âm lịch:
+                </label>
+                <input
+                  type="text"
+                  value={editGioDateInput}
+                  onChange={(e) => setEditGioDateInput(e.target.value)}
+                  placeholder="Ví dụ: 07/01 Âm lịch"
+                  disabled={isSaving}
+                  className="w-full px-3.5 py-2.5 rounded-lg border-2 border-primary/30 focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm font-bold text-primary-dark bg-white outline-none"
+                />
+              </div>
+
+              {/* Thông báo lỗi nếu có */}
+              {saveError && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-700 flex items-center gap-2">
+                  <AlertCircle size={15} className="text-red-500 flex-shrink-0" />
+                  <span>{saveError}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Footer Modal */}
+            <div className="bg-gray-50 px-5 py-3.5 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                {/* Nút khôi phục theo mặc định (tính tự động từ ngày mất) */}
+                <button
+                  type="button"
+                  onClick={() => handleSaveCustomDate(null)}
+                  disabled={isSaving}
+                  className="text-xs font-semibold text-gray-600 hover:text-amber-800 hover:bg-amber-100/70 px-2.5 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 border border-gray-200"
+                  title="Hủy bỏ tùy chỉnh ngoại lệ, quay lại ngày giỗ tính tự động theo ngày mất"
+                >
+                  <RotateCcw size={13} />
+                  <span>Khôi phục mặc định</span>
+                </button>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handleCloseEdit}
+                  disabled={isSaving}
+                  className="px-3.5 py-2 text-xs font-bold text-gray-600 hover:text-gray-800 hover:bg-gray-200/60 rounded-lg transition-colors"
+                >
+                  Hủy
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleSaveCustomDate(editGioDateInput)}
+                  disabled={isSaving || !editGioDateInput.trim()}
+                  className="px-4 py-2 text-xs font-bold text-white bg-primary hover:bg-primary-dark rounded-lg shadow-sm transition-all flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <Check size={14} />
+                  <span>{isSaving ? 'Đang lưu...' : 'Lưu thay đổi'}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

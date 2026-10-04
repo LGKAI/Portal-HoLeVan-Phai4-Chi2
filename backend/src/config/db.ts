@@ -132,6 +132,15 @@ export const initDb = async () => {
             console.warn('Lưu ý khi cập nhật ràng buộc users_role_check:', constraintErr);
         }
 
+        // Đảm bảo bảng members có cột custom_gio_date để lưu ngày giỗ ngoại lệ do quản trị viên chỉnh sửa
+        try {
+            await p.query(`
+                ALTER TABLE members ADD COLUMN IF NOT EXISTS custom_gio_date VARCHAR(200);
+            `);
+        } catch (colErr) {
+            console.warn('Lưu ý khi thêm cột custom_gio_date:', colErr);
+        }
+
         // Tự động nạp dữ liệu gia phả ban đầu nếu bảng members đang trống
         await seedMembersIfEmpty(p);
 

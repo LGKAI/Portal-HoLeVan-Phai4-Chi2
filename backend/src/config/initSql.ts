@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS members (
     burial_place VARCHAR(300),
     hometown VARCHAR(300),
     spouse_type VARCHAR(50),
+    custom_gio_date VARCHAR(200),
     father_id INT REFERENCES members(id) ON DELETE SET NULL,
     mother_id INT REFERENCES members(id) ON DELETE SET NULL,
     spouse_id INT REFERENCES members(id) ON DELETE SET NULL,

@@ -64,4 +64,6 @@ export interface MemorialRecord {
   gender: string;
   burial_place: string;
   notes: string;
+  is_custom?: boolean;
+  custom_gio_date?: string | null;
 }

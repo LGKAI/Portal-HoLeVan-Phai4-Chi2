@@ -725,8 +725,10 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         onlyRenderVisibleElements={true}
         proOptions={{ hideAttribution: true }}
       >
-        {/* Nút điều khiển: Chỉ 2 nút Phóng to (+) và Thu nhỏ (-), được căn chỉnh cân xứng hoàn hảo với Trợ lý AI */}
+        {/* Nút điều khiển: 2 nút Phóng to (+) và Thu nhỏ (-) ở góc trên bên phải, nằm ngang, dấu (+) bên trái dấu (-) */}
         <Controls
+          position="top-right"
+          orientation="horizontal"
           showInteractive={false}
           showFitView={false}
         />
