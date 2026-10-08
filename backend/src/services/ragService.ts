@@ -85,10 +85,11 @@ const getGioDate = (deathDateStr?: string | null): string => {
             return `${String(day - 1).padStart(2, '0')}/${String(month).padStart(2, '0')} Âm lịch`;
         } else {
             const prevMonth = month === 1 ? 12 : month - 1;
-            return `Ngày cuối Tháng ${prevMonth} Âm lịch`;
+            const prevMonthStr = String(prevMonth).padStart(2, '0');
+            return `29 hoặc 30/${prevMonthStr} Âm lịch`;
         }
     }
-    return 'Chưa rõ ngày tháng cụ thể';
+    return 'Chưa rõ ngày tháng';
 };
 
 // Khởi tạo nạp tài liệu

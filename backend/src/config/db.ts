@@ -152,13 +152,14 @@ export const initDb = async () => {
             console.warn('Lưu ý khi cập nhật burial_place:', burialErr);
         }
 
-        // Chuẩn hóa custom_gio_date cũ nếu còn tồn tại định dạng dài dòng
+        // Chuẩn hóa custom_gio_date cũ nếu còn tồn tại định dạng dài dòng trước đây
         try {
             await p.query(`
                 UPDATE members 
                 SET custom_gio_date = NULL 
-                WHERE custom_gio_date ILIKE '%29 hoặc 30%' 
-                   OR custom_gio_date ILIKE '%chưa rõ ngày cụ thể%';
+                WHERE custom_gio_date ILIKE '%ngày cuối tháng%' 
+                   OR custom_gio_date ILIKE '%chưa rõ ngày cụ thể%'
+                   OR custom_gio_date ILIKE '%chưa rõ ngày tháng cụ thể%';
             `);
         } catch (customErr) {
             console.warn('Lưu ý khi chuẩn hóa custom_gio_date:', customErr);

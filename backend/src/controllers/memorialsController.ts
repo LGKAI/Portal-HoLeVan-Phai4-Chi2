@@ -7,7 +7,7 @@ function computeMemorial(death_date: string | null): { gio_date: string; month: 
     const match = death_date.match(/(\d{1,2})\/(\d{1,2})/);
     if (!match) {
         return {
-            gio_date: 'Chưa rõ ngày tháng cụ thể',
+            gio_date: 'Chưa rõ ngày tháng',
             month: 0,
         };
     }
@@ -15,14 +15,15 @@ function computeMemorial(death_date: string | null): { gio_date: string; month: 
     const month = parseInt(match[2], 10);
     if (isNaN(day) || isNaN(month)) {
         return {
-            gio_date: 'Chưa rõ ngày tháng cụ thể',
+            gio_date: 'Chưa rõ ngày tháng',
             month: 0,
         };
     }
     if (day === 1) {
         const prevMonth = month - 1 <= 0 ? 12 : month - 1;
+        const prevMonthStr = String(prevMonth).padStart(2, '0');
         return {
-            gio_date: `Ngày cuối Tháng ${prevMonth} Âm lịch`,
+            gio_date: `29 hoặc 30/${prevMonthStr} Âm lịch`,
             month: prevMonth,
         };
     }
@@ -35,9 +36,9 @@ function computeMemorial(death_date: string | null): { gio_date: string; month: 
 
 function parseLunarMonth(gio_date: string): number {
     if (!gio_date) return 0;
-    const slashMatch = gio_date.match(/(\d{1,2})\/(\d{1,2})/);
+    const slashMatch = gio_date.match(/\/\s*(\d{1,2})/);
     if (slashMatch) {
-        const m = parseInt(slashMatch[2], 10);
+        const m = parseInt(slashMatch[1], 10);
         if (m >= 1 && m <= 12) return m;
     }
     const textMatch = gio_date.match(/tháng\s*(\d{1,2})/i);
@@ -70,7 +71,7 @@ function formatGioDate(input: string): string {
 }
 
 function extractDay(gio_date: string): number {
-    if (gio_date.toLowerCase().includes('ngày cuối')) return 30;
+    if (gio_date.toLowerCase().includes('ngày cuối') || gio_date.includes('29 hoặc 30')) return 30;
     const m = gio_date.match(/^(\d{1,2})\//);
     return m ? parseInt(m[1], 10) : 999;
 }
