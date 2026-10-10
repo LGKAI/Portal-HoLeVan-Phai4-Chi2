@@ -217,12 +217,13 @@ const NewsPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 pb-12 sm:pb-16">
       <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-6 sm:mb-8">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-dark mb-1.5 sm:mb-2">Tư liệu - Sự kiện Dòng họ</h1>
-          <p className="text-sm sm:text-base text-gray-600">Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.</p>
-          <p className="text-xs sm:text-sm text-primary/85 font-medium italic mt-1.5">
+          <h1 className="text-2xl sm:text-3xl font-bold text-dark mb-1.5 sm:mb-2">Tư liệu & Sự kiện Dòng họ</h1>
+          <p className="text-sm sm:text-base text-gray-600 mb-2">Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.</p>
+          <div className="w-16 h-1 bg-primary mb-2.5"></div>
+          <p className="text-xs sm:text-sm text-primary/85 font-medium italic">
             * Thành viên ưu tú có quyền đóng góp bài viết mới (bài viết sẽ được Quản trị viên duyệt trước khi hiển thị công khai).
           </p>
         </div>

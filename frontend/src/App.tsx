@@ -7,6 +7,7 @@ import FamilyTreePage from './pages/FamilyTreePage';
 import MemorialCalendarPage from './pages/MemorialCalendarPage';
 import NewsPage from './pages/NewsPage';
 import NewsDetailPage from './pages/NewsDetailPage';
+import MapPage from './pages/MapPage';
 import ChatbotPanel from './components/Chatbot/ChatbotPanel';
 import ScrollToTop from './components/common/ScrollToTop';
 
@@ -24,6 +25,7 @@ const AppContent: React.FC = () => {
           <Route path="/memorials" element={<MemorialCalendarPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:id" element={<NewsDetailPage />} />
+          <Route path="/map" element={<MapPage />} />
         </Routes>
       </main>
       {!isTreePage && <Footer />}

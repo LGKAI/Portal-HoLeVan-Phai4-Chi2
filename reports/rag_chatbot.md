@@ -1,4 +1,4 @@
-# 📜 Phân Hệ Trợ Lý Ảo Gia Phả (RAG Service)
+# 📜 Phân Hệ Trợ Lý Ảo Gia Phả (RAG Chatbot)
 ### Dòng Họ Lê Văn - Phái 4 - Chi 2 (Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị)
 
 ---
@@ -18,9 +18,21 @@
 
 ---
 
-## 🏗️ 2. Kiến Trúc Kỹ Thuật (Architecture & Tech Stack)
+## 🏗️ 2. Kiến Trúc Kỹ Thuật Song Hành (Dual-Tier RAG Architecture)
 
-Phân hệ RAG được xây dựng theo mô hình dịch vụ độc lập (Microservice), giao tiếp qua giao thức HTTP RESTful và hỗ trợ cả phản hồi đồng bộ (Sync JSON) lẫn truyền phát dòng dữ liệu thời gian thực (SSE Streaming).
+Để tối ưu hóa chi phí vận hành (0đ trên Cloud) đồng thời duy trì khả năng mở rộng tìm kiếm ngữ nghĩa nâng cao cục bộ, hệ thống được thiết kế theo **Mô hình Song Hành (Dual-Tier Architecture)**:
+
+1. 🌟 **In-Backend RAG Engine (Node.js / TypeScript - Triển khai Production 24/7 trên Render):**
+   - Vận hành trực tiếp bên trong tiến trình Express API (`backend/src/services/ragService.ts`).
+   - Nạp sẵn 3 tài liệu tri thức phả hệ Markdown vào bộ nhớ đệm (In-memory Cache).
+   - Tích hợp **Thuật toán mở rộng ngữ cảnh phả hệ đồ thị (Graph-based Context Expansion)**: Khi con cháu hỏi về bất kỳ ai, engine tự động truy vết quan hệ cha/mẹ, vợ/chồng, con cái, anh chị em ruột để đưa vào ngữ cảnh Prompt trước khi gửi tới Gemini.
+   - Cơ chế **Exponential Backoff** tự động thử lại nếu gặp quá tải tốc độ (Rate Limit 429).
+
+2. 🚀 **Python RAG Microservice (FastAPI + ChromaDB - Môi trường Docker / Local Development):**
+   - Microservice độc lập chạy Python 3.11 (`rag-service/`), phục vụ tại cổng `:8000`.
+   - Lưu trữ và truy xuất vector ngữ nghĩa đa chiều bằng **ChromaDB** cục bộ.
+   - Hỗ trợ cả phản hồi đồng bộ (`POST /chat/sync`) và truyền phát dòng dữ liệu SSE thời gian thực (`POST /chat`).
+   - Hỗ trợ mô hình Local Offline hoàn toàn qua Ollama (`qwen2.5:7b`).
 
 ```mermaid
 flowchart TD
@@ -38,21 +50,29 @@ flowchart TD
         EmbedFunc --> ChromaDB[("ChromaDB Vector Store<br/>./data/vector_store")]
     end
 
-    subgraph User_Query_Flow ["3. Quy Trình Xử Lý Câu Hỏi (Inference Flow)"]
-        User(["Con cháu dòng họ (Client)"]) --> API["FastAPI Endpoint (/chat hoặc /chat/sync)"]
-        API --> Retriever["Chroma Retriever<br/>(Similarity Search top-k=6)"]
+    subgraph Production_NodeJS ["3. TIER A: IN-BACKEND RAG (Render Cloud 24/7)"]
+        ClientWeb["Giao diện Người Dùng (ChatbotPanel.tsx)"] --> NodeAPI["Express API (POST /api/chat)"]
+        NodeAPI --> NodeRAG["ragService.ts<br/>(Graph Context Expansion + Cache)"]
+        MD1 & MD2 & MD3 -.->|Load & Cache| NodeRAG
+        NodeRAG --> GeminiDirect["Google Gemini 1.5 Flash API"]
+        GeminiDirect --> NodeAPI --> ClientWeb
+    end
+
+    subgraph Microservice_Python ["4. TIER B: PYTHON RAG SERVICE (Docker / Local)"]
+        NodeAPI -.->|Proxy fallback (tùy chọn)| FastAPIEP["FastAPI Endpoint (/chat hoặc /chat/sync)"]
+        FastAPIEP --> Retriever["Chroma Retriever<br/>(Similarity Search top-k=6)"]
         ChromaDB -.->|Truy xuất ngữ cảnh liên quan| Retriever
         Retriever --> PromptAssembler["Lắp ráp Prompt Template<br/>(System Instruction + Context + History + Query)"]
         PromptAssembler --> LLM_Core{"Lựa chọn LLM<br/>(Hybrid Provider)"}
-        LLM_Core -->|Ưu tiên Cloud Miễn Phí| Gemini["Google Gemini API<br/>(gemini-1.5-flash)"]
-        LLM_Core -->|Tùy chọn Local Offline| Ollama["Local Ollama<br/>(qwen2.5:7b)"]
-        Gemini & Ollama --> StreamResp["StreamingResponse (SSE) / JSON Reply"]
-        StreamResp --> User
+        LLM_Core -->|Cloud| GeminiRAG["Google Gemini 1.5 Flash"]
+        LLM_Core -->|Offline| OllamaRAG["Local Ollama (qwen2.5:7b)"]
+        GeminiRAG & OllamaRAG --> FastAPIEP
     end
 ```
 
 ### Công Nghệ Nền Tảng:
-- **Ngôn ngữ & Framework:** Python 3.11, [FastAPI](https://fastapi.tiangolo.com/) (Async web server), [Uvicorn](https://www.uvicorn.org/).
+- **Node.js RAG Engine:** TypeScript, Express, `@google/generative-ai`, In-memory Caching, Graph expansion.
+- **Python RAG Microservice:** Python 3.11, [FastAPI](https://fastapi.tiangolo.com/), [Uvicorn](https://www.uvicorn.org/).
 - **Điều phối RAG (Orchestration):** [LangChain](https://www.langchain.com/) (`langchain`, `langchain-chroma`, `langchain-community`, `langchain-google-genai`).
 - **Vector Database:** [ChromaDB](https://www.trychroma.com/) (Lưu trữ nhúng vector trực tiếp trên disk, siêu nhẹ, không cần server riêng biệt).
 - **Mô hình Trí tuệ Nhân tạo (LLM) hỗ trợ linh hoạt 2 chế độ:**
@@ -163,6 +183,33 @@ QUY TẮC BẮT BUỘC (TUÂN THỦ TUYỆT ĐỐI 100%):
 
 ## 🔌 6. Chi Tiết Các Cổng Giao Tiếp (REST API Endpoints)
 
+### 6.1. Cổng Giao Tiếp Chính Backend (Node.js Express — `/api/chat`)
+Đây là endpoint chính thức được Frontend (`ChatbotPanel.tsx`) gửi yêu cầu trực tiếp trên cả môi trường Cloud và Local:
+
+- **Phương thức:** `POST /api/chat`
+- **Request Headers:** `Content-Type: application/json`
+- **Request Body:**
+```json
+{
+  "message": "Cụ Thủy tổ họ Lê Văn Chi 2 là ai và an táng ở đâu?",
+  "conversation_history": [
+    {"role": "user", "content": "Xin chào trợ lý gia phả"},
+    {"role": "assistant", "content": "Dạ, xin kính chào bác/anh/chị con cháu dòng tộc họ Lê Văn."}
+  ]
+}
+```
+- **Response JSON:**
+```json
+{
+  "success": true,
+  "reply": "Dạ thưa quý bà con dòng họ, thông tin về Ngài Thủy tổ Lê Văn Khôi trong gia phả như sau:\n\n- Họ và tên: Lê Văn Khôi\n- Thế thứ: Đời 1 Chi 2 (Đời 9 Phái 4)\n- Giới tính: Nam\n- Tình trạng: Đã mất (Quy tiên)\n- Nơi an táng: Cồn Giữa, Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị\n- Quan hệ thân tộc:\n  - Phối ngẫu (Vợ/Chồng): Cụ bà Phan Thị Mưu (Chánh phối)\n  - Con cái: 9 người..."
+}
+```
+
+---
+
+### 6.2. Cổng Giao Tiếp Python RAG Service (`rag-service/` — Cổng `:8000`)
+
 | Phương Thức | Endpoint | Mô Tả | Định Dạng Dữ Liệu |
 | :--- | :--- | :--- | :--- |
 | `GET` | `/health` | Kiểm tra tình trạng hoạt động của service | JSON |
@@ -173,7 +220,7 @@ QUY TẮC BẮT BUỘC (TUÂN THỦ TUYỆT ĐỐI 100%):
 | `POST` | `/ingest/members` | Đồng bộ dữ liệu thành viên từ Backend API (`/api/members`) | JSON |
 | `POST` | `/ingest` | Nạp một đoạn tài liệu tùy biến vào Vector Store | JSON |
 
-### Chi tiết Request & Response mẫu:
+### Chi tiết Request & Response mẫu của Python Microservice:
 
 #### 1. Chat Luồng Trực Tuyến (`POST /chat`):
 - **Request Body:**

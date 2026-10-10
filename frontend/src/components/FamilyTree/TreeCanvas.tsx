@@ -490,6 +490,30 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
   const currentViewportRef = useRef<Viewport>({ x: 0, y: 220, zoom: 0.045 });
   const syncSourceRef = useRef<'flow' | 'scrollbar' | 'v-scrollbar' | null>(null);
   const syncTimerRef = useRef<any>(null);
+  const rafIdRef = useRef<number | null>(null);
+
+  // Bộ nhớ đệm kích thước khung nhìn để không gây layout reflow / lag giật khi lướt ngón tay trên di động
+  const containerSizeRef = useRef<{ width: number; height: number }>({
+    width: typeof window !== 'undefined' ? window.innerWidth : 1200,
+    height: typeof window !== 'undefined' ? window.innerHeight : 800,
+  });
+
+  useEffect(() => {
+    const updateSize = () => {
+      if (containerRef.current) {
+        containerSizeRef.current = {
+          width: containerRef.current.clientWidth || window.innerWidth,
+          height: containerRef.current.clientHeight || window.innerHeight,
+        };
+      }
+    };
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => {
+      window.removeEventListener('resize', updateSize);
+      if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+    };
+  }, []);
 
   const canonicalXMap = useMemo(() => {
     const source = allMembers && allMembers.length > 0 ? allMembers : members;
@@ -562,70 +586,15 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
     ];
   }, [minX, maxX, minY, maxY]);
 
-  // Khởi tạo hoặc cập nhật viewport khi tải hoặc khi đổi bộ lọc
-  useEffect(() => {
-    if (members.length === 0) return;
+  // Hàm đồng bộ thanh cuộn chỉ chạy khi cần và tối ưu hiệu năng
+  const syncScrollbars = useCallback(
+    (viewport: Viewport) => {
+      if (typeof window !== 'undefined' && window.innerWidth <= 768) return;
 
-    // Nếu đang xem danh sách lọc ít người (ví dụ chỉ 1 đời hoặc tìm kiếm), dùng fitView để gom gọn
-    if (members.length <= 50) {
-      const timer = setTimeout(() => {
-        fitView({ padding: 0.2, duration: 400 });
-      }, 50);
-      return () => clearTimeout(timer);
-    }
+      const { width, height } = containerSizeRef.current;
 
-    // Cây phả hệ đầy đủ: Kích thước mặc định tổng quan (zoom ~0.045) như ảnh người dùng yêu cầu
-    const timer = setTimeout(() => {
-      if (!containerRef.current) return;
-      const width = containerRef.current.clientWidth || window.innerWidth;
-      const height = containerRef.current.clientHeight || window.innerHeight;
-      const initialZoom = 0.045;
-      // Do các node đã được căn giữa tại X = 0 (Thủy tổ ở quanh x = 0)
-      // Để hiển thị Thủy tổ chính giữa màn hình: screenX = 0 * zoom + flowX = width / 2 => flowX = width / 2
-      const initialX = width / 2;
-      // Căn gọn gàng vị trí Y theo chiều cao màn hình, không để khoảng trống trên/dưới quá lớn
-      const treeHeightPx = (maxY - minY) * initialZoom;
-      const initialY = Math.max(80, Math.round((height - treeHeightPx) / 2));
-
-      currentViewportRef.current = { x: initialX, y: initialY, zoom: initialZoom };
-      setViewport({ x: initialX, y: initialY, zoom: initialZoom }, { duration: 0 });
-
-      // Đồng bộ thanh cuộn ngang
       if (spacerRef.current) {
-        const virtualW = Math.max(worldWidth * initialZoom, width);
-        spacerRef.current.style.width = `${virtualW}px`;
-      }
-      if (scrollbarRef.current) {
-        const targetScroll = -(minX * initialZoom + initialX);
-        scrollbarRef.current.scrollLeft = Math.max(0, targetScroll);
-      }
-
-      // Đồng bộ thanh cuộn dọc
-      if (verticalSpacerRef.current) {
-        const virtualH = Math.max(worldHeight * initialZoom, height);
-        verticalSpacerRef.current.style.height = `${virtualH}px`;
-      }
-      if (verticalScrollbarRef.current) {
-        const targetScrollY = -(minY * initialZoom + initialY);
-        verticalScrollbarRef.current.scrollTop = Math.max(0, targetScrollY);
-      }
-    }, 60);
-
-    return () => clearTimeout(timer);
-  }, [members, minX, minY, maxY, worldWidth, worldHeight, setViewport, fitView]);
-
-  // Đồng bộ từ thao tác kéo/zoom trên canvas sang thanh cuộn ngang và dọc
-  const handleMove = useCallback(
-    (_event: any, viewport: Viewport) => {
-      currentViewportRef.current = viewport;
-
-      if (syncSourceRef.current === 'scrollbar' || syncSourceRef.current === 'v-scrollbar') return;
-
-      syncSourceRef.current = 'flow';
-
-      if (spacerRef.current && containerRef.current) {
-        const containerW = containerRef.current.clientWidth || window.innerWidth;
-        const virtualW = Math.max(worldWidth * viewport.zoom, containerW);
+        const virtualW = Math.max(worldWidth * viewport.zoom, width);
         spacerRef.current.style.width = `${virtualW}px`;
       }
 
@@ -634,9 +603,8 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         scrollbarRef.current.scrollLeft = Math.max(0, targetScroll);
       }
 
-      if (verticalSpacerRef.current && containerRef.current) {
-        const containerH = containerRef.current.clientHeight || window.innerHeight;
-        const virtualH = Math.max(worldHeight * viewport.zoom, containerH);
+      if (verticalSpacerRef.current) {
+        const virtualH = Math.max(worldHeight * viewport.zoom, height);
         verticalSpacerRef.current.style.height = `${virtualH}px`;
       }
 
@@ -644,13 +612,68 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         const targetScrollY = -(minY * viewport.zoom + viewport.y);
         verticalScrollbarRef.current.scrollTop = Math.max(0, targetScrollY);
       }
+    },
+    [worldWidth, worldHeight, minX, minY]
+  );
+
+  // Khởi tạo hoặc cập nhật viewport khi tải hoặc khi đổi bộ lọc
+  useEffect(() => {
+    if (members.length === 0) return;
+
+    if (members.length <= 50) {
+      const timer = setTimeout(() => {
+        fitView({ padding: 0.2, duration: 400 });
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+
+    const timer = setTimeout(() => {
+      const { width, height } = containerSizeRef.current;
+      const initialZoom = 0.045;
+      const initialX = width / 2;
+      const treeHeightPx = (maxY - minY) * initialZoom;
+      const initialY = Math.max(80, Math.round((height - treeHeightPx) / 2));
+
+      currentViewportRef.current = { x: initialX, y: initialY, zoom: initialZoom };
+      setViewport({ x: initialX, y: initialY, zoom: initialZoom }, { duration: 0 });
+
+      syncScrollbars({ x: initialX, y: initialY, zoom: initialZoom });
+    }, 60);
+
+    return () => clearTimeout(timer);
+  }, [members, minX, minY, maxY, worldWidth, worldHeight, setViewport, fitView, syncScrollbars]);
+
+  // Đồng bộ từ thao tác kéo/zoom trên canvas sang thanh cuộn ngang và dọc (được bọc RAF mượt mà không khựng)
+  const handleMove = useCallback(
+    (_event: any, viewport: Viewport) => {
+      currentViewportRef.current = viewport;
+
+      if (syncSourceRef.current === 'scrollbar' || syncSourceRef.current === 'v-scrollbar') return;
+
+      syncSourceRef.current = 'flow';
+
+      if (!rafIdRef.current) {
+        rafIdRef.current = requestAnimationFrame(() => {
+          syncScrollbars(viewport);
+          rafIdRef.current = null;
+        });
+      }
 
       clearTimeout(syncTimerRef.current);
       syncTimerRef.current = setTimeout(() => {
         syncSourceRef.current = null;
-      }, 50);
+      }, 60);
     },
-    [minX, minY, worldWidth, worldHeight]
+    [syncScrollbars]
+  );
+
+  const handleMoveEnd = useCallback(
+    (_event: any, viewport: Viewport) => {
+      currentViewportRef.current = viewport;
+      syncScrollbars(viewport);
+      syncSourceRef.current = null;
+    },
+    [syncScrollbars]
   );
 
   // Đồng bộ từ thanh cuộn ngang sang toạ độ canvas
@@ -709,6 +732,7 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         onEdgesChange={onEdgesChange}
         onNodeClick={(_event, node) => onClickDetail(node.data as Member)}
         onMove={handleMove}
+        onMoveEnd={handleMoveEnd}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         defaultViewport={{
@@ -721,7 +745,13 @@ const TreeCanvasContent: React.FC<TreeCanvasProps> = ({
         maxZoom={2}
         nodesDraggable={false}
         nodesConnectable={false}
-        elementsSelectable={true}
+        elementsSelectable={false}
+        nodesFocusable={false}
+        edgesFocusable={false}
+        elevateNodesOnSelect={false}
+        preventScrolling={true}
+        zoomOnPinch={true}
+        panOnDrag={true}
         onlyRenderVisibleElements={true}
         proOptions={{ hideAttribution: true }}
       >

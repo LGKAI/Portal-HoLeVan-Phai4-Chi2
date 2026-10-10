@@ -99,7 +99,7 @@ const RichDocEditor: React.FC<RichDocEditorProps> = ({
     if (editorRef.current) {
       editorRef.current.focus();
     }
-    const imgHtml = `<p class="my-3 text-center"><img src="${url}" alt="Ảnh bài viết" style="max-width: 100%; height: auto; border-radius: 8px; margin: 12px auto; display: block; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" /></p><p><br></p>`;
+    const imgHtml = `<p class="my-3 text-center"><img src="${url}" alt="Ảnh bài viết" style="max-width: 580px; width: 100%; height: auto; border-radius: 8px; margin: 12px auto; display: block; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" /></p><p><br></p>`;
     document.execCommand('insertHTML', false, imgHtml);
     handleInput();
   };
@@ -349,7 +349,7 @@ const RichDocEditor: React.FC<RichDocEditorProps> = ({
         onInput={handleInput}
         onPaste={handlePaste}
         onDrop={handleDrop}
-        className="p-4 min-h-[260px] max-h-[500px] overflow-y-auto outline-none prose max-w-none text-gray-800 text-[15px] leading-relaxed [&_img]:max-w-full [&_img]:rounded-lg [&_img]:my-3 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-4 [&_h2]:mb-2 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:mt-3 [&_h3]:mb-1 [&_p]:mb-4 [&_p]:leading-relaxed [&_div]:mb-4"
+        className="p-4 min-h-[260px] max-h-[500px] overflow-y-auto outline-none prose max-w-none text-gray-800 text-[15px] leading-relaxed [&_img]:max-w-[580px] [&_img]:mx-auto [&_img]:block [&_img]:rounded-lg [&_img]:my-3 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-4 [&_h2]:mb-2 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:mt-3 [&_h3]:mb-1 [&_p]:mb-4 [&_p]:leading-relaxed [&_div]:mb-4"
         data-placeholder={placeholder}
       />
     </div>

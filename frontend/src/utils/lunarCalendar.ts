@@ -131,22 +131,39 @@ export function convertSolar2Lunar(dd: number, mm: number, yy: number, timeZone 
 export function getRealtimeDateString(date: Date = new Date()): {
   solarFormatted: string;
   lunarFormatted: string;
+  dayOfWeek: string;
+  displayLine: string;
   fullBannerText: string;
 } {
   const d = date.getDate();
   const m = date.getMonth() + 1;
   const y = date.getFullYear();
 
+  const DAYS_OF_WEEK = [
+    'Chủ Nhật',
+    'Thứ Hai',
+    'Thứ Ba',
+    'Thứ Tư',
+    'Thứ Năm',
+    'Thứ Sáu',
+    'Thứ Bảy',
+  ];
+  const dayOfWeek = DAYS_OF_WEEK[date.getDay()];
+
   const solarFormatted = `${String(d).padStart(2, '0')}/${String(m).padStart(2, '0')}/${y}`;
   const lunar = convertSolar2Lunar(d, m, y, 7);
   const lunarDayStr = String(lunar.day).padStart(2, '0');
   const lunarMonthStr = String(lunar.month).padStart(2, '0');
   const lunarFormatted = `${lunarDayStr}/${lunarMonthStr}/${lunar.year}${lunar.isLeap ? ' Nhuận' : ''}`;
+  
+  const displayLine = `${dayOfWeek}, ${solarFormatted} (${lunarFormatted} Âm lịch)`;
   const fullBannerText = `Hôm nay là ngày ${solarFormatted} (${lunarFormatted} Âm lịch)`;
 
   return {
     solarFormatted,
     lunarFormatted,
+    dayOfWeek,
+    displayLine,
     fullBannerText,
   };
 }

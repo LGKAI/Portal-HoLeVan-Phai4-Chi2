@@ -44,14 +44,14 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
     ? "border-[#be185d]" // Nữ còn sống: viền hồng đậm (pink-700)
     : "border-slate-600";
 
-  // Hiệu ứng bóng: người đã mất có hiệu ứng bóng màu đen xung quanh node
+  // Hiệu ứng bóng: người đã mất có hiệu ứng bóng màu đen xung quanh node (tối ưu mượt mà cho GPU di động)
   const shadowClass = isDeceased
-    ? "shadow-[0_0_24px_3px_rgba(0,0,0,0.55),0_10px_22px_rgba(0,0,0,0.4)] hover:shadow-[0_0_32px_4px_rgba(0,0,0,0.7),0_14px_28px_rgba(0,0,0,0.5)]"
+    ? "shadow-[0_0_16px_rgba(0,0,0,0.55),0_8px_16px_rgba(0,0,0,0.4)]"
     : isMale
-    ? "shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30"
+    ? "shadow-md shadow-blue-900/20"
     : isFemale
-    ? "shadow-lg shadow-pink-900/20 hover:shadow-xl hover:shadow-pink-900/30"
-    : "shadow-lg shadow-gray-900/15";
+    ? "shadow-md shadow-pink-900/20"
+    : "shadow-md shadow-gray-900/15";
 
   const hasValidOccupation =
     nodeData.occupation &&
@@ -61,7 +61,7 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
 
   return (
     <div
-      className={`relative rounded-xl border-[3px] ${bgColor} ${borderColor} ${shadowClass} overflow-visible transition-all duration-200 hover:-translate-y-0.5`}
+      className={`relative rounded-xl border-[3px] ${bgColor} ${borderColor} ${shadowClass} overflow-visible hover:-translate-y-0.5 transition-transform duration-150`}
       style={{ width: `${NODE_W}px`, height: `${NODE_H}px` }}
     >
       {/* Generation Badge */}
@@ -213,4 +213,4 @@ const MemberNode: React.FC<NodeProps> = ({ data }) => {
   );
 };
 
-export default MemberNode;
+export default React.memo(MemberNode);

@@ -4,7 +4,6 @@ import { MemorialRecord } from '../types';
 import defaultMemorials from '../data/memorials.json';
 import api from '../services/api';
 import { useAuthStore } from '../store/authStore';
-import { getRealtimeDateString } from '../utils/lunarCalendar';
 
 const MONTH_OPTIONS = [
   { id: 0, label: 'Tất cả 12 tháng', shortLabel: 'Tất cả' },
@@ -45,15 +44,7 @@ const MemorialCalendarPage: React.FC = () => {
   const [selectedMonth, setSelectedMonth] = useState<number>(0);
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  // Ngày giờ thực tế (real-time)
-  const [currentDate, setCurrentDate] = useState<Date>(new Date());
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentDate(new Date());
-    }, 30000);
-    return () => clearInterval(timer);
-  }, []);
-  const todayInfo = useMemo(() => getRealtimeDateString(currentDate), [currentDate]);
+
 
   // Trạng thái modal chỉnh sửa ngày giỗ ngoại lệ cho quản trị viên
   const [editingRecord, setEditingRecord] = useState<MemorialRecord | null>(null);
@@ -196,21 +187,6 @@ const MemorialCalendarPage: React.FC = () => {
       )}
 
       <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 mt-4 sm:mt-8">
-        {/* Dòng hiển thị ngày real-time theo Dương lịch & Âm lịch */}
-        <div className="mb-4 sm:mb-5 bg-gradient-to-r from-[#5B1313] via-primary to-[#7A1D1D] text-white rounded-xl shadow-sm px-4 py-3 flex items-center justify-between flex-wrap gap-2 border border-amber-300/30 animate-fade-in">
-          <div className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-semibold">
-            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-secondary flex-shrink-0 shadow-xs border border-white/10">
-              <Calendar size={17} />
-            </div>
-            <span>
-              Hôm nay là ngày <strong className="text-secondary font-bold">{todayInfo.solarFormatted}</strong> ({todayInfo.lunarFormatted} Âm lịch)
-            </span>
-          </div>
-          <span className="text-[11px] text-amber-200/90 font-medium bg-black/20 px-2.5 py-1 rounded-full border border-amber-200/20">
-            Lịch ngày thời gian thực
-          </span>
-        </div>
-
         {/* Bộ lọc tháng & Tìm kiếm */}
         <div className="bg-white rounded-xl shadow-sm border border-amber-200/80 p-3.5 sm:p-5 mb-6 sm:mb-8">
           <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-between items-center mb-4 sm:mb-6">
@@ -330,23 +306,23 @@ const MemorialCalendarPage: React.FC = () => {
                       <span>→</span>
                     </div>
                     <div className="overflow-x-auto">
-                      <table className="w-full text-left text-[13px] table-fixed min-w-[980px]">
+                      <table className="w-full text-left text-[13px] table-fixed min-w-[760px] md:min-w-[850px] lg:min-w-full">
                         <colgroup>
-                          <col style={{ width: '210px' }} />
-                          <col style={{ width: '180px' }} />
-                          <col style={{ width: '82px' }} />
-                          <col style={{ width: '170px' }} />
-                          <col style={{ width: '170px' }} />
+                          <col className="w-[170px] sm:w-[210px]" />
+                          <col className="w-[150px] sm:w-[180px]" />
+                          <col className="w-[65px] sm:w-[82px]" />
+                          <col className="w-[130px] sm:w-[170px]" />
+                          <col className="w-[130px] sm:w-[170px]" />
                           <col />
                         </colgroup>
                         <thead className="bg-primary text-white text-[11px] sm:text-xs uppercase tracking-wider font-semibold">
                           <tr>
-                            <th className="py-2.5 px-3.5 w-[210px]">Ngày giỗ</th>
-                            <th className="py-2.5 px-3.5 w-[180px]">Họ và tên</th>
-                            <th className="py-2.5 px-2 w-[82px] text-center whitespace-nowrap">Đời thứ</th>
-                            <th className="py-2.5 px-3.5 w-[170px]">Thân phụ</th>
-                            <th className="py-2.5 px-3.5 w-[170px]">Thân mẫu</th>
-                            <th className="py-2.5 px-3.5">Nơi an táng</th>
+                            <th className="py-2.5 px-3 w-[170px] sm:w-[210px]">Ngày giỗ</th>
+                            <th className="py-2.5 px-3 w-[150px] sm:w-[180px]">Họ và tên</th>
+                            <th className="py-2.5 px-2 w-[65px] sm:w-[82px] text-center whitespace-nowrap">Đời thứ</th>
+                            <th className="py-2.5 px-3 w-[130px] sm:w-[170px]">Thân phụ</th>
+                            <th className="py-2.5 px-3 w-[130px] sm:w-[170px]">Thân mẫu</th>
+                            <th className="py-2.5 px-3">Nơi an táng</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-100">

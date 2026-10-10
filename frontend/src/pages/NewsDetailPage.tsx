@@ -68,7 +68,7 @@ const NewsDetailPage: React.FC = () => {
           <img 
             src={news.thumbnail_url} 
             alt={news.title} 
-            className="max-w-full h-auto rounded-lg shadow-md border border-[#E8D8C3]/50"
+            className="w-auto max-w-full sm:max-w-[560px] md:max-w-[580px] max-h-[420px] h-auto object-contain rounded-xl shadow-md border border-[#E8D8C3]/50 mx-auto block"
             onError={(e) => {
               const parent = e.currentTarget.parentElement;
               if (parent) parent.style.display = 'none';
@@ -80,7 +80,7 @@ const NewsDetailPage: React.FC = () => {
       <div className="prose max-w-none prose-lg text-gray-800 leading-relaxed">
         {news.content && (news.content.includes('<p') || news.content.includes('<img') || news.content.includes('<div') || news.content.includes('<h') || news.content.includes('<ul') || news.content.includes('<ol')) ? (
           <div
-            className="article-rich-content [&_img]:rounded-xl [&_img]:shadow-md [&_img]:my-6 [&_img]:mx-auto [&_img]:max-w-full [&_img]:max-h-[650px] [&_img]:object-contain [&_p]:my-4 [&_p]:leading-relaxed [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-gray-900 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6"
+            className="article-rich-content [&_img]:rounded-xl [&_img]:shadow-md [&_img]:my-6 [&_img]:mx-auto [&_img]:block [&_img]:w-auto [&_img]:max-w-full sm:[&_img]:max-w-[560px] md:[&_img]:max-w-[580px] [&_img]:max-h-[420px] [&_img]:object-contain [&_figure]:flex [&_figure]:flex-col [&_figure]:items-center [&_figure]:my-6 [&_figcaption]:text-center [&_figcaption]:text-xs [&_figcaption]:text-gray-500 [&_figcaption]:mt-2 [&_p]:my-4 [&_p]:leading-relaxed [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-gray-900 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6"
             dangerouslySetInnerHTML={{ __html: news.content }}
           />
         ) : (

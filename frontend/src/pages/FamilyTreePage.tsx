@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Search, Filter } from 'lucide-react';
 import TreeCanvas from '../components/FamilyTree/TreeCanvas';
 import MemberFormModal from '../components/FamilyTree/MemberFormModal';
@@ -26,15 +26,15 @@ const FamilyTreePage: React.FC = () => {
   
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
-  const handleAddChild = (parentId: number) => {
+  const handleAddChild = useCallback((parentId: number) => {
     setFormMode('add');
     setSelectedMember(undefined);
     setParentIdForAdd(parentId);
     setSpouseIdForAdd(undefined);
     setIsFormOpen(true);
-  };
+  }, []);
 
-  const handleAddSpouse = (memberId: number) => {
+  const handleAddSpouse = useCallback((memberId: number) => {
     const husbandOrWife = members.find(m => m.id === memberId);
     const existingSpouses = members.filter(m => m.spouse_id === memberId || (husbandOrWife?.spouse_id && m.id === husbandOrWife.spouse_id));
     const spouseCount = existingSpouses.length;
@@ -56,9 +56,9 @@ const FamilyTreePage: React.FC = () => {
     setParentIdForAdd(undefined);
     setSpouseIdForAdd(memberId);
     setIsFormOpen(true);
-  };
+  }, [members]);
 
-  const handleEdit = (memberId: number) => {
+  const handleEdit = useCallback((memberId: number) => {
     const member = members.find(m => m.id === memberId);
     if (member) {
       setFormMode('edit');
@@ -67,9 +67,9 @@ const FamilyTreePage: React.FC = () => {
       setSpouseIdForAdd(undefined);
       setIsFormOpen(true);
     }
-  };
+  }, [members]);
 
-  const handleDelete = async (memberId: number) => {
+  const handleDelete = useCallback(async (memberId: number) => {
     const member = members.find(m => m.id === memberId);
     const confirmName = member ? member.full_name : 'thành viên này';
     if (window.confirm(`Bạn có chắc chắn muốn xóa "${confirmName}" khỏi cây gia phả?`)) {
@@ -81,12 +81,12 @@ const FamilyTreePage: React.FC = () => {
         alert(err.response?.data?.message || 'Có lỗi xảy ra khi xóa thành viên.');
       }
     }
-  };
+  }, [members, refetch]);
 
-  const handleClickDetail = (member: Member) => {
+  const handleClickDetail = useCallback((member: Member) => {
     setSelectedMember(member);
     setIsDetailOpen(true);
-  };
+  }, []);
 
   const handleSubmitForm = async (data: any) => {
     try {

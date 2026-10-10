@@ -71,14 +71,22 @@
   fill: #4a1212 !important;
 }
 
-/* Nút Trợ lý AI nổi - Cân xứng và cách thanh cuộn dọc bên phải một khoảng thoáng đãng */
+/* Nút Trợ lý AI nổi - Cân xứng và tối ưu vị trí trên điện thoại, ipad và máy tính */
 .chatbot-floating-btn {
-  bottom: 40px !important;
-  right: 36px !important;
-  width: 56px !important;
-  height: 56px !important;
+  bottom: 20px !important;
+  right: 16px !important;
+  width: 50px !important;
+  height: 50px !important;
 }
 
+@media (min-width: 640px) {
+  .chatbot-floating-btn {
+    bottom: 32px !important;
+    right: 28px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+}
 
 /* Custom Bottom Horizontal Scrollbar for Tree View */
 .tree-horizontal-scrollbar {
@@ -163,15 +171,34 @@
   z-index: 20;
 }
 
-/* iOS WebKit Performance Optimizations for Large Family Tree Canvas */
+/* Ẩn thanh cuộn desktop trên điện thoại và máy tính bảng nhỏ (<= 768px) để người dùng lướt chạm trực tiếp mượt mà */
+@media (max-width: 768px) {
+  .tree-horizontal-scrollbar,
+  .tree-vertical-scrollbar,
+  .tree-scrollbar-corner {
+    display: none !important;
+  }
+}
+
+/* Tối ưu phần cứng GPU & Cách ly Render cho Cây gia phả */
+.react-flow__pane {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .react-flow__node-memberNode {
   contain: layout style;
+  will-change: transform;
+  transform: translateZ(0);
   overflow: visible !important;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .react-flow__viewport {
+  will-change: transform;
+  transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -316,5 +343,28 @@
 .animate-gold-glow {
   animation: goldPulse 2.8s ease-in-out infinite;
 }
+
+/* Bài viết sự kiện: Giới hạn kích thước ảnh vừa vặn, căn giữa thanh lịch */
+.article-rich-content img,
+.prose img {
+  max-width: 580px !important;
+  max-height: 440px !important;
+  width: auto !important;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 640px) {
+  .article-rich-content img,
+  .prose img {
+    max-width: 100% !important;
+    max-height: 360px !important;
+  }
+}
+
 
 

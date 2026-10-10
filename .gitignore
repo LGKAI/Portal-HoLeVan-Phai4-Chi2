@@ -26,11 +26,3 @@ rag-service/data/vector_store/
 *.suo
 *.user
 admin.txt
-
-# Scripts
-scripts/
-/scripts/
-
-# Scratch & temporary files
-scratch/
-/scratch/

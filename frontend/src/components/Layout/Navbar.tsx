@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, LogOut, Home, BookOpen, Calendar, Newspaper } from 'lucide-react';
+import { Menu, X, LogOut, Home, BookOpen, Calendar, Newspaper, MapPin } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
 import { authService } from '../../services/authService';
 import LoginModal from '../Auth/LoginModal';
 import UserProfileModal from '../Auth/UserProfileModal';
+import { getRealtimeDateString } from '../../utils/lunarCalendar';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [realtimeDate, setRealtimeDate] = useState(() => getRealtimeDateString());
   const { user, token, isAuthenticated, logout, setUser } = useAuthStore();
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRealtimeDate(getRealtimeDateString());
+    }, 60000);
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     if (isAuthenticated && token) {
@@ -42,7 +51,8 @@ const Navbar: React.FC = () => {
     { name: 'Trang chủ', path: '/', icon: Home },
     { name: 'Gia phả số', path: '/tree', icon: BookOpen },
     { name: 'Lịch giỗ kỵ', path: '/memorials', icon: Calendar },
-    { name: 'Tư liệu - Sự kiện', path: '/news', icon: Newspaper },
+    { name: 'Tư liệu & Sự kiện', path: '/news', icon: Newspaper },
+    { name: 'Bản đồ', path: '/map', icon: MapPin },
   ];
 
   return (
@@ -51,14 +61,21 @@ const Navbar: React.FC = () => {
         <div className="w-full px-4 sm:px-6 lg:px-6 xl:px-8 relative">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link to="/" className="flex-shrink-0 flex items-center gap-2">
-                <img src="/favicon.ico" alt="Logo" className="w-8 h-8 object-contain" />
-                <span className="font-artistic font-bold text-sm sm:text-lg tracking-tight whitespace-nowrap text-secondary">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</span>
+              <Link to="/" className="flex-shrink-0 flex items-center gap-2 sm:gap-2.5">
+                <img src="/favicon.ico" alt="Logo" className="w-8 h-8 sm:w-9 sm:h-9 object-contain flex-shrink-0" />
+                <div className="flex flex-col justify-center">
+                  <span className="font-artistic font-bold text-sm sm:text-base lg:text-lg tracking-tight whitespace-nowrap text-secondary leading-tight">
+                    CHI 2 - PHÁI 4 - HỌ LÊ VĂN
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] text-white font-medium whitespace-nowrap leading-tight mt-0.5">
+                    {realtimeDate.displayLine}
+                  </span>
+                </div>
               </Link>
             </div>
 
             {/* Desktop Menu - only shown on true desktop (≥1024px) */}
-            <div className="hidden lg:flex items-center space-x-2 xl:space-x-3">
+            <div className="hidden lg:flex items-center space-x-1 xl:space-x-2.5">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
                 const Icon = link.icon;
@@ -66,7 +83,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive ? 'bg-primary-dark text-white' : 'hover:bg-primary-dark text-white/90'}`}
+                    className={`flex items-center gap-1.5 px-2.5 xl:px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive ? 'bg-primary-dark text-white' : 'hover:bg-primary-dark text-white/90'}`}
                   >
                     <Icon size={16} />
                     <span>{link.name}</span>
@@ -132,7 +149,7 @@ const Navbar: React.FC = () => {
           isAuthenticated && user ? (
             <div
               onClick={() => setIsProfileModalOpen(true)}
-              className="fixed right-2 sm:right-3 top-[4.25rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
+              className="fixed right-2 sm:right-3 top-[4.5rem] lg:top-[4.75rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
               title="Nhấn để xem thông tin tài khoản & làm bài test"
             >
               {user.role === 'admin' ? (
@@ -149,7 +166,8 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
                   <span className="text-xs sm:text-sm flex-shrink-0">💡</span>
                   <span className="text-gray-700">
-                    Bạn đang là <strong className="text-gray-900 font-bold">Thành viên tiêu chuẩn</strong>, hãy <strong className="text-primary font-bold underline underline-offset-2">làm bài Test</strong> để nâng cấp vai trò!
+                    <span className="hidden sm:inline">Bạn đang là <strong className="text-gray-900 font-bold">Thành viên tiêu chuẩn</strong>, hãy </span>
+                    <strong className="text-primary font-bold underline underline-offset-2">Làm bài Test</strong> nâng cấp vai trò!
                   </span>
                 </div>
               )}
@@ -157,23 +175,30 @@ const Navbar: React.FC = () => {
           ) : (
             <div
               onClick={() => setIsLoginModalOpen(true)}
-              className="fixed right-2 sm:right-3 top-[4.25rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
+              className="fixed right-2 sm:right-3 top-[4.5rem] lg:top-[4.75rem] cursor-pointer animate-fade-in group select-none transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 z-40 max-w-[calc(100vw-1rem)]"
               title="Nhấn để đăng nhập vào hệ thống"
             >
               <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
                 <span className="text-xs sm:text-sm flex-shrink-0">✨</span>
                 <span className="text-gray-700">
-                  Hãy <strong className="text-primary font-bold underline underline-offset-2">đăng nhập</strong> để có thêm những trải nghiệm thú vị!
+                  <span className="hidden sm:inline">Hãy </span><strong className="text-primary font-bold underline underline-offset-2">đăng nhập</strong><span className="hidden sm:inline"> để có thêm những trải nghiệm thú vị!</span><span className="sm:hidden"> trải nghiệm thêm tính năng! ✨</span>
                 </span>
               </div>
             </div>
           )
         )}
 
+        {/* Mobile Menu Backdrop */}
+        {isMenuOpen && (
+          <div 
+            className="fixed inset-0 top-16 bg-black/40 backdrop-blur-xs z-30 lg:hidden animate-fade-in"
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-primary border-t border-white/10">
+          <div className="lg:hidden bg-primary border-t border-white/10 relative z-40 shadow-xl animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));

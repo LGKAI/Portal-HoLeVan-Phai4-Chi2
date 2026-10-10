@@ -52,7 +52,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ news, isAdmin, onEdit, onDelete, on
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 text-gray-400 p-4 text-center">
-            <span className="text-sm font-medium">Tư liệu - Sự kiện</span>
+            <span className="text-sm font-medium">Tư liệu & Sự kiện</span>
             <span className="text-xs text-gray-400 mt-1">Họ Lê Văn - Phái 4 - Chi 2</span>
           </div>
         )}

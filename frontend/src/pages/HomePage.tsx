@@ -1,14 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Bot, ChevronRight, BookOpen, Newspaper, Landmark, Users, Clock } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Calendar, Bot, ChevronRight, BookOpen, Landmark, Users, Clock } from 'lucide-react';
 import NewsCard from '../components/News/NewsCard';
 import { newsService } from '../services/newsService';
 import { NewsItem } from '../types';
 import LoadingSpinner from '../components/common/LoadingSpinner';
+import AncestralMapSection from '../components/Home/AncestralMapSection';
+import DeveloperMessageSection from '../components/Home/DeveloperMessageSection';
 
 const HomePage: React.FC = () => {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loadingNews, setLoadingNews] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#map') {
+      const el = document.getElementById('map');
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -29,7 +41,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="bg-cream min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[calc(100vh-4rem)] min-h-[620px] flex flex-col justify-end overflow-hidden">
+      <section className="relative h-[calc(100vh-4rem)] min-h-[600px] flex flex-col justify-end overflow-hidden">
         {/* Background: nhích lên cao hơn để cắt bầu trời, nhưng không để mái nhà chạm đỉnh */}
         <div
           className="absolute inset-0 bg-cover z-0 bg-no-repeat transition-all duration-500 origin-top
@@ -46,24 +58,24 @@ const HomePage: React.FC = () => {
         {/* Gradient overlay: tối dần xuống phía dưới để làm nổi bật các dòng chữ và nút bấm */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 via-40% to-black/80 z-10 pointer-events-none" />
 
-        {/* Khối chữ và nút bấm - nhích lên cao hơn trên mobile để cân đối giao diện */}
-        <div className="relative z-20 text-center text-white px-3 sm:px-4 max-w-4xl mx-auto pb-40 sm:pb-16 md:pb-20">
+        {/* Khối chữ và nút bấm - cân đối và nhích lên trên một chút theo yêu cầu */}
+        <div className="relative z-20 text-center text-white px-3 sm:px-4 max-w-4xl mx-auto pb-36 sm:pb-24 md:pb-28">
 
           <h1 className="mb-2 tracking-wide leading-tight">
             <span
-              className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] block text-lg sm:text-2xl md:text-[26px] font-bold tracking-wider whitespace-nowrap"
+              className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] block text-base sm:text-2xl md:text-[26px] font-bold tracking-wider whitespace-nowrap"
               style={{ textShadow: '0 0 20px rgba(255,200,50,0.35), 0 4px 14px rgba(0,0,0,0.98)' }}
             >
               Cổng Thông Tin Dòng Họ
             </span>
             <div className="h-1"></div>
             <span
-              className="font-artistic text-secondary block text-[clamp(1.42rem,6.6vw,3.2rem)] font-extrabold whitespace-nowrap tracking-tight sm:tracking-wide mt-0.5 animate-gold-glow"
+              className="font-artistic text-secondary block text-[clamp(1.35rem,6.2vw,3.2rem)] font-extrabold whitespace-nowrap tracking-tight sm:tracking-wide mt-0.5 animate-gold-glow"
             >
               LÊ VĂN - PHÁI 4 - CHI 2
             </span>
           </h1>
-          <p className="text-[clamp(0.92rem,4.1vw,1.4rem)] mb-2.5 sm:mb-3 font-extrabold whitespace-nowrap tracking-wide"
+          <p className="text-[clamp(0.85rem,3.8vw,1.35rem)] mb-2.5 sm:mb-3 font-extrabold whitespace-nowrap tracking-wide"
             style={{
               color: '#ff5252',
               textShadow: '0 2px 6px rgba(0,0,0,1), 0 4px 20px rgba(0,0,0,0.95), 0 0 30px rgba(0,0,0,0.85)'
@@ -74,7 +86,7 @@ const HomePage: React.FC = () => {
 
           {/* 2 câu đối thơ nghệ thuật thư pháp */}
           <div
-            className="font-cursive text-white text-xl sm:text-2xl md:text-3xl tracking-wide mb-3.5 sm:mb-5 space-y-0.5 sm:space-y-1"
+            className="font-cursive text-white text-lg sm:text-2xl md:text-3xl tracking-wide mb-3.5 sm:mb-5 space-y-0.5 sm:space-y-1"
             style={{
               textShadow: '0 2px 4px rgba(0,0,0,1), 0 4px 14px rgba(0,0,0,0.95), 0 0 25px rgba(0,0,0,0.9)'
             }}
@@ -102,75 +114,72 @@ const HomePage: React.FC = () => {
 
 
       {/* Features Section */}
-      <section className="py-10 sm:py-16 bg-cream">
+      <section className="pt-8 sm:pt-10 pb-12 sm:pb-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-dark mb-2 sm:mb-4">Kết nối Truyền thống & Tương lai</h2>
-            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto"></div>
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-dark mb-1.5 sm:mb-2">Kết nối Truyền thống & Tương lai</h2>
+            <p className="text-sm sm:text-base text-gray-600 mb-2">
+              Nền tảng số hóa gìn giữ nguồn cội, kết nối muôn đời thế hệ con cháu dòng họ.
+            </p>
+            <div className="w-16 h-1 bg-primary mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <div className="rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-all border-2 border-red-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #fff5f5 0%, #ffe4e4 100%)'}}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <Link
+              to="/tree"
+              className="group cursor-pointer rounded-xl p-5 sm:p-6 text-center transition-all duration-300 border-2 border-red-300/60 shadow-sm hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.02] active:scale-[0.98] flex flex-col justify-between"
+              style={{background: 'linear-gradient(135deg, #fff5f5 0%, #ffe4e4 100%)'}}
+            >
               <div>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 transition-transform duration-300 group-hover:scale-110">
                   <BookOpen size={24} className="text-red-700" />
                 </div>
                 <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-red-800">Gia Phả Số</h3>
-                <p className="text-red-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
-                  Hệ thống phả hệ trực quan giúp con cháu dễ dàng tra cứu nguồn cội, thế thứ và quan hệ thân tộc.
+                <p className="text-red-900/75 text-sm mb-3 sm:mb-4 leading-relaxed">
+                  Hệ thống phả hệ trực quan giúp con cháu muôn phương dễ dàng tra cứu nguồn cội, thế thứ và tỏ tường quan hệ thân tộc.
                 </p>
               </div>
-              <Link to="/tree" className="text-red-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
-                Khám phá ngay <ChevronRight size={17} />
-              </Link>
-            </div>
+              <div className="text-red-700 font-bold text-sm flex items-center justify-center gap-1 group-hover:gap-2 transition-all mt-2">
+                <span>Khám phá ngay</span> <ChevronRight size={17} className="transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
 
-            <div className="rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-all border-2 border-secondary/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #fffde7 0%, #fff8c5 100%)'}}>
+            <Link
+              to="/memorials"
+              className="group cursor-pointer rounded-xl p-5 sm:p-6 text-center transition-all duration-300 border-2 border-secondary/60 shadow-sm hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.02] active:scale-[0.98] flex flex-col justify-between"
+              style={{background: 'linear-gradient(135deg, #fffde7 0%, #fff8c5 100%)'}}
+            >
               <div>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/30 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/30 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 transition-transform duration-300 group-hover:scale-110">
                   <Calendar size={24} className="text-yellow-700" />
                 </div>
                 <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-yellow-800">Lịch Giỗ Kỵ</h3>
-                <p className="text-yellow-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
-                  Tra cứu ngày cúng giỗ, nơi an táng các bậc tiền nhân trong 12 tháng Âm lịch để phụng sự hương khói.
+                <p className="text-yellow-900/75 text-sm mb-3 sm:mb-4 leading-relaxed">
+                  Tra cứu ngày cúng giỗ, nơi an táng các bậc tiền nhân trong 12 tháng Âm lịch để con cháu chu toàn phụng sự hương khói.
                 </p>
               </div>
-              <Link to="/memorials" className="text-yellow-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
-                Xem lịch kỵ nhật <ChevronRight size={17} />
-              </Link>
-            </div>
-
-            <div className="rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-all border-2 border-green-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)'}}>
-              <div>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
-                  <Newspaper size={24} className="text-green-700" />
-                </div>
-                <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-green-800">Tư Liệu - Sự Kiện</h3>
-                <p className="text-green-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
-                  Nơi cập nhật thông báo, hình ảnh tư liệu và các sinh hoạt truyền thống quan trọng của dòng họ.
-                </p>
+              <div className="text-yellow-700 font-bold text-sm flex items-center justify-center gap-1 group-hover:gap-2 transition-all mt-2">
+                <span>Xem lịch kỵ nhật</span> <ChevronRight size={17} className="transition-transform group-hover:translate-x-1" />
               </div>
-              <Link to="/news" className="text-green-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-2">
-                Xem sự kiện <ChevronRight size={17} />
-              </Link>
-            </div>
+            </Link>
 
-            <div className="rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-all border-2 border-blue-300/60 shadow-sm flex flex-col justify-between" style={{background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)'}}>
+            <div
+              onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
+              className="group cursor-pointer rounded-xl p-5 sm:p-6 text-center transition-all duration-300 border-2 border-blue-300/60 shadow-sm hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.02] active:scale-[0.98] flex flex-col justify-between"
+              style={{background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)'}}
+            >
               <div>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 transition-transform duration-300 group-hover:scale-110">
                   <Bot size={24} className="text-blue-700" />
                 </div>
                 <h3 className="text-lg font-bold mb-1.5 sm:mb-2 text-blue-800">Trợ Lý AI Dòng Họ</h3>
-                <p className="text-blue-900/75 text-sm mb-3 sm:mb-4 line-clamp-3 leading-relaxed">
-                  Trí tuệ nhân tạo học sâu từ gia phả, sẵn sàng giải đáp thắc mắc của con cháu về dòng họ 24/7.
+                <p className="text-blue-900/75 text-sm mb-3 sm:mb-4 leading-relaxed">
+                  Trí tuệ nhân tạo học sâu từ gia phả, sẵn sàng tận tâm giải đáp mọi thắc mắc của con cháu về dòng họ 24/7.
                 </p>
               </div>
-              <button
-                onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
-                className="text-blue-700 font-bold text-sm flex items-center justify-center gap-1 hover:underline mx-auto mt-2"
-              >
-                Bắt đầu hỏi đáp <ChevronRight size={17} />
-              </button>
+              <div className="text-blue-700 font-bold text-sm flex items-center justify-center gap-1 group-hover:gap-2 transition-all mt-2">
+                <span>Bắt đầu hỏi đáp</span> <ChevronRight size={17} className="transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           </div>
         </div>
@@ -206,11 +215,14 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Latest News */}
-      <section className="py-10 sm:py-16 bg-cream">
+      <section className="pt-8 sm:pt-10 pb-12 sm:pb-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-6 sm:mb-10">
+          <div className="flex justify-between items-end mb-6 sm:mb-8">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-dark mb-1.5 sm:mb-2">Tư liệu - Sự kiện Dòng họ</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-dark mb-1.5 sm:mb-2">Tư liệu & Sự kiện Dòng họ</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-2">
+                Nơi cập nhật thông báo, hình ảnh tư liệu và các sự kiện quan trọng của dòng họ.
+              </p>
               <div className="w-16 h-1 bg-primary"></div>
             </div>
             {news.length > 0 && (
@@ -230,11 +242,17 @@ const HomePage: React.FC = () => {
             </div>
           ) : (
             <div className="text-center py-12 bg-cream/50 rounded-lg border border-dashed border-primary/30">
-              <p className="text-gray-500 italic text-sm">Chưa có tư liệu - sự kiện nào được đăng tải.</p>
+              <p className="text-gray-500 italic text-sm">Chưa có tư liệu & sự kiện nào được đăng tải.</p>
             </div>
           )}
         </div>
       </section>
+
+      {/* Thông điệp từ Người phát triển Cổng thông tin (Lê Gia Khánh) */}
+      <DeveloperMessageSection />
+
+      {/* Bản đồ Cội Nguồn Dòng Tộc (Nhà Thờ Họ & Cồn Giữa) */}
+      <AncestralMapSection />
 
     </div>
   );

@@ -37,12 +37,17 @@ const Footer: React.FC = () => {
               <Paperclip size={18} className="text-secondary flex-shrink-0" />
               <h4 className="text-base font-bold text-secondary">Liên kết</h4>
             </div>
-            <ul className="space-y-0.5 text-xs md:text-sm text-gray-300">
-              <li><Link to="/" className="hover:text-white transition-colors">Trang chủ</Link></li>
-              <li><Link to="/tree" className="hover:text-white transition-colors">Gia phả số</Link></li>
-              <li><Link to="/memorials" className="hover:text-white transition-colors">Lịch giỗ kỵ</Link></li>
-              <li><Link to="/news" className="hover:text-white transition-colors">Tư liệu - Sự kiện</Link></li>
-            </ul>
+            <div className="flex items-start gap-5 sm:gap-6 text-xs md:text-sm text-gray-300">
+              <ul className="space-y-0.5">
+                <li><Link to="/" className="hover:text-white transition-colors whitespace-nowrap">Trang chủ</Link></li>
+                <li><Link to="/tree" className="hover:text-white transition-colors whitespace-nowrap">Gia phả số</Link></li>
+                <li><Link to="/memorials" className="hover:text-white transition-colors whitespace-nowrap">Lịch giỗ kỵ</Link></li>
+              </ul>
+              <ul className="space-y-0.5">
+                <li><Link to="/news" className="hover:text-white transition-colors whitespace-nowrap">Tư liệu & Sự kiện</Link></li>
+                <li><Link to="/map" className="hover:text-white transition-colors whitespace-nowrap">Bản đồ</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="border-t border-white/10 mt-3 pt-2.5 text-center text-xs text-gray-400">

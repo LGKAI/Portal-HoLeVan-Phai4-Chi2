@@ -23,12 +23,13 @@
 
 Dự án **Portal Họ Lê Văn - Phái 4 - Chi 2** là nền tảng số hóa di sản dòng họ toàn diện, kết hợp công nghệ web hiện đại với trí tuệ nhân tạo thế hệ mới (**RAG - Retrieval Augmented Generation**).
 
-Hệ thống quản lý dữ liệu **hơn 321 thành viên trải qua 8 thế hệ** (Đời 9 đến Đời 16 của Phái 4 Họ Lê Văn tại Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị), với 4 phân hệ chính:
+Hệ thống quản lý dữ liệu **hơn 321 thành viên trải qua 8 thế hệ** (Đời 9 đến Đời 16 của Phái 4 Họ Lê Văn tại Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị), với 5 phân hệ chính:
 
-- 🔴 **Gia phả số**: Cây phả hệ trực quan, phân tầng theo đời, quản lý toàn bộ quan hệ huyết thống và hôn phối.
-- 🟡 **Lịch giỗ kỵ**: Sổ kỵ nhật tiền nhân 12 tháng Âm lịch, tự động tính toán và đồng bộ khi cập nhật gia phả.
+- 🔴 **Gia phả số**: Cây phả hệ trực quan đa tầng, tối ưu phần cứng GPU 60–120 FPS trên di động & máy tính bảng, quản lý toàn bộ quan hệ huyết thống và hôn phối.
+- 🟡 **Lịch giỗ kỵ**: Sổ kỵ nhật tiền nhân 12 tháng Âm lịch, tự động tính toán và đồng bộ khi cập nhật gia phả, giao diện cân xứng trên iPad.
+- 🟣 **Bản đồ Cội Nguồn Dòng Tộc**: Bản đồ số hóa vệ tinh tương tác cao cấp (Leaflet GIS) định vị Nhà Thờ Họ và Khu Lăng Mộ Cồn Giữa kèm chỉ đường GPS tận nơi.
 - 🟢 **Tư liệu - Sự kiện**: Tin tức, hoạt động, thông báo, tài liệu lịch sử họ tộc kèm phân quyền tác giả.
-- 🔵 **Trợ lý AI dòng họ**: Tra cứu gia phả thông minh qua hội thoại tự nhiên với kho tri thức chuyên sâu.
+- 🔵 **Trợ lý AI dòng họ**: Tra cứu gia phả thông minh qua hội thoại tự nhiên với kho tri thức chuyên sâu và cam kết Zero-Hallucination.
 
 ---
 
@@ -38,16 +39,18 @@ Mô hình kiến trúc phân tán (**Decoupled Architecture**), vận hành **24
 
 ```mermaid
 flowchart TB
-    subgraph ClientTier["1. GIAO DIỆN CLIENT — Vercel Edge"]
+    subgraph ClientTier["1. GIAO DIỆN CLIENT — Vercel Edge / Nginx"]
         UI["React 18 SPA (Vite + Tailwind CSS)"]
+        TreeEngine["React Flow v12 + GPU Hardware Acceleration"]
+        LeafletGIS["Leaflet Satellite Map (Nhà Thờ & Cồn Giữa)"]
         OfflineFallback["Offline Fallback (Local JSON)"]
     end
 
-    subgraph APITier["2. BACKEND API — Render Web Service"]
+    subgraph APITier["2. BACKEND API — Render Web Service / Node.js"]
         API["Node.js 22 LTS + Express + TypeScript"]
         AuthMid["JWT & RBAC Middleware"]
         UploadMid["Supabase Storage Upload"]
-        RAGCore["RAG Engine (ragService.ts + Gemini)"]
+        RAGCore["In-Backend RAG Engine (ragService.ts + Gemini Flash)"]
     end
 
     subgraph DataTier["3. LƯU TRỮ ĐÁM MÂY — Supabase"]
@@ -56,9 +59,8 @@ flowchart TB
     end
 
     subgraph FallbackTier["4. RAG LOCAL — Docker (tùy chọn)"]
-        FastAPIApp["Python FastAPI Service"]
+        FastAPIApp["Python FastAPI Service (ChromaDB + Ollama/Gemini)"]
         VectorDB[("ChromaDB Vector Store")]
-        OllamaLocal["Ollama Local LLM (qwen2.5:7b)"]
     end
 
     UI -->|HTTPS REST| API
@@ -69,17 +71,22 @@ flowchart TB
     RAGCore -->|HTTPS| GeminiAI["Google Gemini Flash"]
     API -.->|Proxy fallback local| FastAPIApp
     FastAPIApp --> VectorDB
-    FastAPIApp --> OllamaLocal
 ```
 
 ---
 
 ## ✨ Các Tính Năng Chính
 
-### 1. Cây Gia Phả Tương Tác (`FamilyTreePage.tsx`)
+### 1. Cây Gia Phả Tương Tác & Tối Ưu Hiệu Năng 60–120 FPS (`FamilyTreePage.tsx`, `TreeCanvas.tsx`, `MemberNode.tsx`)
 - **Thuật toán phân tầng tự động**: Tọa độ Y = `(generation - 1) × ΔY`; tọa độ X chống chồng lấn tự động theo bề rộng nhánh con cái.
-- **Đa hôn phối**: Hiển thị Chánh phối, Kế thất, Thứ phối cạnh nhau; đường kết nối chuẩn xác theo từng cặp cha/mẹ → con.
+- **Đa hôn phối chuẩn mực**: Hiển thị Chánh phối, Thứ phối, Thứ thứ phối cạnh nhau; đường kết nối phân tầng riêng biệt theo từng cặp cha/mẹ → con.
+- **Tối ưu hóa hiệu năng di động đột phá**:
+  - **Triệt tiêu Layout Thrashing**: Bộ nhớ đệm kích thước khung nhìn (`containerSizeRef`) và đồng bộ vị trí cuộn qua `requestAnimationFrame`, loại bỏ 100% hiện tượng khựng lag khi vuốt ngón tay trên điện thoại.
+  - **Tăng tốc phần cứng GPU**: Bổ sung `contain: layout style paint;`, `will-change: transform`, `transform: translateZ(0)` trong CSS cách ly toàn bộ cây gia phả.
+  - **Memoization toàn diện**: Bọc `React.memo(MemberNode)` và `useCallback` cho toàn bộ các handler thao tác phả hệ, ngăn chặn re-render dây chuyền.
+  - **Ẩn thanh cuộn desktop trên di động**: Màn hình `<= 768px` tự động ẩn thanh cuộn chuột để ưu tiên cử chỉ chạm vuốt (pan) và phóng to/thu nhỏ (pinch-to-zoom) trực tiếp.
 - **Search & Auto-Focus**: Nhập tên → pan và zoom tự động định vị đúng vị trí tiền nhân trên cây.
+- **Thống kê linh hoạt**: Bảng thống kê tổng số thành viên, số người đã mất, còn sống với chế độ co gọn thông minh trên di động.
 - **Offline Fallback**: Khi Backend cold-start hoặc gặp sự cố mạng, tự động nạp `members.json` cục bộ.
 - **Admin Panel**: Thêm/sửa/xóa thành viên, upload ảnh chân dung với công cụ cắt ảnh tỉ lệ 1:1 (`react-easy-crop`).
 
@@ -87,67 +94,74 @@ flowchart TB
 - Danh sách hơn 109 vị tiền nhân đã quy tiên, phân nhóm theo 12 tháng Âm lịch.
 - **Quy ước phong tục họ tộc**: Ngày cúng giỗ = Ngày mất − 1 (ví dụ: ngày mất 10/01 → ngày giỗ 09/01 Âm lịch).
 - **Tự động đồng bộ**: Khi Quản trị viên cập nhật `death_date` hoặc `is_deceased` trong Gia phả → Lịch giỗ kỵ tự động phản ánh tức thì.
+- **Giao diện chuẩn iPad & Di động**: 14 nút chọn tháng âm lịch chia thành 2 hàng x 7 cột (`grid-cols-7`) cân đối hoàn hảo trên iPad; bảng dữ liệu tự căn chỉnh chiều rộng không bị ép thanh cuộn ngang khó chịu.
 - Tìm kiếm đa năng: họ tên, đời thứ, tên thân phụ/thân mẫu, nơi an táng.
 
-### 3. Tư Liệu - Sự Kiện Dòng Họ (`NewsPage.tsx`, `NewsDetailPage.tsx`)
+### 3. Bản Đồ Cội Nguồn Dòng Tộc & Chỉ Đường GPS (`AncestralMapSection.tsx`, `MapPage.tsx`)
+- **Tích hợp bản đồ vệ tinh chuyên sâu**: Sử dụng thư viện Leaflet GIS kết hợp lớp ảnh vệ tinh độ phân giải cao Google Maps Satellite Hybrid.
+- **Định vị 2 địa điểm tâm linh thiêng liêng của dòng họ**:
+  - 🏛️ **Nhà Thờ Họ Lê Văn**: Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị (GPS: `16.825772, 107.141450`) — chốn từ đường phụng tự và tổ chức các kỳ tế lễ truyền thống.
+  - 🪦 **Lăng Mộ Chi 2 - Phái 4 - Họ Lê Văn tại Cồn Giữa**: GPS: `16.830898, 107.144187` — nơi an nghỉ thiên thu của Ngài Thủy tổ Lê Văn Khôi, Cụ bà Phan Thị Mưu cùng 88 vị tiền nhân liệt tổ liệt tông.
+- **Trải nghiệm tương tác mượt mà**:
+  - Cuộn chuột trực tiếp trên khung bản đồ để thu phóng (không cần giữ phím Ctrl).
+  - Marker huy hiệu rực rỡ với hiệu ứng radar quét xung quanh (pulsing beacon) và nhãn vị trí nổi bật.
+  - Phím tắt thu phóng, căn giữa vị trí và sao chép nhanh tọa độ GPS 1-click.
+  - Nút **"Chỉ đường về tận nơi"** tự động mở ứng dụng Google Maps dẫn đường trực tiếp trên điện thoại/máy tính.
+- **Tích hợp linh hoạt**: Xuất hiện vừa là một khối trang trọng trên Trang chủ, vừa có trang route riêng biệt `/map`.
+
+### 4. Tư Liệu - Sự Kiện Dòng Họ (`NewsPage.tsx`, `NewsDetailPage.tsx`)
 - **Trình soạn thảo chuyên nghiệp**: `RichDocEditor` hỗ trợ định dạng văn bản phong phú, dán ảnh trực tiếp từ clipboard (`Ctrl+V`).
 - **Upload & Cắt ảnh bìa**: Công cụ `react-easy-crop` linh hoạt nhiều tỉ lệ: 16:9 (Chuẩn bài viết), 4:3, 1:1 (Vuông) hoặc Tự do.
 - **Phân quyền tác giả minh bạch**:
   - Ghi nhận và hiển thị tác giả: *"Bài viết được đăng bởi [Tên tác giả]"*.
-  - 👑 **Quản trị viên**: Đăng bài mới, chỉnh sửa và xóa bài viết.
-  - ⭐ **Thành viên ưu tú**: Được cấp quyền viết và đăng tải bài viết mới (không có quyền xóa hoặc sửa bài của tác giả khác).
-  - 👤 **Thành viên tiêu chuẩn**: Xem bài viết, có lời nhắc nâng cấp tài khoản để mở khóa quyền đăng bài.
+  - 👑 **Quản trị viên**: Đăng bài mới, phê duyệt, chỉnh sửa và xóa bài viết.
+  - ⭐ **Thành viên ưu tú**: Được cấp quyền viết và gửi bài mới (bài viết chờ Quản trị viên duyệt trước khi hiển thị công khai).
+  - 👤 **Thành viên tiêu chuẩn**: Xem bài viết, có lời nhắc nâng cấp tài khoản để mở khóa quyền đóng góp bài viết.
 - **Lưu trữ & Phục vụ ảnh**: Phục vụ qua CDN Supabase Storage trên Cloud và Nginx tĩnh trên môi trường Docker.
 
-### 4. Hệ Thống Tài Khoản, Phân Quyền & Bài Test Nâng Hạng (`UserProfileModal.tsx`, `Navbar.tsx`)
+### 5. Thông Điệp Từ Người Phát Triển (`DeveloperMessageSection.tsx`)
+- Khu vực tự sự trang trọng của người sáng lập & phát triển hệ thống — **Lê Gia Khánh** (con cháu Chi 2 - Phái 4), chia sẻ tâm nguyện gìn giữ gia phả thiêng liêng, hướng về nguồn cội quê hương An Lợi, Triệu Bình, Quảng Trị.
+
+### 6. Hệ Thống Tài Khoản, Phân Quyền & Bài Test Nâng Hạng (`UserProfileModal.tsx`, `Navbar.tsx`)
 - **Phân cấp vai trò rõ ràng (3 cấp bậc)**:
-  - 👑 **Trùm cuối (`admin`)**: Toàn quyền hệ thống, quản lý cây gia phả, lịch kỵ nhật và bài viết.
+  - 👑 **Trùm cuối (`admin`)**: Toàn quyền hệ thống, quản lý cây gia phả, lịch kỵ nhật và duyệt bài viết.
   - ⭐ **Thành viên ưu tú (`elite`)**: Quyền đăng bài viết mới trong mục Tư liệu - Sự kiện.
   - 👤 **Thành viên tiêu chuẩn (`member`)**: Quyền tra cứu cơ bản, tham gia làm bài test nâng cấp vai trò.
 - **Hồ sơ cá nhân & Bài trắc nghiệm dòng họ**:
-  - Tích hợp cửa sổ User Profile trực quan khi nhấp vào tên tài khoản hoặc thẻ thông báo.
+  - Cửa sổ User Profile trực quan khi nhấp vào tên tài khoản hoặc thẻ thông báo.
   - Bộ 10 câu hỏi trắc nghiệm A/B tìm hiểu nguồn cội, tiền nhân và truyền thống dòng họ Lê Văn Phái 4 - Chi 2.
   - Làm đúng từ **5/10 câu trở lên**: Chúc mừng và tự động thăng hạng lên **Thành viên ưu tú**.
-  - Kết quả rõ ràng, thân thiện và hỗ trợ làm lại không giới hạn mà không lộ đáp án.
-- **Thẻ thông báo vai trò thông minh**:
-  - Ghim sát mép phải màn hình ngay dưới Navbar (`fixed right-2 sm:right-3`), hiển thị trạng thái tài khoản hiện tại.
-  - Tự động ẩn khi mở menu trên thiết bị di động để tránh chồng đè giao diện.
+- **Thẻ thông báo vai trò thông minh**: Ghim góc trên phải trang chủ, tự động co gọn trên màn hình di động để không đè chữ tiêu đề.
 
-### 5. Trợ Lý AI Gia Phả (RAG Engine & Floating Chatbot)
+### 7. Trợ Lý AI Gia Phả (RAG Engine & Floating Chatbot)
 - **Thiết kế biểu tượng Chatbot sang trọng**:
-  - Nút bấm AI nổi bật với hình ảnh đại diện Robot 3D tông màu Đỏ - Vàng kim truyền thống (`/ai-robot.jpg`).
-  - Đèn báo trạng thái trực tuyến (online) xanh lá tròn trịa, nổi hoàn toàn trên nút bấm không bị cắt xén viền.
-  - Lời chào nhập môn trang trọng: *"Xin chào! Tôi là trợ lý AI của trang Portal Chi 2 - Phái 4 - Họ Lê Văn..."*.
+  - Nút bấm AI nổi bật với ảnh Robot 3D tông màu Đỏ - Vàng kim (`/ai-robot.jpg`), đèn báo trạng thái xanh lá trực tuyến.
+  - Tối ưu vị trí cách mép phải/đáy phù hợp trên cả điện thoại (`50px`) và máy tính (`56px`).
 - **In-Backend RAG Engine** (`ragService.ts`):
-  - Chạy trực tiếp trong Node.js Backend, truy vấn kết hợp Google Gemini Flash.
-  - Bộ tri thức chuẩn hóa 3 tài liệu Markdown: lịch sử dòng họ, kỵ nhật tiền nhân và hồ sơ thành viên.
-  - Thuật toán mở rộng ngữ cảnh phả hệ đa quan hệ (thân phụ, thân mẫu, phối ngẫu, con cái).
+  - Tích hợp trực tiếp trong Node.js Backend, truy vấn kết hợp Google Gemini Flash.
+  - Thuật toán mở rộng ngữ cảnh quan hệ gia phả đa chiều (thân phụ mẫu, phối ngẫu, con cái, anh chị em).
   - Cơ chế **Exponential Backoff** tự động thử lại khi gặp giới hạn tốc độ API (Rate Limit 429).
-- **Trải nghiệm trò chuyện thân thiện**:
-  - Bong bóng phản hồi của Trợ lý AI mang sắc vàng nhạt trang nhã (`#FEF9C3`), viền vàng dịu (`#FDE047`), phân biệt rõ với tin nhắn người gửi màu đỏ trầm.
-  - Hỗ trợ gõ phím `Enter` gửi tin nhắn, tự động cuộn xuống cuối và hiển thị hiệu ứng ba chấm động sinh động.
+  - Chi tiết kiến trúc xem tại: [`reports/rag_chatbot.md`](reports/rag_chatbot.md).
 - **Python RAG Service** (Tùy chọn Local Docker): FastAPI + ChromaDB + Ollama (`qwen2.5:7b`).
 
-### 6. Giao Diện Người Dùng Đồng Bộ & Thẩm Mỹ (UI/UX)
-- **Thanh điều hướng (Navbar)**: Đồng bộ icon và tên gọi:
+### 8. Giao Diện Người Dùng Đồng Bộ & Thẩm Mỹ (UI/UX)
+- **Thanh điều hướng (Navbar)**: Đồng bộ icon và tên gọi 5 danh mục:
   - 🏠 **Trang chủ**
   - 📖 **Gia phả số**
   - 📅 **Lịch giỗ kỵ**
   - 📰 **Tư liệu - Sự kiện**
+  - 📍 **Bản đồ**
+  - Dòng hiển thị ngày tháng âm dương đầy đủ, rõ nét (*"Thứ Bảy, 10/10/2026 (01/09/2026 Âm lịch)"*), không bị cắt xén.
+  - Menu hamburger trên thiết bị di động có lớp nền mờ tối (`backdrop-blur`) sang trọng, dễ thao tác.
 - **Banner chính & Nghệ thuật chữ truyền thống**:
-  - Tiêu đề **LÊ VĂN - PHÁI 4 - CHI 2** áp dụng font viết tay nghệ thuật sắc sảo **Merienda** (Google Fonts).
-  - Tối ưu hóa phản hồi đa màn hình: sử dụng `clamp(1.3rem, 6vw, 3.2rem)` cùng `whitespace-nowrap` đảm bảo tiêu đề luôn nằm trọn vẹn trên 1 dòng duy nhất trên tất cả màn hình điện thoại di động và máy tính bảng.
-  - Lớp phủ nền toàn cảnh được tinh chỉnh độ sáng cân đối (`bg-black/[0.38]` và gradient êm dịu), giúp làm nổi bật các khối chữ vàng kim và câu đối thư pháp.
+  - Tiêu đề **LÊ VĂN - PHÁI 4 - CHI 2** font nghệ thuật **Merienda** (Google Fonts).
+  - Hai câu đối thư pháp trang nhã co dãn linh hoạt, cân đối vị trí trung tâm nổi bật trên cổng nhà thờ họ.
   - Nút bấm đôi trang nhã **"Xem Gia Phả"** và **"Xem Lịch Giỗ"**.
-- **Chỉ số dòng họ**: Tích hợp icon màu vàng kim sắc nét:
-  - 🏛️ **8+ Đời** (Biểu tượng Nhà thờ họ - `Landmark`)
-  - 👥 **300+ Thành viên** (Biểu tượng Hội đồng thân tộc - `Users`)
-  - 🕒 **250+ Năm lịch sử** (Biểu tượng Thời gian - `Clock`)
-- **4 Thẻ tính năng nổi bật**: Phối màu pastel truyền thống với icon chuyên biệt (`BookOpen`, `Calendar`, `Newspaper`, `Bot`).
+- **Chỉ số dòng họ**: 🏛️ **8+ Đời**, 👥 **300+ Thành viên**, 🕒 **250+ Năm lịch sử**.
+- **3 Thẻ tính năng nổi bật**: Hiệu ứng chuyển động sống động, nảy nhẹ và phóng to tinh tế khi hover.
 - **Chân trang (Footer)**:
-  - Logo dòng họ được đặt trang trọng bên cạnh tiêu đề **CHI 2 - PHÁI 4 - HỌ LÊ VĂN**.
-  - Icon điện thoại bàn (📞 **Liên hệ**) và icon kẹp tài liệu (📎 **Liên kết**).
-  - Dòng bản quyền căn giữa trang trọng, tinh tế.
+  - Thông tin dòng họ, điện thoại liên hệ (📞) và liên kết (📎).
+  - Cột Liên kết chia đôi gọn gàng: Cột 1 (*Trang chủ, Gia phả số, Lịch giỗ kỵ*) và Cột 2 (*Tư liệu & Sự kiện, Bản đồ*).
 
 ---
 
@@ -259,23 +273,29 @@ Portal-HoLeVan-Phai4-Chi2/
 │   ├── package.json
 │   └── tsconfig.json
 │
+├── reports/                        # Báo cáo kỹ thuật chuyên đề
+│   └── rag_chatbot.md              # Báo cáo chuyên sâu phân hệ Trợ lý AI (RAG Engine)
+│
 ├── frontend/                       # Giao diện (React 18 / Vite / TypeScript / Tailwind)
 │   ├── public/
 │   │   ├── ai-robot.jpg            # Ảnh đại diện Trợ lý AI tông đỏ - vàng
 │   │   ├── favicon.ico             # Logo dòng họ
-│   │   └── background.jpg          # Ảnh toàn cảnh Nhà thờ họ
+│   │   ├── background.jpg          # Ảnh toàn cảnh Nhà thờ họ
+│   │   └── le-gia-khanh.jpg        # Chân dung Người sáng lập & phát triển
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── FamilyTree/         # @xyflow/react: MemberNode, TreeControls, layoutEngine
+│   │   │   ├── FamilyTree/         # @xyflow/react: MemberNode, TreeCanvas, layoutEngine, CustomEdges
+│   │   │   ├── Home/               # AncestralMapSection.tsx, DeveloperMessageSection.tsx
 │   │   │   ├── Chatbot/            # ChatbotPanel.tsx (Floating button & AI chatbox)
 │   │   │   ├── Layout/             # Navbar.tsx, Footer.tsx
 │   │   │   ├── Auth/               # LoginModal.tsx, RegisterModal.tsx, UserProfileModal.tsx
 │   │   │   ├── News/               # NewsCard.tsx, RichDocEditor.tsx
-│   │   │   └── common/             # LoadingSpinner.tsx, ...
+│   │   │   └── common/             # LoadingSpinner.tsx, ScrollToTop.tsx
 │   │   ├── pages/
 │   │   │   ├── HomePage.tsx            # Trang chủ & các khối chức năng
-│   │   │   ├── FamilyTreePage.tsx      # Cây gia phả tương tác
+│   │   │   ├── FamilyTreePage.tsx      # Cây gia phả tương tác 60-120 FPS
 │   │   │   ├── MemorialCalendarPage.tsx# Lịch giỗ kỵ 12 tháng Âm lịch
+│   │   │   ├── MapPage.tsx             # Bản đồ Cội Nguồn Dòng Tộc (Leaflet vệ tinh)
 │   │   │   ├── NewsPage.tsx            # Danh sách tư liệu - sự kiện
 │   │   │   └── NewsDetailPage.tsx      # Chi tiết bài viết
 │   │   ├── services/
