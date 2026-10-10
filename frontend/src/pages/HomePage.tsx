@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 via-40% to-black/80 z-10 pointer-events-none" />
 
         {/* Khối chữ và nút bấm - cân đối và nhích lên trên một chút theo yêu cầu */}
-        <div className="relative z-20 text-center text-white px-3 sm:px-4 max-w-4xl mx-auto pb-36 sm:pb-24 md:pb-28">
+        <div className="relative z-20 text-center text-white px-3 sm:px-4 max-w-4xl mx-auto pb-44 sm:pb-24 md:pb-28">
 
           <h1 className="mb-2 tracking-wide leading-tight">
             <span

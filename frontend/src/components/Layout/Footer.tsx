@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <h3 className="font-artistic font-bold text-sm sm:text-lg text-secondary tracking-tight">CHI 2 - PHÁI 4 - HỌ LÊ VĂN</h3>
             </div>
             <p className="text-gray-300 text-xs md:text-sm leading-normal">
-              Cổng thông tin lưu trữ gia phả, tư liệu và kết nối con cháu dòng họ Lê Văn - Phái 4 - Chi 2.
+              Cổng thông tin lưu trữ gia phả, tư liệu và kết nối con cháu Chi 2 - Phái 4 - Họ Lê Văn.
             </p>
           </div>
 

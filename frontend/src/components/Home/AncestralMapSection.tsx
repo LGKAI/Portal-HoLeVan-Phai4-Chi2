@@ -226,7 +226,7 @@ const AncestralMapSection: React.FC<AncestralMapProps> = ({ id = 'map', isStanda
             Vị Trí Từ Đường & Mộ Phần Dòng Họ
           </h2>
           <p className="text-sm sm:text-base text-gray-600 mb-2">
-            Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị — nơi phụng tự tổ tiên và lưu dấu nguồn cội muôn đời của con cháu Họ Lê Văn - Phái 4 - Chi 2.
+            Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị — Nơi phụng tự tổ tiên và lưu dấu nguồn cội muôn đời của con cháu Chi 2 - Phái 4 - Họ Lê Văn.
           </p>
           <div className="w-16 h-1 bg-primary"></div>
         </div>

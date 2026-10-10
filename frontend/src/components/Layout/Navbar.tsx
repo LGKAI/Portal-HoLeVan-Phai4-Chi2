@@ -163,11 +163,10 @@ const Navbar: React.FC = () => {
                   <span>Bạn đang là Thành viên ưu tú!</span>
                 </div>
               ) : (
-                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
+                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-[11px] sm:text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
                   <span className="text-xs sm:text-sm flex-shrink-0">💡</span>
                   <span className="text-gray-700">
-                    <span className="hidden sm:inline">Bạn đang là <strong className="text-gray-900 font-bold">Thành viên tiêu chuẩn</strong>, hãy </span>
-                    <strong className="text-primary font-bold underline underline-offset-2">Làm bài Test</strong> nâng cấp vai trò!
+                    Bạn đang là <strong className="text-gray-900 font-bold">Thành viên tiêu chuẩn</strong>, hãy <strong className="text-primary font-bold underline underline-offset-2">nâng cấp vai trò</strong>!
                   </span>
                 </div>
               )}
@@ -181,7 +180,7 @@ const Navbar: React.FC = () => {
               <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 text-gray-800 shadow-xl border border-primary/30 text-xs font-medium backdrop-blur-md hover:bg-amber-50 hover:border-primary/50 transition-all">
                 <span className="text-xs sm:text-sm flex-shrink-0">✨</span>
                 <span className="text-gray-700">
-                  <span className="hidden sm:inline">Hãy </span><strong className="text-primary font-bold underline underline-offset-2">đăng nhập</strong><span className="hidden sm:inline"> để có thêm những trải nghiệm thú vị!</span><span className="sm:hidden"> trải nghiệm thêm tính năng! ✨</span>
+                  <strong className="text-primary font-bold underline underline-offset-2">Đăng nhập</strong> để thêm trải nghiệm thú vị!
                 </span>
               </div>
             </div>
