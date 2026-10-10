@@ -1,7 +1,4 @@
-# 📜 Phân Hệ Trợ Lý Ảo Gia Phả (RAG Chatbot)
-### Dòng Họ Lê Văn - Phái 4 - Chi 2 (Thôn An Lợi, Xã Triệu Bình, Tỉnh Quảng Trị)
-
----
+# RAG Chatbot - Trợ Lý Ảo Gia Phả
 
 ## 📌 1. Giới Thiệu Tổng Quan (Introduction)
 
