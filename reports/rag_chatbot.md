@@ -125,7 +125,7 @@ Khi dữ liệu gia tộc trong database được bổ sung hoặc cập nhật,
 
 ---
 
-## 🎯 5. Prompt Engineering & Bộ Quy Tắc Ứng Xử Chuẩn Mực
+## 🎯 5. Hệ Thống Prompt & Bộ Quy Tắc Ứng Xử Chuẩn Mực (Prompt Engineering)
 
 Trọng tâm xử lý logic ngôn ngữ nằm ở `SYSTEM_PROMPT` trong `src/rag_pipeline.py`, được tinh chỉnh chống ảo giác và chuẩn hóa 100%:
 
